@@ -37,6 +37,7 @@ footer a{color:#f5c542}
     <p>Questions? <a href="mailto:lonefaisal977@gmail.com">lonefaisal977@gmail.com</a></p>
   </footer>
 
-<script>document.addEventListener('DOMContentLoaded',function(){const b=document.querySelector('img[src*="netlify"]');if(b)b.remove();const l=document.querySelector('a[href*="netlify.com"]');if(l&&l.querySelector('img'))l.remove()})</script>
+<style>img[src*="netlify"],a[href*="netlify.com"] img,div[id*="netlify"],.netlify-badge,#netlify-badge,#netlify-cta,#netlify-toolbar{display:none !important;visibility:hidden !important;opacity:0 !important;width:0 !important;height:0 !important;pointer-events:none !important}</style>
+<script>function removeNetlifyBadge(){document.querySelectorAll('img').forEach(function(img){if(img.src&&img.src.indexOf('netlify')>-1){img.parentElement&&img.parentElement.remove()}});document.querySelectorAll('a').forEach(function(a){if(a.href&&a.href.indexOf('netlify.com')>-1&&a.querySelector('img')){a.remove()}});document.querySelectorAll('[id*="netlify"],[class*="netlify"]').forEach(function(el){el.remove()})}document.addEventListener('DOMContentLoaded',removeNetlifyBadge);setTimeout(removeNetlifyBadge,500);setTimeout(removeNetlifyBadge,2000);setTimeout(removeNetlifyBadge,5000)</script>
 </body>
 </html>
