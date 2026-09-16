@@ -1,6 +1,19 @@
-/* Digitalaikart — scroll effects engine (Apple-style reveals, 3D book, count-up) */
+/* Digitalaikart — scroll effects engine (Apple-style reveals, 3D book, count-up) + analytics */
 (function () {
   'use strict';
+
+  /* ---------- 0. GOOGLE ANALYTICS 4 (site-wide) ---------- */
+  (function () {
+    var s = document.createElement('script');
+    s.async = true;
+    s.src = 'https://www.googletagmanager.com/gtag/js?id=G-WWDP6KR3EC';
+    document.head.appendChild(s);
+    window.dataLayer = window.dataLayer || [];
+    window.gtag = function () { window.dataLayer.push(arguments); };
+    window.gtag('js', new Date());
+    window.gtag('config', 'G-WWDP6KR3EC');
+  })();
+
   if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
 
   /* ---------- 1. REVEAL ON SCROLL ---------- */
