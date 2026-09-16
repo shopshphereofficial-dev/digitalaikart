@@ -5,6 +5,3 @@
   for = "/*"
   [headers.values]
     X-Frame-Options = "DENY"
-
-[[plugins]]
-  package = "@netlify/plugin-no-powered-by"
