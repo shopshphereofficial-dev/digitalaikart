@@ -54,6 +54,157 @@
     }
   })();
 
+
+  /* ---------- 0c. SITE SEARCH (all pages, auto-injected) ---------- */
+  (function () {
+    if (window.__dskSearch) return; window.__dskSearch = true;
+    var css = ''
+      + '.dsk-search-btn{background:none;border:none;color:#e8eef7;font-size:1.25rem;cursor:pointer;padding:0 .45rem;line-height:1;opacity:.85;vertical-align:middle}'
+      + '.dsk-search-btn:hover{color:#f5c542;opacity:1}'
+      + '.dsk-overlay{position:fixed;inset:0;background:rgba(6,12,24,.78);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);z-index:9999;display:none;align-items:flex-start;justify-content:center;padding:9vh 1rem 2rem}'
+      + '.dsk-overlay.on{display:flex}'
+      + '.dsk-modal{width:100%;max-width:640px;background:#0d1f38;border:1px solid rgba(245,197,66,.28);border-radius:18px;overflow:hidden;box-shadow:0 30px 80px rgba(0,0,0,.55)}'
+      + '.dsk-input-wrap{display:flex;align-items:center;gap:.7rem;padding:1rem 1.1rem;border-bottom:1px solid rgba(255,255,255,.08)}'
+      + '.dsk-input-wrap input{flex:1;background:none;border:none;outline:none;color:#eef4fb;font-size:1.05rem;font-family:inherit}'
+      + '.dsk-input-wrap input::placeholder{color:#7c8aa0}'
+      + '.dsk-close{background:none;border:none;color:#8fa0b8;cursor:pointer;font-size:1rem;padding:.2rem .4rem}'
+      + '.dsk-close:hover{color:#fff}'
+      + '.dsk-results{max-height:52vh;overflow-y:auto}'
+      + '.dsk-res{display:block;padding:.8rem 1.1rem;text-decoration:none;border-bottom:1px solid rgba(255,255,255,.05)}'
+      + '.dsk-res:hover{background:rgba(245,197,66,.08)}'
+      + '.dsk-badge{display:inline-block;font-size:.6rem;letter-spacing:.08em;text-transform:uppercase;font-weight:700;padding:.16rem .55rem;border-radius:99px;width:max-content;margin-bottom:.3rem}'
+      + '.dsk-b{background:rgba(90,140,255,.16);color:#9db9ff}'
+      + '.dsk-p{background:rgba(245,197,66,.16);color:#f5c542}'
+      + '.dsk-rt{color:#eef4fb;font-weight:600;font-size:.95rem;display:block}'
+      + '.dsk-rd{color:#8fa0b8;font-size:.8rem;display:block;margin-top:.15rem}'
+      + '.dsk-empty,.dsk-loading{padding:1.4rem;color:#8fa0b8;font-size:.9rem;text-align:center}'
+      + '.dsk-hint{padding:.55rem 1.1rem;color:#5d6c84;font-size:.68rem;border-top:1px solid rgba(255,255,255,.05)}';
+    var st = document.createElement('style'); st.textContent = css; document.head.appendChild(st);
+
+    var navLinks = document.querySelector('.nav-links');
+    if (!navLinks) return;
+    var btn = document.createElement('button');
+    btn.className = 'dsk-search-btn';
+    btn.setAttribute('aria-label', 'Search products and blogs');
+    btn.type = 'button';
+    btn.textContent = '\uD83D\uDD0D';
+    btn.addEventListener('click', open);
+    navLinks.appendChild(btn);
+
+    var overlay = null, input = null, results = null, idx = null, loading = false;
+
+    function buildOverlay() {
+      if (overlay) return;
+      overlay = document.createElement('div');
+      overlay.className = 'dsk-overlay';
+      var modal = document.createElement('div');
+      modal.className = 'dsk-modal';
+      modal.innerHTML = '<div class="dsk-input-wrap"><span>\uD83D\uDD0D</span><input type="text" placeholder="Search products and blogs&hellip;" /><button class="dsk-close" type="button">\u2715</button></div><div class="dsk-results"></div><div class="dsk-hint">Searches all products and blog posts &middot; press Esc to close</div>';
+      overlay.appendChild(modal);
+      document.body.appendChild(overlay);
+      input = modal.querySelector('input');
+      results = modal.querySelector('.dsk-results');
+      overlay.addEventListener('click', function (e) { if (e.target === overlay) close(); });
+      modal.querySelector('.dsk-close').addEventListener('click', close);
+      input.addEventListener('input', function () { render(input.value); });
+      input.addEventListener('keydown', function (e) {
+        if (e.key === 'Enter') {
+          var f = results.querySelector('a.dsk-res');
+          if (f) location.href = f.getAttribute('href');
+        } else if (e.key === 'Escape') { close(); }
+      });
+    }
+    function open() {
+      buildOverlay();
+      overlay.classList.add('on');
+      document.body.style.overflow = 'hidden';
+      loadIndex();
+      setTimeout(function () { input.focus(); }, 60);
+    }
+    function close() {
+      if (!overlay) return;
+      overlay.classList.remove('on');
+      document.body.style.overflow = '';
+    }
+    document.addEventListener('keydown', function (e) {
+      var tag = (document.activeElement && document.activeElement.tagName) || '';
+      if (e.key === '/' && tag !== 'INPUT' && tag !== 'TEXTAREA') { e.preventDefault(); open(); }
+      if (e.key === 'Escape') close();
+    });
+
+    function loadIndex() {
+      if (idx || loading) return;
+      loading = true;
+      idx = [];
+      results.innerHTML = '<div class="dsk-loading">Loading search index&hellip;</div>';
+      fetch('/blog/?v=' + Date.now()).then(function (r) { return r.text(); }).then(function (t) {
+        var d = new DOMParser().parseFromString(t, 'text/html');
+        d.querySelectorAll('a.blog-card').forEach(function (c) {
+          var h = c.querySelector('h3');
+          var p = c.querySelector('.blog-card-body p');
+          idx.push({ t: 'Blog', title: h ? h.textContent : '', desc: p ? p.textContent : '', href: c.getAttribute('href') || '' });
+        });
+        render(input.value);
+      }).catch(function () { loading = false; });
+      fetch('/products/?v=' + Date.now()).then(function (r) { return r.text(); }).then(function (t) {
+        var d = new DOMParser().parseFromString(t, 'text/html');
+        d.querySelectorAll('.card').forEach(function (c) {
+          var a = c.querySelector('a[href^="/products/"]');
+          if (!a) return;
+          var h = c.querySelector('.card-title');
+          var p = c.querySelector('.card-desc');
+          idx.push({ t: 'Product', title: h ? h.textContent : '', desc: p ? p.textContent : '', href: a.getAttribute('href') || '' });
+        });
+        render(input.value);
+      }).catch(function () { loading = false; });
+    }
+
+    function score(item, q) {
+      var title = item.title.toLowerCase(), desc = item.desc.toLowerCase(), s = 0;
+      for (var i = 0; i < q.length; i++) {
+        if (title.indexOf(q[i]) > -1) s += 2;
+        else if (desc.indexOf(q[i]) > -1) s += 1;
+        else return -1;
+      }
+      if (title.indexOf(q.join(' ')) > -1) s += 3;
+      return s;
+    }
+    function render(v) {
+      if (!results) return;
+      var q = (v || '').trim().toLowerCase().split(/\s+/).filter(Boolean);
+      if (!q.length) { results.innerHTML = ''; return; }
+      if (!idx) { results.innerHTML = '<div class="dsk-loading">Loading search index&hellip;</div>'; return; }
+      var out = [];
+      for (var i = 0; i < idx.length; i++) {
+        var s = score(idx[i], q);
+        if (s > 0) out.push([s, idx[i]]);
+      }
+      out.sort(function (a, b) { return b[0] - a[0]; });
+      results.innerHTML = '';
+      if (!out.length) {
+        results.innerHTML = '<div class="dsk-empty">No results &mdash; try &ldquo;GPT&rdquo;, &ldquo;jobs&rdquo;, &ldquo;prompts&rdquo;&hellip;</div>';
+        return;
+      }
+      out.slice(0, 8).forEach(function (r) {
+        var it = r[1];
+        var a = document.createElement('a');
+        a.className = 'dsk-res';
+        a.setAttribute('href', it.href);
+        var badge = document.createElement('span');
+        badge.className = 'dsk-badge ' + (it.t === 'Blog' ? 'dsk-b' : 'dsk-p');
+        badge.textContent = it.t;
+        var t = document.createElement('span');
+        t.className = 'dsk-rt';
+        t.textContent = it.title;
+        var d = document.createElement('span');
+        d.className = 'dsk-rd';
+        d.textContent = it.desc.slice(0, 110) + '\u2026';
+        a.appendChild(badge); a.appendChild(t); a.appendChild(d);
+        results.appendChild(a);
+      });
+    }
+  })();
+
   if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
 
   /* ---------- 1. REVEAL ON SCROLL ---------- */
