@@ -71,7 +71,7 @@
 <script>
 function sendShipping(){
   var g=function(id){return document.getElementById(id).value.trim()};
-  var msg=['*Shipping Details — GPT-6 Astra Guide (Digital + Printed)*','','Name: '+g('s-name'),'WhatsApp: '+g('s-wa'),'Address: '+g('s-addr'),'City: '+g('s-city'),'State: '+g('s-state'),'PIN: '+g('s-pin')];
+  var msg=['*Shipping Details — Digitalaikart Order*','','Name: '+g('s-name'),'WhatsApp: '+g('s-wa'),'Address: '+g('s-addr'),'City: '+g('s-city'),'State: '+g('s-state'),'PIN: '+g('s-pin')];
   var ref=g('s-ref');
   if(ref){msg.push('Razorpay Ref: '+ref)}
   window.open('https://wa.me/919682600301?text='+encodeURIComponent(msg.join('\n')),'_blank');
@@ -79,7 +79,18 @@ function sendShipping(){
   document.getElementById('shipDone').style.display='block';
   return false;
 }
-if(window.location.search.indexOf('product=combo')>-1){document.getElementById('shipForm').style.display='block'}
+(function(){
+  var p=null;
+  try{p=new URLSearchParams(window.location.search).get('product')}catch(e){}
+  if(!p){return}
+  var combo=(p==='combo'||/-combo$/.test(p));
+  var slug=p.replace(/-combo$/,'');
+  if(slug&&slug!=='combo'&&slug!=='gpt-6-astra-guide'){
+    var dl=document.querySelector('.download-btn');
+    if(dl){dl.setAttribute('href','/downloads/'+slug+'.pdf')}
+  }
+  if(combo){document.getElementById('shipForm').style.display='block'}
+})();
 </script>
 <script src="/assets/effects.js"></script>
 <script>function rN(){document.querySelectorAll('img').forEach(function(i){if(i.src&&i.src.indexOf('netlify')>-1){i.parentElement&&i.parentElement.remove()}});document.querySelectorAll('a').forEach(function(a){if(a.href&&a.href.indexOf('netlify.com')>-1&&a.querySelector('img')){a.remove()}});document.querySelectorAll('[id*="netlify"],[class*="netlify"]').forEach(function(e){e.remove()})}document.addEventListener('DOMContentLoaded',rN);setTimeout(rN,500);setTimeout(rN,2000);setTimeout(rN,5000)</script>
