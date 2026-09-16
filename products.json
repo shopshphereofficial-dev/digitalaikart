@@ -1,0 +1,25 @@
+{
+  "updated": "2026-09-16",
+  "note": "Single source of truth for ALL products on digitalkartai.shop. The blog agent MUST read this file at the start of every run and promote the best-matching product per post. The product agent MUST append new products here when publishing them. Never delete or modify existing entries.",
+  "products": [
+    {
+      "slug": "gpt-6-astra-guide",
+      "name": "GPT-6 Astra Guide — Digital Edition",
+      "tagline": "The complete 108-page zero-to-hero guide on GPT-6 Astra. Master prompts, automation, business ideas, and cost optimization.",
+      "price": "₹149",
+      "mrp": "₹999",
+      "url": "/products/gpt-6-astra-guide/",
+      "also_available": "Digital + Printed combo at ₹1,999",
+      "topics": ["GPT-6", "GPT-6 Astra", "OpenAI", "ChatGPT", "AI models", "LLM", "prompt engineering", "AI automation", "AI tools", "AI business ideas", "AI side hustle", "AGI", "Gemini", "Claude", "AI model comparison", "AI news", "AI features", "reasoning models"]
+    },
+    {
+      "slug": "ai-job-hunt-kit",
+      "name": "The AI Job Hunt Kit — Digital Edition",
+      "tagline": "60 copy-paste AI prompts for your resume, LinkedIn, cover letters, interviews and salary negotiation — built for the Indian job market.",
+      "price": "₹99",
+      "mrp": "₹499",
+      "url": "/products/ai-job-hunt-kit/",
+      "topics": ["jobs", "job market", "career", "hiring", "recruitment", "resume", "CV", "ATS", "interview", "LinkedIn", "salary negotiation", "placements", "layoffs", "internships", "freshers", "IT jobs", "upskilling", "HR tech", "India employment"]
+    }
+  ]
+}
