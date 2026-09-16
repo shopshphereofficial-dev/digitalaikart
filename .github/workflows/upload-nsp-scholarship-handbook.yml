@@ -1,0 +1,31 @@
+name: Upload NSP Scholarship Handbook to Repo
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  upload-ebook:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Download ebook from release
+        run: |
+          mkdir -p downloads
+          gh release download nsp-scholarship-handbook-2026-27-v1 --repo shopshphereofficial-dev/digitalaikart --output "downloads/nsp-scholarship-handbook-2026-27.pdf"
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Commit ebook to repo
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add downloads/nsp-scholarship-handbook-2026-27.pdf
+          git commit -m "Add NSP Scholarship Handbook PDF to repo" || echo "No changes to commit"
+          git push
