@@ -1,8 +1,8 @@
-/* Digitalaikart — scroll effects engine (Apple-style reveals, 3D book, count-up) + analytics */
+/* Digitalaikart — scroll effects engine (Apple-style reveals, 3D book, count-up) + analytics + view counter */
 (function () {
   'use strict';
 
-  /* ---------- 0. GOOGLE ANALYTICS 4 (site-wide) ---------- */
+  /* ---------- 0a. GOOGLE ANALYTICS 4 (site-wide) ---------- */
   (function () {
     var s = document.createElement('script');
     s.async = true;
@@ -12,6 +12,46 @@
     window.gtag = function () { window.dataLayer.push(arguments); };
     window.gtag('js', new Date());
     window.gtag('config', 'G-WWDP6KR3EC');
+  })();
+
+  /* ---------- 0b. BLOG VIEW COUNTER (eye icon) ---------- */
+  (function () {
+    var BASE = 'https://abacus.jasoncameron.dev';
+    var NS = 'digitalkartai.shop';
+    function slugOf(u) {
+      var m = (u || '').match(/\/blog\/([A-Za-z0-9_-]{3,64})\.html/i);
+      return m ? m[1] : null;
+    }
+    function fmt(n) { return n >= 1000 ? (n / 1000).toFixed(1).replace(/\.0$/, '') + 'k' : String(n); }
+    var post = slugOf(location.pathname);
+    if (post) {
+      fetch(BASE + '/hit/' + NS + '/' + post).then(function (r) { return r.json(); }).then(function (d) {
+        var meta = document.querySelector('.post-meta');
+        if (meta && typeof d.value === 'number') {
+          var s = document.createElement('span');
+          s.style.cssText = 'margin-left:0.4rem;color:var(--gold,#f5c542);font-weight:600';
+          s.textContent = '\uD83D\uDC41 ' + fmt(d.value);
+          meta.appendChild(s);
+        }
+      }).catch(function () {});
+      return;
+    }
+    var cards = document.querySelectorAll('.blog-card');
+    for (var c = 0; c < cards.length && c < 25; c++) {
+      (function (card) {
+        var sl = slugOf(card.getAttribute('href'));
+        if (!sl) return;
+        fetch(BASE + '/get/' + NS + '/' + sl).then(function (r) { return r.json(); }).then(function (d) {
+          var dEl = card.querySelector('.date');
+          if (dEl && typeof d.value === 'number' && d.value > 0) {
+            var b = document.createElement('span');
+            b.style.cssText = 'margin-left:0.5rem;color:var(--gold,#f5c542);font-weight:600';
+            b.textContent = '\uD83D\uDC41 ' + fmt(d.value);
+            dEl.appendChild(b);
+          }
+        }).catch(function () {});
+      })(cards[c]);
+    }
   })();
 
   if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
