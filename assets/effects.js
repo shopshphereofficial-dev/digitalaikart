@@ -11,7 +11,8 @@
     '.spotlight', '.blog-card', '.card', '.author-box',
     '.tldr', '.product-box', '.engage', '.sources', '.summary-box',
     '.page-header', '.stats-strip', '.big-claim', '.community',
-    '.final-cta', '.stats-bar', '.coming-soon', '.post-svg', '.post-title', '.post-meta'
+    '.final-cta', '.stats-bar', '.coming-soon', '.post-svg', '.post-title', '.post-meta',
+    '.legal h2', '.legal .updated', '.blog-header', '.ship-form', '.community-box'
   ].join(',');
 
   var els = document.querySelectorAll(SELECTORS);
@@ -69,14 +70,16 @@
         if (!entries[j].isIntersecting) continue;
         var el = entries[j].target;
         cio.unobserve(el);
+        var start = parseInt(el.textContent, 10) || 0;
         var end = parseInt(el.getAttribute('data-count'), 10) || 0;
+        if (start === end) continue;
         var suffix = el.getAttribute('data-suffix') || '';
         var t0 = null, dur = 1500;
         var step = function (t) {
           if (t0 === null) t0 = t;
           var k = Math.min(1, (t - t0) / dur);
           k = 1 - Math.pow(1 - k, 3);
-          el.textContent = Math.round(end * k) + suffix;
+          el.textContent = Math.round(start + (end - start) * k) + suffix;
           if (k < 1) requestAnimationFrame(step);
         };
         requestAnimationFrame(step);
