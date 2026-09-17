@@ -1,0 +1,23 @@
+name: Import FSP PDF
+on:
+  push:
+    paths:
+      - fsp-ready.txt
+permissions:
+  contents: write
+jobs:
+  import:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: |
+          curl -sL -o downloads/first-salary-playbook.pdf "https://github.com/shopshphereofficial-dev/digitalaikart/releases/download/fsp-import/first-salary-playbook.pdf"
+          SIZE=$(stat -c%s downloads/first-salary-playbook.pdf)
+          if [ "$SIZE" != "84554" ]; then echo "BAD SIZE $SIZE"; exit 1; fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add downloads/first-salary-playbook.pdf
+          git commit -m "Publish First Salary Playbook PDF"
+          git rm --quiet fsp-ready.txt .github/workflows/import-fsp.yml
+          git commit -m "Cleanup FSP import" --allow-empty
+          git push
