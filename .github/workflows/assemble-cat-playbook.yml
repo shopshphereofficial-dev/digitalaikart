@@ -1,0 +1,35 @@
+name: Assemble CAT Playbook PDF
+
+on:
+  push:
+    paths:
+      - '.github/workflows/assemble-cat-playbook.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  assemble:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Assemble PDF from parts and verify checksum
+        run: |
+          cat .github/tmp/cat-parts/p*.b64 | base64 -d > cat-2026-countdown-playbook.pdf
+          echo "24592a549a3faa2b7f008ec77c7654a5  cat-2026-countdown-playbook.pdf" | md5sum -c -
+
+      - name: Commit PDF and clean up
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          mkdir -p downloads
+          cp cat-2026-countdown-playbook.pdf downloads/cat-2026-countdown-playbook.pdf
+          git add downloads/cat-2026-countdown-playbook.pdf
+          git rm -r .github/tmp/cat-parts
+          git rm .github/workflows/assemble-cat-playbook.yml
+          git commit -m "Add CAT 2026 Countdown Playbook PDF to downloads"
+          git push
