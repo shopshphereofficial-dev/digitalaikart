@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-17",
+  "updated": "2026-09-18",
   "note": "Single source of truth for ALL products on digitalkartai.shop. The blog agent MUST read this file at the start of every run and promote the best-matching product per post. The product agent MUST append new products here when publishing them. Never delete or modify existing entries.",
   "products": [
     {
@@ -173,6 +173,59 @@
         "XAT",
         "management entrance",
         "final year students"
+      ]
+    },
+    {
+      "slug": "festive-seller-playbook-2026",
+      "name": "The Festive Seller Playbook 2026 — Digital Edition",
+      "tagline": "The complete 30-page small-seller playbook for India's festive season — Big Billion Days (8-9 Oct), the Great Indian Festival window, the Navratri-to-Diwali calendar, pricing floors that protect margin, ads, GST 2.0, cash flow and the post-Diwali second wave.",
+      "price": "₹149",
+      "mrp": "₹999",
+      "url": "/products/festive-seller-playbook-2026/",
+      "topics": [
+        "festive season",
+        "festive sales",
+        "Big Billion Days",
+        "Great Indian Festival",
+        "Flipkart",
+        "Amazon India",
+        "Meesho",
+        "ONDC",
+        "online selling",
+        "e-commerce India",
+        "small business",
+        "sellers",
+        "marketplace selling",
+        "pricing strategy",
+        "discount strategy",
+        "online marketplace fees",
+        "Sponsored ads",
+        "ecommerce ads",
+        "GST 2.0",
+        "GST for sellers",
+        "TCS",
+        "cash flow",
+        "working capital",
+        "Diwali sales",
+        "Navratri",
+        "Dhanteras",
+        "quick commerce",
+        "Blinkit",
+        "Zepto",
+        "WhatsApp Business",
+        "Instagram selling",
+        "D2C India",
+        "product listing",
+        "product photography",
+        "FBA",
+        "Flipkart Fulfilment",
+        "Prime badge",
+        "F-Assured",
+        "returns",
+        "Indian sellers",
+        "side business",
+        "home business",
+        "tier 2 ecommerce"
       ]
     }
   ]
