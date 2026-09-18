@@ -18,7 +18,7 @@ jobs:
       - name: Download ebook from release
         run: |
           mkdir -p downloads
-          gh release download ssc-2026-27-season-handbook-v1 --repo shopshphereofficial-dev/digitalaikart --output "downloads/ssc-2026-27-season-handbook.pdf"
+          gh release download ssc-2026-27-season-handbook-v1 --repo shopshphereofficial-dev/digitalaikart --clobber --output "downloads/ssc-2026-27-season-handbook.pdf"
           rm -rf downloads/.ssc-parts
           test "$(stat -c%s downloads/ssc-2026-27-season-handbook.pdf)" = "105656"
           echo "sha256: $(sha256sum downloads/ssc-2026-27-season-handbook.pdf | cut -d' ' -f1)"
