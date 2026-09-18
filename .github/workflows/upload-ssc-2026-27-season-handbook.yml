@@ -1,0 +1,34 @@
+name: Upload SSC 2026-27 Season Handbook to Repo
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  upload-ebook:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Download ebook from release
+        run: |
+          mkdir -p downloads
+          gh release download ssc-2026-27-season-handbook-v1 --repo shopshphereofficial-dev/digitalaikart --output "downloads/ssc-2026-27-season-handbook.pdf"
+          rm -rf downloads/.ssc-parts
+          test "$(stat -c%s downloads/ssc-2026-27-season-handbook.pdf)" = "105656"
+          echo "sha256: $(sha256sum downloads/ssc-2026-27-season-handbook.pdf | cut -d' ' -f1)"
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Commit ebook to repo
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add -A downloads
+          git commit -m "Add SSC 2026-27 Season Handbook PDF to repo"
+          git push
