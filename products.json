@@ -346,6 +346,15 @@
         "admit card",
         "score card"
       ]
-    }
+    },
+  {
+    "slug": "ielts-2026-27-preparation-handbook",
+    "name": "The IELTS 2026-27 Preparation Handbook — Indian Edition",
+    "tagline": "The complete 30-page Indian-edition guide to IELTS — every 2026 fee and booking rule verified from IDP IELTS India, the band scale decoded with real averaging examples, skill-by-skill strategy for Listening, Reading, Writing and Speaking, the One Skill Retake playbook, and the 8-week plan that takes you from diagnostic to test day.",
+    "price": "₹99",
+    "mrp": "₹499",
+    "url": "/products/ielts-2026-27-preparation-handbook/",
+    "topics": ["IELTS", "IELTS 2026", "IELTS India", "IELTS preparation", "IELTS band score", "IELTS fees", "IDP IELTS", "study abroad", "IELTS Listening", "IELTS Reading", "IELTS Writing", "IELTS Speaking", "One Skill Retake", "IELTS booking", "English test", "student visa", "IELTS strategy", "IELTS plan"]
+  }
   ]
 }
