@@ -1,0 +1,31 @@
+name: Upload UPSC 2027 Foundation Planner to Repo
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  upload-ebook:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Download ebook from release
+        run: |
+          mkdir -p downloads
+          gh release download upsc-2027-foundation-planner-v1 --repo shopshphereofficial-dev/digitalaikart --output "downloads/upsc-2027-foundation-planner.pdf"
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Commit ebook to repo
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add downloads/upsc-2027-foundation-planner.pdf
+          git commit -m "Add UPSC 2027 Foundation Planner PDF to repo" || echo "No changes to commit"
+          git push
