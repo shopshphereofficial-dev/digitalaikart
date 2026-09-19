@@ -1,0 +1,56 @@
+name: Publish IELTS product site files
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Insert card, entry and sitemap URL
+        run: |
+          python3 - <<'EOF'
+          # products/index.html: insert card at top of grid
+          html = open('products/index.html').read()
+          card = open('.github/site-updates/ielts-card.html').read().strip()
+          anchor = '<div class="product-grid">'
+          assert html.count(anchor) == 1, 'anchor not found'
+          assert 'ielts-2026-27-preparation-handbook' not in html, 'card already inserted'
+          html = html.replace(anchor, anchor + '\n' + card + '\n')
+          open('products/index.html','w').write(html)
+
+          # products.json: textual append before final "\n  ]\n}"
+          raw = open('products.json').read()
+          entry = open('.github/site-updates/ielts-products-entry.json').read().strip()
+          assert 'ielts-2026-27-preparation-handbook' not in raw, 'entry already present'
+          idx = raw.rfind('\n  ]\n}')
+          assert idx > 0, 'products array close not found'
+          new = raw[:idx] + ',\n  ' + entry.replace('\n', '\n  ') + raw[idx:]
+          import json
+          json.loads(new)  # validate JSON
+          open('products.json','w').write(new)
+
+          # sitemap.xml: insert before </urlset>
+          sm = open('sitemap.xml').read()
+          url_line = open('.github/site-updates/ielts-sitemap-url.txt').read().strip()
+          assert 'ielts-2026-27-preparation-handbook' not in sm, 'sitemap entry already present'
+          assert sm.count('</urlset>') == 1
+          sm = sm.replace('</urlset>', url_line + '\n</urlset>')
+          open('sitemap.xml','w').write(sm)
+          print('All three files updated')
+          EOF
+      - name: Commit and push
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add products/index.html products.json sitemap.xml
+          if git diff --cached --quiet; then
+            echo "No changes"
+          else
+            git commit -m "Publish IELTS 2026-27 Preparation Handbook to catalog"
+            git push
+          fi
