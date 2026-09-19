@@ -1,4 +1,4 @@
-/* Digitalaikart Admin — Part 2: products & blog management */
+/* Digitalaikart Admin — Part 2: products (edit/delete) & blog management */
 (function () {
   'use strict';
   var A = window.__dskAdmin;
@@ -105,62 +105,6 @@
       return A.getF('products/' + slug + '/index.html').then(function (f) { return A.delF('products/' + slug + '/index.html', 'Admin: delete product page (' + slug + ')', f.sha); });
     }).then(function () { A.spin(false); A.toast('Product delete ho gaya 🗑️'); loadProducts(); })
       .catch(function (e) { A.spin(false); A.toast('Delete: ' + e.message); });
-  }
-
-  /* ---- add product ---- */
-  $('btn-add-product').addEventListener('click', function () {
-    var name = $('np-name').value.trim(), tag = $('np-tag').value.trim();
-    var price = $('np-price').value.trim(), mrp = $('np-mrp').value.trim();
-    var feats = $('np-feat').value.split('\n').map(function (s) { return s.trim(); }).filter(Boolean);
-    var rzp = $('np-rzp').value.trim();
-    if (!name || !tag || !price) { A.toast('Naam, tagline aur price zaroori hain'); return; }
-    var slug = A.slugify(name);
-    if (slug.length < 3) { A.toast('Naam se slug nahi ban raha — English naam try karo'); return; }
-    var buy = rzp || 'https://wa.me/919682600301';
-    A.spin(true);
-
-    var off = mrp && parseInt(mrp, 10) > parseInt(price, 10) ? Math.round((1 - price / mrp) * 100) + '% OFF' : 'NEW';
-    var featsCard = feats.slice(0, 5).map(function (f) { return '<li>' + A.esc(f) + '</li>'; }).join('\n');
-    var page = pageTemplate(name, tag, slug, price, mrp, feats, buy, off);
-
-    A.putF('products/' + slug + '/index.html', page, 'Admin: new product page (' + name + ')').then(function () {
-      return A.getF('products/index.html').then(function (f) {
-        var doc = A.parse(f.c), grid = doc.querySelector('.product-grid');
-        if (!grid) throw new Error('products page me .product-grid nahi mila');
-        var c = doc.createElement('div'); c.className = 'card tilt';
-        c.innerHTML =
-          '<div class="card-img"><span class="card-badge">' + A.esc(off) + '</span></div>' +
-          '<div class="card-body"><h3 class="card-title">' + A.esc(name) + '</h3>' +
-          '<p class="card-desc">' + A.esc(tag) + '</p>' +
-          '<ul class="card-features">' + featsCard + '</ul>' +
-          '<div class="price-row"><span class="price">\u20B9' + A.esc(price) + '</span>' + (mrp ? '<span class="price-old">\u20B9' + A.esc(mrp) + '</span>' : '') + '<span class="price-label">one-time</span></div>' +
-          '<a href="/products/' + slug + '/" class="btn btn-gold">View Details &rarr;</a></div>';
-        grid.insertBefore(c, grid.firstChild);
-        return A.putF('products/index.html', A.serialize(doc), 'Admin: add product card (' + name + ')', f.sha);
-      });
-    }).then(function () {
-      return A.getF('products.json').then(function (f) {
-        var j = JSON.parse(f.c);
-        j.products = j.products || [];
-        j.products.push({ slug: slug, name: name, tagline: tag, price: '\u20B9' + price, mrp: '\u20B9' + (mrp || price), url: '/products/' + slug + '/', topics: [name.toLowerCase()].concat(feats.map(function (x) { return x.toLowerCase(); })) });
-        return A.putF('products.json', JSON.stringify(j, null, 2), 'Admin: add to products.json (' + slug + ')', f.sha);
-      });
-    }).then(function () {
-      return A.getF('sitemap.xml').then(function (f) {
-        var x = f.c.replace('</urlset>', '  <url><loc>' + A.SITE + '/products/' + slug + '/</loc><lastmod>' + new Date().toISOString().slice(0, 10) + '</lastmod><priority>0.9</priority></url>\n</urlset>');
-        return A.putF('sitemap.xml', x, 'Admin: add sitemap entry (' + slug + ')', f.sha);
-      });
-    }).then(function () {
-      A.spin(false); A.toast('Naya product live! 🎉');
-      ['np-name', 'np-tag', 'np-price', 'np-mrp', 'np-feat', 'np-rzp'].forEach(function (id) { $(id).value = ''; });
-      loadProducts();
-    }).catch(function (e) { A.spin(false); A.toast(e.message); });
-  });
-
-  function pageTemplate(name, tag, slug, price, mrp, feats, buy, off) {
-    var featsLi = feats.map(function (f) { return '      <li>' + A.esc(f) + '</li>'; }).join('\n');
-    var featsCards = feats.map(function (f) { return '    <div class="feature-card"><p>' + A.esc(f) + '</p></div>'; }).join('\n');
-    return '<!DOCTYPE html>\n<html lang="en">\n<head>\n<meta charset="UTF-8">\n<meta name="viewport" content="width=device-width, initial-scale=1.0">\n<title>' + A.esc(name) + ' | Digitalaikart</title>\n<meta name="description" content="' + A.esc(tag) + '">\n<link rel="canonical" href="' + A.SITE + '/products/' + slug + '/">\n<meta property="og:title" content="' + A.esc(name) + '">\n<meta property="og:description" content="' + A.esc(tag) + '">\n<meta property="og:type" content="website">\n<link rel="stylesheet" href="/assets/style.css">\n</head>\n<body>\n<nav class="nav"><div class="nav-inner"><a href="/" class="nav-logo">Digitalaikart</a><div class="nav-links"><a href="/">Home</a><a href="/products/" class="active">Products</a><a href="/blog/">Blog</a></div></div></nav>\n<section class="product-hero">\n  <div class="product-info">\n    <h1>' + A.esc(name) + '</h1>\n    <p>' + A.esc(tag) + '</p>\n    <ul class="chapter-list">\n' + featsLi + '\n    </ul>\n    <div class="pricing-grid">\n      <div class="pricing-card featured tilt">\n        <span class="pricing-badge">' + A.esc(off) + '</span>\n        <div class="price">\u20B9' + A.esc(price) + '</div>\n        <div class="price-note">' + (mrp ? '<s>\u20B9' + A.esc(mrp) + '</s> ' : '') + 'one-time payment</div>\n        <a href="' + A.esc(buy) + '" class="btn btn-gold">Buy Now</a>\n      </div>\n    </div>\n  </div>\n</section>\n<section class="section">\n  <h2 class="section-title">What\u2019s Inside</h2>\n  <div class="gold-divider"></div>\n  <div class="feature-grid">\n' + featsCards + '\n  </div>\n</section>\n<section class="section">\n  <h2 class="section-title">Order & Support</h2>\n  <div class="gold-divider"></div>\n  <p style="text-align:center;max-width:640px;margin:0 auto;color:#334155">Koi sawaal? WhatsApp karo: <a href="https://wa.me/919682600301">+91 96826 00301</a></p>\n</section>\n<footer><div class="footer-links"><a href="/">Home</a><a href="/products/">Products</a><a href="/blog/">Blog</a><a href="/privacy-policy.html">Privacy Policy</a><a href="/refund-policy.html">Refund Policy</a><a href="/terms.html">Terms & Conditions</a></div><p><strong>Digitalaikart</strong> \u2014 Premium AI Digital Products</p><p>Feedback & Inquiries: <a href="mailto:lonefaisal977@gmail.com">lonefaisal977@gmail.com</a> | WhatsApp: <a href="https://wa.me/919682600301">+91 96826 00301</a></p><p style="margin-top:0.5rem;color:#334155">&copy; 2026 Digitalaikart. All rights reserved.</p></footer>\n<script src="/assets/effects.js"><\/script>\n</body>\n</html>';
   }
 
   /* ================= BLOG ================= */
