@@ -1,0 +1,30 @@
+name: Assemble IELTS PDF
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  assemble:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Assemble PDF from verified parts
+        run: |
+          cat .github/pdf-parts/ielts-2026-27-preparation-handbook.part*.txt | tr -d '\n' | base64 -d > ielts-2026-27-preparation-handbook.pdf
+          test "$(md5sum ielts-2026-27-preparation-handbook.pdf | cut -d' ' -f1)" = "26d40d7c37e4749f6963222c9473daa3" || (echo 'MD5 mismatch'; exit 1)
+          mkdir -p downloads
+          mv ielts-2026-27-preparation-handbook.pdf downloads/
+      - name: Commit and push
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add downloads/ielts-2026-27-preparation-handbook.pdf
+          if git diff --cached --quiet; then
+            echo "No changes"
+          else
+            git commit -m "Rebuild IELTS handbook PDF from verified parts"
+            git push
+          fi
