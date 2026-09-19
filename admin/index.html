@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="robots" content="noindex, nofollow">
+<title>Digitalaikart Admin</title>
+<link rel="manifest" href="/admin/manifest.json">
+<link rel="icon" href="/admin/icon.svg">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#0a1628;color:#eef4fb;min-height:100vh}
+.wrap{max-width:640px;margin:0 auto;padding:1.1rem 1rem 5.5rem}
+h1{font-size:1.35rem;margin-bottom:.3rem}
+h1 .gold{color:#f5c542}
+.sub{color:#7c8aa0;font-size:.85rem;margin-bottom:1.4rem}
+.card{background:#0d1f38;border:1px solid rgba(245,197,66,.22);border-radius:14px;padding:1.1rem;margin-bottom:1rem}
+label{display:block;font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;color:#8fa0b8;font-weight:700;margin:0 0 .3rem}
+input,textarea{width:100%;background:#0a1628;border:1px solid rgba(255,255,255,.14);border-radius:10px;padding:.7rem .85rem;color:#eef4fb;font-size:.95rem;font-family:inherit;outline:none;margin-bottom:.9rem}
+input:focus,textarea:focus{border-color:#f5c542}
+textarea{resize:vertical;min-height:64px}
+.btn{display:inline-block;border:none;cursor:pointer;font-family:inherit;border-radius:10px;padding:.75rem 1.2rem;font-size:.95rem;font-weight:700}
+.btn-gold{background:linear-gradient(135deg,#f5c542,#e8a82c);color:#0a1628;width:100%}
+.btn-ghost{background:none;border:1px solid rgba(255,255,255,.2);color:#8fa0b8;width:100%;margin-top:.6rem}
+.btn-ghost:hover{color:#fff}
+.btn-sm{padding:.45rem .9rem;font-size:.8rem;width:auto}
+.btn-danger{background:none;border:1px solid rgba(255,90,90,.4);color:#ff7b7b;width:100%;margin-top:.5rem}
+.ok{color:#4ade80}.bad{color:#ff7b7b}
+.pill{display:inline-block;font-size:.62rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:.14rem .5rem;border-radius:99px;background:rgba(245,197,66,.16);color:#f5c542}
+.big-pin{display:flex;gap:.6rem;justify-content:center;margin:1.4rem 0}
+.big-pin input{width:52px;height:58px;text-align:center;font-size:1.5rem;margin:0}
+.tabs{position:fixed;bottom:0;left:0;right:0;background:#0d1f38;border-top:1px solid rgba(245,197,66,.22);display:flex;z-index:50;max-width:640px;margin:0 auto}
+.tabs button{flex:1;background:none;border:none;color:#7c8aa0;padding:.8rem 0 .7rem;font-size:.68rem;font-family:inherit;cursor:pointer;display:flex;flex-direction:column;align-items:center;gap:.2rem}
+.tabs button .ti{font-size:1.25rem}
+.tabs button.on{color:#f5c542}
+.row{display:flex;justify-content:space-between;align-items:center;gap:.6rem}
+.row h3{font-size:1rem}
+.muted{color:#7c8aa0;font-size:.78rem}
+.views{color:#f5c542;font-size:.8rem;font-weight:600}
+.list-item{background:#0d1f38;border:1px solid rgba(255,255,255,.08);border-radius:12px;padding:.85rem .95rem;margin-bottom:.7rem;display:flex;justify-content:space-between;align-items:center;gap:.5rem}
+.list-item .t{font-size:.9rem;font-weight:600;line-height:1.3}
+.list-item .d{color:#7c8aa0;font-size:.72rem;margin-top:.15rem}
+.del{background:none;border:none;color:#ff7b7b;cursor:pointer;font-size:1rem;padding:.3rem .5rem}
+.toast{position:fixed;bottom:5.2rem;left:50%;transform:translateX(-50%);background:#0d1f38;border:1px solid #f5c542;color:#eef4fb;padding:.7rem 1.2rem;border-radius:99px;font-size:.85rem;z-index:99;display:none;max-width:90%;text-align:center}
+.spinner{position:fixed;inset:0;background:rgba(6,12,24,.75);z-index:98;display:none;align-items:center;justify-content:center;flex-direction:column;gap:.8rem}
+.spinner .dot{width:38px;height:38px;border:3px solid rgba(245,197,66,.25);border-top-color:#f5c542;border-radius:50%;animation:spin .8s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.notes{font-size:.72rem;color:#5d6c84;line-height:1.5;margin-top:.6rem}
+.hide{display:none!important}
+</style>
+</head>
+<body>
+
+<!-- SETUP SCREEN -->
+<div id="scr-setup" class="wrap hide">
+  <h1>Admin <span class="gold">Setup</span></h1>
+  <p class="sub">Sirf pehli baar — 2 minute ka kaam</p>
+  <div class="card">
+    <label>1. GitHub Token paste karo</label>
+    <textarea id="in-token" rows="3" placeholder="github_pat_... ya ghp_..."></textarea>
+    <label>2. Apna PIN banao (4+ digit)</label>
+    <input id="in-pin1" type="password" inputmode="numeric" placeholder="PIN">
+    <label>3. PIN dobara likho</label>
+    <input id="in-pin2" type="password" inputmode="numeric" placeholder="PIN confirm">
+    <button class="btn btn-gold" id="btn-setup">Save & Unlock</button>
+    <p class="notes">Token sirf is phone pe save hota hai. Token banane ka tarika: github.com &rarr; Settings &rarr; Developer settings &rarr; Personal access tokens &rarr; Fine-grained &rarr; Repository: digitalaikart &rarr; Permission: Contents = Read and write.</p>
+  </div>
+</div>
+
+<!-- LOCK SCREEN -->
+<div id="scr-lock" class="wrap hide">
+  <h1>Digitalaikart <span class="gold">Admin</span></h1>
+  <p class="sub">PIN daalo app kholne ke liye</p>
+  <div class="big-pin" id="pin-dots"></div>
+  <div style="max-width:270px;margin:0 auto">
+    <input id="in-pin" type="password" inputmode="numeric" autocomplete="off" placeholder="• • • •" style="text-align:center;letter-spacing:.6em">
+  </div>
+  <button class="btn btn-ghost" id="btn-logout-full" style="max-width:270px;display:block;margin:.8rem auto 0">Forget everything (sab data mitao)</button>
+</div>
+
+<!-- MAIN APP -->
+<div id="scr-app" class="wrap hide">
+  <div class="row" style="margin-bottom:1rem">
+    <div><h1 style="margin:0">Digitalaikart <span class="gold">Admin</span></h1><span class="muted" id="repo-label">digitalaikart &middot; main</span></div>
+    <span class="pill" id="live-dot">LIVE</span>
+  </div>
+
+  <!-- PRODUCTS VIEW -->
+  <div id="view-products">
+    <p class="sub">Products &mdash; price, naam, description yahin badlo. Change turant site pe jata hai.</p>
+    <button class="btn btn-gold" id="btn-load-products" style="margin-bottom:1rem">Load / Refresh Products</button>
+    <div id="prod-list"></div>
+    <div class="card">
+      <h3 style="margin-bottom:.7rem">+ Naya Product Jodo</h3>
+      <label>Naam</label><input id="np-name" placeholder="Jaise: AI Resume Master Kit">
+      <label>Tagline (chhota description)</label><textarea id="np-tag" placeholder="Kya hai ye product — 1-2 line"></textarea>
+      <label>Price (₹)</label><input id="np-price" type="number" placeholder="149">
+      <label>Purana Price / MRP (₹)</label><input id="np-mrp" type="number" placeholder="999">
+      <label>Features (har line ek)</label><textarea id="np-feat" placeholder="50 prompts
+PDF download
+Lifetime access"></textarea>
+      <label>Razorpay link (optional)</label><input id="np-rzp" placeholder="https://rzp.io/rzp/...">
+      <button class="btn btn-gold" id="btn-add-product">Product Publish Karo</button>
+      <p class="notes">Product page, products page card, products.json aur sitemap &mdash; sab automatic ban jayenge.</p>
+    </div>
+  </div>
+
+  <!-- BLOG VIEW -->
+  <div id="view-blog" class="hide">
+    <p class="sub">Blog posts &mdash; views dekho, delete karo.</p>
+    <button class="btn btn-gold" id="btn-load-blog" style="margin-bottom:1rem">Load / Refresh Blog</button>
+    <div id="blog-list"></div>
+  </div>
+
+  <!-- SETTINGS VIEW -->
+  <div id="view-settings" class="hide">
+    <p class="sub">Settings & security</p>
+    <div class="card">
+      <h3>Token Status</h3>
+      <p class="muted" id="tok-status" style="margin:.4rem 0 1rem"></p>
+      <button class="btn btn-ghost" id="btn-lock">Lock App (PIN laga do)</button>
+      <button class="btn btn-ghost" id="btn-retoken">Naya Token Daalo</button>
+      <button class="btn btn-danger" id="btn-wipe">Forget Everything</button>
+    </div>
+    <div class="card">
+      <h3>Info</h3>
+      <p class="muted">Har change GitHub pe commit hota hai &mdash; purani state hamesha wapas laayi ja sakti hai. Ye app bina token ke khaali darwaza hai.</p>
+    </div>
+  </div>
+</div>
+
+<!-- BOTTOM TABS -->
+<div class="tabs hide" id="tabs">
+  <button data-v="products" class="on"><span class="ti">📦</span>Products</button>
+  <button data-v="blog"><span class="ti">📝</span>Blog</button>
+  <button data-v="settings"><span class="ti">⚙️</span>Settings</button>
+</div>
+
+<div class="toast" id="toast"></div>
+<div class="spinner" id="spin"><div class="dot"></div><span class="muted">GitHub se baat ho rahi hai&hellip;</span></div>
+
+<script src="/admin/app.js"></script>
+</body>
+</html>
