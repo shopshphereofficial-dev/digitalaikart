@@ -74,14 +74,25 @@
   });
 
   /* ---- lock/unlock ---- */
-  $('in-pin').addEventListener('input', function () {
-    var v = this.value;
-    renderDots(v.length);
-    if (v.length < 4) return;
+  function tryPin() {
+    var v = $('in-pin').value;
+    if (!v || v.length < 4) return;
     sha256(v).then(function (h) {
       if (h === localStorage.getItem(LS_PIN)) { sessionStorage.setItem(SS_OK, '1'); $('in-pin').value = ''; renderDots(0); boot(); }
-      else { $('in-pin').value = ''; renderDots(0); toast('Galat PIN 🚫'); }
+      else { $('in-pin').value = ''; renderDots(0); toast('Galat ya adhura PIN 🚫 — dobara daalo'); }
     });
+  }
+  var pinTimer = null;
+  $('in-pin').addEventListener('input', function () {
+    var v = this.value.replace(/\D/g, '');
+    if (v !== this.value) this.value = v;
+    renderDots(this.value.length);
+    if (pinTimer) clearTimeout(pinTimer);
+    if (this.value.length < 4) return;
+    pinTimer = setTimeout(tryPin, 700);
+  });
+  $('in-pin').addEventListener('keydown', function (e) {
+    if (e.key === 'Enter') { if (pinTimer) clearTimeout(pinTimer); tryPin(); }
   });
   function renderDots(n) {
     var el = $('pin-dots'); el.innerHTML = '';
