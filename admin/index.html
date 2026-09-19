@@ -18,23 +18,21 @@ h1 .gold{color:#f5c542}
 label{display:block;font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;color:#8fa0b8;font-weight:700;margin:0 0 .3rem}
 input,textarea{width:100%;background:#0a1628;border:1px solid rgba(255,255,255,.14);border-radius:10px;padding:.7rem .85rem;color:#eef4fb;font-size:.95rem;font-family:inherit;outline:none;margin-bottom:.9rem}
 input:focus,textarea:focus{border-color:#f5c542}
+input[type=file]{color:#8fa0b8}
+input[type=file]::file-selector-button{background:rgba(245,197,66,.16);border:1px solid rgba(245,197,66,.35);color:#f5c542;border-radius:8px;padding:.45rem .85rem;margin-right:.7rem;font-weight:700;cursor:pointer;font-family:inherit}
 textarea{resize:vertical;min-height:64px}
 .btn{display:inline-block;border:none;cursor:pointer;font-family:inherit;border-radius:10px;padding:.75rem 1.2rem;font-size:.95rem;font-weight:700}
 .btn-gold{background:linear-gradient(135deg,#f5c542,#e8a82c);color:#0a1628;width:100%}
 .btn-ghost{background:none;border:1px solid rgba(255,255,255,.2);color:#8fa0b8;width:100%;margin-top:.6rem}
 .btn-ghost:hover{color:#fff}
-.btn-sm{padding:.45rem .9rem;font-size:.8rem;width:auto}
 .btn-danger{background:none;border:1px solid rgba(255,90,90,.4);color:#ff7b7b;width:100%;margin-top:.5rem}
-.ok{color:#4ade80}.bad{color:#ff7b7b}
 .pill{display:inline-block;font-size:.62rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:.14rem .5rem;border-radius:99px;background:rgba(245,197,66,.16);color:#f5c542}
 .big-pin{display:flex;gap:.6rem;justify-content:center;margin:1.4rem 0}
-.big-pin input{width:52px;height:58px;text-align:center;font-size:1.5rem;margin:0}
 .tabs{position:fixed;bottom:0;left:0;right:0;background:#0d1f38;border-top:1px solid rgba(245,197,66,.22);display:flex;z-index:50;max-width:640px;margin:0 auto}
 .tabs button{flex:1;background:none;border:none;color:#7c8aa0;padding:.8rem 0 .7rem;font-size:.68rem;font-family:inherit;cursor:pointer;display:flex;flex-direction:column;align-items:center;gap:.2rem}
 .tabs button .ti{font-size:1.25rem}
 .tabs button.on{color:#f5c542}
 .row{display:flex;justify-content:space-between;align-items:center;gap:.6rem}
-.row h3{font-size:1rem}
 .muted{color:#7c8aa0;font-size:.78rem}
 .views{color:#f5c542;font-size:.8rem;font-weight:600}
 .list-item{background:#0d1f38;border:1px solid rgba(255,255,255,.08);border-radius:12px;padding:.85rem .95rem;margin-bottom:.7rem;display:flex;justify-content:space-between;align-items:center;gap:.5rem}
@@ -100,8 +98,11 @@ textarea{resize:vertical;min-height:64px}
 PDF download
 Lifetime access"></textarea>
       <label>Razorpay link (optional)</label><input id="np-rzp" placeholder="https://rzp.io/rzp/...">
+      <label>Photo (optional &mdash; phone se choose karo)</label><input id="np-img" type="file" accept="image/*">
+      <label>Video &mdash; YouTube link (optional)</label><input id="np-yt" placeholder="https://youtube.com/watch?v=...">
+      <label>PDF &mdash; digital product file (optional, max 20MB)</label><input id="np-pdf" type="file" accept="application/pdf">
       <button class="btn btn-gold" id="btn-add-product">Product Publish Karo</button>
-      <p class="notes">Product page, products page card, products.json aur sitemap &mdash; sab automatic ban jayenge.</p>
+      <p class="notes">Photo automatic compress hoti hai. Product page + card + products.json + sitemap sab automatic ban jate hain. PDF daali to customer ko thank-you page se automatic download milegi.</p>
     </div>
   </div>
 
@@ -141,5 +142,6 @@ Lifetime access"></textarea>
 
 <script src="/admin/app.js"></script>
 <script src="/admin/app2.js"></script>
+<script src="/admin/app3.js"></script>
 </body>
 </html>
