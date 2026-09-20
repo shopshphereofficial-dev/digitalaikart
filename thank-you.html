@@ -42,14 +42,14 @@
       <label for="s-addr">Full Address (house no, street, area) *</label>
       <textarea id="s-addr" required></textarea>
       <label for="s-city">City *</label>
-      <input type="text" id="s-city" required>
+        <input type="text" id="s-city" required>
       <label for="s-state">State *</label>
       <input type="text" id="s-state" required>
       <label for="s-pin">PIN Code *</label>
       <input type="text" id="s-pin" pattern="[0-9]{6}" title="6-digit PIN" required>
       <label for="s-ref">Razorpay Payment Reference (optional)</label>
       <input type="text" id="s-ref" placeholder="e.g. pay_Xy12AbCd">
-      <button type="submit" class="btn btn-wa">Send Details on WhatsApp →</button>
+      <button type="submit" class="btn btn-wa">Send Details on WhatsApp ↓</button>
       <p class="alt-note">Prefer email? Send the same details to <a href="mailto:lonefaisal977@gmail.com">lonefaisal977@gmail.com</a></p>
     </form>
   </div>
@@ -83,6 +83,13 @@ function sendShipping(){
   var p=null;
   try{p=new URLSearchParams(window.location.search).get('product')}catch(e){}
   if(!p){return}
+  if(p==='ai'){
+    try{localStorage.setItem('dskAI_pro','1');localStorage.removeItem('dskAI_used')}catch(e){}
+    var aiH=document.querySelector('.thankyou h1');if(aiH){aiH.textContent='AI Pro Unlocked! \u001F389'}
+    var aiS=document.querySelector('.thankyou .sub');if(aiS){aiS.innerHTML='Your Digitalaikart AI Pro plan is now active. Unlimited chatting for 1 month!'}
+    var aiD=document.querySelector('.download-btn');if(aiD){aiD.textContent='\u2728 Open Digitalaikart AI';aiD.setAttribute('href','/ai/');aiD.removeAttribute('download')}
+    return
+  }
   var combo=(p==='combo'||/-combo$/.test(p));
   var slug=p.replace(/-combo$/,'');
   if(slug&&slug!=='combo'&&slug!=='gpt-6-astra-guide'){
@@ -93,6 +100,6 @@ function sendShipping(){
 })();
 </script>
 <script src="/assets/effects.js"></script>
-<script>function rN(){document.querySelectorAll('img').forEach(function(i){if(i.src&&i.src.indexOf('netlify')>-1){i.parentElement&&i.parentElement.remove()}});document.querySelectorAll('a').forEach(function(a){if(a.href&&a.href.indexOf('netlify.com')>-1&&a.querySelector('img')){a.remove()}});document.querySelectorAll('[id*="netlify"],[class*="netlify"]').forEach(function(e){e.remove()})}document.addEventListener('DOMContentLoaded',rN);setTimeout(rN,500);setTimeout(rN,2000);setTimeout(rN,5000)</script>
+<script>function rN(){document.querySelectorAll('img').forEach(function(i){if(i.src&&i.src.indexOf('netlify')>-1){i.parentElement&&i.parentElement.remove()}});document.querySelectorAll('a').forEach(function(a){if(a.href&&a.href.indexOf('netlify.com')>-1&&a.querySelector('img')){a.remove()}});document.querySelectorAll('[id*="netlify"],[class*="netlify"]').forEach(function(e){e.remove()}});document.addEventListener('DOMContentLoaded',rN);setTimeout(rN,500);setTimeout(rN,2000);setTimeout(rN,5000)}</script>
 </body>
 </html>
