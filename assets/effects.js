@@ -217,6 +217,14 @@
     nl.appendChild(a);
   })();
 
+  /* ---------- 0e. SITE HELP BOT (all pages except /ai) ---------- */
+  (function () {
+    if (location.pathname.indexOf('/ai') === 0) return;
+    var s = document.createElement('script');
+    s.src = '/assets/helpbot.js?v=1';
+    document.head.appendChild(s);
+  })();
+
   if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
 
   /* ---------- 1. REVEAL ON SCROLL ---------- */
