@@ -1,0 +1,63 @@
+name: Assemble JEE PDF
+on:
+  push:
+    paths:
+      - '.github/pdf-parts/jee-main-2027-starter-handbook.part4.txt'
+
+permissions:
+  contents: write
+
+jobs:
+  assemble:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Assemble PDF from verified parts
+        run: |
+          cat .github/pdf-parts/jee-main-2027-starter-handbook.part*.txt | tr -d '\n' | base64 -d > jee-main-2027-starter-handbook.pdf
+          test "$(md5sum jee-main-2027-starter-handbook.pdf | cut -d' ' -f1)" = "321ad7ad6176704450bc207a3fc513cd" || (echo 'MD5 mismatch'; exit 1)
+          mkdir -p downloads
+          mv jee-main-2027-starter-handbook.pdf downloads/
+      - name: Insert card, entry and sitemap URL
+        run: |
+          python3 - <<'EOF'
+          # products/index.html: insert card at top of grid
+          html = open('products/index.html').read()
+          card = open('.github/site-updates/jee-card.html').read().strip()
+          anchor = '<div class="product-grid">'
+          assert html.count(anchor) == 1, 'anchor not found'
+          assert 'jee-main-2027-starter-handbook' not in html, 'card already inserted'
+          html = html.replace(anchor, anchor + '\n' + card + '\n')
+          open('products/index.html','w').write(html)
+
+          # products.json: textual append before final "\n  ]\n}"
+          raw = open('products.json').read()
+          entry = open('.github/site-updates/jee-products-entry.json').read().strip()
+          assert 'jee-main-2027-starter-handbook' not in raw, 'entry already present'
+          idx = raw.rfind('\n  ]\n}')
+          assert idx > 0, 'products array close not found'
+          new = raw[:idx] + ',\n  ' + entry.replace('\n', '\n  ') + raw[idx:]
+          import json
+          json.loads(new)  # validate JSON
+          open('products.json','w').write(new)
+
+          # sitemap.xml: insert before </urlset>
+          sm = open('sitemap.xml').read()
+          url_line = open('.github/site-updates/jee-sitemap-url.txt').read().strip()
+          assert 'jee-main-2027-starter-handbook' not in sm, 'sitemap entry already present'
+          assert sm.count('</urlset>') == 1
+          sm = sm.replace('</urlset>', url_line + '\n</urlset>')
+          open('sitemap.xml','w').write(sm)
+          print('All three files updated')
+          EOF
+      - name: Commit and push
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add downloads/jee-main-2027-starter-handbook.pdf products/index.html products.json sitemap.xml
+          if git diff --cached --quiet; then
+            echo "No changes"
+          else
+            git commit -m "Publish JEE Main 2027 Starter Handbook (PDF + catalog)"
+            git push
+          fi
