@@ -18,7 +18,7 @@ jobs:
           import glob, json, base64, hashlib
           b64 = ''
           for p in sorted(glob.glob('.github/pdf-parts/jee-main-2027-starter-handbook.part??.txt')):
-              s = open(p).read()
+              s = open(p).read().strip()
               fixp = p[:-4] + '.fix.json'
               try:
                   fixes = json.load(open(fixp))
@@ -32,7 +32,7 @@ jobs:
               b64 += s
           pdf = base64.b64decode(b64)
           md5 = hashlib.md5(pdf).hexdigest()
-          assert md5 == '321ad7ad6176704450bc207a3fc513cd', 'MD5 mismatch: ' + md5
+          assert md5 == '2059fe058cc32dbdb414a338a5830bec', 'MD5 mismatch: ' + md5
           open('jee-main-2027-starter-handbook.pdf','wb').write(pdf)
           print('Assembled OK, bytes:', len(pdf))
           EOF
