@@ -1,0 +1,37 @@
+name: Publish WhatsApp Business AI Playbook Site Files
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  upload-site-files:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Download site files from release
+        run: |
+          mkdir -p tmp-site
+          gh release download whatsapp-business-ai-playbook-site-v1 --repo shopshphereofficial-dev/digitalaikart --dir tmp-site
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Place site files
+        run: |
+          cp tmp-site/products-index.html products/index.html
+          mkdir -p products/whatsapp-business-ai-playbook
+          cp tmp-site/whatsapp-business-ai-playbook-product-page.html products/whatsapp-business-ai-playbook/index.html
+
+      - name: Commit site files to repo
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add products/index.html products/whatsapp-business-ai-playbook/index.html
+          git commit -m "Publish WhatsApp Business AI Playbook site files" || echo "No changes to commit"
+          git push
