@@ -355,6 +355,46 @@
     "mrp": "₹499",
     "url": "/products/ielts-2026-27-preparation-handbook/",
     "topics": ["IELTS", "IELTS 2026", "IELTS India", "IELTS preparation", "IELTS band score", "IELTS fees", "IDP IELTS", "study abroad", "IELTS Listening", "IELTS Reading", "IELTS Writing", "IELTS Speaking", "One Skill Retake", "IELTS booking", "English test", "student visa", "IELTS strategy", "IELTS plan"]
+  },
+  {
+      "slug": "jee-main-2027-starter-handbook",
+      "name": "The JEE Main 2027 Starter Handbook — Digital Edition",
+      "tagline": "The complete 34-page starter kit for JEE Main 2027 Session 1 on 22-30 January 2027 — NTA's 16 September calendar decoded, the October registration walkthrough with fees and documents, percentile and normalisation explained with 2026 data, all 53 official syllabus units mapped, PCM playbooks, the 16-week sprint plan, and the JoSAA-CSAB counselling roadmap.",
+      "price": "₹99",
+      "mrp": "₹499",
+      "url": "/products/jee-main-2027-starter-handbook/",
+      "topics": [
+          "JEE Main 2027",
+          "JEE Main",
+          "JEE",
+          "JEE Mains",
+          "NTA",
+          "engineering entrance",
+          "B.Tech",
+          "B.E.",
+          "NIT",
+          "IIIT",
+          "GFTI",
+          "IIT",
+          "JEE Advanced",
+          "percentile",
+          "normalisation",
+          "mock tests",
+          "Class 12",
+          "droppers",
+          "repeaters",
+          "JoSAA",
+          "CSAB",
+          "counselling",
+          "registration",
+          "study plan",
+          "Physics",
+          "Chemistry",
+          "Mathematics",
+          "exam calendar",
+          "January session",
+          "India"
+      ]
   }
   ]
 }
