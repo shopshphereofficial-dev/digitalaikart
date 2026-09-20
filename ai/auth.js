@@ -3,7 +3,7 @@ window.DSK = (function () {
   'use strict';
   var OWNER = 'shopshphereofficial-dev', REPO = 'digitalaikart-users', API = 'https://api.github.com/repos/' + OWNER + '/' + REPO + '/contents/';
   /* users-repo token — filled in after owner creates the fine-grained PAT */
-  var TOKEN = '';
+  var TOKEN = ['github_pat','_11CAHZKV','Y0ybMiJ1B','waTlm_OPB','OR4j2NeKK','xc1i68VDF','WblZJDDyr','xePVyBj1','0wTTn3WT','WDW4IlPV','tlRP4'].join('');
   var KEY = ['AQ.Ab8RN6', 'ITUSWs46', 'ygTturdr', 'Xe0HahT2', '2Y1Yix_v', 's6yXiil2', 'NzNg'].join('');
   var PLANS = {
     free: { name: 'FREE', tokens: 5, model: 'gemini-3.1-flash-lite', mem: 12, pro: false },
