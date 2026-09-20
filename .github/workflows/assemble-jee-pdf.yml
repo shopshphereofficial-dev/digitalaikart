@@ -21,12 +21,24 @@ jobs:
               s = open(p).read().strip()
               fixp = p[:-4] + '.fix.json'
               try:
-                  fixes = json.load(open(fixp))
+                  fix = json.load(open(fixp))
               except FileNotFoundError:
-                  fixes = {}
-              if fixes:
+                  fix = None
+              if fix and 'ops' in fix:
+                  parsed = []
+                  for o in fix['ops']:
+                      kind, a, b = o.split(':', 2)
+                      parsed.append((int(a), kind, b))
+                  for pos, kind, b in sorted(parsed, key=lambda x: -x[0]):
+                      if kind == 'ins':
+                          s = s[:pos] + b + s[pos:]
+                      elif kind == 'del':
+                          s = s[:pos] + s[pos+int(b):]
+                      else:
+                          raise ValueError('bad op: ' + o)
+              elif fix:
                   lst = list(s)
-                  for pos, ch in fixes.items():
+                  for pos, ch in fix.items():
                       lst[int(pos)] = ch
                   s = ''.join(lst)
               b64 += s
