@@ -205,6 +205,18 @@
     }
   })();
 
+
+  /* ---------- 0d. NAV: AI CHAT LINK (all pages) ---------- */
+  (function () {
+    var nl = document.querySelector('.nav-links');
+    if (!nl || nl.querySelector('a[href="/ai/"]')) return;
+    var a = document.createElement('a');
+    a.href = '/ai/';
+    a.textContent = '\u2728 AI';
+    a.style.cssText = 'color:#f5c542;font-weight:700';
+    nl.appendChild(a);
+  })();
+
   if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
 
   /* ---------- 1. REVEAL ON SCROLL ---------- */
