@@ -2,7 +2,7 @@ name: Assemble JEE PDF
 on:
   push:
     paths:
-      - '.github/pdf-parts/jee-main-2027-starter-handbook.part4.txt'
+      - '.github/pdf-parts/jee-main-2027-starter-handbook.part12.txt'
 
 permissions:
   contents: write
