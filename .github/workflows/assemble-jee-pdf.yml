@@ -2,7 +2,7 @@ name: Assemble JEE PDF
 on:
   push:
     paths:
-      - '.github/pdf-parts/jee-main-2027-starter-handbook.part12.txt'
+      - '.github/pdf-parts/jee-main-2027-starter-handbook.READY'
 
 permissions:
   contents: write
@@ -14,8 +14,28 @@ jobs:
       - uses: actions/checkout@v4
       - name: Assemble PDF from verified parts
         run: |
-          cat .github/pdf-parts/jee-main-2027-starter-handbook.part*.txt | tr -d '\n' | base64 -d > jee-main-2027-starter-handbook.pdf
-          test "$(md5sum jee-main-2027-starter-handbook.pdf | cut -d' ' -f1)" = "321ad7ad6176704450bc207a3fc513cd" || (echo 'MD5 mismatch'; exit 1)
+          python3 - <<'EOF'
+          import glob, json, base64, hashlib
+          b64 = ''
+          for p in sorted(glob.glob('.github/pdf-parts/jee-main-2027-starter-handbook.part??.txt')):
+              s = open(p).read()
+              fixp = p[:-4] + '.fix.json'
+              try:
+                  fixes = json.load(open(fixp))
+              except FileNotFoundError:
+                  fixes = {}
+              if fixes:
+                  lst = list(s)
+                  for pos, ch in fixes.items():
+                      lst[int(pos)] = ch
+                  s = ''.join(lst)
+              b64 += s
+          pdf = base64.b64decode(b64)
+          md5 = hashlib.md5(pdf).hexdigest()
+          assert md5 == '321ad7ad6176704450bc207a3fc513cd', 'MD5 mismatch: ' + md5
+          open('jee-main-2027-starter-handbook.pdf','wb').write(pdf)
+          print('Assembled OK, bytes:', len(pdf))
+          EOF
           mkdir -p downloads
           mv jee-main-2027-starter-handbook.pdf downloads/
       - name: Insert card, entry and sitemap URL
