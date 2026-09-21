@@ -1,0 +1,343 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""Build the NEET 2027 Starter Handbook PDF (Digitalaikart)."""
+import os
+from reportlab.lib.pagesizes import A4
+from reportlab.lib.units import inch, mm
+from reportlab.lib import colors
+from reportlab.lib.styles import ParagraphStyle, getSampleStyleSheet
+from reportlab.lib.enums import TA_CENTER, TA_LEFT, TA_JUSTIFY
+from reportlab.platypus import (BaseDocTemplate, PageTemplate, Frame, Paragraph,
+                                Spacer, Table, TableStyle, PageBreak,
+                                ListFlowable, ListItem, KeepTogether,
+                                NextPageTemplate, CondPageBreak)
+
+# ---------------------------------------------------------------- palette
+NAVY = colors.HexColor("#0a1628")
+NAVY2 = colors.HexColor("#132743")
+GOLD = colors.HexColor("#c9a227")
+GOLD_D = colors.HexColor("#9a7b1c")
+CREAM = colors.HexColor("#F6F1E3")
+CREAM2 = colors.HexColor("#EFE7D2")
+INK = colors.HexColor("#1b1b1b")
+GREY = colors.HexColor("#5a6472")
+LINE = colors.HexColor("#d8d2c2")
+WHITE = colors.white
+
+PAGE_W, PAGE_H = A4
+MARGIN = 0.85 * inch
+DOC_W = PAGE_W - 2 * MARGIN
+
+styles = getSampleStyleSheet()
+
+body = ParagraphStyle("body", parent=styles["Normal"], fontName="Helvetica",
+                      fontSize=10.5, leading=14.5, textColor=INK,
+                      spaceAfter=7, alignment=TA_JUSTIFY)
+lead = ParagraphStyle("lead", parent=body, fontSize=11, leading=16,
+                      textColor=NAVY2, spaceAfter=9)
+h1 = ParagraphStyle("h1", parent=styles["Heading1"], fontName="Helvetica-Bold",
+                    fontSize=17, leading=21, textColor=NAVY,
+                    spaceBefore=16, spaceAfter=4, keepWithNext=1)
+h2 = ParagraphStyle("h2", parent=styles["Heading2"], fontName="Helvetica-Bold",
+                    fontSize=12.5, leading=16, textColor=GOLD_D,
+                    spaceBefore=11, spaceAfter=5, keepWithNext=1)
+kicker = ParagraphStyle("kicker", parent=body, fontName="Helvetica-Bold",
+                       fontSize=8.5, leading=11, textColor=GOLD_D,
+                       spaceAfter=2, keepWithNext=1)
+note = ParagraphStyle("note", parent=body, fontSize=9.5, leading=13,
+                      textColor=GREY, leftIndent=10, rightIndent=10)
+cell = ParagraphStyle("cell", parent=body, fontSize=9, leading=11.5,
+                      spaceAfter=0, alignment=TA_LEFT)
+cellc = ParagraphStyle("cellc", parent=cell, alignment=TA_CENTER)
+headc = ParagraphStyle("headc", parent=cell, fontName="Helvetica-Bold",
+                      textColor=colors.white, alignment=TA_LEFT)
+quote = ParagraphStyle("quote", parent=body, fontName="Helvetica-Oblique",
+                      fontSize=11, leading=15, textColor=NAVY2, leftIndent=16,
+                      rightIndent=16, alignment=TA_CENTER, spaceBefore=6,
+                      spaceAfter=8)
+
+def P(text, style=body):
+    return Paragraph(text, style)
+
+def bullets(items, style=body):
+    return ListFlowable([ListItem(Paragraph(t, style)) for t in items],
+                         bulletType="bullet", start="circle",
+                         leftIndent=14)
+
+def numbered(items, style=body):
+    return ListFlowable([ListItem(Paragraph(t, style)) for t in items],
+                         bulletType="1", leftIndent=16)
+
+def gold_rule():
+    t = Table([[""]], colWidths=[DOC_W], rowHeights=[2.2])
+    t.setStyle(TableStyle([("BACKGROUND", (0, 0), (-1, -1), GOLD)]))
+    return t
+
+def callout(title, text):
+    """Gold-edged navy callout box."""
+    inner = [P("<b>%s</b>" % title,
+               ParagraphStyle("cot", parent=body, fontName="Helvetica-Bold",
+                              textColor=GOLD, fontSize=10, leading=13,
+                              spaceAfter=3)),
+             P(text, ParagraphStyle("cob", parent=body, fontSize=9.5,
+                                    leading=13, textColor=colors.HexColor("#e8e4d8"),
+                                    spaceAfter=0))]
+    t = Table([[inner]], colWidths=[DOC_W])
+    t.setStyle(TableStyle([
+        ("BACKGROUND", (0, 0), (-1, -1), NAVY),
+        ("LINEBEFORE", (0, 0), (0, -1), 3, GOLD),
+        ("TOPPADDING", (0, 0), (-1, -1), 9),
+        ("BOTTOMPADDING", (0, 0), (-1, -1), 9),
+        ("LEFTPADDING", (0, 0), (-1, -1), 12),
+        ("RIGHTPADDING", (0, 0), (-1, -1), 12)]))
+    return t
+
+def mk_table(header, rows, fracs, align_first_left=True):
+    data = [[Paragraph(h, headc) for h in header]]
+    for r in rows:
+        row = []
+        for j, c in enumerate(r):
+            row.append(Paragraph(c, cell if (j == 0 or align_first_left) else cellc))
+        data.append(row)
+    t = Table(data, colWidths=[f * DOC_W for f in fracs], repeatRows=1)
+    st = [("BACKGROUND", (0, 0), (-1, 0), NAVY),
+          ("TEXTCOLOR", (0, 0), (-1, 0), colors.white),
+          ("VALIGN", (0, 0), (-1, -1), "TOP"),
+          ("GRID", (0, 0), (-1, -1), 0.4, LINE),
+          ("TOPPADDING", (0, 0), (-1, -1), 4),
+          ("BOTTOMPADDING", (0, 0), (-1, -1), 4),
+          ("LEFTPADDING", (0, 0), (-1, -1), 6),
+          ("RIGHTPADDING", (0, 0), (-1, -1), 6)]
+    for i in range(1, len(data)):
+        if i % 2 == 0:
+            st.append(("BACKGROUND", (0, i), (-1, i), CREAM))
+    t.setStyle(TableStyle(st))
+    return t
+
+def chapter(num, title, flow):
+    """Chapter heading with kicker number, gold rule, then content."""
+    block = [P("CHAPTER %d" % num, kicker), P(title, h1), gold_rule(),
+             Spacer(1, 8)]
+    return [KeepTogether(block + [flow[0]])] + list(flow[1:])
+
+# ------------------------------------------------------------- page frames
+def on_cover(canvas, doc):
+    canvas.saveState()
+    canvas.setFillColor(NAVY)
+    canvas.rect(0, 0, PAGE_W, PAGE_H, stroke=0, fill=1)
+    canvas.setFillColor(GOLD)
+    canvas.rect(0, PAGE_H - 70, PAGE_W, 6, stroke=0, fill=1)
+    canvas.rect(0, 64, PAGE_W, 6, stroke=0, fill=1)
+    # corner diamonds
+    canvas.setFillColor(GOLD)
+    for (cx, cy) in [(MARGIN, PAGE_H - 110), (PAGE_W - MARGIN, PAGE_H - 110)]:
+        canvas.circle(cx, cy, 3, stroke=0, fill=1)
+    canvas.restoreState()
+
+def on_inner(canvas, doc):
+    canvas.saveState()
+    canvas.setFillColor(NAVY)
+    canvas.rect(0, PAGE_H - 46, PAGE_W, 46, stroke=0, fill=1)
+    canvas.setFillColor(GOLD)
+    canvas.rect(0, PAGE_H - 49, PAGE_W, 3, stroke=0, fill=1)
+    canvas.setFont("Helvetica-Bold", 8.5)
+    canvas.setFillColor(colors.white)
+    canvas.drawString(MARGIN, PAGE_H - 29, "THE NEET 2027 STARTER HANDBOOK")
+    canvas.drawRightString(PAGE_W - MARGIN, PAGE_H - 29, "DIGITALAIKART")
+    canvas.setFont("Helvetica", 8.5)
+    canvas.setFillColor(GOLD)
+    canvas.drawCentredString(PAGE_W / 2, 0.5 * inch, "Page %d" % canvas.getPageNumber())
+    canvas.setFillColor(GREY)
+    canvas.setFont("Helvetica", 7)
+    canvas.drawCentredString(PAGE_W / 2, 0.32 * inch, "Verified September 2026 · neet.nta.nic.in is the only official source")
+    canvas.restoreState()
+
+doc = BaseDocTemplate("/scratch/work/neet-2027-starter-handbook.pdf",
+                      pagesize=A4, leftMargin=MARGIN, rightMargin=MARGIN,
+                      topMargin=0.95 * inch, bottomMargin=0.85 * inch,
+                      title="The NEET 2027 Starter Handbook",
+                      author="Digitalaikart")
+
+cover_frame = Frame(MARGIN, 1.4 * inch, DOC_W, PAGE_H - 3.2 * inch, id="cf")
+inner_frame = Frame(MARGIN, 0.85 * inch, DOC_W, PAGE_H - 1.7 * inch, id="if")
+doc.addPageTemplates([PageTemplate(id="cover", frames=[cover_frame], onPage=on_cover),
+                      PageTemplate(id="inner", frames=[inner_frame], onPage=on_inner)])
+
+S = []  # story
+
+# ============================================================== COVER
+cov_title = ParagraphStyle("covt", parent=body, fontName="Helvetica-Bold",
+                           fontSize=42, leading=48, textColor=colors.white,
+                           alignment=TA_CENTER, spaceAfter=0)
+cov_em = ParagraphStyle("cove", parent=cov_title, fontSize=42, leading=48,
+                         textColor=GOLD)
+cov_sub = ParagraphStyle("covs", parent=body, fontSize=14, leading=19,
+                         textColor=colors.HexColor("#dfe6f0"),
+                         alignment=TA_CENTER)
+cov_brand = ParagraphStyle("covb", parent=body, fontName="Helvetica-Bold",
+                           fontSize=11, textColor=GOLD, alignment=TA_CENTER)
+cov_small = ParagraphStyle("covsm", parent=body, fontSize=9, leading=13,
+                           textColor=colors.HexColor("#9fb0c6"),
+                           alignment=TA_CENTER)
+cov_statnum = ParagraphStyle("covsn", parent=body, fontName="Helvetica-Bold",
+                             fontSize=15, leading=18, textColor=GOLD,
+                             alignment=TA_CENTER)
+cov_statlbl = ParagraphStyle("covsl", parent=body, fontSize=8, leading=10,
+                             textColor=colors.HexColor("#dfe6f0"),
+                             alignment=TA_CENTER)
+
+S.append(Spacer(1, 30))
+S.append(P("DIGITALAIKART ORIGINAL", cov_brand))
+S.append(Spacer(1, 18))
+S.append(Paragraph("THE NEET 2027", cov_title))
+S.append(Paragraph("STARTER HANDBOOK", cov_em))
+S.append(Spacer(1, 14))
+S.append(Paragraph("Eight months to one Sunday in May — the complete, "
+                   "fact-checked starter kit for India's biggest entrance exam",
+                   cov_sub))
+S.append(Spacer(1, 26))
+cover_stats = [("180 x 4", "QUESTIONS, MARKS EVERY 60 SECONDS"),
+               ("90 / 360", "BIOLOGY QUESTIONS AND MARKS AT STAKE"),
+               ("22.8 LAKH", "CANDIDATES IN THE 2026 RACE"),
+               ("8 MONTHS", "FROM SEPTEMBER 2026 TO MAY 2027")]
+rows = [[], []]
+n = len(cover_stats)
+cw = (DOC_W - 3 * 10) / 4
+colw = []
+for i in range(4):
+    colw.append(cw)
+    if i < 3:
+        colw.append(10)
+for i, (num, lbl) in enumerate(cover_stats):
+    rows[0].append(Paragraph(num, cov_statnum))
+    rows[1].append(Paragraph(lbl, cov_statlbl))
+    if i < 3:
+        rows[0].append("")
+        rows[1].append("")
+t = Table(rows, colWidths=colw, rowHeights=[30, 26])
+tstyle = [("VALIGN", (0, 0), (-1, -1), "MIDDLE")]
+for i in range(4):
+    col = 2 * i
+    tstyle += [("BACKGROUND", (col, 0), (col, -1), colors.HexColor("#0f1f38")),
+               ("BOX", (col, 0), (col, -1), 0.7, colors.HexColor("#2a3f60")),
+               ("TOPPADDING", (col, 0), (col, 0), 8),
+               ("BOTTOMPADDING", (col, -1), (col, -1), 8)]
+t.setStyle(TableStyle(tstyle))
+S.append(t)
+S.append(Spacer(1, 30))
+S.append(Paragraph("Every date, rule and number in this handbook was verified in September 2026 "
+                   "against the official NTA Information Bulletin for NEET (UG) 2026, NTA result "
+                   "statistics, the NMC seat matrix and MCC counselling documents. Everything not "
+                   "yet notified for 2027 is clearly marked as expected.", cov_small))
+S.append(NextPageTemplate("inner"))
+S.append(PageBreak())
+
+# ============================================================== TOC
+S.append(P("WHAT'S INSIDE", kicker))
+S.append(P("Table of Contents", h1))
+S.append(gold_rule())
+S.append(Spacer(1, 10))
+toc_items = [
+    "The Clock That Starts Now",
+    "What NEET Actually Is",
+    "The 2026 Lesson: A Cancelled Paper and a Re-Exam",
+    "The Exam, Question by Question",
+    "NEET 2027: The Expected Timeline",
+    "Who Can Sit: Eligibility Decoded",
+    "The Numbers That Define the Race",
+    "Seats, Quotas and What a Score Buys",
+    "The Syllabus, Sorted",
+    "The Biology Playbook (360 Marks)",
+    "The Chemistry Playbook (180 Marks)",
+    "The Physics Playbook (180 Marks)",
+    "The Syllabus Map, Chapter by Chapter",
+    "NCERT First, Then the Right Books",
+    "The Eight-Month Runway, Month by Month",
+    "A Day That Actually Works",
+    "Deep Work: Phones, Slumps and Sleep",
+    "Mock Tests and the Error Log",
+    "Boards and NEET Together",
+    "The Dropper Track",
+    "Registration: The 2026 Template",
+    "Exam Day: 180 Minutes, Executed",
+    "After the Exam: Result to Allotment",
+    "For Parents: The Support Playbook",
+    "Twenty Questions, Answered Straight",
+    "The Master Checklist",
+    "Sources and Official Links",
+]
+toc_rows = []
+for i, item in enumerate(toc_items):
+    toc_rows.append([Paragraph("<b>%d.</b>  %s" % (i + 1, item),
+                              ParagraphStyle("toc", parent=body, fontSize=10.5,
+                                             leading=15, spaceAfter=0))])
+toc = Table(toc_rows, colWidths=[DOC_W - 12], rowHeights=[21.5] * len(toc_rows), hAlign="LEFT")
+tst = [("VALIGN", (0, 0), (-1, -1), "MIDDLE"),
+       ("LEFTPADDING", (0, 0), (-1, -1), 0),
+       ("RIGHTPADDING", (0, 0), (-1, -1), 0),
+       ("TOPPADDING", (0, 0), (-1, -1), 1.5),
+       ("BOTTOMPADDING", (0, 0), (-1, -1), 1.5)]
+for i in range(len(toc_rows)):
+    if i % 2 == 0:
+        tst.append(("BACKGROUND", (0, i), (-1, i), CREAM))
+toc.setStyle(TableStyle(tst))
+S.append(toc)
+S.append(Spacer(1, 14))
+toc_note = ParagraphStyle("tocnote", parent=body, fontSize=9.5, leading=13,
+                         textColor=GREY)
+S.append(P("Read it cover to cover once, then use the playbooks and the monthly plan "
+           "as working documents for the rest of the season.", toc_note))
+S.append(PageBreak())
+
+# ============================================================== CH 1
+c1 = []
+c1.append(P("If you are reading this in September 2026, you have roughly eight months "
+            "before India's biggest entrance exam — one Sunday in May 2027 — decides "
+            "the next six years of your life. That is enough time to build a serious "
+            "score from wherever you are standing today: Class 11, Class 12, or a "
+            "repeat attempt. It is not enough time to waste a month of it deciding.", lead))
+c1.append(P("NEET is a volume game played on a surprisingly small field. The syllabus is "
+            "the NCERT Biology, Chemistry and Physics of Classes 11 and 12. The paper "
+            "asks 180 multiple-choice questions in 180 minutes. Every candidate who "
+            "beat you last year did not know more books than you will finish by "
+            "December — they knew the same books more times."))
+c1.append(P("This handbook is a starter kit, not a textbook. It tells you what the exam "
+            "is, what the rules are, what the numbers say, where the marks actually "
+            "come from, and what to do each month between now and the Sunday in May. "
+            "Every date, fee, cutoff and statistic in it was verified in September 2026 "
+            "against official NTA, NMC and MCC sources — and anything that is still a "
+            "forecast for 2027 is labelled as one, because guessing at an exam's rules "
+            "is how seasons get ruined."))
+c1.append(P("Who this is for:"))
+c1.append(bullets([
+    "Class 12 students sitting Boards and NEET in the same season, who need one system that serves both.",
+    "Class 11 students building a foundation early enough to make 2027 feel comfortable instead of compressed.",
+    "Droppers and repeaters who know the syllabus already and need a diagnosis-first rebuild, not a rerun.",
+    "Parents who want the timeline, the costs and the scam-traps in plain language.",
+]))
+c1.append(Spacer(1, 4))
+c1.append(callout("THE ONE RULE THIS BOOK RUNS ON",
+                  "Facts about the exam come only from official sources: the NTA "
+                  "Information Bulletin and neet.nta.nic.in, the NMC seat matrix, and "
+                  "MCC counselling documents. Study advice is clearly separated from "
+                  "exam facts, and every 2027 date that is not yet notified is marked "
+                  "as expected."))
+S += chapter(1, "The Clock That Starts Now", c1)
+S.append(PageBreak())
+
+# ============================================================== CH 2
+c2 = []
+c2.append(P("One exam, every medical seat", h2))
+c2.append(P("NEET (UG) is the single national entrance test for undergraduate medical "
+            "education in India. The National Testing Agency (NTA) conducts it, and its "
+            "scores decide admission to MBBS and BDS courses, and — under the laws that "
+            "created the National Medical Commission, the National Commission for "
+            "Indian System of Medicine and the National Commission for Homoeopathy — "
+            "to BAMS, BUMS, BSMS and BHMS courses, plus BVSc and AH and B.Sc. Nursing "
+            "programmes such as the Military Nursing Service, which require a NEET "
+            "score. There is no second door: private colleges, deemed universities, "
+            "AIIMS and JIPMER all admit through the same NEET merit list."))
+c2.append(P("The National Medical Commission (NMC), not NTA, notifies the syllabus and "
+            "the exam structure — NTA runs the exam machine itself. That division "
+            "matters to you: when 2027 rules are announced, the Information Bulletin "
+            "on neet.nta.nic.in is the only document that counts."))
