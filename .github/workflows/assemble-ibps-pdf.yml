@@ -1,0 +1,33 @@
+name: Assemble IBPS PDF
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - '.github/pdf-parts/ibps-po-mains-2026-countdown-playbook.READY'
+
+permissions:
+  contents: write
+
+jobs:
+  assemble:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Assemble PDF from verified parts
+        run: |
+          cat .github/pdf-parts/ibps-po-mains-2026-countdown-playbook.part01.txt .github/pdf-parts/ibps-po-mains-2026-countdown-playbook.part02.txt .github/pdf-parts/ibps-po-mains-2026-countdown-playbook.part03.txt .github/pdf-parts/ibps-po-mains-2026-countdown-playbook.part04.txt | tr -d '[:space:]' | base64 -d > ibps-po-mains-2026-countdown-playbook.pdf
+          test "$(md5sum ibps-po-mains-2026-countdown-playbook.pdf | cut -d' ' -f1)" = "8093f2fccea8d03b2dbef56afef9900b" || (echo 'MD5 mismatch'; exit 1)
+          test "$(wc -c < ibps-po-mains-2026-countdown-playbook.pdf)" = "68282" || (echo 'Byte count mismatch'; exit 1)
+          mkdir -p downloads
+          mv ibps-po-mains-2026-countdown-playbook.pdf downloads/
+      - name: Commit and push
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add downloads/ibps-po-mains-2026-countdown-playbook.pdf
+          if git diff --cached --quiet; then
+            echo "No changes"
+          else
+            git commit -m "Rebuild IBPS PO Mains 2026 Countdown Playbook PDF from verified parts"
+            git push
+          fi
