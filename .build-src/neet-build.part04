@@ -1,0 +1,229 @@
+                   "the papers are public, and no paid shortcut has ever survived "
+                   "contact with an NTA investigation."))
+S += chapter(14, "NCERT First, Then the Right Books", c13)
+
+# ============================================================== CH 14
+c14 = []
+c14.append(P("Eight months is the honest shape of a first-attempt NEET preparation: "
+            "long enough to cover everything, short enough that every month has a "
+            "job. Here is the runway as it should run, from this September to the "
+            "Sunday in May.", lead))
+c14.append(mk_table(
+    ["Phase", "Months", "The job"],
+    [["Foundation 1", "Sept - Oct 2026", "Class 12 chapters alongside a full Class 11 re-cover; weekly rotation of all three subjects; error log opens"],
+     ["Foundation 2", "Nov - Dec 2026", "Complete first pass of the whole syllabus; 60% new content, 40% revision; chapter tests weekly"],
+     ["Consolidation", "Jan 2027", "Syllabus gaps closed; full-syllabus learning ends; subject-wise tests go timed; registration window watch"],
+     ["Board bridge", "Feb - Mar 2027", "Board-style written practice with 30 - 40 NEET MCQs daily; one full mock a week"],
+     ["Mock season", "April 2027", "Two to three full 180-minute mocks a week, each analysed the same day; error-log raids; no new chapters"],
+     ["Taper", "Exam week", "Sleep protected, light formula and diagram revision, one mock at the real 2 PM slot; nothing new"]],
+    [0.20, 0.16, 0.64]))
+c14.append(P("The week-by-week engine under the phases", h2))
+c14.append(P("Each month above runs on the same four-part weekly cycle. It is deliberately "
+             "boring — the point of a system is that you stop negotiating with it."))
+c14.append(mk_table(
+    ["Day", "Commitment"],
+    [["Monday - Friday", "Concept blocks: new NCERT chapters per the rotation; daily numericals (Physics) and daily recall (Biology)"],
+     ["Wednesday", "Chapter test on everything from the previous week — 30 minutes, timed"],
+     ["Saturday", "PYQ block: previous-year questions for the week's chapters, plus one section-length timed set"],
+     ["Sunday", "The review: error log updated, 30-minute week audit, next week's rotation planned — then a real half-day off"]],
+    [0.22, 0.78]))
+c14.append(P("If you are starting from Class 11, compress nothing — just begin "
+            "Foundation 1 with the Class 11 chapters you are currently studying, "
+            "and let school run parallel. If you are a dropper, Chapter 20 has your "
+            "version of this calendar."))
+c14.append(P("The one habit that makes this calendar work is the weekly review: "
+            "every Sunday, 30 minutes, no exceptions. Which chapters did I touch this "
+            "week? What did the error log teach me? What is next week's rotation? "
+            "Eight months of Sundays with that habit is a rank; without it, it is "
+            "eight months of activity with nothing banked."))
+S += chapter(15, "The Eight-Month Runway, Month by Month", c14)
+S.append(PageBreak())
+
+# ============================================================== CH 15
+c15 = []
+c15.append(P("There is no perfect timetable — there is only one you will actually "
+            "follow for eight months. Two templates that have survived contact with "
+            "real students; adjust the clock, keep the proportions.", lead))
+c15.append(P("Class 12 student (with school), about 6 - 8 hours of self-study", h2))
+c15.append(mk_table(
+    ["Slot", "Focus"],
+    [["Early morning (60 - 90 min)", "New Physics or Chemistry concepts — freshest brain to the hardest subject"],
+     ["School hours", "Attend properly; your board syllabus IS the NEET syllabus"],
+     ["After school (90 min)", "Biology NCERT reading and recall of the day's chapter"],
+     ["Evening session 1 (60 - 90 min)", "Physics / Physical Chemistry numericals"],
+     ["Evening session 2 (60 min)", "Chapter MCQs and PYQs of everything touched today"],
+     ["Before bed (30 min)", "Error log update + formula / diagram flash-recall"]],
+    [0.30, 0.70]))
+c15.append(P("Dropper / repeater, 8 - 10 hours", h2))
+c15.append(bullets([
+    "Three concept blocks (Physics, Chemistry, Biology) of 90 minutes each, morning to afternoon, one subject per block, all three every day.",
+    "One 90-minute MCQ / PYQ block, alternating subjects day by day.",
+    "One 60-minute revision block reserved for the error log and the week's weakest chapters.",
+    "One full 180-minute mock at exam timing (2 - 5 PM) every week from January, twice a week from April.",
+]))
+c15.append(P("Whichever template you use, protect the two bookends: the morning "
+            "hardest-subject slot and the before-bed recall. Those two slots, held "
+            "for eight months, do more for a NEET score than anything in between. "
+            "And sleep is not the flexible line item — seven to eight hours is part "
+            "of the syllabus, because memory consolidation happens overnight."))
+S += chapter(16, "A Day That Actually Works", c15)
+
+# ============================================================== CH 17 DEEP WORK (new)
+cdw = []
+cdw.append(P("Eight months of content will not save eight months of bad study "
+             "conditions. The difference between a 520 and a 620 is usually not "
+             "knowledge — it is how many of your nominal study hours were actually "
+             "spent studying.", lead))
+cdw.append(P("The phone contract", h2))
+cdw.append(P("Every study block you have is competing with a machine engineered to "
+             "win that competition. Sign a contract with yourself instead of "
+             "negotiating hourly: the phone lives in another room (not face-down on "
+             "the desk — another room) during concept blocks; it comes back during "
+             "meals and the evening break; notifications from every app except "
+             "family contacts are off for the season. Aspirants fear this will cost "
+             "them their social life; in practice it costs about ten days of "
+             "fidgeting and then returns two to three usable hours a day."))
+cdw.append(P("Environment beats willpower", h2))
+cdw.append(bullets([
+    "One desk, one purpose: study where you study, scroll where you scroll. The brain learns locations faster than it learns subjects.",
+    "Two-minute rule for starting: begin with the easiest task in the block — copying a formula sheet, re-reading one summary. Starting is the hard part; momentum handles the rest.",
+    "Plan the night before: a written list for tomorrow's blocks removes the morning decision-tax, which is where most blocks quietly die.",
+    "One weekly half-day off, protected like a mock test. Rest that is scheduled actually restores; rest that is stolen mid-afternoon just adds guilt.",
+]))
+cdw.append(P("The long middle", h2))
+cdw.append(P("Every NEET season has a hard stretch — usually December and February — "
+             "when the excitement of starting has faded, the exam feels distant, and "
+             "motivation dries up. Plan for it rather than being ambushed by it: "
+             "in those weeks, drop the target from 'excellent day' to 'scheduled "
+             "day'. Hit the blocks, hit the review, and let the calendar carry you. "
+             "Motivation follows action far more reliably than it precedes it, and "
+             "the 1 - 7 - 30 revision rhythm means even your worst fortnight keeps "
+             "banking revision."))
+cdw.append(P("Sleep is a subject", h2))
+cdw.append(P("Memory consolidation happens during sleep — the hours you cut at "
+             "night are the hours in which today's Biology actually gets filed. "
+             "Seven to eight hours is the floor for a memory-dependent exam, and "
+             "the exam-week rule is firmer still: a rested brain out-performs a "
+             "crammed one on recall speed, and NEET is a recall-speed exam. One "
+             "habit makes sleep easier: screens off thirty minutes before bed, "
+             "replaced by the day's formula-sheet and exceptions-notebook recall."))
+S += chapter(17, "Deep Work: Phones, Slumps and Sleep", cdw)
+
+# ============================================================== CH 18 (mocks)
+c16 = []
+c16.append(P("Mocks are not a test of how much you know. They are the training "
+            "ground for the only four skills that matter on exam day: reading "
+            "accuracy, time allocation, negative-marking judgement, and calm. "
+            "Treated that way, ten well-analysed mocks beat forty casually taken "
+            "ones.", lead))
+c16.append(P("The 3:1 rule", h2))
+c16.append(P("For every hour you spend taking a mock, spend three hours analysing "
+            "it. A 180-minute mock earns a 9-hour analysis spread over the following "
+            "days. Skipping the analysis to take another mock is the single most "
+            "common way serious aspirants stay stuck at the same score for months."))
+c16.append(P("The error log", h2))
+c16.append(P("Every wrong, guessed or slow question goes into one notebook with four "
+            "columns — question / topic, what I did, why it was wrong, the fix — "
+            "sorted into four buckets:"))
+c16.append(bullets([
+    "Didn't know: a content gap — back to that NCERT chapter the same week.",
+    "Knew but calculated wrong: an execution error — practise that computation type daily for a week.",
+    "Knew but ran out of time: a pacing error — your section order or question triage needs work.",
+    "Misread the question: an accuracy error — slow down the first read; underline the stem's ask in every practice session.",
+]))
+c16.append(P("By February this notebook becomes your private question bank of "
+             "everything you once got wrong — and the only revision material you "
+             "need in the final fortnight."))
+c16.append(P("What a page of it looks like", h2))
+c16.append(mk_table(
+    ["Question / topic", "What I did", "Why wrong", "Fix and date"],
+    [["Bio: Human Physiology - JGA mechanism", "Marked option C", "Didn't know: never read that NCERT line", "Re-read 19.2 excretion same week (Oct 12)"],
+     ["Phy: Ray Optics - lens-maker numerical", "Set up correctly, wrong sign", "Knew but calculated wrong: sign convention", "Convention drills, 5 per day for a week (Nov 3)"],
+     ["Chem: Coordination - CFSE order", "Left blank in the mock", "Knew but ran out of time", "Section order fixed: inorganic flagged first (Dec 8)"]],
+    [0.27, 0.18, 0.27, 0.28]))
+c16.append(P("The mock ladder", h2))
+c16.append(numbered([
+    "October - December: chapter and unit tests, untimed or loosely timed, within a week of studying the chapter.",
+    "January - February: one full 180-question mock a week, at the real 2 - 5 PM slot, OMR sheet if the paper is on paper mode practice.",
+    "March: mocks continue through board season at reduced frequency — even a half-paper keeps the machinery warm.",
+    "April: two to three full mocks a week, each analysed same-day; finish error-log raids of the top ten weak chapters.",
+]))
+S += chapter(18, "Mock Tests and the Error Log", c16)
+S.append(PageBreak())
+
+# ============================================================== CH 17
+c17 = []
+c17.append(P("If you are in Class 12, you are not preparing for two exams — you "
+            "are preparing for one syllabus in two formats. NCERT is the shared "
+            "base; Boards ask you to write it long, NEET asks you to recognise it "
+            "fast. The mistake is treating February and March as a 'board break' "
+            "from NEET.", lead))
+c17.append(bullets([
+    "Your Class 12 board syllabus is the majority of the NEET syllabus — every board hour is also a NEET hour, if you study the chapters to depth rather than to the syllabus's minimum.",
+    "From November, add one board-style written answer per week per subject: the discipline of structured writing is what the 50% PCB aggregate and your board marks both need.",
+    "Never drop MCQ practice during board months. Thirty to forty NEET MCQs a day — twenty minutes — keeps retrieval speed alive while you practise writing.",
+    "After boards end, you get a clean run of weeks before the May exam: reserve it for full mocks and error-log revision, not for re-learning.",
+]))
+c17.append(P("For Class 11 students the pressure is different and lighter: use the "
+            "year to make Class 11 fundamentals unshakeable, because NEET's hardest "
+            "questions routinely fuse Class 11 and 12 concepts — genetics on cell "
+            "biology, electrochemistry on equilibrium, modern physics on mechanics. "
+            "The 2027 syllabus is close to equally split between the two years."))
+c17.append(callout("THE 50 PERCENT CLAUSE",
+                   "Remember the eligibility rule from Chapter 6: you need 50 percent "
+                   "in PCB (40 for reserved categories) in Class 12 to convert a NEET "
+                   "score into a seat. A brilliant NEET score on a weak board result "
+                   "is a tragedy the rules do not forgive."))
+S += chapter(19, "Boards and NEET Together", c17)
+
+# ============================================================== CH 18
+c18 = []
+c18.append(P("A repeat year is not a continuation — it is a rebuild. The candidates "
+            "who gain 100+ marks in a drop year are the ones who started by finding "
+            "out exactly why last year's score happened, and the ones who gain "
+            "nothing are those who ran the same year harder. Start with a "
+            "diagnosis, not a timetable.", lead))
+c18.append(numbered([
+    "Autopsy your last paper and mocks: for each dropped mark, assign one of the four error buckets from Chapter 18. Patterns will emerge within an hour — most repeat-year losses are 60 percent accuracy and pacing, not knowledge.",
+    "Rebuild from NCERT anyway. Droppers skip the textbook because 'already done' — and lose the direct-line Biology and Inorganic questions that decide ranks. Re-read it with fresh eyes; it is a different book the second time.",
+    "Fix the exam, not just the syllabus: full 180-minute mocks weekly from October, at 2 PM, with the real section order and OMR discipline.",
+    "Guard the aggregates: board percentage rules and the 50 percent PCB clause apply to your existing Class 12 result — check them once, now, before committing the year.",
+]))
+c18.append(P("One psychological note that droppers earn the right to hear: the field "
+            "is not against you. In 2026, of the 138 candidates above 690 marks, "
+            "more than 93 percent were first-timers — meaning droppers who rebuilt "
+            "properly still competed at the very top. A diagnosis-first drop year "
+            "with an error log is a genuine advantage, not a deficit."))
+S += chapter(20, "The Dropper Track", c18)
+
+# ============================================================== CH 19
+c19 = []
+c19.append(P("The 2027 form will differ in small details from the 2026 one, but the "
+            "shape below is stable year to year. Treat this as the rehearsal; "
+            "follow the live 2027 bulletin when it arrives.", lead))
+c19.append(P("Fees in 2026 (in India; Rs. 9,500 abroad)", h2))
+c19.append(mk_table(
+    ["Category", "Fee"],
+    [["General", "Rs. 1,700"],
+     ["General - EWS / OBC - NCL", "Rs. 1,600"],
+     ["SC / ST / PwBD / Third Gender", "Rs. 1,000"]],
+    [0.55, 0.45]))
+c19.append(P("Documents to have ready before the window opens", h2))
+c19.append(bullets([
+    "A recent passport photograph (the bulletin specifies size and format), a scanned signature, and a valid address proof.",
+    "Class 10 certificate or birth proof for the date of birth.",
+    "Category certificate (OBC - NCL / EWS / SC / ST / PwBD) in the prescribed format, issued by the competent authority.",
+    "Citizenship / OCI / NRI documents where applicable.",
+    "DigiLocker or Aadhaar linkage as advised in the bulletin's pre-registration notices.",
+]))
+c19.append(P("The ten mistakes that cost seasons", h2))
+c19.append(bullets([
+    "Waiting for the last day of the registration window — servers slow down and payments fail precisely then.",
+    "Mistyping the name so it does not match the Class 10 certificate.",
+    "Wrong category claim: OBC - NCL claimed without a valid current-year certificate.",
+    "Uploading a photograph that is old, blurred, or wrongly sized — rejected at centre verification.",
+    "Choosing exam cities without checking travel and stay feasibility for the city intimation that comes.",
+    "Missing the correction window (in 2026: 10 - 12 March) after noticing an error.",
+    "Filling PwBD columns when not eligible, or leaving them blank when eligible.",
+    "Paying the fee but not submitting the form — payment alone does not register you.",
+    "Not keeping the confirmation page printout.",
