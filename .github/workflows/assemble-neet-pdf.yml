@@ -16,11 +16,13 @@ jobs:
           python-version: '3.12'
       - run: pip install reportlab
       - run: |
-          mkdir -p /scratch/work
-          cat .build-src/neet-build.part* > /scratch/work/build_neet_handbook.py
-          sha256sum /scratch/work/build_neet_handbook.py
-          python3 /scratch/work/build_neet_handbook.py
-          cp /scratch/work/neet-2027-starter-handbook.pdf downloads/neet-2027-starter-handbook.pdf
+          WORK="$RUNNER_TEMP/work"
+          mkdir -p "$WORK"
+          cat .build-src/neet-build.part* > "$WORK/build_neet_handbook.py"
+          sed -i "s|/scratch/work|$WORK|g" "$WORK/build_neet_handbook.py"
+          sha256sum "$WORK/build_neet_handbook.py"
+          python3 "$WORK/build_neet_handbook.py"
+          cp "$WORK/neet-2027-starter-handbook.pdf" downloads/neet-2027-starter-handbook.pdf
           ls -la downloads/neet-2027-starter-handbook.pdf
           rm -rf .build-src .github/workflows/assemble-neet-pdf.yml
           git config user.name "shopshphereofficial-dev"
