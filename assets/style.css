@@ -296,6 +296,8 @@ footer p{margin:0.3rem 0}
 .blog-card-body h3{font-size:0.95rem;color:#f1f5f9;margin-bottom:0.3rem}
 .blog-card-body p{font-size:0.78rem;color:var(--text-secondary)}
 .blog-card-body .date{font-size:0.7rem;color:var(--text-muted);margin-top:0.5rem}
+/* perf: skip layout/paint for offscreen cards on the blog listing */
+.blog-card{content-visibility:auto;contain-intrinsic-size:auto 300px}
 
 /* THANK YOU */
 .thankyou{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:6rem 1.5rem 2rem}
