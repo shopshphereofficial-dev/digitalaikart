@@ -1,0 +1,30 @@
+name: Assemble Study Abroad SOP Toolkit PDF
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  assemble:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Assemble PDF from verified parts
+        run: |
+          cat .github/pdf-parts/study-abroad-sop-toolkit.part*.txt | tr -d '\n' | base64 -d > study-abroad-sop-toolkit.pdf
+          test "$(md5sum study-abroad-sop-toolkit.pdf | cut -d' ' -f1)" = "4e5247a2fb7009e785ba3255627bf498" || (echo 'MD5 mismatch'; exit 1)
+          test "$(wc -c < study-abroad-sop-toolkit.pdf)" = "64209" || (echo 'Byte count mismatch'; exit 1)
+          mkdir -p downloads
+          mv study-abroad-sop-toolkit.pdf downloads/
+      - name: Commit and push
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add downloads/study-abroad-sop-toolkit.pdf
+          if git diff --cached --quiet; then
+            echo "No changes"
+          else
+            git commit -m "Rebuild Study Abroad SOP Toolkit PDF from verified parts"
+            git push
+          fi
