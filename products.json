@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-21",
+  "updated": "2026-09-22",
   "note": "Single source of truth for ALL products on digitalkartai.shop. The blog agent MUST read this file at the start of every run and promote the best-matching product per post. The product agent MUST append new products here when publishing them. Never delete or modify existing entries.",
   "products": [
     {
@@ -506,6 +506,36 @@
         "interview",
         "banking careers",
         "India"
+      ]
+    },
+    {
+      "slug": "study-abroad-sop-toolkit",
+      "name": "The Study Abroad SOP & LOR Toolkit — Fall 2027 Edition",
+      "tagline": "The complete 25-page application-essay system for Indian students targeting Fall 2027: 5-part SOP blueprint, UK's new three-question UCAS format, Common App 2026-27 prompts, Canada IRCC study plan, and the full LOR kit.",
+      "price": "₹149",
+      "mrp": "₹499",
+      "url": "/products/study-abroad-sop-toolkit/",
+      "topics": [
+        "SOP",
+        "statement of purpose",
+        "study abroad",
+        "Fall 2027",
+        "LOR",
+        "recommendation letter",
+        "UCAS",
+        "personal statement",
+        "Common App",
+        "IRCC",
+        "study permit",
+        "Canada visa",
+        "masters abroad",
+        "MS in USA",
+        "UK universities",
+        "Motivationsschreiben",
+        "application essay",
+        "admissions",
+        "Indian students",
+        "higher education"
       ]
     }
   ]
