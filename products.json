@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-22",
+  "updated": "2026-09-23",
   "note": "Single source of truth for ALL products on digitalkartai.shop. The blog agent MUST read this file at the start of every run and promote the best-matching product per post. The product agent MUST append new products here when publishing them. Never delete or modify existing entries.",
   "products": [
     {
@@ -576,6 +576,44 @@
         "counselling",
         "UG admissions",
         "India"
+      ]
+    },
+    {
+      "slug": "ugc-net-december-2026-countdown-playbook",
+      "name": "UGC NET December 2026 Countdown Playbook — Digital Edition",
+      "tagline": "The complete 30-page countdown playbook for the UGC NET December 2026 cycle (exam 14-19 December) — confirmed dates from NTA's 16 September calendar, the expected October registration window, the three-result category system, the 6% qualifying rule with a worked cut-off example, Paper 1's ten units, a dated 82-day study plan with trackers, and scam protection. Verified September 2026.",
+      "price": "₹99",
+      "mrp": "₹499",
+      "url": "/products/ugc-net-december-2026-countdown-playbook/",
+      "topics": [
+        "UGC NET",
+        "NET exam",
+        "NTA",
+        "National Testing Agency",
+        "JRF",
+        "Junior Research Fellowship",
+        "Assistant Professor",
+        "PhD admission",
+        "December 2026 cycle",
+        "NET registration",
+        "NET eligibility",
+        "Paper 1",
+        "Paper 2",
+        "NET syllabus",
+        "NET exam pattern",
+        "NET cut off",
+        "6% rule",
+        "NET result",
+        "fellowship",
+        "research career",
+        "teaching jobs",
+        "higher education",
+        "post graduate",
+        "Master's degree",
+        "net preparation",
+        "India exams",
+        "exam calendar",
+        "e-certificate"
       ]
     }
   ]
