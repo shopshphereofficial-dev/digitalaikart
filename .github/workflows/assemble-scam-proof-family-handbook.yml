@@ -1,0 +1,34 @@
+name: Assemble Scam-Proof Family Handbook PDF
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - '.github/pdf-parts/scam-proof-family-handbook.part07.txt'
+
+permissions:
+  contents: write
+
+jobs:
+  assemble:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Assemble PDF from verified parts
+        run: |
+          cat .github/pdf-parts/scam-proof-family-handbook.part01.txt .github/pdf-parts/scam-proof-family-handbook.part02.txt .github/pdf-parts/scam-proof-family-handbook.part03.txt .github/pdf-parts/scam-proof-family-handbook.part04.txt .github/pdf-parts/scam-proof-family-handbook.part05.txt .github/pdf-parts/scam-proof-family-handbook.part06.txt .github/pdf-parts/scam-proof-family-handbook.part07.txt | tr -d '[:space:]' | base64 -d > scam-proof-family-handbook.pdf
+          test "$(md5sum scam-proof-family-handbook.pdf | cut -d' ' -f1)" = "56f757f0683936d055b9d94a1c362a09" || (echo 'MD5 mismatch'; exit 1)
+          test "$(wc -c < scam-proof-family-handbook.pdf)" = "49321" || (echo 'Byte count mismatch'; exit 1)
+          mkdir -p downloads
+          mv scam-proof-family-handbook.pdf downloads/
+      - name: Commit and push
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add downloads/scam-proof-family-handbook.pdf
+          if git diff --cached --quiet; then
+            echo "No changes"
+          else
+            git commit -m "Rebuild Scam-Proof Family Handbook PDF from verified parts"
+            git push
+          fi
