@@ -1,0 +1,30 @@
+name: Upload CIBIL Repair Playbook to Repo
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  upload-ebook:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Assemble and verify PDF from parts
+        run: |
+          mkdir -p downloads
+          cat .pdf-parts/cibil-repair-playbook/part.* | tr -d '\n' | base64 -d > downloads/cibil-repair-playbook.pdf
+          echo "e97c681438c56111a639fe97ec18314e722b8f68a162e6af215540f9bd4d0f35  downloads/cibil-repair-playbook.pdf" | sha256sum -c -
+
+      - name: Commit ebook to repo and remove parts
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git rm -r -q .pdf-parts/cibil-repair-playbook
+          git add downloads/cibil-repair-playbook.pdf
+          git commit -m "Add CIBIL Repair Playbook PDF to repo" || echo "No changes to commit"
+          git push
