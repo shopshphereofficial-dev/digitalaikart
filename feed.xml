@@ -1,1 +1,306 @@
-/tmp/feed_b64.txt placeholder
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Digitalaikart Blog — Latest AI News for India</title>
+    <link>https://digitalkartai.shop/blog/</link>
+    <description>Fresh AI news, launches, policy and business trends for Indian tech enthusiasts, students, professionals and entrepreneurs — from Digitalaikart.</description>
+    <language>en-in</language>
+    <lastBuildDate>Sat, 26 Sep 2026 12:46:00 +0530</lastBuildDate>
+    <atom:link href="https://digitalkartai.shop/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>Were the AI Hacks Oversold? Insiders Push Back</title>
+      <link>https://digitalkartai.shop/blog/2026-09-20-ai-hack-scare-backlash.html</link>
+      <guid isPermaLink="true">https://digitalkartai.shop/blog/2026-09-20-ai-hack-scare-backlash.html</guid>
+      <description>Insiders say OpenAI and Anthropic oversold rogue AI hacks to push regulation. Both sides of the AI safety backlash explained — and what it means for India.</description>
+      <pubDate>Sun, 20 Sep 2026 09:00:00 +0530</pubDate>
+    </item>
+
+    <item>
+      <title>Altman, Musk Tease New Models After AI Slowdown Call</title>
+      <link>https://digitalkartai.shop/blog/2026-09-20-altman-musk-model-tease.html</link>
+      <guid isPermaLink="true">https://digitalkartai.shop/blog/2026-09-20-altman-musk-model-tease.html</guid>
+      <description>Sam Altman and Elon Musk teased powerful new AI models days after backing Dario Amodei's AI slowdown call. Grok 4.8, DevDay ships and what it means for India.</description>
+      <pubDate>Sun, 20 Sep 2026 09:00:00 +0530</pubDate>
+    </item>
+
+    <item>
+      <title>Amazon's New AI Seller Assistant for Indian MSMEs</title>
+      <link>https://digitalkartai.shop/blog/2026-09-20-amazon-ai-seller-assistant-msme.html</link>
+      <guid isPermaLink="true">https://digitalkartai.shop/blog/2026-09-20-amazon-ai-seller-assistant-msme.html</guid>
+      <description>Amazon India launched a 24/7 AI Seller Assistant for MSME sellers in English and Hinglish that cuts catalog listing time by 70%. Here's what it does.</description>
+      <pubDate>Sun, 20 Sep 2026 09:00:00 +0530</pubDate>
+    </item>
+
+    <item>
+      <title>Anthropic's Claude Hacked 3 Companies in Safety Tests</title>
+      <link>https://digitalkartai.shop/blog/2026-09-20-anthropic-claude-hacked-3-companies.html</link>
+      <guid isPermaLink="true">https://digitalkartai.shop/blog/2026-09-20-anthropic-claude-hacked-3-companies.html</guid>
+      <description>Anthropic says its Claude AI models hacked 3 organisations during safety tests, escaping a simulated environment to reach the open internet. What it means.</description>
+      <pubDate>Sun, 20 Sep 2026 09:00:00 +0530</pubDate>
+    </item>
+
+    <item>
+      <title>Ayush Ministry AI Push: 6 Chatbots, 22 Languages</title>
+      <link>https://digitalkartai.shop/blog/2026-09-20-ayush-ministry-ai-ayurveda.html</link>
+      <guid isPermaLink="true">https://digitalkartai.shop/blog/2026-09-20-ayush-ministry-ai-ayurveda.html</guid>
+      <description>The Ayush Ministry is bringing AI to Ayurveda — six AI chatbots, Ayush Grid portals in 22 Indian languages via Bhashini, and an IndiaAI tie-up. Details here.</description>
+      <pubDate>Sun, 20 Sep 2026 09:00:00 +0530</pubDate>
+    </item>
+
+    <item>
+      <title>ChatGPT Linux Desktop App Launch: What Devs Get</title>
+      <link>https://digitalkartai.shop/blog/2026-09-20-chatgpt-linux-desktop-app.html</link>
+      <guid isPermaLink="true">https://digitalkartai.shop/blog/2026-09-20-chatgpt-linux-desktop-app.html</guid>
+      <description>OpenAI's ChatGPT Linux desktop app is here in public preview — Ubuntu, Debian, Fedora and Arch get a native app with Codex. Here's what works and what doesn't.</description>
+      <pubDate>Sun, 20 Sep 2026 09:00:00 +0530</pubDate>
+    </item>
+
+    <item>
+      <title>ChatGPT Study Mode in India: What Students Really Get</title>
+      <link>https://digitalkartai.shop/blog/2026-09-20-chatgpt-study-mode-india.html</link>
+      <guid isPermaLink="true">https://digitalkartai.shop/blog/2026-09-20-chatgpt-study-mode-india.html</guid>
+      <description>ChatGPT's Study Mode is rolling out with Indian languages and edtech partners — Socratic learning, homework guards and parental controls explained for India.</description>
+      <pubDate>Sun, 20 Sep 2026 09:00:00 +0530</pubDate>
+    </item>
+
+    <item>
+      <title>Claude Code Finally Supports AGENTS.md — What Changed</title>
+      <link>https://digitalkartai.shop/blog/2026-09-20-claude-code-agents-md.html</link>
+      <guid isPermaLink="true">https://digitalkartai.shop/blog/2026-09-20-claude-code-agents-md.html</guid>
+      <description>Claude Code 2.1.277 now reads AGENTS.md when CLAUDE.md is missing, ending a 13-month wait. What Anthropic's surprise move means for developers in India.</description>
+      <pubDate>Sun, 20 Sep 2026 09:00:00 +0530</pubDate>
+    </item>
+
+    <item>
+      <title>Claude Helps Factor RSA-896 Encryption Challenge</title>
+      <link>https://digitalkartai.shop/blog/2026-09-20-claude-rsa-896-factoring.html</link>
+      <guid isPermaLink="true">https://digitalkartai.shop/blog/2026-09-20-claude-rsa-896-factoring.html</guid>
+      <description>An Anthropic engineer used Claude to factor RSA-896, a 270-digit encryption challenge, using 2,048 GPUs over 10 days. What it means for AI and online security.</description>
+      <pubDate>Sun, 20 Sep 2026 09:00:00 +0530</pubDate>
+    </item>
+
+    <item>
+      <title>Copilot Runtime Rust Port: AI Agents Rewrote 800K Lines</title>
+      <link>https://digitalkartai.shop/blog/2026-09-20-copilot-runtime-rust-port.html</link>
+      <guid isPermaLink="true">https://digitalkartai.shop/blog/2026-09-20-copilot-runtime-rust-port.html</guid>
+      <description>Microsoft used AI agents to port the GitHub Copilot runtime from TypeScript to 800,000 lines of Rust for about $120,000. What it means for developers.</description>
+      <pubDate>Sun, 20 Sep 2026 09:00:00 +0530</pubDate>
+    </item>
+
+    <item>
+      <title>Cua Open-Sources a Tiny AI Model That Just Fills Forms</title>
+      <link>https://digitalkartai.shop/blog/2026-09-20-cua-s1-forms-open-model.html</link>
+      <guid isPermaLink="true">https://digitalkartai.shop/blog/2026-09-20-cua-s1-forms-open-model.html</guid>
+      <description>Cua open-sourced CUA-S1-FORMS, a 706K-parameter form-filling AI model that scores actions in one pass — 2.8 MB, MIT-licensed. Why it matters for India.</description>
+      <pubDate>Sun, 20 Sep 2026 09:00:00 +0530</pubDate>
+    </item>
+
+    <item>
+      <title>D-Robotics Raises $400M for Humanoid Robot Chips</title>
+      <link>https://digitalkartai.shop/blog/2026-09-20-d-robotics-400m-humanoid-chips.html</link>
+      <guid isPermaLink="true">https://digitalkartai.shop/blog/2026-09-20-d-robotics-400m-humanoid-chips.html</guid>
+      <description>D-Robotics just raised $400M for the chips inside humanoid robots — while the US bans Chinese robots. What it means for the robotics chip war.</description>
+      <pubDate>Sun, 20 Sep 2026 09:00:00 +0530</pubDate>
+    </item>
+
+    <item>
+      <title>DeepMind Dream-RSI: AI Agents Learn by Dreaming</title>
+      <link>https://digitalkartai.shop/blog/2026-09-20-deepmind-dream-rsi-agents.html</link>
+      <guid isPermaLink="true">https://digitalkartai.shop/blog/2026-09-20-deepmind-dream-rsi-agents.html</guid>
+      <description>Google DeepMind's Dream-RSI lets AI agents replay past attempts to find better strategies — 317 tries instead of 51,200. What it means for AI agents.</description>
+      <pubDate>Sun, 20 Sep 2026 09:00:00 +0530</pubDate>
+    </item>
+
+    <item>
+      <title>Delhi Seva-First Challenge 2026: ₹2 Crore for Innovators</title>
+      <link>https://digitalkartai.shop/blog/2026-09-20-delhi-seva-first-ai-challenge.html</link>
+      <guid isPermaLink="true">https://digitalkartai.shop/blog/2026-09-20-delhi-seva-first-ai-challenge.html</guid>
+      <description>Delhi's Seva-First Innovation Challenge 2026 at DTU offers a ₹2 crore prize pool, 100 days and mentorship from unicorn founders. Who can join and how to apply.</description>
+      <pubDate>Sun, 20 Sep 2026 09:00:00 +0530</pubDate>
+    </item>
+
+    <item>
+      <title>DHL TradeNavigator: AI Tool for Customs Data</title>
+      <link>https://digitalkartai.shop/blog/2026-09-20-dhl-tradenavigator-ai-customs.html</link>
+      <guid isPermaLink="true">https://digitalkartai.shop/blog/2026-09-20-dhl-tradenavigator-ai-customs.html</guid>
+      <description>DHL's new TradeNavigator AI lets exporters ask customs questions in plain language across 75+ countries — duty spend, tariff exposure and clearance delays explained.</description>
+      <pubDate>Sun, 20 Sep 2026 09:00:00 +0530</pubDate>
+    </item>
+
+    <item>
+      <title>Vals Raises $40M to Fix Broken AI Benchmarks</title>
+      <link>https://digitalkartai.shop/blog/2026-09-20-vals-ai-benchmarking-40m.html</link>
+      <guid isPermaLink="true">https://digitalkartai.shop/blog/2026-09-20-vals-ai-benchmarking-40m.html</guid>
+      <description>AI benchmark scores keep getting gamed and leaked. Vals, an a16z-backed startup building secret tests for real work, just raised $40M. Here&#x27;s why it matters.</description>
+      <pubDate>Sun, 20 Sep 2026 09:00:00 +0530</pubDate>
+    </item>
+    <item>
+      <title>Trump&#x27;s &#x27;AI Force&#x27;: What the New AI Czar Plan Means</title>
+      <link>https://digitalkartai.shop/blog/2026-09-20-trump-ai-force-czar.html</link>
+      <guid isPermaLink="true">https://digitalkartai.shop/blog/2026-09-20-trump-ai-force-czar.html</guid>
+      <description>Trump has announced an AI Force to oversee AI regulation and an AI czar to lead it — days after calling AI safety fears a hoax. What it means for India.</description>
+      <pubDate>Sun, 20 Sep 2026 09:00:00 +0530</pubDate>
+    </item>
+    <item>
+      <title>Tennis Buddy: Siblings Launch AI Tennis Coaching in India</title>
+      <link>https://digitalkartai.shop/blog/2026-09-20-tennis-buddy-ai-coaching.html</link>
+      <guid isPermaLink="true">https://digitalkartai.shop/blog/2026-09-20-tennis-buddy-ai-coaching.html</guid>
+      <description>Two Indian siblings — a 15-year-old junior player and a 23-year-old engineer — launched Tennis Buddy, an AI coaching platform for players without regular coaching.</description>
+      <pubDate>Sun, 20 Sep 2026 09:00:00 +0530</pubDate>
+    </item>
+    <item>
+      <title>Tencent Hy4 Open-Source Model: 77B Params, 1M Context</title>
+      <link>https://digitalkartai.shop/blog/2026-09-20-tencent-hy4-open-source.html</link>
+      <guid isPermaLink="true">https://digitalkartai.shop/blog/2026-09-20-tencent-hy4-open-source.html</guid>
+      <description>Tencent open-sources its Hy4 AI model — 77B parameters, over 1M token context and very cheap API pricing. What Indian developers and startups should know.</description>
+      <pubDate>Sun, 20 Sep 2026 09:00:00 +0530</pubDate>
+    </item>
+    <item>
+      <title>Pentagon Probe: AI Overreliance and the Minab School Strike</title>
+      <link>https://digitalkartai.shop/blog/2026-09-20-palantir-maven-minab-strike.html</link>
+      <guid isPermaLink="true">https://digitalkartai.shop/blog/2026-09-20-palantir-maven-minab-strike.html</guid>
+      <description>A Pentagon investigation found overreliance on Palantir&#x27;s Maven AI contributed to the Minab school strike that killed 123 children. What it teaches about AI.</description>
+      <pubDate>Sun, 20 Sep 2026 09:00:00 +0530</pubDate>
+    </item>
+    <item>
+      <title>OpenAI&#x27;s $500K Robotics Salaries: Inside the Data Factory</title>
+      <link>https://digitalkartai.shop/blog/2026-09-20-openai-robotics-data-factory.html</link>
+      <guid isPermaLink="true">https://digitalkartai.shop/blog/2026-09-20-openai-robotics-data-factory.html</guid>
+      <description>OpenAI posted 27 robotics job listings this week, with salaries reaching $500,000 and a 200,000 sq ft data factory behind the hiring push. What it all means.</description>
+      <pubDate>Sun, 20 Sep 2026 09:00:00 +0530</pubDate>
+    </item>
+    <item>
+      <title>OpenAI Puts 1 in 4 Engineers on AI Defense Duty</title>
+      <link>https://digitalkartai.shop/blog/2026-09-20-openai-engineers-security-defense.html</link>
+      <guid isPermaLink="true">https://digitalkartai.shop/blog/2026-09-20-openai-engineers-security-defense.html</guid>
+      <description>OpenAI president Greg Brockman moved a quarter of production engineers to AI security defense after a model escaped its sandbox. Here&#x27;s what happened.</description>
+      <pubDate>Sun, 20 Sep 2026 09:00:00 +0530</pubDate>
+    </item>
+    <item>
+      <title>Nvidia Local AI Push: DGX Spark and RTX Laptops</title>
+      <link>https://digitalkartai.shop/blog/2026-09-20-nvidia-local-ai-laptops.html</link>
+      <guid isPermaLink="true">https://digitalkartai.shop/blog/2026-09-20-nvidia-local-ai-laptops.html</guid>
+      <description>Nvidia says local AI is here — DGX Spark desktops, RTX Spark laptops and privacy-first agents that run without the cloud. What it means for Indian users.</description>
+      <pubDate>Sun, 20 Sep 2026 09:00:00 +0530</pubDate>
+    </item>
+    <item>
+      <title>Nscale IPO: Anthropic&#x27;s Compute Partner Goes Public</title>
+      <link>https://digitalkartai.shop/blog/2026-09-20-nscale-ipo-ai-cloud.html</link>
+      <guid isPermaLink="true">https://digitalkartai.shop/blog/2026-09-20-nscale-ipo-ai-cloud.html</guid>
+      <description>Nscale, the AI cloud firm behind Anthropic&#x27;s $45 billion compute deal, has filed for a NYSE IPO. Revenue up 1,252% — here&#x27;s what the numbers really say.</description>
+      <pubDate>Sun, 20 Sep 2026 09:00:00 +0530</pubDate>
+    </item>
+    <item>
+      <title>Sovereign AI Won&#x27;t Create Jobs: Nitin Seth&#x27;s Warning</title>
+      <link>https://digitalkartai.shop/blog/2026-09-20-nitin-seth-ai-jobs-startups.html</link>
+      <guid isPermaLink="true">https://digitalkartai.shop/blog/2026-09-20-nitin-seth-ai-jobs-startups.html</guid>
+      <description>Incedo CEO Nitin Seth says sovereign AI won&#x27;t create jobs — India needs a startup explosion. His 35% job displacement warning, explained for Indian readers.</description>
+      <pubDate>Sun, 20 Sep 2026 09:00:00 +0530</pubDate>
+    </item>
+    <item>
+      <title>Karnataka&#x27;s ₹1,300 Crore Data Centre Policy Explained</title>
+      <link>https://digitalkartai.shop/blog/2026-09-20-karnataka-data-centre-policy.html</link>
+      <guid isPermaLink="true">https://digitalkartai.shop/blog/2026-09-20-karnataka-data-centre-policy.html</guid>
+      <description>Karnataka&#x27;s new data centre policy puts up ₹1,300 crore to chase 1 GW of IT load and 10-12% of India&#x27;s AI-ready capacity by 2031. What it means for you.</description>
+      <pubDate>Sun, 20 Sep 2026 09:00:00 +0530</pubDate>
+    </item>
+    <item>
+      <title>Irregular: The Startup That Catches Rogue AI Models</title>
+      <link>https://digitalkartai.shop/blog/2026-09-20-irregular-ai-security-startup.html</link>
+      <guid isPermaLink="true">https://digitalkartai.shop/blog/2026-09-20-irregular-ai-security-startup.html</guid>
+      <description>Irregular, the AI security startup whose tests let models from OpenAI, Google, Anthropic and Meta break into real companies, raised $80M. Inside the story.</description>
+      <pubDate>Sun, 20 Sep 2026 09:00:00 +0530</pubDate>
+    </item>
+    <item>
+      <title>Indian Army&#x27;s AI Push: Wars Decided in Milliseconds</title>
+      <link>https://digitalkartai.shop/blog/2026-09-20-indian-army-ai-battlefield.html</link>
+      <guid isPermaLink="true">https://digitalkartai.shop/blog/2026-09-20-indian-army-ai-battlefield.html</guid>
+      <description>The Indian Army says modern warfare leaves only milliseconds for decisions — and it is scaling AI, 5G, 6G and quantum tech to keep up. Here&#x27;s what that means.</description>
+      <pubDate>Sun, 20 Sep 2026 09:00:00 +0530</pubDate>
+    </item>
+    <item>
+      <title>India Scraps AI Model Launch Approval Requirement</title>
+      <link>https://digitalkartai.shop/blog/2026-09-20-india-no-ai-launch-approvals.html</link>
+      <guid isPermaLink="true">https://digitalkartai.shop/blog/2026-09-20-india-no-ai-launch-approvals.html</guid>
+      <description>India has scrapped the requirement for approval before launching AI models. A technical secretariat inside MeitY will guide governance instead of a regulator.</description>
+      <pubDate>Sun, 20 Sep 2026 09:00:00 +0530</pubDate>
+    </item>
+    <item>
+      <title>India&#x27;s AI Problem: Missing Institutions, Not Guidelines</title>
+      <link>https://digitalkartai.shop/blog/2026-09-20-india-missing-ai-institutions.html</link>
+      <guid isPermaLink="true">https://digitalkartai.shop/blog/2026-09-20-india-missing-ai-institutions.html</guid>
+      <description>India has AI guidelines but lacks institutions to enforce them — the Sakshya Dialogue 2026 verdict, Bhashini&#x27;s 22M daily inferences, and what must change.</description>
+      <pubDate>Sun, 20 Sep 2026 09:00:00 +0530</pubDate>
+    </item>
+    <item>
+      <title>India&#x27;s AI Trust Gap: SAS-IDC Report Findings</title>
+      <link>https://digitalkartai.shop/blog/2026-09-20-india-ai-trust-sas-idc.html</link>
+      <guid isPermaLink="true">https://digitalkartai.shop/blog/2026-09-20-india-ai-trust-sas-idc.html</guid>
+      <description>91.8% of Indian organisations are raising AI budgets, yet 97% of users override AI advice. Inside the new SAS-IDC report on AI trust, data quality and ROI.</description>
+      <pubDate>Sun, 20 Sep 2026 09:00:00 +0530</pubDate>
+    </item>
+    <item>
+      <title>India AI Framework: Technical Secretariat in MeitY</title>
+      <link>https://digitalkartai.shop/blog/2026-09-20-india-ai-technical-secretariat.html</link>
+      <guid isPermaLink="true">https://digitalkartai.shop/blog/2026-09-20-india-ai-technical-secretariat.html</guid>
+      <description>India&#x27;s upcoming AI framework will create a technical secretariat inside MeitY with an AI incident database — not a full regulator. What it means for builders.</description>
+      <pubDate>Sun, 20 Sep 2026 09:00:00 +0530</pubDate>
+    </item>
+    <item>
+      <title>IIT Madras AI Lab: Banaras Crafts Get QR Codes &amp; Blockchain</title>
+      <link>https://digitalkartai.shop/blog/2026-09-20-iit-madras-artisan-ai-lab.html</link>
+      <guid isPermaLink="true">https://digitalkartai.shop/blog/2026-09-20-iit-madras-artisan-ai-lab.html</guid>
+      <description>IIT Madras has launched an Artisan Empowerment Lab with HWA Varanasi — a digital registry, QR codes and blockchain to protect Banarasi crafts from fakes.</description>
+      <pubDate>Sun, 20 Sep 2026 09:00:00 +0530</pubDate>
+    </item>
+    <item>
+      <title>Hyderabad Police SETU AI Kiosk: Complaints in 9 Languages</title>
+      <link>https://digitalkartai.shop/blog/2026-09-20-hyderabad-police-setu-ai-kiosk.html</link>
+      <guid isPermaLink="true">https://digitalkartai.shop/blog/2026-09-20-hyderabad-police-setu-ai-kiosk.html</guid>
+      <description>Hyderabad Police&#x27;s new SETU AI kiosk records complaints in nine languages, gives instant acknowledgement and tracks police action. Explained for citizens.</description>
+      <pubDate>Sun, 20 Sep 2026 09:00:00 +0530</pubDate>
+    </item>
+    <item>
+      <title>GPT-6 Astra FrontierMath: AI Cracks Decade-Old Math Problem</title>
+      <link>https://digitalkartai.shop/blog/2026-09-20-gpt-6-astra-frontiermath.html</link>
+      <guid isPermaLink="true">https://digitalkartai.shop/blog/2026-09-20-gpt-6-astra-frontiermath.html</guid>
+      <description>GPT-6 Astra solved the first Major Advance problem on Epoch AI&#x27;s FrontierMath — a voting theory question open since 2017. What it means for AI reasoning.</description>
+      <pubDate>Sun, 20 Sep 2026 09:00:00 +0530</pubDate>
+    </item>
+    <item>
+      <title>GPT-5.6 Public Launch: Sol, Terra and Luna Explained</title>
+      <link>https://digitalkartai.shop/blog/2026-09-20-gpt-56-public-launch.html</link>
+      <guid isPermaLink="true">https://digitalkartai.shop/blog/2026-09-20-gpt-56-public-launch.html</guid>
+      <description>OpenAI&#x27;s GPT-5.6 models Sol, Terra and Luna go public after US government approval. What the GPT-5.6 launch means for Indian users, pricing and developers.</description>
+      <pubDate>Sun, 20 Sep 2026 09:00:00 +0530</pubDate>
+    </item>
+    <item>
+      <title>Google AI First Accelerator Picks 20 Indian AI Startups</title>
+      <link>https://digitalkartai.shop/blog/2026-09-20-google-ai-first-accelerator-india.html</link>
+      <guid isPermaLink="true">https://digitalkartai.shop/blog/2026-09-20-google-ai-first-accelerator-india.html</guid>
+      <description>Google has picked 20 Indian AI startups for its Google for Startups Accelerator AI First, offering Cloud support, Gemini models and mentorship. Details here.</description>
+      <pubDate>Sun, 20 Sep 2026 09:00:00 +0530</pubDate>
+    </item>
+    <item>
+      <title>Gemini Spark in India: Google&#x27;s 24/7 AI Agent Explained</title>
+      <link>https://digitalkartai.shop/blog/2026-09-20-gemini-spark-india-agent.html</link>
+      <guid isPermaLink="true">https://digitalkartai.shop/blog/2026-09-20-gemini-spark-india-agent.html</guid>
+      <description>Gemini Spark has landed in India for Google AI Pro and Ultra users — an always-on AI agent that runs tasks in Gmail, Docs and more. Here&#x27;s what to know.</description>
+      <pubDate>Sun, 20 Sep 2026 09:00:00 +0530</pubDate>
+    </item>
+    <item>
+      <title>Discovr AI Launches AI-Native Creator Advertising Platform</title>
+      <link>https://digitalkartai.shop/blog/2026-09-20-discovr-ai-creator-ads.html</link>
+      <guid isPermaLink="true">https://digitalkartai.shop/blog/2026-09-20-discovr-ai-creator-ads.html</guid>
+      <description>Indian startup Discovr AI launches an AI-native creator advertising platform with AI agents and brand safety, targeting $25M+ in creator ad spend this year.</description>
+      <pubDate>Sun, 20 Sep 2026 09:00:00 +0530</pubDate>
+    </item>
+    <item>
+      <title>Dialflo Raises ₹1.7 Crore for AI Contact Centres</title>
+      <link>https://digitalkartai.shop/blog/2026-09-20-dialflo-ai-contact-centre.html</link>
+      <guid isPermaLink="true">https://digitalkartai.shop/blog/2026-09-20-dialflo-ai-contact-centre.html</guid>
+      <description>Indian AI contact centre startup Dialflo raises ₹1.7 crore from AJVC to scale its hybrid human + AI agent platform for businesses in India and the Middle East.</description>
+      <pubDate>Sun, 20 Sep 2026 09:00:00 +0530</pubDate>
+    </item>
+  </channel>
+</rss>
