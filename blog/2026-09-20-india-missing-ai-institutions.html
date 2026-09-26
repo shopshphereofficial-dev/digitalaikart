@@ -62,6 +62,8 @@
 .post-body strong{color:#e2e8f0}
 .post-body ul{margin:0.6rem 0 0.6rem 1.4rem}
 .post-body li{font-size:0.85rem;color:var(--text-secondary);margin-bottom:0.35rem}
+.post-body .faq h3{font-size:0.98rem;color:#f1f5f9;margin:1.5rem 0 0.3rem}
+.post-body .faq p{font-size:0.85rem;color:var(--text-secondary);margin:0.4rem 0 0.9rem}
 .product-box{background:var(--navy-card);border:1px solid rgba(245,197,66,0.35);border-radius:14px;padding:1.5rem;margin:2.5rem 0;position:relative;overflow:hidden}
 .product-box::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:var(--gold-gradient)}
 .product-box h4{color:var(--gold);font-size:0.72rem;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:0.5rem}
@@ -103,6 +105,38 @@
     {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://digitalkartai.shop/"},
     {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://digitalkartai.shop/blog/"},
     {"@type": "ListItem", "position": 3, "name": "India's AI Problem: Missing Institutions, Not Guidelines", "item": "https://digitalkartai.shop/blog/2026-09-20-india-missing-ai-institutions.html"}
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What did the Sakshya Dialogue 2026 say is India's main AI problem?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Experts at the Sakshya Dialogue 2026 in New Delhi agreed that India does not lack AI guidelines — it lacks institutions to enforce them. The most-needed missing piece is an independent, conflict-free benchmarking body, one that could potentially be anchored in India's own AI Safety Institute."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is Bhashini and why was it held up as a success?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Bhashini is India's multilingual AI translation platform, spanning the country's 22 scheduled languages and their dialects. It now handles 22 million inferences a day — digitising panchayat meeting minutes and delivering real-time agricultural advice to farmers in their own language. It succeeded by partnering with more than 70 research institutions to collect language data and by choosing iteration over perfection."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why do successful Indian AI pilots stall outside one state?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Pilots such as an agricultural advisory tool and a maternal health risk predictor proved themselves in one state and then stalled because of missing plumbing: no sectoral data layer, no model registry, and no trusted mechanism to certify that a model proven safe in one state is safe to deploy in another. The innovation wasn't the problem — the infrastructure was."
+      }
+    }
   ]
 }
 </script>
@@ -182,6 +216,13 @@
       <li>Proven pilots (farm advisory, maternal health risk) stall without sectoral data layers, model registries and cross-state certification</li>
       <li>India underfunds foundational AI research, and <strong>no Indian company has yet made significant money from AI</strong></li>
     </ul>
+
+
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq">      <h3>What did the Sakshya Dialogue 2026 say is India's main AI problem?</h3>
+      <p>Experts at the Sakshya Dialogue 2026 in New Delhi agreed that India does not lack AI guidelines — it lacks institutions to enforce them. The most-needed missing piece is an independent, conflict-free benchmarking body, one that could potentially be anchored in India's own AI Safety Institute.</p>      <h3>What is Bhashini and why was it held up as a success?</h3>
+      <p>Bhashini is India's multilingual AI translation platform, spanning the country's 22 scheduled languages and their dialects. It now handles 22 million inferences a day — digitising panchayat meeting minutes and delivering real-time agricultural advice to farmers in their own language. It succeeded by partnering with more than 70 research institutions to collect language data and by choosing iteration over perfection.</p>      <h3>Why do successful Indian AI pilots stall outside one state?</h3>
+      <p>Pilots such as an agricultural advisory tool and a maternal health risk predictor proved themselves in one state and then stalled because of missing plumbing: no sectoral data layer, no model registry, and no trusted mechanism to certify that a model proven safe in one state is safe to deploy in another. The innovation wasn't the problem — the infrastructure was.</p>    </div>
 
     <h2>What This Means for You</h2>
     <p>If you're a student or researcher, read this as a career signal: India is about to need people who can build and staff these institutions — evaluators, auditors, benchmarking specialists — not just model builders. If you're a founder or work in an enterprise, the "stalled pilot" problem is your opportunity: the startups that solve boring plumbing — data layers, registries, certification tooling — will ride the institutional wave the Dialogue just described. And if you're simply trying to make AI work for you while the policy world sorts itself out, don't wait for the scaffolding. Start with the practical layer: our <a href="/products/gpt-6-astra-guide/">GPT-6 Astra — Zero to Hero Guide</a> takes you from prompting basics to agents, cost control and safety in a structured 30-day roadmap, which is the one part of this story you can act on this week. And if you want to poke at these policy debates yourself while the institutions get built, our free <a href="/ai/">Digitalaikart AI assistant</a> is a quick way to ask AI, tech and career questions — no sign-up needed to start.</p>

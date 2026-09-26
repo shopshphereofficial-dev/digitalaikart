@@ -74,6 +74,8 @@
 .post-body strong{color:#e2e8f0}
 .post-body ul{margin:0.6rem 0 0.6rem 1.4rem}
 .post-body li{font-size:0.85rem;color:var(--text-secondary);margin-bottom:0.35rem}
+.post-body .faq h3{font-size:0.98rem;color:#f1f5f9;margin:1.5rem 0 0.3rem}
+.post-body .faq p{font-size:0.85rem;color:var(--text-secondary);margin:0.4rem 0 0.9rem}
 .product-box{background:var(--navy-card);border:1px solid rgba(245,197,66,0.35);border-radius:14px;padding:1.5rem;margin:2.5rem 0;position:relative;overflow:hidden}
 .product-box::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:var(--gold-gradient)}
 .product-box h4{color:var(--gold);font-size:0.72rem;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:0.5rem}
@@ -104,6 +106,38 @@
 .tag-pills{display:flex;flex-wrap:wrap;gap:0.5rem;margin:0.3rem 0 1.2rem}
 .tag-pills span{font-size:0.68rem;font-weight:600;color:#94a3b8;background:rgba(148,163,184,0.08);border:1px solid rgba(148,163,184,0.25);padding:0.18rem 0.7rem;border-radius:999px;letter-spacing:0.3px}
 </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What are the GPT-5.6 Sol, Terra and Luna models?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "GPT-5.6 is a series of three models. Sol is the flagship tier, Terra is the mid-range workhorse for everyday tasks, and Luna is the fast, low-cost option for high-volume work where speed matters more than depth. For students and small businesses picking one to build on, Terra is the practical default."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why was the GPT-5.6 launch delayed by the US government?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "In late June, at the US government's request, OpenAI restricted preview access to GPT-5.6 to a small group of trusted US-based partners over cybersecurity concerns — the models' unprecedented ability to identify weaknesses in code that hackers can exploit. After technical testing and meetings between OpenAI and government officials, the administration approved a broad public launch."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much will GPT-5.6 Terra cost?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Once broadly available, Terra will be priced at half the cost of its predecessor GPT-5.5, as OpenAI looks to lock in customers amid fierce competition from Anthropic and Google. Anthropic is also restoring global access to its Fable 5 and Mythos 5 models after Washington lifted its own restriction."
+      }
+    }
+  ]
+}
+</script>
 </head>
 <body>
 <nav class="nav"><div class="nav-inner"><a href="/" class="nav-logo">Digitalaikart</a><div class="nav-links"><a href="/">Home</a><a href="/products/">Products</a><a href="/blog/" class="active">Blog</a></div></div></nav>
@@ -186,6 +220,13 @@
       <li>Anthropic's Fable 5 and Mythos 5 are also being restored globally after a US restriction lift</li>
       <li>Both labs are heading toward IPOs at near-$1 trillion valuations</li>
     </ul>
+
+
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq">      <h3>What are the GPT-5.6 Sol, Terra and Luna models?</h3>
+      <p>GPT-5.6 is a series of three models. Sol is the flagship tier, Terra is the mid-range workhorse for everyday tasks, and Luna is the fast, low-cost option for high-volume work where speed matters more than depth. For students and small businesses picking one to build on, Terra is the practical default.</p>      <h3>Why was the GPT-5.6 launch delayed by the US government?</h3>
+      <p>In late June, at the US government's request, OpenAI restricted preview access to GPT-5.6 to a small group of trusted US-based partners over cybersecurity concerns — the models' unprecedented ability to identify weaknesses in code that hackers can exploit. After technical testing and meetings between OpenAI and government officials, the administration approved a broad public launch.</p>      <h3>How much will GPT-5.6 Terra cost?</h3>
+      <p>Once broadly available, Terra will be priced at half the cost of its predecessor GPT-5.5, as OpenAI looks to lock in customers amid fierce competition from Anthropic and Google. Anthropic is also restoring global access to its Fable 5 and Mythos 5 models after Washington lifted its own restriction.</p>    </div>
 
     <h2>What This Means for You</h2>
     <p>If you're in India and building with AI, this launch removes an excuse — the best current models will be generally available again, and the mid-tier is getting dramatically cheaper. For students, Luna and Terra mean you can experiment seriously without burning through pocket money. For freelancers and small agencies, a 50% cost cut on the workhorse tier directly changes your margins on AI-powered services. Don't wait for the "perfect" model to start learning, though — the skills that matter (prompting, building agents, controlling costs) transfer across every generation. If you want a structured path, the <a href="/products/gpt-6-astra-guide/">GPT-6 Astra — Zero to Hero Guide</a> is the practical next step. And if you're newer to all this, start with <a href="/blog/gpt-6-astra-what-you-need-to-know.html">our beginner-friendly GPT-6 Astra explainer</a>.</p>
