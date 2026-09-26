@@ -62,6 +62,8 @@
 .post-body strong{color:#e2e8f0}
 .post-body ul{margin:0.6rem 0 0.6rem 1.4rem}
 .post-body li{font-size:0.85rem;color:var(--text-secondary);margin-bottom:0.35rem}
+.post-body h3{font-size:0.98rem;color:#f1f5f9;margin:1.5rem 0 0.3rem}
+.post-body .faq p{font-size:0.85rem;color:var(--text-secondary);margin:0.4rem 0 0.9rem}
 .product-box{background:var(--navy-card);border:1px solid rgba(245,197,66,0.35);border-radius:14px;padding:1.5rem;margin:2.5rem 0;position:relative;overflow:hidden}
 .product-box::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:var(--gold-gradient)}
 .product-box h4{color:var(--gold);font-size:0.72rem;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:0.5rem}
@@ -103,6 +105,38 @@
     {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://digitalkartai.shop/"},
     {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://digitalkartai.shop/blog/"},
     {"@type": "ListItem", "position": 3, "name": "ChatGPT Linux Desktop App Launch: What Devs Get", "item": "https://digitalkartai.shop/blog/2026-09-20-chatgpt-linux-desktop-app.html"}
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Which Linux distributions does the ChatGPT desktop app support?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The public preview supports Ubuntu 24.04 LTS, Ubuntu 26.04 LTS, Debian 13, Fedora 43, Fedora 44 and current Arch Linux rolling releases, in both x64 and ARM64 builds. It ships as .deb packages for Ubuntu and Debian, .rpm for Fedora, an installation script for Arch, and OpenAI sets up package repositories so updates arrive through your normal package manager."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What features does the ChatGPT Linux desktop app include?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The app bundles ChatGPT conversations, Codex (OpenAI's coding agent), Projects and local file access, so the assistant can read and work with code and documents on your machine instead of making you paste everything in. Browser actions are supported, but the app cannot yet control other desktop applications — full computer use isn't available on Linux yet."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is the ChatGPT Linux desktop app stable?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It's a public preview, and OpenAI says feature availability may not match the Windows and macOS versions. Early adopters on the OpenAI developer forum have reported input-method quirks — notably Japanese input via Fcitx when the app runs under XWayland on Fedora and Debian — with launching the app on the native Wayland backend as a common workaround."
+      }
+    }
   ]
 }
 </script>
@@ -186,6 +220,16 @@
       <li>Browser actions work; <strong>desktop-app control doesn't yet</strong> — full computer use is not on Linux for now</li>
       <li>Wayland + IME quirks reported by early users — fine for most, wait if you depend on complex input methods</li>
     </ul>
+
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq">
+      <h3>Which Linux distributions does the ChatGPT desktop app support?</h3>
+      <p>The public preview supports Ubuntu 24.04 LTS, Ubuntu 26.04 LTS, Debian 13, Fedora 43, Fedora 44 and current Arch Linux rolling releases, in both x64 and ARM64 builds. It ships as .deb packages for Ubuntu and Debian, .rpm for Fedora, an installation script for Arch, and OpenAI sets up package repositories so updates arrive through your normal package manager.</p>
+      <h3>What features does the ChatGPT Linux desktop app include?</h3>
+      <p>The app bundles ChatGPT conversations, Codex (OpenAI's coding agent), Projects and local file access, so the assistant can read and work with code and documents on your machine instead of making you paste everything in. Browser actions are supported, but the app cannot yet control other desktop applications — full computer use isn't available on Linux yet.</p>
+      <h3>Is the ChatGPT Linux desktop app stable?</h3>
+      <p>It's a public preview, and OpenAI says feature availability may not match the Windows and macOS versions. Early adopters on the OpenAI developer forum have reported input-method quirks — notably Japanese input via Fcitx when the app runs under XWayland on Fedora and Debian — with launching the app on the native Wayland backend as a common workaround.</p>
+    </div>
 
     <h2>What This Means for You</h2>
     <p>If you're a student or developer in India running Linux, your workflow just got a genuine upgrade — a native AI coding companion on the OS you actually use, with Codex built in. For teams, this also makes Linux workstations first-class citizens for AI-assisted development instead of an afterthought. The bigger shift worth acting on: AI is moving from browser tab to operating system, and the people who learn to direct desktop agents — safely and cheaply — will pull ahead. The <a href="/products/gpt-6-astra-guide/">GPT-6 Astra — Zero to Hero Guide</a> is a practical next step for exactly that: prompting, agents, computer use and cost optimization, explained for beginners.</p>

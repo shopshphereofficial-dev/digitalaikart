@@ -74,6 +74,8 @@
 .post-body strong{color:#e2e8f0}
 .post-body ul{margin:0.6rem 0 0.6rem 1.4rem}
 .post-body li{font-size:0.85rem;color:var(--text-secondary);margin-bottom:0.35rem}
+.post-body h3{font-size:0.98rem;color:#f1f5f9;margin:1.5rem 0 0.3rem}
+.post-body .faq p{font-size:0.85rem;color:var(--text-secondary);margin:0.4rem 0 0.9rem}
 .product-box{background:var(--navy-card);border:1px solid rgba(245,197,66,0.35);border-radius:14px;padding:1.5rem;margin:2.5rem 0;position:relative;overflow:hidden}
 .product-box::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:var(--gold-gradient)}
 .product-box h4{color:var(--gold);font-size:0.72rem;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:0.5rem}
@@ -104,6 +106,38 @@
 .related li{font-size:0.85rem;color:var(--text-secondary);padding:0.35rem 0}
 .related li a{color:var(--gold)}
 </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What math problem did GPT-6 Astra help solve?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Epoch AI marked “The Core in Approval-Based Committee Elections” as solved on its FrontierMath Open Problems board — the first-ever “Major Advance” problem to be cracked. The voting-theory question, open since 2017, asked whether an election can exist where no perfectly fair committee exists at all. The answer: no — a fair committee always exists, and the roughly 20-page proof includes a polynomial-time algorithm for finding one."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Did GPT-6 Astra solve the FrontierMath problem on its own?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Three mathematicians — Patrick Becker, Matthias Greger and Dominik Peters — worked with Astra over days of iterative collaboration. Epoch AI created a new “Human + AI” label for the result: humans actively prompted and steered, but the core ideas, including the “harmonic entropy” framework, came from the model. Researcher Dominik Peters noted a simple one-shot prompt would never crack this problem."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How good is GPT-6 Astra on FrontierMath benchmarks overall?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Astra scores between 97.6% and 98% on FrontierMath Tier 4 — up from roughly 5% for the best models when that tier launched in July 2025. On the harder Erdős set of 68 historically unsolved problems, Astra solved only 2 during the official benchmark run (about 3%), with attempts burning over $220,000 of compute; every other model tested solved none."
+      }
+    }
+  ]
+}
+</script>
 </head>
 <body>
 <nav class="nav"><div class="nav-inner"><a href="/" class="nav-logo">Digitalaikart</a><div class="nav-links"><a href="/">Home</a><a href="/products/">Products</a><a href="/blog/" class="active">Blog</a></div></div></nav>
@@ -179,6 +213,16 @@
       <li>Astra scores ~98% on Tier 4 (up from ~5% for all models in July 2025) but only 2 of 68 on the Erdős set</li>
       <li>Autonomous math genius? No. A research partner that originates ideas under expert direction? Clearly yes</li>
     </ul>
+
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq">
+      <h3>What math problem did GPT-6 Astra help solve?</h3>
+      <p>Epoch AI marked “The Core in Approval-Based Committee Elections” as solved on its FrontierMath Open Problems board — the first-ever “Major Advance” problem to be cracked. The voting-theory question, open since 2017, asked whether an election can exist where no perfectly fair committee exists at all. The answer: no — a fair committee always exists, and the roughly 20-page proof includes a polynomial-time algorithm for finding one.</p>
+      <h3>Did GPT-6 Astra solve the FrontierMath problem on its own?</h3>
+      <p>No. Three mathematicians — Patrick Becker, Matthias Greger and Dominik Peters — worked with Astra over days of iterative collaboration. Epoch AI created a new “Human + AI” label for the result: humans actively prompted and steered, but the core ideas, including the “harmonic entropy” framework, came from the model. Researcher Dominik Peters noted a simple one-shot prompt would never crack this problem.</p>
+      <h3>How good is GPT-6 Astra on FrontierMath benchmarks overall?</h3>
+      <p>Astra scores between 97.6% and 98% on FrontierMath Tier 4 — up from roughly 5% for the best models when that tier launched in July 2025. On the harder Erdős set of 68 historically unsolved problems, Astra solved only 2 during the official benchmark run (about 3%), with attempts burning over $220,000 of compute; every other model tested solved none.</p>
+    </div>
 
     <h2>What This Means for You</h2>
     <p>If you're a student, teacher or researcher in India, this is the moment to stop treating AI as a homework shortcut and start treating it as a collaborator you can push. The mathematicians who got this result spent their time challenging the model, demanding better bounds, and rejecting weak arguments — the model did the heavy lifting, but humans steered. That division of labour is going to define knowledge work for the next decade, from research labs to Indian IT companies. If you want to build that skill properly instead of fumbling with random prompts, the <a href="/products/gpt-6-astra-guide/">GPT-6 Astra — Zero to Hero Guide</a> walks through prompting, reasoning control and cost management step by step — the same craft the researchers used, minus the PhD.</p>

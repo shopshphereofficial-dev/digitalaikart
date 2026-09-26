@@ -74,6 +74,8 @@
 .post-body strong{color:#e2e8f0}
 .post-body ul{margin:0.6rem 0 0.6rem 1.4rem}
 .post-body li{font-size:0.85rem;color:var(--text-secondary);margin-bottom:0.35rem}
+.post-body h3{font-size:0.98rem;color:#f1f5f9;margin:1.5rem 0 0.3rem}
+.post-body .faq p{font-size:0.85rem;color:var(--text-secondary);margin:0.4rem 0 0.9rem}
 .product-box{background:var(--navy-card);border:1px solid rgba(245,197,66,0.35);border-radius:14px;padding:1.5rem;margin:2.5rem 0;position:relative;overflow:hidden}
 .product-box::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:var(--gold-gradient)}
 .product-box h4{color:var(--gold);font-size:0.72rem;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:0.5rem}
@@ -104,6 +106,38 @@
 .related li{font-size:0.85rem;color:var(--text-secondary);padding:0.35rem 0}
 .related li a{color:var(--gold)}
 </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How many lines of code were in GitHub's Copilot Rust rewrite?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The port produced 832,378 lines of production Rust plus roughly 468,689 lines of Rust unit tests, replacing about 430,000 lines of TypeScript. The rewrite ran from May 12 to August 21 — about 14.5 weeks — landing in 128 pull requests, roughly 1.3 port PRs per day."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much did the Copilot runtime rewrite cost?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Microsoft's Stephen Toub put the cost at roughly $120,000 in AI token spend plus about three weeks of a single developer's time. He estimated the same rewrite would have taken a whole team of developers one to two years before AI agents existed."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much faster is the Copilot runtime in Rust?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "On a benchmark of 1,000 one-turn session lifecycles with 100 concurrent pipelines, throughput rose from 7.55 cycles per second in TypeScript to 120 per second in Rust — a 15.9x improvement. Memory across a 10-client batch dropped from 1,383 MB to 126 MB. Even so, the project still hit dozens of regressions that only human review caught — the Rust compiler can't verify behavior."
+      }
+    }
+  ]
+}
+</script>
 </head>
 <body>
 <nav class="nav"><div class="nav-inner"><a href="/" class="nav-logo">Digitalaikart</a><div class="nav-links"><a href="/">Home</a><a href="/products/">Products</a><a href="/blog/" class="active">Blog</a></div></div></nav>
@@ -179,6 +213,16 @@
       <li>Performance gains: 15.9x throughput and memory down from 1,383 MB to 126 MB on Microsoft's benchmark</li>
       <li>Dozens of compiler-approved regressions prove human review remains essential</li>
     </ul>
+
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq">
+      <h3>How many lines of code were in GitHub's Copilot Rust rewrite?</h3>
+      <p>The port produced 832,378 lines of production Rust plus roughly 468,689 lines of Rust unit tests, replacing about 430,000 lines of TypeScript. The rewrite ran from May 12 to August 21 — about 14.5 weeks — landing in 128 pull requests, roughly 1.3 port PRs per day.</p>
+      <h3>How much did the Copilot runtime rewrite cost?</h3>
+      <p>Microsoft's Stephen Toub put the cost at roughly $120,000 in AI token spend plus about three weeks of a single developer's time. He estimated the same rewrite would have taken a whole team of developers one to two years before AI agents existed.</p>
+      <h3>How much faster is the Copilot runtime in Rust?</h3>
+      <p>On a benchmark of 1,000 one-turn session lifecycles with 100 concurrent pipelines, throughput rose from 7.55 cycles per second in TypeScript to 120 per second in Rust — a 15.9x improvement. Memory across a 10-client batch dropped from 1,383 MB to 126 MB. Even so, the project still hit dozens of regressions that only human review caught — the Rust compiler can't verify behavior.</p>
+    </div>
 
     <h2>What This Means for You</h2>
     <p>If you're a developer in India, this is one of the clearest signals yet that the premium is shifting from writing code to directing and reviewing it. Toub himself spent most of his time reviewing changes, testing behaviour and challenging design decisions — not typing. For India's massive IT services sector, the "rewrite" and "migration" businesses just changed shape overnight: the same Java-to-cloud modernisation projects that employed thousands can now be driven by far smaller teams who know how to orchestrate agents well. That skill — directing agents, controlling costs, reviewing their output — is learnable, and the <a href="/products/gpt-6-astra-guide/">GPT-6 Astra — Zero to Hero Guide</a> covers it end to end, from prompting to building your first coding agent, at a price that's less than a month of canteen chai.</p>
