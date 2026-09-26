@@ -1,0 +1,33 @@
+name: Assemble Instagram Brand Deal Kit PDF
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - '.github/pdf-parts/instagram-brand-deal-kit.READY'
+
+permissions:
+  contents: write
+
+jobs:
+  assemble:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Assemble PDF from verified parts
+        run: |
+          cat .github/pdf-parts/instagram-brand-deal-kit.part01.txt .github/pdf-parts/instagram-brand-deal-kit.part02.txt .github/pdf-parts/instagram-brand-deal-kit.part03.txt .github/pdf-parts/instagram-brand-deal-kit.part04.txt .github/pdf-parts/instagram-brand-deal-kit.part05.txt .github/pdf-parts/instagram-brand-deal-kit.part06.txt | tr -d '[:space:]' | base64 -d > instagram-brand-deal-kit.pdf
+          test "$(md5sum instagram-brand-deal-kit.pdf | cut -d' ' -f1)" = "8362ab684b5e046f32852a331e052c9b" || (echo 'MD5 mismatch'; exit 1)
+          test "$(wc -c < instagram-brand-deal-kit.pdf)" = "53830" || (echo 'Byte count mismatch'; exit 1)
+          mkdir -p downloads
+          mv instagram-brand-deal-kit.pdf downloads/
+      - name: Commit and push
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add downloads/instagram-brand-deal-kit.pdf
+          if git diff --cached --quiet; then
+            echo "No changes"
+          else
+            git commit -m "Rebuild Instagram Brand Deal Kit PDF from verified parts"
+            git push
+          fi
