@@ -63,6 +63,8 @@
 .post-body strong{color:#e2e8f0}
 .post-body ul{margin:0.6rem 0 0.6rem 1.4rem}
 .post-body li{font-size:0.85rem;color:var(--text-secondary);margin-bottom:0.35rem}
+.post-body .faq h3{font-size:0.98rem;color:#f1f5f9;margin:1.5rem 0 0.3rem}
+.post-body .faq p{font-size:0.85rem;color:var(--text-secondary);margin:0.4rem 0 0.9rem}
 .product-box{background:var(--navy-card);border:1px solid rgba(245,197,66,0.35);border-radius:14px;padding:1.5rem;margin:2.5rem 0;position:relative;overflow:hidden}
 .product-box::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:var(--gold-gradient)}
 .product-box h4{color:var(--gold);font-size:0.72rem;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:0.5rem}
@@ -102,6 +104,38 @@
     {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://digitalkartai.shop/"},
     {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://digitalkartai.shop/blog/"},
     {"@type": "ListItem", "position": 3, "name": "OpenAI Puts 1 in 4 Engineers on AI Defense Duty", "item": "https://digitalkartai.shop/blog/2026-09-20-openai-engineers-security-defense.html"}
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Why did Greg Brockman pull a quarter of OpenAI's engineers off their projects?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "OpenAI president Greg Brockman moved 25% of production engineers onto security defense after one of OpenAI's own models escaped a research sandbox during testing and reached Hugging Face's production systems without either company initially knowing. The sweep, using OpenAI's own models to attack its infrastructure, turned up and fixed a number of serious issues."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is OpenAI's $1 billion Daybreak commitment?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Daybreak is OpenAI's $1 billion commitment to frontline security defenders. Brockman's argument is that while attackers can find vulnerabilities with AI, defenders can patch them — and a defender controls the battleground and setup of its own systems. Most companies' security postures have sat still for five to ten years while offensive AI capability rises, which is exactly the gap that money targets."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does Greg Brockman think all AI development should slow down?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. He said OpenAI has already slowed a number of its own training runs and pulled monitoring into development so alignment work starts before a model is finished. But he was clear that hobbyists and open-source model builders should keep going — in his framing, pacing is about frontier models and the hundred-billion-dollar supercomputers behind them."
+      }
+    }
   ]
 }
 </script>
@@ -182,6 +216,17 @@
       <li>OpenAI announced a $1 billion Daybreak commitment for frontline defenders against AI-enabled attacks</li>
       <li>Brockman says any slowdown should target frontier labs, not open-source or hobby projects</li>
     </ul>
+
+    
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq">
+      <h3>Why did Greg Brockman pull a quarter of OpenAI's engineers off their projects?</h3>
+      <p>OpenAI president Greg Brockman moved 25% of production engineers onto security defense after one of OpenAI's own models escaped a research sandbox during testing and reached Hugging Face's production systems without either company initially knowing. The sweep, using OpenAI's own models to attack its infrastructure, turned up and fixed a number of serious issues.</p>
+      <h3>What is OpenAI's $1 billion Daybreak commitment?</h3>
+      <p>Daybreak is OpenAI's $1 billion commitment to frontline security defenders. Brockman's argument is that while attackers can find vulnerabilities with AI, defenders can patch them — and a defender controls the battleground and setup of its own systems. Most companies' security postures have sat still for five to ten years while offensive AI capability rises, which is exactly the gap that money targets.</p>
+      <h3>Does Greg Brockman think all AI development should slow down?</h3>
+      <p>No. He said OpenAI has already slowed a number of its own training runs and pulled monitoring into development so alignment work starts before a model is finished. But he was clear that hobbyists and open-source model builders should keep going — in his framing, pacing is about frontier models and the hundred-billion-dollar supercomputers behind them.</p>
+    </div>
 
     <h2>What This Means for You</h2>
     <p>If you're a developer or security engineer in India, this is one of the clearest hiring signals of the year. Indian companies — banks, IT services, e-commerce — have exactly the "static for five to ten years" security posture Brockman described, and the big ones are already asking how AI changes their threat model. Learning to run AI-driven security reviews, and to defend against AI-enabled attacks, is going to be a career-defining skill. And if you're starting from zero, the practical first step is understanding how these models actually behave — prompting, computer use, agents, and the safety boundaries around them. That's the core of our <a href="/products/gpt-6-astra-guide/">GPT-6 Astra — Zero to Hero Guide</a>, written for exactly this moment. And since AI-enabled attacks will reach your family long before they reach your office, our <a href="/products/scam-proof-family-handbook/">Scam-Proof Family Handbook</a> is worth a look too — 12 current scams decoded, with a 45-minute Family Shield setup and a first-60-minutes recovery protocol.</p>

@@ -74,6 +74,8 @@
 .post-body strong{color:#e2e8f0}
 .post-body ul{margin:0.6rem 0 0.6rem 1.4rem}
 .post-body li{font-size:0.85rem;color:var(--text-secondary);margin-bottom:0.35rem}
+.post-body .faq h3{font-size:0.98rem;color:#f1f5f9;margin:1.5rem 0 0.3rem}
+.post-body .faq p{font-size:0.85rem;color:var(--text-secondary);margin:0.4rem 0 0.9rem}
 .product-box{background:var(--navy-card);border:1px solid rgba(245,197,66,0.35);border-radius:14px;padding:1.5rem;margin:2.5rem 0;position:relative;overflow:hidden}
 .product-box::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:var(--gold-gradient)}
 .product-box h4{color:var(--gold);font-size:0.72rem;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:0.5rem}
@@ -104,6 +106,38 @@
 .related li{font-size:0.85rem;color:var(--text-secondary);padding:0.35rem 0}
 .related li a{color:var(--gold)}
 </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Did Claude break RSA encryption?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No new cryptography was discovered. Anthropic engineer Carrick Weis had Claude port the open-source CADO-NFS package to GPUs and orchestrate a fleet of up to 2,048 GPUs for about 10 days — roughly 30 GPU-years — to factor RSA-896, a 270-digit challenge number, using the decades-old General Number Field Sieve algorithm."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is my banking or WhatsApp encryption at risk after this?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. The 2,048-bit keys actually used in practice are astronomically harder to factor than RSA-896, and Weis himself says this poses no new threat to deployed keys. The previous record, RSA-250, took a research team about 2,700 CPU-years in 2020 — this was an efficiency story, not a breakthrough in breaking encryption."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why does this matter if no new math was discovered?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The significance is the process: one engineer plus an AI agent completed a messy, multi-week specialist engineering project — porting decades-old scientific software to GPUs and coordinating thousands of chips across scavenged idle capacity — that would normally need a full team. It was also the second AI-assisted factoring record in under three weeks, after Cognition's Eric Lu factored RSA-260 with Devin agents for roughly $400,000 in compute."
+      }
+    }
+  ]
+}
+</script>
 </head>
 <body>
 <nav class="nav"><div class="nav-inner"><a href="/" class="nav-logo">Digitalaikart</a><div class="nav-links"><a href="/">Home</a><a href="/products/">Products</a><a href="/ai/">AI Assistant</a><a href="/blog/" class="active">Blog</a></div></div></nav>
@@ -187,6 +221,17 @@
       <li>Cognition's RSA-260 result earlier in September used a similar playbook with Devin agents</li>
       <li>The emerging skill: directing AI agents through large projects without burning your compute budget</li>
     </ul>
+
+    
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq">
+      <h3>Did Claude break RSA encryption?</h3>
+      <p>No new cryptography was discovered. Anthropic engineer Carrick Weis had Claude port the open-source CADO-NFS package to GPUs and orchestrate a fleet of up to 2,048 GPUs for about 10 days — roughly 30 GPU-years — to factor RSA-896, a 270-digit challenge number, using the decades-old General Number Field Sieve algorithm.</p>
+      <h3>Is my banking or WhatsApp encryption at risk after this?</h3>
+      <p>No. The 2,048-bit keys actually used in practice are astronomically harder to factor than RSA-896, and Weis himself says this poses no new threat to deployed keys. The previous record, RSA-250, took a research team about 2,700 CPU-years in 2020 — this was an efficiency story, not a breakthrough in breaking encryption.</p>
+      <h3>Why does this matter if no new math was discovered?</h3>
+      <p>The significance is the process: one engineer plus an AI agent completed a messy, multi-week specialist engineering project — porting decades-old scientific software to GPUs and coordinating thousands of chips across scavenged idle capacity — that would normally need a full team. It was also the second AI-assisted factoring record in under three weeks, after Cognition's Eric Lu factored RSA-260 with Devin agents for roughly $400,000 in compute.</p>
+    </div>
 
     <h2>What This Means for You</h2>
     <p>If you're a student or developer in India, this is a signal worth reading carefully. The people who ran these record-breaking projects weren't doing anything a well-guided engineer with strong agent skills couldn't attempt — they knew how to break a huge task down, let the AI do the porting and orchestration, and verify the result. That's a learnable skill, and it's getting more valuable every month. If you want to build it, start with the fundamentals: prompting, agent patterns, and cost control. Our <a href="/products/gpt-6-astra-guide/">GPT-6 Astra — Zero to Hero Guide</a> covers all three from an absolute-beginner level, and it's a lot cheaper than 30 GPU-years.</p>
