@@ -62,6 +62,7 @@
 .post-body strong{color:#e2e8f0}
 .post-body ul{margin:0.6rem 0 0.6rem 1.4rem}
 .post-body li{font-size:0.85rem;color:var(--text-secondary);margin-bottom:0.35rem}
+.post-body .faq p{font-size:0.85rem;color:var(--text-secondary);margin:0.4rem 0 0.9rem}
 .product-box{background:var(--navy-card);border:1px solid rgba(245,197,66,0.35);border-radius:14px;padding:1.5rem;margin:2.5rem 0;position:relative;overflow:hidden}
 .product-box::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:var(--gold-gradient)}
 .product-box h4{color:var(--gold);font-size:0.72rem;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:0.5rem}
@@ -106,6 +107,47 @@
   ]
 }
 </script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is Tencent's Hy4 model?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Hy4 is a preview-release, open-source mixture-of-experts AI model from Tencent, released on September 19, 2026. It has 77 billion total parameters with only 4.9 billion active per query, which keeps inference costs low, and a context window of over 1 million tokens."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much does the Tencent Hy4 API cost?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Tencent prices the Hy4 API at $0.834 per million input tokens, $2.501 per million output tokens, and $0.042 per million tokens for cache hits. It is also free to use on Tencent's WorkBuddy and CodeBuddy tools until September 30, 2026."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Where can Indian developers access the Hy4 model?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Hy4 is available through Tencent's WorkBuddy, CodeBuddy, Yuanbao and Tencent Cloud TokenHub, as well as on OpenRouter — so you can try it without any special setup beyond an account on those platforms."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How did Hy4 score against competing models?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "In Tencent's internal blind test, 163 experts rated Hy4 across 203 engineering tasks and it averaged 2.99 out of 4.00 — slightly ahead of GLM-5.3 (2.92) and Kimi K3 (2.94). Keep in mind the evaluation was run by the model's own maker, so treat the ranking as directional rather than definitive."
+      }
+    }
+  ]
+}
+</script>
+
 </head>
 <body>
 <nav class="nav"><div class="nav-inner"><a href="/" class="nav-logo">Digitalaikart</a><div class="nav-links"><a href="/">Home</a><a href="/products/">Products</a><a href="/blog/" class="active">Blog</a></div></div></nav>
@@ -179,6 +221,19 @@
       <li><strong>$0.834/M input</strong>, free on WorkBuddy and CodeBuddy till September 30</li>
       <li>Self-optimization loop reportedly improved throughput by 31.8%</li>
     </ul>
+
+
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq">
+      <h3>What is Tencent's Hy4 model?</h3>
+      <p>Hy4 is a preview-release, open-source mixture-of-experts AI model from Tencent, released on September 19, 2026. It has 77 billion total parameters with only 4.9 billion active per query, which keeps inference costs low, and a context window of over 1 million tokens.</p>
+      <h3>How much does the Tencent Hy4 API cost?</h3>
+      <p>Tencent prices the Hy4 API at $0.834 per million input tokens, $2.501 per million output tokens, and $0.042 per million tokens for cache hits. It is also free to use on Tencent's WorkBuddy and CodeBuddy tools until September 30, 2026.</p>
+      <h3>Where can Indian developers access the Hy4 model?</h3>
+      <p>Hy4 is available through Tencent's WorkBuddy, CodeBuddy, Yuanbao and Tencent Cloud TokenHub, as well as on OpenRouter — so you can try it without any special setup beyond an account on those platforms.</p>
+      <h3>How did Hy4 score against competing models?</h3>
+      <p>In Tencent's internal blind test, 163 experts rated Hy4 across 203 engineering tasks and it averaged 2.99 out of 4.00 — slightly ahead of GLM-5.3 (2.92) and Kimi K3 (2.94). Keep in mind the evaluation was run by the model's own maker, so treat the ranking as directional rather than definitive.</p>
+    </div>
 
     <h2>What This Means for You</h2>
     <p>If you're a developer in India, this is a good week to experiment — spin up Hy4 on OpenRouter or grab the free access on Tencent's tools before September 30 and benchmark it on your own tasks, not Tencent's. If you're a founder, note that the price of intelligence keeps falling, and your moat will be what you build around the model, not the model itself. And whatever model you end up using, the skill that pays is knowing how to direct it — prompting, agents and cost discipline — which is exactly what the <a href="/products/gpt-6-astra-guide/">GPT-6 Astra — Zero to Hero Guide</a> teaches, from first prompt to working AI agents.</p>

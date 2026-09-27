@@ -62,6 +62,7 @@
 .post-body strong{color:#e2e8f0}
 .post-body ul{margin:0.6rem 0 0.6rem 1.4rem}
 .post-body li{font-size:0.85rem;color:var(--text-secondary);margin-bottom:0.35rem}
+.post-body .faq p{font-size:0.85rem;color:var(--text-secondary);margin:0.4rem 0 0.9rem}
 .product-box{background:var(--navy-card);border:1px solid rgba(245,197,66,0.35);border-radius:14px;padding:1.5rem;margin:2.5rem 0;position:relative;overflow:hidden}
 .product-box::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:var(--gold-gradient)}
 .product-box h4{color:var(--gold);font-size:0.72rem;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:0.5rem}
@@ -106,6 +107,47 @@
   ]
 }
 </script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is the Nvidia DGX Spark?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The DGX Spark is Nvidia's Mac mini-sized desktop AI computer, launched last October as \"the world's smallest AI supercomputer.\" It runs Linux, weighs about 2.6 pounds, and uses the GB10 Grace Blackwell superchip to deliver up to a petaflop of AI performance with 128GB of unified memory — enough to run models with up to 200 billion parameters locally."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much does the DGX Spark cost in India?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The DGX Spark is priced at $4,699 in the US, which works out to roughly ₹4 lakh after conversion. There is no per-token billing or usage cap after the upfront purchase, unlike a monthly AI subscription."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "When do RTX Spark laptops launch and who makes them?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "RTX Spark laptops, built around the same GB10 silicon as the DGX Spark, are expected to ship this fall from Dell, HP, Lenovo, Asus, MSI and Acer. Microsoft is reportedly building a Surface Laptop Ultra around the chip as well. They run Windows 11 and work as regular laptops while also running large local models."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is local AI as good as cloud AI models?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Not yet. Nvidia's own Adel El Hallak admits cloud frontier models are significantly more capable than the open-weight models you can run locally. The realistic near-term picture is hybrid: local AI for routine and private work like summarising documents, drafting emails or running a coding assistant, and cloud models for heavy tasks — with no subscription fee and no data leaving your machine on the local side."
+      }
+    }
+  ]
+}
+</script>
+
 </head>
 <body>
 <nav class="nav"><div class="nav-inner"><a href="/" class="nav-logo">Digitalaikart</a><div class="nav-links"><a href="/">Home</a><a href="/products/">Products</a><a href="/blog/" class="active">Blog</a></div></div></nav>
@@ -184,6 +226,19 @@
       <li>Setup is shifting from command-line installs to GUI-based app-like experiences — the key to mainstream adoption</li>
       <li>Frontier cloud models remain significantly more capable; the realistic near future is hybrid — local for routine and private work, cloud for heavy tasks</li>
     </ul>
+
+
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq">
+      <h3>What is the Nvidia DGX Spark?</h3>
+      <p>The DGX Spark is Nvidia's Mac mini-sized desktop AI computer, launched last October as "the world's smallest AI supercomputer." It runs Linux, weighs about 2.6 pounds, and uses the GB10 Grace Blackwell superchip to deliver up to a petaflop of AI performance with 128GB of unified memory — enough to run models with up to 200 billion parameters locally.</p>
+      <h3>How much does the DGX Spark cost in India?</h3>
+      <p>The DGX Spark is priced at $4,699 in the US, which works out to roughly ₹4 lakh after conversion. There is no per-token billing or usage cap after the upfront purchase, unlike a monthly AI subscription.</p>
+      <h3>When do RTX Spark laptops launch and who makes them?</h3>
+      <p>RTX Spark laptops, built around the same GB10 silicon as the DGX Spark, are expected to ship this fall from Dell, HP, Lenovo, Asus, MSI and Acer. Microsoft is reportedly building a Surface Laptop Ultra around the chip as well. They run Windows 11 and work as regular laptops while also running large local models.</p>
+      <h3>Is local AI as good as cloud AI models?</h3>
+      <p>Not yet. Nvidia's own Adel El Hallak admits cloud frontier models are significantly more capable than the open-weight models you can run locally. The realistic near-term picture is hybrid: local AI for routine and private work like summarising documents, drafting emails or running a coding assistant, and cloud models for heavy tasks — with no subscription fee and no data leaving your machine on the local side.</p>
+    </div>
 
     <h2>What This Means for You</h2>
     <p>If you're an Indian professional handling sensitive material — client documents, medical records, financial data, legal drafts — local AI is the first version of this technology that takes your privacy concerns seriously instead of asking you to sign them away. For students, the smarter move today isn't rushing to buy hardware; it's learning to work skilfully with cloud models now (the free and low-cost tiers are generous), because the prompting and agent skills transfer directly to local models as they get cheaper. And when you do start paying for AI, spend deliberately — the <a href="/products/gpt-6-astra-guide/">GPT-6 Astra — Zero to Hero Guide</a> includes a full cost-optimization chapter that shows you how to run a serious AI workflow without the runaway bills, which is exactly the discipline that will decide whether local AI saves you money or just becomes another expensive gadget on your desk.</p>

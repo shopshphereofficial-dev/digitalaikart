@@ -62,6 +62,7 @@
 .post-body strong{color:#e2e8f0}
 .post-body ul{margin:0.6rem 0 0.6rem 1.4rem}
 .post-body li{font-size:0.85rem;color:var(--text-secondary);margin-bottom:0.35rem}
+.post-body .faq p{font-size:0.85rem;color:var(--text-secondary);margin:0.4rem 0 0.9rem}
 .product-box{background:var(--navy-card);border:1px solid rgba(245,197,66,0.35);border-radius:14px;padding:1.5rem;margin:2.5rem 0;position:relative;overflow:hidden}
 .product-box::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:var(--gold-gradient)}
 .product-box h4{color:var(--gold);font-size:0.72rem;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:0.5rem}
@@ -104,6 +105,47 @@
   ]
 }
 </script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How much are OpenAI's robotics jobs paying?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "OpenAI posted 27 robotics-related job listings in the week covered, up from 11 four months earlier, with base salaries reaching $500,000 a year — roughly ₹4.2 crore for an individual engineer."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What does OpenAI's teleoperation lab do?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "OpenAI's San Francisco teleoperation facility, launched in February, pairs GELLO controllers with Franka robotic arms and runs 24 hours a day across three shifts. Contract workers guide the arms through everyday tasks like making toast to produce state-action training datasets. The workforce has grown from roughly 100 to more than 400 people."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why did OpenAI lease a 202,000 sq ft warehouse?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "In March 2026 OpenAI signed a lease for 202,000 square feet at the Portside Commerce Center in Richmond, California. The building's electrical capacity exceeds 14,000 amperes — comparable to a small data center — to power robotic test cells, actuation rigs and the GPU clusters that turn teleoperation footage into trained robot policies."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Who is OpenAI competing against in robotics?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Google DeepMind released Gemini Robotics 2 on July 30, 2026 — vision-language-action models demonstrated on Apptronik's Apollo 2 robot, with a 68.4% success rate on tabletop pickup tasks and 45.7% on floor-level pickup. Tesla is converting its Fremont factory to manufacture Optimus humanoids, targeting a million units a year at scale."
+      }
+    }
+  ]
+}
+</script>
+
 </head>
 <body>
 <nav class="nav"><div class="nav-inner"><a href="/" class="nav-logo">Digitalaikart</a><div class="nav-links"><a href="/">Home</a><a href="/products/">Products</a><a href="/blog/" class="active">Blog</a></div></div></nav>
@@ -180,6 +222,19 @@
       <li>Google DeepMind's Gemini Robotics 2 (July 30) showed 68.4% tabletop pickup success on Apptronik's Apollo 2; Tesla targets 1M Optimus units a year</li>
       <li>OpenAI's bet: controlling the training data pipeline matters more than being first to ship hardware</li>
     </ul>
+
+
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq">
+      <h3>How much are OpenAI's robotics jobs paying?</h3>
+      <p>OpenAI posted 27 robotics-related job listings in the week covered, up from 11 four months earlier, with base salaries reaching $500,000 a year — roughly ₹4.2 crore for an individual engineer.</p>
+      <h3>What does OpenAI's teleoperation lab do?</h3>
+      <p>OpenAI's San Francisco teleoperation facility, launched in February, pairs GELLO controllers with Franka robotic arms and runs 24 hours a day across three shifts. Contract workers guide the arms through everyday tasks like making toast to produce state-action training datasets. The workforce has grown from roughly 100 to more than 400 people.</p>
+      <h3>Why did OpenAI lease a 202,000 sq ft warehouse?</h3>
+      <p>In March 2026 OpenAI signed a lease for 202,000 square feet at the Portside Commerce Center in Richmond, California. The building's electrical capacity exceeds 14,000 amperes — comparable to a small data center — to power robotic test cells, actuation rigs and the GPU clusters that turn teleoperation footage into trained robot policies.</p>
+      <h3>Who is OpenAI competing against in robotics?</h3>
+      <p>Google DeepMind released Gemini Robotics 2 on July 30, 2026 — vision-language-action models demonstrated on Apptronik's Apollo 2 robot, with a 68.4% success rate on tabletop pickup tasks and 45.7% on floor-level pickup. Tesla is converting its Fremont factory to manufacture Optimus humanoids, targeting a million units a year at scale.</p>
+    </div>
 
     <h2>What This Means for You</h2>
     <p>For Indian engineers and students, don't just see the ₹4.2 crore salary — see what it's paying for. It's not roboticists in the classic sense; it's people who understand AI models deeply enough to build data pipelines around them. That's a stack you can start learning today, entirely from a laptop: prompting, agent orchestration, cost control, and safety practices. The GPT-6 era skills in our <a href="/products/gpt-6-astra-guide/">GPT-6 Astra — Zero to Hero Guide</a> translate directly to the robotics wave, because the models orchestrating those robot arms are the same family of models you'd be directing in any other domain.</p>
