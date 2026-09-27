@@ -1,0 +1,34 @@
+name: Assemble Health Insurance Claim Playbook PDF
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - '.github/pdf-parts/health-insurance-claim-playbook.part15.txt'
+
+permissions:
+  contents: write
+
+jobs:
+  assemble:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Assemble PDF from verified parts
+        run: |
+          cat .github/pdf-parts/health-insurance-claim-playbook.part01.txt .github/pdf-parts/health-insurance-claim-playbook.part02.txt .github/pdf-parts/health-insurance-claim-playbook.part03.txt .github/pdf-parts/health-insurance-claim-playbook.part04.txt .github/pdf-parts/health-insurance-claim-playbook.part05.txt .github/pdf-parts/health-insurance-claim-playbook.part06.txt .github/pdf-parts/health-insurance-claim-playbook.part07.txt .github/pdf-parts/health-insurance-claim-playbook.part08.txt .github/pdf-parts/health-insurance-claim-playbook.part09.txt .github/pdf-parts/health-insurance-claim-playbook.part10.txt .github/pdf-parts/health-insurance-claim-playbook.part11.txt .github/pdf-parts/health-insurance-claim-playbook.part12.txt .github/pdf-parts/health-insurance-claim-playbook.part13.txt .github/pdf-parts/health-insurance-claim-playbook.part14.txt .github/pdf-parts/health-insurance-claim-playbook.part15.txt | tr -d '[:space:]' | base64 -d > health-insurance-claim-playbook.pdf
+          test "$(md5sum health-insurance-claim-playbook.pdf | cut -d' ' -f1)" = "8298ed0ceea84c9bd818a2c7b5149fce" || (echo 'MD5 mismatch'; exit 1)
+          test "$(wc -c < health-insurance-claim-playbook.pdf)" = "126524" || (echo 'Byte count mismatch'; exit 1)
+          mkdir -p downloads
+          mv health-insurance-claim-playbook.pdf downloads/
+      - name: Commit and push
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add downloads/health-insurance-claim-playbook.pdf
+          if git diff --cached --quiet; then
+            echo "No changes"
+          else
+            git commit -m "Rebuild Health Insurance Claim Playbook PDF from verified parts"
+            git push
+          fi
