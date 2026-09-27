@@ -280,8 +280,8 @@ document.addEventListener('DOMContentLoaded',function(){
   rl();
   lb.addEventListener('click',function(){lk++;localStorage.setItem(key,lk);rl()});
   var u=encodeURIComponent(location.href),t=encodeURIComponent(document.title);
-  document.getElementById('shWa').href='https://wa.me/?text='+t+'%20'+u;
-  document.getElementById('shTw').href='https://twitter.com/intent/tweet?text='+t+'&url='+u;
+  var tg=[].map.call(document.querySelectorAll('meta[property="article:tag"]'),function(m){return (m.getAttribute('content')||'').replace(/[^A-Za-z0-9]/g,'')}).filter(Boolean);var waTags=encodeURIComponent(tg.map(function(x){return '#'+x}).join(' '));document.getElementById('shWa').href='https://wa.me/?text='+t+(tg.length?'%20'+waTags:'')+'%20'+u;
+  document.getElementById('shTw').href='https://twitter.com/intent/tweet?text='+t+'&url='+u+(tg.length?'&hashtags='+tg.join(','):'');
   document.getElementById('shLi').href='https://www.linkedin.com/sharing/share-offsite/?url='+u;
   document.getElementById('shCp').addEventListener('click',function(){navigator.clipboard.writeText(location.href).then(function(){alert('Link copied!')})});
 });
