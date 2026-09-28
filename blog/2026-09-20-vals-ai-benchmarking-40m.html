@@ -49,6 +49,7 @@
 .post-body strong{color:#e2e8f0}
 .post-body ul{margin:0.6rem 0 0.6rem 1.4rem}
 .post-body li{font-size:0.85rem;color:var(--text-secondary);margin-bottom:0.35rem}
+.post-body .faq p{font-size:0.85rem;color:var(--text-secondary);margin:0.4rem 0 0.9rem}
 .product-box{background:var(--navy-card);border:1px solid rgba(245,197,66,0.35);border-radius:14px;padding:1.5rem;margin:2.5rem 0;position:relative;overflow:hidden}
 .product-box::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:var(--gold-gradient)}
 .product-box h4{color:var(--gold);font-size:0.72rem;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:0.5rem}
@@ -79,6 +80,38 @@
 .tag-pills{display:flex;flex-wrap:wrap;gap:0.5rem;margin:0.3rem 0 1.2rem}
 .tag-pills span{font-size:0.68rem;font-weight:600;color:#94a3b8;background:rgba(148,163,184,0.08);border:1px solid rgba(148,163,184,0.25);padding:0.18rem 0.7rem;border-radius:999px;letter-spacing:0.3px}
 </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Why are public AI benchmarks considered broken?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Public benchmarks like MMLU have three problems: their questions leak into training data, so models have effectively seen the exam paper before; the tests are saturated, with every top model scoring so high that they no longer separate anyone; and in many cases the company building the model also runs the benchmark. The industry largely runs on self-reported grades."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What makes Vals' approach different?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Vals keeps its test materials private — like the CAT or SAT, questions stay sealed, so a model cannot be trained on a test it has never seen. Instead of quiz-style trivia, it tests models on real professional work such as legal research, financial document analysis, engineering tasks and clinical questions, built with domain experts and graded like a senior professional would grade the work product."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Who backs Vals, and how good are top models on its tests?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Vals was founded in 2024 by Rayan Krishnan and Langston Nashold, raised a $40 million Series A at a $400 million valuation led by Andreessen Horowitz (after a seed round led by 8VC and Bloomberg Beta), and says revenue has grown 8x versus all of 2025. Its results are cited in the official model cards of OpenAI, Anthropic, Google, Meta and xAI. On its Finance Agent v2 benchmark, the best model still scored just 52% on a professional analyst's tasks."
+      }
+    }
+  ]
+}
+</script>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -186,6 +219,17 @@
       <li>Best model on the finance benchmark still scored just 52% — real capability gaps remain behind the hype</li>
       <li>New launches: Vals Smith for custom coding benchmarks, cyber and mental-health risk benchmarks</li>
     </ul>
+
+    
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq">
+      <h3>Why are public AI benchmarks considered broken?</h3>
+      <p>Public benchmarks like MMLU have three problems: their questions leak into training data, so models have effectively seen the exam paper before; the tests are saturated, with every top model scoring so high that they no longer separate anyone; and in many cases the company building the model also runs the benchmark. The industry largely runs on self-reported grades.</p>
+      <h3>What makes Vals' approach different?</h3>
+      <p>Vals keeps its test materials private — like the CAT or SAT, questions stay sealed, so a model cannot be trained on a test it has never seen. Instead of quiz-style trivia, it tests models on real professional work such as legal research, financial document analysis, engineering tasks and clinical questions, built with domain experts and graded like a senior professional would grade the work product.</p>
+      <h3>Who backs Vals, and how good are top models on its tests?</h3>
+      <p>Vals was founded in 2024 by Rayan Krishnan and Langston Nashold, raised a $40 million Series A at a $400 million valuation led by Andreessen Horowitz (after a seed round led by 8VC and Bloomberg Beta), and says revenue has grown 8x versus all of 2025. Its results are cited in the official model cards of OpenAI, Anthropic, Google, Meta and xAI. On its Finance Agent v2 benchmark, the best model still scored just 52% on a professional analyst's tasks.</p>
+    </div>
 
     <h2>What This Means for You</h2>
     <p>If you're a student or developer in India, this is a career signal: AI evaluation is becoming a real, fundable field — auditing models is a skill labs and enterprises will pay for. If you're a professional or running a business, the lesson is more immediate: don't pick your AI tools based on launch-day scorecards. Run your own small, private tests on your actual work — a model that tops a leaderboard can still fumble your use case. And while independent scorekeepers matter, the skill that pays you personally is knowing how to direct these models well: clear prompting, structured review, and cost control so experiments don't drain your budget. That's exactly what our <a href="/products/gpt-6-astra-guide/">GPT-6 Astra — Zero to Hero Guide</a> teaches, and honestly, that's where I'd start before trusting any benchmark at face value.</p>
