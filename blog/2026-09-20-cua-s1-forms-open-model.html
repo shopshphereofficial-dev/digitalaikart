@@ -75,6 +75,7 @@
 .post-body strong{color:#e2e8f0}
 .post-body ul{margin:0.6rem 0 0.6rem 1.4rem}
 .post-body li{font-size:0.85rem;color:var(--text-secondary);margin-bottom:0.35rem}
+.post-body .faq p{font-size:0.85rem;color:var(--text-secondary);margin:0.4rem 0 0.9rem}
 .product-box{background:var(--navy-card);border:1px solid rgba(245,197,66,0.35);border-radius:14px;padding:1.5rem;margin:2.5rem 0;position:relative;overflow:hidden}
 .product-box::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:var(--gold-gradient)}
 .product-box h4{color:var(--gold);font-size:0.72rem;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:0.5rem}
@@ -105,6 +106,38 @@
 .related li{font-size:0.85rem;color:var(--text-secondary);padding:0.35rem 0}
 .related li a{color:var(--gold)}
 </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is CUA-S1-FORMS?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "An open-source model from San Francisco startup Cua with just 706,048 parameters and a 2.8 MB checkpoint, released on September 18. Its entire job is deciding how an AI agent should fill out forms. The model weights, training code and dataset are all MIT-licensed, so you can fork it and ship it inside a commercial product without asking permission."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does a form-filling AI model work?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Instead of generating text, it scores a fixed set of permitted actions in a single forward pass and returns a probability for each — fill the field with one of the supplied values, tick a checkbox, click a button, or skip it. Cua's Driver tool then translates those decisions into interface actions, and the submit button is only clicked when authorised."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why not just use a frontier model to fill forms?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "For messy, judgment-heavy work a big model is the right tool, but most office automation is the same 30 fields every single day — using a frontier model for that is like hiring a PhD to stamp envelopes. A tiny specialist that does one thing cheaply, fast and consistently is often the better engineering answer, and CUA-S1-FORMS joins TypeSafe's Jev in the emerging 'System One' category of small, specialised decision models."
+      }
+    }
+  ]
+}
+</script>
 </head>
 <body>
 <nav class="nav"><div class="nav-inner"><a href="/" class="nav-logo">Digitalaikart</a><div class="nav-links"><a href="/">Home</a><a href="/products/">Products</a><a href="/ai/">AI Assistant</a><a href="/blog/" class="active">Blog</a></div></div></nav>
@@ -184,6 +217,16 @@
       <li>Cua Driver executes the plan with a safety ordering: fields first, checkboxes next, submit only when authorised</li>
       <li>It joins TypeSafe's Jev in the emerging "System One" category of small, specialised decision models</li>
     </ul>
+
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq">
+      <h3>What is CUA-S1-FORMS?</h3>
+      <p>An open-source model from San Francisco startup Cua with just 706,048 parameters and a 2.8 MB checkpoint, released on September 18. Its entire job is deciding how an AI agent should fill out forms. The model weights, training code and dataset are all MIT-licensed, so you can fork it and ship it inside a commercial product without asking permission.</p>
+      <h3>How does a form-filling AI model work?</h3>
+      <p>Instead of generating text, it scores a fixed set of permitted actions in a single forward pass and returns a probability for each — fill the field with one of the supplied values, tick a checkbox, click a button, or skip it. Cua's Driver tool then translates those decisions into interface actions, and the submit button is only clicked when authorised.</p>
+      <h3>Why not just use a frontier model to fill forms?</h3>
+      <p>For messy, judgment-heavy work a big model is the right tool, but most office automation is the same 30 fields every single day — using a frontier model for that is like hiring a PhD to stamp envelopes. A tiny specialist that does one thing cheaply, fast and consistently is often the better engineering answer, and CUA-S1-FORMS joins TypeSafe's Jev in the emerging 'System One' category of small, specialised decision models.</p>
+    </div>
 
     <h2>What This Means for You</h2>
     <p>If you're a developer or a final-year student, download it this weekend — a model this small runs on anything, and reading its training code will teach you more about applied AI than a month of headlines. If you run a business that handles paperwork — loans, insurance, compliance, admissions — start mapping which of your workflows are "bounded" enough for a specialist like this, because your competitors are. And if you're new to building with agents altogether, start with the fundamentals: our <a href="/products/gpt-6-astra-guide/">GPT-6 Astra — Zero to Hero Guide</a> covers prompting, computer use, agents, cost optimization and safety in one practical package — ₹149 for the Digital edition, or ₹1,999 for Digital plus a printed book delivered anywhere in India.</p>
