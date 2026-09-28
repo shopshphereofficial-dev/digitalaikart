@@ -89,6 +89,8 @@
 .post-body strong{color:#e2e8f0}
 .post-body ul{margin:0.6rem 0 0.6rem 1.4rem}
 .post-body li{font-size:0.85rem;color:var(--text-secondary);margin-bottom:0.35rem}
+.post-body h3{font-size:0.98rem;color:#f1f5f9;margin:1.5rem 0 0.3rem}
+.post-body .faq p{font-size:0.85rem;color:var(--text-secondary);margin:0.4rem 0 0.9rem}
 .product-box{background:var(--navy-card);border:1px solid rgba(245,197,66,0.35);border-radius:14px;padding:1.5rem;margin:2.5rem 0;position:relative;overflow:hidden}
 .product-box::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:var(--gold-gradient)}
 .product-box h4{color:var(--gold);font-size:0.72rem;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:0.5rem}
@@ -119,6 +121,38 @@
 .related li{font-size:0.85rem;color:var(--text-secondary);padding:0.35rem 0}
 .related li a{color:var(--gold)}
 </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What can Meta's Muse Mac app do?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Released on September 17, 2026 — nine days after the phone launch — the native Mac app is the first version of Muse that gets things done directly on your computer. With your permission it works across your files, Messages, Calendar, Notes and Mail, and a task can begin on your phone, continue on the Mac and be nudged along through WhatsApp, with Muse keeping the context throughout."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the Sentinel agent in Muse for Mac?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It is Meta's safety architecture: a separate Sentinel agent runs on the same machine, kept apart from Muse at the system level. Nothing Muse does reaches the internet unless the Sentinel approves it, and the Sentinel asks you for permission when needed. Permissions are opt-in, changeable and revocable through Settings, and Meta's safety team says Muse was built with prompt-injection awareness."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is Muse for Mac available in India?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No — the Mac app is US-only for now, with a free tier that has usage limits and paid plans for heavier use. Meta says wider expansion is coming, though India timings have not been announced."
+      }
+    }
+  ]
+}
+</script>
 </head>
 <body>
 <nav class="nav"><div class="nav-inner"><a href="/" class="nav-logo">Digitalaikart</a><div class="nav-links"><a href="/">Home</a><a href="/products/">Products</a><a href="/ai/">AI Assistant</a><a href="/blog/" class="active">Blog</a></div></div></nav>
@@ -196,6 +230,17 @@
       <li>Muse crossed 730,000 US downloads in its first few days, beating Meta's own AI app launch</li>
       <li>US-only for now; India availability is unannounced</li>
     </ul>
+
+    
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq">
+      <h3>What can Meta's Muse Mac app do?</h3>
+      <p>Released on September 17, 2026 — nine days after the phone launch — the native Mac app is the first version of Muse that gets things done directly on your computer. With your permission it works across your files, Messages, Calendar, Notes and Mail, and a task can begin on your phone, continue on the Mac and be nudged along through WhatsApp, with Muse keeping the context throughout.</p>
+      <h3>What is the Sentinel agent in Muse for Mac?</h3>
+      <p>It is Meta's safety architecture: a separate Sentinel agent runs on the same machine, kept apart from Muse at the system level. Nothing Muse does reaches the internet unless the Sentinel approves it, and the Sentinel asks you for permission when needed. Permissions are opt-in, changeable and revocable through Settings, and Meta's safety team says Muse was built with prompt-injection awareness.</p>
+      <h3>Is Muse for Mac available in India?</h3>
+      <p>No — the Mac app is US-only for now, with a free tier that has usage limits and paid plans for heavier use. Meta says wider expansion is coming, though India timings have not been announced.</p>
+    </div>
 
     <h2>What This Means for You</h2>
     <p>The direction of travel is clear: your next assistant won't live in a tab you visit — it will live on the machine you work on, reading what you allow and acting on what you approve. For Indian professionals and students, the practical move is to get comfortable with agent workflows now, while the stakes are low and the tools are forgiving. Start small: give an agent one boring task on your own device and watch what it does. If you want a structured path, the GPT-6 Astra — Zero to Hero Guide walks through computer use, agent building and safety step by step — and it costs less than a pizza.</p>

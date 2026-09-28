@@ -89,6 +89,8 @@
 .post-body strong{color:#e2e8f0}
 .post-body ul{margin:0.6rem 0 0.6rem 1.4rem}
 .post-body li{font-size:0.85rem;color:var(--text-secondary);margin-bottom:0.35rem}
+.post-body h3{font-size:0.98rem;color:#f1f5f9;margin:1.5rem 0 0.3rem}
+.post-body .faq p{font-size:0.85rem;color:var(--text-secondary);margin:0.4rem 0 0.9rem}
 .product-box{background:var(--navy-card);border:1px solid rgba(245,197,66,0.35);border-radius:14px;padding:1.5rem;margin:2.5rem 0;position:relative;overflow:hidden}
 .product-box::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:var(--gold-gradient)}
 .product-box h4{color:var(--gold);font-size:0.72rem;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:0.5rem}
@@ -119,6 +121,38 @@
 .related li{font-size:0.85rem;color:var(--text-secondary);padding:0.35rem 0}
 .related li a{color:var(--gold)}
 </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is Kimi K3 and when did it arrive on Amazon Bedrock?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Kimi K3 is the flagship open model from Beijing-based Moonshot AI, described by its maker as the first open model to reach 2.8 trillion parameters, with a 1 million token context window and native vision capabilities. The full open weights were released on July 27, 2026, and on September 18, 2026 AWS made the model available on Amazon Bedrock alongside Kimi K2.5 and Kimi K2 Thinking."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why does an open model on Bedrock matter for Indian teams?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It removes the old dilemma: previously a startup had to choose between closed frontier APIs priced in dollars with vendor lock-in, or downloading open weights and running GPU clusters itself. Managed open-weight models on Bedrock give teams fallback options, bargaining power on pricing, and the freedom to move workloads when a better model shows up. Bedrock has added dozens of open-weight models since 2025 from providers including DeepSeek, Google, Mistral AI, NVIDIA and Qwen."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What caveats should you know before adopting Kimi K3?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The headline claims — the 2.8 trillion parameter count and roughly 2.5x scaling efficiency over Kimi K2 — come from Moonshot's own launch materials, not independent benchmarks. Running it on Bedrock means using the managed version rather than self-hosting the weights, and data residency and compliance still need a review of the Bedrock terms for your region before pointing a regulated workload at it."
+      }
+    }
+  ]
+}
+</script>
 </head>
 <body>
 <nav class="nav"><div class="nav-inner"><a href="/" class="nav-logo">Digitalaikart</a><div class="nav-links"><a href="/">Home</a><a href="/products/">Products</a><a href="/ai/">AI Assistant</a><a href="/blog/" class="active">Blog</a></div></div></nav>
@@ -195,6 +229,17 @@
       <li>Bedrock's open-weight lineup now includes DeepSeek, Mistral, Qwen, Moonshot and more — real pricing leverage for Indian teams</li>
       <li>Vendor claims still need independent validation before you bet production on them</li>
     </ul>
+
+    
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq">
+      <h3>What is Kimi K3 and when did it arrive on Amazon Bedrock?</h3>
+      <p>Kimi K3 is the flagship open model from Beijing-based Moonshot AI, described by its maker as the first open model to reach 2.8 trillion parameters, with a 1 million token context window and native vision capabilities. The full open weights were released on July 27, 2026, and on September 18, 2026 AWS made the model available on Amazon Bedrock alongside Kimi K2.5 and Kimi K2 Thinking.</p>
+      <h3>Why does an open model on Bedrock matter for Indian teams?</h3>
+      <p>It removes the old dilemma: previously a startup had to choose between closed frontier APIs priced in dollars with vendor lock-in, or downloading open weights and running GPU clusters itself. Managed open-weight models on Bedrock give teams fallback options, bargaining power on pricing, and the freedom to move workloads when a better model shows up. Bedrock has added dozens of open-weight models since 2025 from providers including DeepSeek, Google, Mistral AI, NVIDIA and Qwen.</p>
+      <h3>What caveats should you know before adopting Kimi K3?</h3>
+      <p>The headline claims — the 2.8 trillion parameter count and roughly 2.5x scaling efficiency over Kimi K2 — come from Moonshot's own launch materials, not independent benchmarks. Running it on Bedrock means using the managed version rather than self-hosting the weights, and data residency and compliance still need a review of the Bedrock terms for your region before pointing a regulated workload at it.</p>
+    </div>
 
     <h2>What This Means for You</h2>
     <p>If you're a developer in India, try Kimi K3 through Bedrock's free tier or Model Playground this weekend and compare it against what you're currently paying for — especially for long-document and vision tasks where that 1M context window shines. Startup founders should see this as pricing insurance: every serious model that lands on managed cloud infrastructure gives you more room to negotiate and more freedom to switch. And if you're still early in your AI journey, don't collect models — collect skills. Prompting, agent design and cost control transfer across every model you'll ever use, and that's exactly what our <a href="/products/gpt-6-astra-guide/">GPT-6 Astra — Zero to Hero Guide</a> teaches, in a practical, India-first way.</p>
