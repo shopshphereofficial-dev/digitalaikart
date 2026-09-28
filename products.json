@@ -1,5 +1,5 @@
 {
- "updated": "2026-09-27",
+ "updated": "2026-09-28",
  "note": "Single source of truth for ALL products on digitalkartai.shop. The blog agent MUST read this file at the start of every run and promote the best-matching product per post. The product agent MUST append new products here when publishing them. Never delete or modify existing entries.",
  "products": [
   {
@@ -1078,6 +1078,47 @@
     "AI agents India",
     "digital workforce",
     "AI upskilling"
+   ]
+  },
+  {
+   "slug": "ctet-december-2026-countdown-playbook",
+   "name": "CTET December 2026 Countdown Playbook — Digital Edition",
+   "tagline": "The complete 31-page sprint plan for the 22nd Central Teacher Eligibility Test on 12-13 December 2026 — the verified exam facts, the 90-mark qualifying math, the pedagogy dividend, CDP and subject playbooks for Paper I and II, a dated 75-day master plan, the mock system, and exam-day execution.",
+   "price": "₹99",
+   "mrp": "₹499",
+   "url": "/products/ctet-december-2026-countdown-playbook/",
+   "topics": [
+    "CTET",
+    "CTET 2026",
+    "CTET December 2026",
+    "CTET 22nd edition",
+    "Central Teacher Eligibility Test",
+    "teacher eligibility test",
+    "TET",
+    "CBSE",
+    "teacher recruitment",
+    "teaching jobs",
+    "Paper I",
+    "Paper II",
+    "Child Development and Pedagogy",
+    "CDP",
+    "EVS",
+    "pedagogy",
+    "B.Ed",
+    "D.El.Ed",
+    "KVS",
+    "NVS",
+    "DSSSB",
+    "government teaching jobs",
+    "primary teacher",
+    "TGT PGT",
+    "exam strategy",
+    "study plan",
+    "mock tests",
+    "previous year papers",
+    "DigiLocker",
+    "education",
+    "India"
    ]
   }
  ]
