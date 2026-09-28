@@ -1,0 +1,29 @@
+name: Assemble First Home Buyer Playbook PDF
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  assemble:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Assemble PDF from verified parts
+        run: |
+          cat .github/pdf-parts/first-home-buyer-playbook.part*.txt | tr -d '\n' | base64 -d > first-home-buyer-playbook.pdf
+          test "$(md5sum first-home-buyer-playbook.pdf | cut -d' ' -f1)" = "81da087b0c017345d1a7195190243d72" || (echo 'MD5 mismatch'; exit 1)
+          mkdir -p downloads
+          mv first-home-buyer-playbook.pdf downloads/
+      - name: Commit and push
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add downloads/first-home-buyer-playbook.pdf
+          if git diff --cached --quiet; then
+            echo "No changes"
+          else
+            git commit -m "Rebuild First Home Buyer Playbook PDF from verified parts"
+            git push
+          fi
