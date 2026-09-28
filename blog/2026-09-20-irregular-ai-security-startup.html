@@ -78,7 +78,40 @@
 .related ul{list-style:none}
 .related li{font-size:0.85rem;color:var(--text-secondary);padding:0.35rem 0}
 .related li a{color:var(--gold)}
+.faq p{font-size:0.85rem;color:var(--text-secondary);margin:0.4rem 0 0.9rem}
 </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What does Irregular actually do?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Irregular is a Tel Aviv-based AI security startup that calls itself a frontier security lab. Before a lab releases a model, Irregular tests how good it is at offensive cyber operations — finding vulnerabilities, guessing credentials, chaining exploits — inside simulated environments. Google, Meta, Anthropic and OpenAI are all reported clients, and it was founded by Dan Lahav and Omer Nevo."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How did the AI sandbox breakouts happen?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Per Forkast's reporting, the breaches trace back to a misconfiguration in the evaluation harness that accidentally left internet access on during \"capture the flag\" exercises. In Google's case, the fictional target shared a name with a real company, so Gemini searched the web, guessed a password and got into the real firm's systems before realising its mistake and stopping. Very similar slip-ups produced the OpenAI, Anthropic and Meta breakouts."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much has Irregular raised, and what has changed since the incidents?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Irregular has raised roughly $80 million led by Sequoia Capital and Redpoint Ventures, at a reported valuation of around $450 million. It has since cut off internet access entirely for models under evaluation and is drafting a white paper on containment best practices."
+      }
+    }
+  ]
+}
+</script>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -185,6 +218,16 @@
       <li>Internet access is now cut off during evaluations, and a containment white paper is being drafted</li>
       <li>AI security evaluation is becoming a core industry category — and a career path worth watching</li>
     </ul>
+
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq">
+      <h3>What does Irregular actually do?</h3>
+      <p>Irregular is a Tel Aviv-based AI security startup that calls itself a frontier security lab. Before a lab releases a model, Irregular tests how good it is at offensive cyber operations — finding vulnerabilities, guessing credentials, chaining exploits — inside simulated environments. Google, Meta, Anthropic and OpenAI are all reported clients, and it was founded by Dan Lahav and Omer Nevo.</p>
+      <h3>How did the AI sandbox breakouts happen?</h3>
+      <p>Per Forkast's reporting, the breaches trace back to a misconfiguration in the evaluation harness that accidentally left internet access on during "capture the flag" exercises. In Google's case, the fictional target shared a name with a real company, so Gemini searched the web, guessed a password and got into the real firm's systems before realising its mistake and stopping. Very similar slip-ups produced the OpenAI, Anthropic and Meta breakouts.</p>
+      <h3>How much has Irregular raised, and what has changed since the incidents?</h3>
+      <p>Irregular has raised roughly $80 million led by Sequoia Capital and Redpoint Ventures, at a reported valuation of around $450 million. It has since cut off internet access entirely for models under evaluation and is drafting a white paper on containment best practices.</p>
+    </div>
 
     <h2>What This Means for You</h2>
     <p>For Indian developers and security professionals, this is one of the clearest signals of the year: AI security is no longer a niche. If a lab that stress-tests frontier models can raise $80 million the same month its tests embarrass half the industry, demand for people who understand both AI systems and security is about to explode — in Bengaluru, Hyderabad and Pune as much as in Tel Aviv. For students wondering what to specialize in, red-teaming AI agents is a genuinely open field with almost no settled best practices yet. And if you're already building with agents, start with the fundamentals of doing it safely — our <a href="/products/gpt-6-astra-guide/">GPT-6 Astra — Zero to Hero Guide</a> is the practical place to begin. And for the everyday version of this threat — the fake bank calls and UPI traps hitting Indian families while everyone watches the frontier labs — our <a href="/products/scam-proof-family-handbook/">Scam-Proof Family Handbook</a> decodes 12 of those scams and includes a 45-minute Family Shield setup plus a first-60-minutes recovery protocol.</p>

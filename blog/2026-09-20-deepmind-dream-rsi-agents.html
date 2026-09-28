@@ -35,6 +35,38 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is Dream-RSI?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Dream-RSI is a Google DeepMind method that lets AI agents test new strategies by replaying their recorded past attempts instead of paying for new computation — a process the researchers call \"dreaming\". Only the search strategy changes; the underlying model stays completely untouched, so it is not model retraining but a smarter controller wrapped around the same brain."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What results did Dream-RSI achieve?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Tested with Gemini 3.1 Pro and Gemini 3.7 Flash across eight tasks, Dream-RSI cut the average runtime with Gemini 3.1 Pro from 3,587 to 2,931 milliseconds and reduced attempts from 550 to 317 — while a rival system, SimpleTES, needed 51,200 runs for the same result. On GPU kernel-writing tasks it matched performance with up to 2.43x fewer runs, and on two other tasks delivered up to 2.09x the performance within the same budget."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why does Dream-RSI matter for the AI safety debate?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Recursive self-improvement — AI systems helping build better AI systems — is the phrase that made Anthropic's CEO call for the industry to slow down. Dream-RSI makes self-improvement dramatically cheaper, which is exactly what safety researchers worry about, though the paper itself is a search-efficiency methods study, not a rogue system."
+      }
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   "itemListElement": [
     {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://digitalkartai.shop/"},
@@ -104,6 +136,7 @@
 .related ul{list-style:none}
 .related li{font-size:0.85rem;color:var(--text-secondary);padding:0.35rem 0}
 .related li a{color:var(--gold)}
+.faq p{font-size:0.85rem;color:var(--text-secondary);margin:0.4rem 0 0.9rem}
 </style>
 </head>
 <body>
@@ -186,6 +219,16 @@
       <li>On GPU kernel tasks, it cut runs by up to 2.43× or boosted performance up to 2.09× within budget</li>
       <li>Cheaper self-improvement feeds directly into the industry's recursive-self-improvement safety debate</li>
     </ul>
+
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq">
+      <h3>What is Dream-RSI?</h3>
+      <p>Dream-RSI is a Google DeepMind method that lets AI agents test new strategies by replaying their recorded past attempts instead of paying for new computation — a process the researchers call "dreaming". Only the search strategy changes; the underlying model stays completely untouched, so it is not model retraining but a smarter controller wrapped around the same brain.</p>
+      <h3>What results did Dream-RSI achieve?</h3>
+      <p>Tested with Gemini 3.1 Pro and Gemini 3.7 Flash across eight tasks, Dream-RSI cut the average runtime with Gemini 3.1 Pro from 3,587 to 2,931 milliseconds and reduced attempts from 550 to 317 — while a rival system, SimpleTES, needed 51,200 runs for the same result. On GPU kernel-writing tasks it matched performance with up to 2.43x fewer runs, and on two other tasks delivered up to 2.09x the performance within the same budget.</p>
+      <h3>Why does Dream-RSI matter for the AI safety debate?</h3>
+      <p>Recursive self-improvement — AI systems helping build better AI systems — is the phrase that made Anthropic's CEO call for the industry to slow down. Dream-RSI makes self-improvement dramatically cheaper, which is exactly what safety researchers worry about, though the paper itself is a search-efficiency methods study, not a rogue system.</p>
+    </div>
 
     <h2>What This Means for You</h2>
     <p>If you're a student or researcher, this paper is worth an hour of your weekend — the technique of learning from logged experience instead of new experiments applies to far more than frontier AI. If you're a developer, start treating your agent logs as an asset; the history of what your agent tried is now raw material for making it smarter. And if you're an entrepreneur in India, the cost of running serious AI workloads is falling on two fronts at once — cheaper infrastructure at home (as we saw with Karnataka's data centre push) and techniques like Dream-RSI making every rupee of compute go further. The gap between people who merely use AI and people who direct it well is widening, and that gap is where the opportunity lives. The <a href="/products/gpt-6-astra-guide/">GPT-6 Astra — Zero to Hero Guide</a> is a practical way to end up on the right side of it.</p>

@@ -78,7 +78,40 @@
 .related ul{list-style:none}
 .related li{font-size:0.85rem;color:var(--text-secondary);padding:0.35rem 0}
 .related li a{color:var(--gold)}
+.faq p{font-size:0.85rem;color:var(--text-secondary);margin:0.4rem 0 0.9rem}
 </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Who is D-Robotics?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "D-Robotics is a Shenzhen-based startup spun off from autonomous-driving chipmaker Horizon Robotics in early 2024 with a single mandate: designing computing silicon for AI-powered robots. It does not build robots — it builds the processors inside them, along with RDK developer kits and software. Its Sunrise chip family has shipped over 8 million units, with more than 500 universities and 100,000 developers across 20-plus countries building on the platform."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the Sunrise S600 chip?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The flagship S600, launched in November 2025, uses a \"Brain-Cerebellum\" architecture: an 18-core ARM CPU cluster acts as the brain, running the large language and vision models that let a robot understand what it is looking at, while a separate neural accelerator handles the split-second, high-frequency motor commands that keep it standing. Within six months of launch it was adopted by more than 20 robot makers, including UBTECH, Fourier, Booster Robotics, Astribot, TARS and Spirit AI."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the $400M round, and how does the US ban affect it?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "D-Robotics closed a $400 million Series C on September 17, led by South Korea's Mirae Asset with Meituan participating, bringing total disclosed funding to roughly $770 million in about 26 months. The catch: on July 28 the US FCC added humanoid and quadruped robots to its Covered List, effectively banning new Chinese-made robots from the US market — nearly all of D-Robotics' named S600 customers are Chinese manufacturers. The ban does not block the chips themselves, so D-Robotics is likely to dominate the Chinese and broader Asian robot boom while Nvidia's Jetson line powers the Western one."
+      }
+    }
+  ]
+}
+</script>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -179,6 +212,16 @@
       <li>The US FCC's July ban blocks new Chinese humanoid robot imports, boxing its customer base out of the US</li>
       <li>Morgan Stanley sees the humanoid chip market reaching $305B — a two-camp, US-vs-China race that India can arbitrage</li>
     </ul>
+
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq">
+      <h3>Who is D-Robotics?</h3>
+      <p>D-Robotics is a Shenzhen-based startup spun off from autonomous-driving chipmaker Horizon Robotics in early 2024 with a single mandate: designing computing silicon for AI-powered robots. It does not build robots — it builds the processors inside them, along with RDK developer kits and software. Its Sunrise chip family has shipped over 8 million units, with more than 500 universities and 100,000 developers across 20-plus countries building on the platform.</p>
+      <h3>What is the Sunrise S600 chip?</h3>
+      <p>The flagship S600, launched in November 2025, uses a "Brain-Cerebellum" architecture: an 18-core ARM CPU cluster acts as the brain, running the large language and vision models that let a robot understand what it is looking at, while a separate neural accelerator handles the split-second, high-frequency motor commands that keep it standing. Within six months of launch it was adopted by more than 20 robot makers, including UBTECH, Fourier, Booster Robotics, Astribot, TARS and Spirit AI.</p>
+      <h3>What is the $400M round, and how does the US ban affect it?</h3>
+      <p>D-Robotics closed a $400 million Series C on September 17, led by South Korea's Mirae Asset with Meituan participating, bringing total disclosed funding to roughly $770 million in about 26 months. The catch: on July 28 the US FCC added humanoid and quadruped robots to its Covered List, effectively banning new Chinese-made robots from the US market — nearly all of D-Robotics' named S600 customers are Chinese manufacturers. The ban does not block the chips themselves, so D-Robotics is likely to dominate the Chinese and broader Asian robot boom while Nvidia's Jetson line powers the Western one.</p>
+    </div>
 
     <h2>What This Means for You</h2>
     <p>You're probably not building robot chips. But if you're in tech in India, this story matters for two reasons. First, it confirms that the AI wave is hardening into hardware — agents need bodies, and bodies need silicon, which means embedded systems and robotics skills are about to get scarce and expensive. Second, the geopolitics of that hardware is splitting into camps, and India is one of the few places both camps want to sell to. For students and professionals, the practical move is the same as it's been all year: get fluent in AI systems first — prompting, agents, cost control — because every layer above the silicon is being rebuilt around them. Our <a href="/products/gpt-6-astra-guide/">GPT-6 Astra — Zero to Hero Guide</a> is the fastest way to do that.</p>
