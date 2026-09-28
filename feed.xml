@@ -802,10 +802,10 @@
     </item>
 
     <item>
-      <title>Google Home MCP: AI Agents Can Now Run Your House</title>
+      <title>Google Home MCP Limits: Security Rules for AI Agents</title>
       <link>https://digitalkartai.shop/blog/2026-09-19-google-home-mcp-ai-agents.html</link>
       <guid isPermaLink="true">https://digitalkartai.shop/blog/2026-09-19-google-home-mcp-ai-agents.html</guid>
-      <description>Google Home MCP lets AI agents like Claude control your smart home — lights, cameras, thermostats. What works, what's blocked, and when India gets it.</description>
+      <description>Google Home MCP blocks AI agents from unlocking doors, needs consent for face recognition and rate-limits every action. The limits, the risks and India's wait.</description>
       <pubDate>Sat, 19 Sep 2026 09:00:00 +0530</pubDate>
       <category>AI Tools</category>
       <category>Google Home</category>
