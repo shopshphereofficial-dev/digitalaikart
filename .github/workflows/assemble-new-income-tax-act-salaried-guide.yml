@@ -1,0 +1,31 @@
+name: Assemble New Income Tax Act Salaried Guide PDF
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  assemble:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Assemble PDF from verified parts
+        run: |
+          cat .github/pdf-parts/new-income-tax-act-salaried-guide.part01.txt .github/pdf-parts/new-income-tax-act-salaried-guide.part02.txt .github/pdf-parts/new-income-tax-act-salaried-guide.part03.txt .github/pdf-parts/new-income-tax-act-salaried-guide.part04.txt .github/pdf-parts/new-income-tax-act-salaried-guide.part05.txt .github/pdf-parts/new-income-tax-act-salaried-guide.part06.txt .github/pdf-parts/new-income-tax-act-salaried-guide.part07.txt .github/pdf-parts/new-income-tax-act-salaried-guide.part08.txt .github/pdf-parts/new-income-tax-act-salaried-guide.part09.txt .github/pdf-parts/new-income-tax-act-salaried-guide.part10.txt .github/pdf-parts/new-income-tax-act-salaried-guide.part11.txt .github/pdf-parts/new-income-tax-act-salaried-guide.part12.txt .github/pdf-parts/new-income-tax-act-salaried-guide.part13.txt .github/pdf-parts/new-income-tax-act-salaried-guide.part14.txt > new-income-tax-act-salaried-guide.pdf
+          test "$(md5sum new-income-tax-act-salaried-guide.pdf | cut -d' ' -f1)" = "5d798a82002c1dc2b2d21a6d3a62b38c" || (echo 'MD5 mismatch'; exit 1)
+          test "$(wc -c < new-income-tax-act-salaried-guide.pdf)" = "122540" || (echo 'Byte count mismatch'; exit 1)
+          mkdir -p downloads
+          mv new-income-tax-act-salaried-guide.pdf downloads/
+      - name: Commit and push
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add downloads/new-income-tax-act-salaried-guide.pdf
+          if git diff --cached --quiet; then
+            echo "No changes"
+          else
+            git commit -m "Rebuild New Income Tax Act Salaried Guide PDF from verified parts"
+            git push
+          fi
