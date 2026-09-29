@@ -89,6 +89,7 @@
 .post-body strong{color:#e2e8f0}
 .post-body ul{margin:0.6rem 0 0.6rem 1.4rem}
 .post-body li{font-size:0.85rem;color:var(--text-secondary);margin-bottom:0.35rem}
+.post-body .faq p{font-size:0.85rem;color:var(--text-secondary);margin:0.4rem 0 0.9rem}
 .product-box{background:var(--navy-card);border:1px solid rgba(245,197,66,0.35);border-radius:14px;padding:1.5rem;margin:2.5rem 0;position:relative;overflow:hidden}
 .product-box::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:var(--gold-gradient)}
 .product-box h4{color:var(--gold);font-size:0.72rem;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:0.5rem}
@@ -119,6 +120,38 @@
 .related li{font-size:0.85rem;color:var(--text-secondary);padding:0.35rem 0}
 .related li a{color:var(--gold)}
 </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Why are Anthropic and OpenAI suddenly interested in small data center deals?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "According to a CNBC report citing four people familiar with the conversations, both labs are exploring 20-30 megawatt agreements — Anthropic in the UK and Nordics, OpenAI in the Nordics — because of “speed to usable capacity”. A small slot at a site that already has electricity can go live in months instead of years, which suits inference workloads that can be split across locations."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does this mean the mega AI data center projects are slowing down?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. In August, Anthropic signed a roughly $45 billion cloud deal with Nscale covering around 460 MW in West Virginia, and OpenAI has already surpassed its original 10 GW Stargate commitment with a further 3 GW planned in Georgia and 8 GW in Ohio. The small deals are a second, faster lane running alongside the big builds, not a replacement."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is Crusoe's Spark?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Spark is Crusoe's line of modular data centers built in a factory, transported by truck and connected to existing power sources almost anywhere — capacity that can plug into the grid in weeks instead of the 18-24 months a traditional build takes. Crusoe announced a $3.9 billion Series F at a $30.9 billion post-money valuation to fund it, and says it now has over $140 billion in contracted value."
+      }
+    }
+  ]
+}
+</script>
 </head>
 <body>
 <nav class="nav"><div class="nav-inner"><a href="/" class="nav-logo">Digitalaikart</a><div class="nav-links"><a href="/">Home</a><a href="/products/">Products</a><a href="/ai/">AI Assistant</a><a href="/blog/" class="active">Blog</a></div></div></nav>
@@ -196,6 +229,16 @@
       <li>Crusoe raised $3.9 billion at a $30.9 billion valuation to build "Spark" — truck-deliverable modular AI factories</li>
       <li>The trend points to inference workloads spreading out — faster, cheaper AI capacity in more locations</li>
     </ul>
+
+<h2>Frequently Asked Questions</h2>
+<div class="faq">
+      <h3>Why are Anthropic and OpenAI suddenly interested in small data center deals?</h3>
+      <p>According to a CNBC report citing four people familiar with the conversations, both labs are exploring 20-30 megawatt agreements — Anthropic in the UK and Nordics, OpenAI in the Nordics — because of “speed to usable capacity”. A small slot at a site that already has electricity can go live in months instead of years, which suits inference workloads that can be split across locations.</p>
+      <h3>Does this mean the mega AI data center projects are slowing down?</h3>
+      <p>No. In August, Anthropic signed a roughly $45 billion cloud deal with Nscale covering around 460 MW in West Virginia, and OpenAI has already surpassed its original 10 GW Stargate commitment with a further 3 GW planned in Georgia and 8 GW in Ohio. The small deals are a second, faster lane running alongside the big builds, not a replacement.</p>
+      <h3>What is Crusoe's Spark?</h3>
+      <p>Spark is Crusoe's line of modular data centers built in a factory, transported by truck and connected to existing power sources almost anywhere — capacity that can plug into the grid in weeks instead of the 18-24 months a traditional build takes. Crusoe announced a $3.9 billion Series F at a $30.9 billion post-money valuation to fund it, and says it now has over $140 billion in contracted value.</p>
+    </div>
 
     <h2>What This Means for You</h2>
     <p>If you're building anything with AI in India — a SaaS product, an agency, a student project that outgrew free tiers — the infrastructure race happening in the Nordics and West Virginia will eventually show up in your API bill, and in a good way. More distributed, faster-to-deploy capacity means the AI services you build on get more reliable and cheaper over time, not less. But don't wait for that to rescue a badly architected product: prompt caching, model selection and workflow design are things you control today. The <a href="/products/gpt-6-astra-guide/">GPT-6 Astra — Zero to Hero Guide</a> covers those cost-optimization techniques step by step, along with prompting, agents and business ideas — practical skills that matter far more than the size of anyone's data center.</p>

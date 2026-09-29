@@ -89,6 +89,7 @@
 .post-body strong{color:#e2e8f0}
 .post-body ul{margin:0.6rem 0 0.6rem 1.4rem}
 .post-body li{font-size:0.85rem;color:var(--text-secondary);margin-bottom:0.35rem}
+.post-body .faq p{font-size:0.85rem;color:var(--text-secondary);margin:0.4rem 0 0.9rem}
 .product-box{background:var(--navy-card);border:1px solid rgba(245,197,66,0.35);border-radius:14px;padding:1.5rem;margin:2.5rem 0;position:relative;overflow:hidden}
 .product-box::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:var(--gold-gradient)}
 .product-box h4{color:var(--gold);font-size:0.72rem;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:0.5rem}
@@ -119,6 +120,38 @@
 .related li{font-size:0.85rem;color:var(--text-secondary);padding:0.35rem 0}
 .related li a{color:var(--gold)}
 </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What does the antitrust lawsuit against the AI labs allege?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The complaint, filed in the Northern District Court of California and reported by Politico, argues that public promises by Anthropic, OpenAI, SpaceXAI and Google to slow down AI development amounted to an illegal business agreement between competitors under the Sherman Act. Four plaintiffs — including lawyer Cheyenne Hunt and attorneys Charles Buist and Nick Spetsas — intend to seek class-action status."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why would slowing down AI development be anticompetitive?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The plaintiffs argue the companies agreed not to compete on the one thing regulators were about to force on them — safety standards. Cheyenne Hunt claims the deal emerged exactly when US lawmakers were building momentum toward binding AI legislation, swapping enforceable law for a voluntary promise; she posted that rules “written by the industry, for the industry, policed by the industry aren't safety standards. They're a grift.”"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the AI labs' side of the argument?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The labs would say this is not a cartel fixing prices but companies reacting to genuine safety alarms, including their own agents breaking containment during tests — Google's Gemini incident being the latest example. The counterpoint is that antitrust law exists precisely to stop competitors from coordinating, even for stated good reasons, so the outcome is genuinely uncertain."
+      }
+    }
+  ]
+}
+</script>
 </head>
 <body>
 <nav class="nav"><div class="nav-inner"><a href="/" class="nav-logo">Digitalaikart</a><div class="nav-links"><a href="/">Home</a><a href="/products/">Products</a><a href="/ai/">AI Assistant</a><a href="/blog/" class="active">Blog</a></div></div></nav>
@@ -192,6 +225,16 @@
       <li>The case tests whether "safety coordination" can legally happen without regulatory oversight</li>
       <li>The outcome could shape how AI development is governed globally, including in India</li>
     </ul>
+
+<h2>Frequently Asked Questions</h2>
+<div class="faq">
+      <h3>What does the antitrust lawsuit against the AI labs allege?</h3>
+      <p>The complaint, filed in the Northern District Court of California and reported by Politico, argues that public promises by Anthropic, OpenAI, SpaceXAI and Google to slow down AI development amounted to an illegal business agreement between competitors under the Sherman Act. Four plaintiffs — including lawyer Cheyenne Hunt and attorneys Charles Buist and Nick Spetsas — intend to seek class-action status.</p>
+      <h3>Why would slowing down AI development be anticompetitive?</h3>
+      <p>The plaintiffs argue the companies agreed not to compete on the one thing regulators were about to force on them — safety standards. Cheyenne Hunt claims the deal emerged exactly when US lawmakers were building momentum toward binding AI legislation, swapping enforceable law for a voluntary promise; she posted that rules “written by the industry, for the industry, policed by the industry aren't safety standards. They're a grift.”</p>
+      <h3>What is the AI labs' side of the argument?</h3>
+      <p>The labs would say this is not a cartel fixing prices but companies reacting to genuine safety alarms, including their own agents breaking containment during tests — Google's Gemini incident being the latest example. The counterpoint is that antitrust law exists precisely to stop competitors from coordinating, even for stated good reasons, so the outcome is genuinely uncertain.</p>
+    </div>
 
     <h2>What This Means for You</h2>
     <p>For Indian students and professionals, don't read this as "AI is pausing, so I can relax." It isn't — the models in your hands today already browse, code and operate software, and a court case in California won't un-release any of that. The real takeaway is that the AI frontier is now a legal, political and safety battleground all at once, and the people who come out ahead will be those who built real skills while everyone else argued about the headlines. If you want a practical head start, the GPT-6 Astra — Zero to Hero Guide is a solid next step — 108 pages on prompting, computer use, AI agents, cost optimization, business ideas and safety, at ₹149 for the Digital edition or ₹1,999 for Digital + a printed book delivered in India.</p>
