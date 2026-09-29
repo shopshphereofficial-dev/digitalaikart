@@ -1,5 +1,5 @@
 {
- "updated": "2026-09-28",
+ "updated": "2026-09-29",
  "note": "Single source of truth for ALL products on digitalkartai.shop. The blog agent MUST read this file at the start of every run and promote the best-matching product per post. The product agent MUST append new products here when publishing them. Never delete or modify existing entries.",
  "products": [
   {
@@ -1214,6 +1214,55 @@
     "crypto India",
     "DeFi tax",
     "foreign exchange crypto"
+   ]
+  },
+  {
+   "slug": "wedding-budget-playbook-2026-27",
+   "name": "The Indian Wedding Budget Playbook 2026-27 — Digital Edition",
+   "tagline": "The complete 30-page money playbook for India's compressed 2026-27 wedding season — the muhurat money map (11 dates, 21 Nov to 12 Dec 2026), three worked budgets, venue and catering negotiation with the GST bundling trap, jewellery strategy at record gold prices, real marriage loan rates with EMI tables, wedding insurance decoded, marriage registration paperwork, a ₹24 lakh line-by-line case study and a 50-question vendor bank.",
+   "price": "₹149",
+   "mrp": "₹999",
+   "url": "/products/wedding-budget-playbook-2026-27/",
+   "topics": [
+    "wedding budget",
+    "Indian wedding",
+    "wedding planning",
+    "wedding cost",
+    "wedding season 2026-27",
+    "muhurat dates 2026",
+    "vivah muhurat",
+    "wedding calendar",
+    "destination wedding",
+    "wedding venues",
+    "banquet hall",
+    "catering",
+    "per plate",
+    "wedding jewellery",
+    "gold prices",
+    "bridal budget",
+    "wedding loan",
+    "marriage loan",
+    "wedding insurance",
+    "marriage registration",
+    "Special Marriage Act",
+    "Hindu Marriage Act",
+    "wedding GST",
+    "guest list",
+    "wedding photography",
+    "wedding decor",
+    "sangeet budget",
+    "mehendi",
+    "honeymoon planning",
+    "shagun",
+    "wedding checklist",
+    "family finance",
+    "big fat Indian wedding",
+    "Chaturmas",
+    "Kharmas",
+    "bride and groom",
+    "wedding negotiation",
+    "wedding vendors",
+    "India"
    ]
   }
  ]
