@@ -1,0 +1,31 @@
+name: Upload CA AI Practice Playbook to Repo
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  upload-ebook:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Assemble and verify PDF
+        run: |
+          mkdir -p downloads
+          cat .ca-build/ca-playbook-part1.txt .ca-build/ca-playbook-part2.txt .ca-build/ca-playbook-part3.txt .ca-build/ca-playbook-part4.txt .ca-build/ca-playbook-part5.txt | tr -d '\n' | base64 -d > downloads/ca-ai-practice-playbook.pdf
+          echo "9022c5bbbfa8e9b433308443223a247895569a7a98610f3b3b773f357df48a95  downloads/ca-ai-practice-playbook.pdf" | sha256sum -c -
+
+      - name: Commit ebook to repo
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git rm -r .ca-build
+          git add downloads/ca-ai-practice-playbook.pdf
+          git commit -m "Add CA AI Practice Playbook PDF to repo" || echo "No changes to commit"
+          git push
