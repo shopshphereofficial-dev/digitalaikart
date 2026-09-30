@@ -41,6 +41,46 @@
   ]
 }
 </script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is Google Home MCP?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "MCP stands for Model Context Protocol — an open standard that lets AI models connect to external tools and data. Google opened early access to Home MCP on September 16, 2026, letting outside AI agents read and control the devices in your Google Home — Nest doorbells, thermostats, even plain Matter light bulbs — along with the event history behind them."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which AI agents can connect to Google Home?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Any agent that speaks MCP can connect; Google explicitly names Antigravity, Claude, Hermes and OpenClaw as clients. Once connected, an agent can summarise camera footage, read device state history, push audio messages through your speakers and even build a custom dashboard to replace the Home app's interface."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is Google Home MCP available in India?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Not yet. Early access is limited to Google Home Premium Advanced subscribers in the United States — roughly a $20-a-month tier (about ₹1,700) — in English only, and Europe is excluded entirely. Google hasn't said when, or whether, India or other markets will be added."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can an AI agent unlock doors with Google Home MCP?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No — unlocking doors is the example Google itself gives of a sensitive action agents may never perform. Home MCP also enforces rate limits, lets you revoke access any time from the Google Home app, and requires a separate explicit consent flow for facial recognition. The bigger open risk is prompt injection, which researchers have already demonstrated against early Gemini smart-home versions."
+      }
+    }
+  ]
+}
+</script>
 
 
 <script type="application/ld+json">
@@ -49,7 +89,7 @@
   "@type": "NewsArticle",
   "headline": "Google Home MCP Limits: Security Rules for AI Agents",
   "datePublished": "2026-09-19",
-  "dateModified": "2026-09-29",
+  "dateModified": "2026-09-30",
   "image": [
     "https://digitalkartai.shop/assets/og/2026-09-19-google-home-mcp-ai-agents.png"
   ],
@@ -118,6 +158,8 @@
 .related ul{list-style:none}
 .related li{font-size:0.85rem;color:var(--text-secondary);padding:0.35rem 0}
 .related li a{color:var(--gold)}
+.post-body .faq h3{font-size:0.95rem;color:var(--text-primary);margin:1.1rem 0 0}
+.post-body .faq p{font-size:0.85rem;color:var(--text-secondary);margin:0.4rem 0 0.9rem}
 </style>
 </head>
 <body>
@@ -196,6 +238,18 @@
       <li>US-only, English-only, Premium Advanced tier only — and the setup is genuinely technical</li>
       <li>Prompt injection remains the big open risk when agents touch physical spaces</li>
     </ul>
+
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq">
+      <h3>What is Google Home MCP?</h3>
+      <p>MCP stands for Model Context Protocol — an open standard that lets AI models connect to external tools and data. Google opened early access to Home MCP on September 16, 2026, letting outside AI agents read and control the devices in your Google Home — Nest doorbells, thermostats, even plain Matter light bulbs — along with the event history behind them.</p>
+      <h3>Which AI agents can connect to Google Home?</h3>
+      <p>Any agent that speaks MCP can connect; Google explicitly names Antigravity, Claude, Hermes and OpenClaw as clients. Once connected, an agent can summarise camera footage, read device state history, push audio messages through your speakers and even build a custom dashboard to replace the Home app's interface.</p>
+      <h3>Is Google Home MCP available in India?</h3>
+      <p>Not yet. Early access is limited to Google Home Premium Advanced subscribers in the United States — roughly a $20-a-month tier (about ₹1,700) — in English only, and Europe is excluded entirely. Google hasn't said when, or whether, India or other markets will be added.</p>
+      <h3>Can an AI agent unlock doors with Google Home MCP?</h3>
+      <p>No — unlocking doors is the example Google itself gives of a sensitive action agents may never perform. Home MCP also enforces rate limits, lets you revoke access any time from the Google Home app, and requires a separate explicit consent flow for facial recognition. The bigger open risk is prompt injection, which researchers have already demonstrated against early Gemini smart-home versions.</p>
+    </div>
 
     <h2>What This Means for You</h2>
     <p>If you're in India, you can't use this yet — but the direction is unmistakable, and it'll reach us faster than the smartwatch wave did. The real skill of the next five years won't be tapping apps; it'll be directing AI agents that operate your tools, your home and eventually your work. The best head start you can give yourself right now is learning how agents actually behave — how to prompt them, how to keep costs sane, and how to use them safely. That's exactly what our <a href="/products/gpt-6-astra-guide/">GPT-6 Astra — Zero to Hero Guide</a> covers, and honestly, once your house joins the agent economy, you'll want those instincts ready before the keys arrive. When you're ready to actually build agents around your own tools — n8n, Make, Copilot Studio, even WhatsApp — our <a href="/products/ai-agents-automation-playbook/">AI Agents & Automation Playbook</a> lays out 10 blueprints with real running costs in rupees.</p>
