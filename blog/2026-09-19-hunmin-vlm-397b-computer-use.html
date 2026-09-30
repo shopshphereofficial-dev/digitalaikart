@@ -119,6 +119,38 @@
 .related li{font-size:0.85rem;color:var(--text-secondary);padding:0.35rem 0}
 .related li a{color:var(--gold)}
 </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is Hunmin VLM 397B?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Hunmin VLM 397B is a 397-billion-parameter open-source computer-use model from Korean generative AI company Xenon, built on Qwen 3.5-397B and open-sourced on September 18. It identifies on-screen elements — buttons, input fields, menus — and then performs the actual actions: clicking, typing and navigating."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does Hunmin VLM 397B perform on benchmarks?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It scored 75.6 on ScreenSpot Pro, placing second on Hugging Face's official leaderboard and making it the only Korean model among the 48 listed. On OSWorld's 360 real Linux tasks it scored 70.5 — 22.3 points above the base model — and it came in 9.1 points higher on WindowsAgentArena."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much compute was needed to train it?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The entire post-training run used just eight Nvidia B200 GPUs. Xenon transferred the computer-operating capabilities of the open base model using a low-rank method, then ran supervised learning and reinforcement learning in an FP8 quantisation environment."
+      }
+    }
+  ]
+}
+</script>
 </head>
 <body>
 <nav class="nav"><div class="nav-inner"><a href="/" class="nav-logo">Digitalaikart</a><div class="nav-links"><a href="/">Home</a><a href="/products/">Products</a><a href="/ai/">AI Assistant</a><a href="/blog/" class="active">Blog</a></div></div></nav>
@@ -195,6 +227,16 @@
       <li>Post-trained on just eight Nvidia B200 GPUs using low-rank transfer and FP8 quantisation</li>
       <li>Ships with an FP8 version and full evaluation methods — a genuinely open release</li>
     </ul>
+
+        <h2>Frequently Asked Questions</h2>
+    <div class="faq">
+      <h3>What is Hunmin VLM 397B?</h3>
+      <p>Hunmin VLM 397B is a 397-billion-parameter open-source computer-use model from Korean generative AI company Xenon, built on Qwen 3.5-397B and open-sourced on September 18. It identifies on-screen elements — buttons, input fields, menus — and then performs the actual actions: clicking, typing and navigating.</p>
+      <h3>How does Hunmin VLM 397B perform on benchmarks?</h3>
+      <p>It scored 75.6 on ScreenSpot Pro, placing second on Hugging Face's official leaderboard and making it the only Korean model among the 48 listed. On OSWorld's 360 real Linux tasks it scored 70.5 — 22.3 points above the base model — and it came in 9.1 points higher on WindowsAgentArena.</p>
+      <h3>How much compute was needed to train it?</h3>
+      <p>The entire post-training run used just eight Nvidia B200 GPUs. Xenon transferred the computer-operating capabilities of the open base model using a low-rank method, then ran supervised learning and reinforcement learning in an FP8 quantisation environment.</p>
+    </div>
 
     <h2>What This Means for You</h2>
     <p>For Indian developers and students, an open computer-use model changes the maths completely. You're no longer tied to one vendor's API pricing in dollars — you can self-host, fine-tune for Indian apps and workflows (think UPI dashboards, ERP screens, government portals), and build automation products on your own terms. For small teams, this is the moment to start experimenting with agents that operate software, not just chat about it. And if computer use is new to you, our <a href="/products/gpt-6-astra-guide/">GPT-6 Astra — Zero to Hero Guide</a> has a full chapter on it, written for beginners, walking you from your first prompt to building working automations.</p>

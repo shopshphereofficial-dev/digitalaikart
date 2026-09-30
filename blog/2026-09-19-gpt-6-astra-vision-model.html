@@ -119,6 +119,38 @@
 .related li{font-size:0.85rem;color:var(--text-secondary);padding:0.35rem 0}
 .related li a{color:var(--gold)}
 </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What did Roboflow's vision tests find about GPT-6 Astra?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Roboflow, an independent computer vision platform, called GPT-6 Astra the strongest vision model it has tested so far. At low reasoning effort it scored 82.1% mAP@50 on object detection, ahead of Qwen3.8 Max at 76.7%, and it now powers Roboflow's Auto Annotate feature in production."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How expensive is GPT-6 Astra for analysing video?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Roboflow measured roughly $0.02–$0.08 per frame. Over a minute of standard 30fps video that adds up to about $36–$144 — roughly ₹3,000–₹12,000 per minute. At low effort Astra takes about 11 seconds per image, climbing to around 32 seconds at high effort."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is it worth paying for high reasoning effort on vision tasks?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Usually not. Roboflow found high effort only lifted detection from 82.1% to 83.6% mAP@50 while roughly doubling the per-image price. Their advice: test a cheaper model first, and reserve Astra for the cross-frame interpretation — identity, context and judgment."
+      }
+    }
+  ]
+}
+</script>
 </head>
 <body>
 <nav class="nav"><div class="nav-inner"><a href="/" class="nav-logo">Digitalaikart</a><div class="nav-links"><a href="/">Home</a><a href="/products/">Products</a><a href="/ai/">AI Assistant</a><a href="/blog/" class="active">Blog</a></div></div></nav>
@@ -192,6 +224,16 @@
       <li>Smart architectures mix cheap tracking models with Astra for high-level interpretation only</li>
       <li>Computer-use training appears to have improved vision skills as a side effect</li>
     </ul>
+
+        <h2>Frequently Asked Questions</h2>
+    <div class="faq">
+      <h3>What did Roboflow's vision tests find about GPT-6 Astra?</h3>
+      <p>Roboflow, an independent computer vision platform, called GPT-6 Astra the strongest vision model it has tested so far. At low reasoning effort it scored 82.1% mAP@50 on object detection, ahead of Qwen3.8 Max at 76.7%, and it now powers Roboflow's Auto Annotate feature in production.</p>
+      <h3>How expensive is GPT-6 Astra for analysing video?</h3>
+      <p>Roboflow measured roughly $0.02–$0.08 per frame. Over a minute of standard 30fps video that adds up to about $36–$144 — roughly ₹3,000–₹12,000 per minute. At low effort Astra takes about 11 seconds per image, climbing to around 32 seconds at high effort.</p>
+      <h3>Is it worth paying for high reasoning effort on vision tasks?</h3>
+      <p>Usually not. Roboflow found high effort only lifted detection from 82.1% to 83.6% mAP@50 while roughly doubling the per-image price. Their advice: test a cheaper model first, and reserve Astra for the cross-frame interpretation — identity, context and judgment.</p>
+    </div>
 
     <h2>What This Means for You</h2>
     <p>If you're a developer or student in India playing with vision projects, this changes your toolkit: auto-annotation just got dramatically better, which means you can build datasets for your own ideas in hours instead of weeks. But do the maths before you commit — at these prices, the winners will be the ones who architect for cost, not the ones with the best ideas. A practical grounding in prompting, agents and cost optimization will save you far more than any single model choice; our <a href="/products/gpt-6-astra-guide/">GPT-6 Astra — Zero to Hero Guide</a> was built for exactly that.</p>
