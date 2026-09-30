@@ -92,6 +92,7 @@
 .post-body strong{color:#e2e8f0}
 .post-body ul{margin:0.6rem 0 0.6rem 1.4rem}
 .post-body li{font-size:0.85rem;color:var(--text-secondary);margin-bottom:0.35rem}
+.post-body .faq p{font-size:0.85rem;color:var(--text-secondary);margin:0.4rem 0 0.9rem}
 .product-box{background:var(--navy-card);border:1px solid rgba(245,197,66,0.35);border-radius:14px;padding:1.5rem;margin:2.5rem 0;position:relative;overflow:hidden}
 .product-box::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:var(--gold-gradient)}
 .product-box h4{color:var(--gold);font-size:0.72rem;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:0.5rem}
@@ -122,6 +123,38 @@
 .related li{font-size:0.85rem;color:var(--text-secondary);padding:0.35rem 0}
 .related li a{color:var(--gold)}
 </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is the IIT Kanpur AI training programme?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "IIT Kanpur has partnered with the Government of Uttar Pradesh and the State Council of Educational Research and Training (SCERT) to train 900 participants in digital literacy, computational thinking, AI and technology-enabled teaching. The programme, called DLCCAI (Digital Literacy and Computational Thinking Concepts for AI), is expanding into secondary education and runs in six batches of 150 participants each."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Who can take part in the programme?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The 900 seats go to secondary school teachers, lecturers from District Institutes of Education and Training (DIETs), and officials from SCERT's ancillary units. Training the people who design teacher training means the effect multiplies down the chain, which is why that last group matters more than it first appears."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How long is the programme and what do participants get?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It runs eight weeks. It begins with a five-day residential training at IIT Kanpur covering digital foundations, productivity tools, spreadsheets, creativity and AI, block-based programming and introductory Python; the rest happens online through Google Classroom with weekly mentor sessions and live doubt-clearing sessions. Completing the quizzes, assignments, projects and a final capstone earns a joint certificate from SCERT and IIT Kanpur."
+      }
+    }
+  ]
+}
+</script>
 </head>
 <body>
 <nav class="nav"><div class="nav-inner"><a href="/" class="nav-logo">Digitalaikart</a><div class="nav-links"><a href="/">Home</a><a href="/products/">Products</a><a href="/ai/">AI Assistant</a><a href="/blog/" class="active">Blog</a></div></div></nav>
@@ -199,6 +232,17 @@
       <li>Joint SCERT-IITK certificate on completing a capstone presentation</li>
       <li>The same curriculum is already in SCERT Class 6-8 textbooks, reaching ~48 lakh UP students</li>
     </ul>
+
+    
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq">
+      <h3>What is the IIT Kanpur AI training programme?</h3>
+      <p>IIT Kanpur has partnered with the Government of Uttar Pradesh and the State Council of Educational Research and Training (SCERT) to train 900 participants in digital literacy, computational thinking, AI and technology-enabled teaching. The programme, called DLCCAI (Digital Literacy and Computational Thinking Concepts for AI), is expanding into secondary education and runs in six batches of 150 participants each.</p>
+      <h3>Who can take part in the programme?</h3>
+      <p>The 900 seats go to secondary school teachers, lecturers from District Institutes of Education and Training (DIETs), and officials from SCERT's ancillary units. Training the people who design teacher training means the effect multiplies down the chain, which is why that last group matters more than it first appears.</p>
+      <h3>How long is the programme and what do participants get?</h3>
+      <p>It runs eight weeks. It begins with a five-day residential training at IIT Kanpur covering digital foundations, productivity tools, spreadsheets, creativity and AI, block-based programming and introductory Python; the rest happens online through Google Classroom with weekly mentor sessions and live doubt-clearing sessions. Completing the quizzes, assignments, projects and a final capstone earns a joint certificate from SCERT and IIT Kanpur.</p>
+    </div>
 
     <h2>What This Means for You</h2>
     <p>If you're a teacher in UP, keep an eye on your DIET or SCERT circulars — six batches of 150 means your district will get slots. If you're a parent, this is good news: your child's teachers are being brought up to speed on the same tools your child will compete with. And if you're a student or working professional watching all this from the outside, remember that the certificate is just the entry ticket. The real advantage goes to people who keep practising after the course ends — building lessons with AI, automating marksheets, experimenting with prompts. A structured guide like our <a href="/products/gpt-6-astra-guide/">GPT-6 Astra — Zero to Hero Guide</a> can shorten that journey considerably, at less than the cost of a pizza.</p>

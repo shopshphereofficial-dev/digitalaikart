@@ -92,6 +92,7 @@
 .post-body strong{color:#e2e8f0}
 .post-body ul{margin:0.6rem 0 0.6rem 1.4rem}
 .post-body li{font-size:0.85rem;color:var(--text-secondary);margin-bottom:0.35rem}
+.post-body .faq p{font-size:0.85rem;color:var(--text-secondary);margin:0.4rem 0 0.9rem}
 .product-box{background:var(--navy-card);border:1px solid rgba(245,197,66,0.35);border-radius:14px;padding:1.5rem;margin:2.5rem 0;position:relative;overflow:hidden}
 .product-box::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:var(--gold-gradient)}
 .product-box h4{color:var(--gold);font-size:0.72rem;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:0.5rem}
@@ -122,6 +123,38 @@
 .related li{font-size:0.85rem;color:var(--text-secondary);padding:0.35rem 0}
 .related li a{color:var(--gold)}
 </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Did an Anthropic model really hack OpenAI?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. A three-person security team at startup Hacktron AI, taking part in OpenAI's bug bounty programme, used Anthropic's Claude Opus 5 to find a path into OpenAI's systems. They chained a flaw in Discourse, the software behind OpenAI's community forum, with a second critical vulnerability to reach multiple employee ChatGPT accounts and internal software. OpenAI says the issues are resolved and paid a $6,500 award — around ₹5.5 lakh at current rates."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How did Opus 5 compare with the earlier model?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A cybersecurity version of Claude Opus 4.8, made available to security researchers, tried across several sessions to build a working exploit for the Discourse flaw and failed. When Anthropic released Opus 5, the team gave it the exact same problem within hours and it succeeded — one version bump, and a capability that did not exist in the morning existed by evening."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does this only affect closed frontier models?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. AI safety nonprofit SaferAI found that Chinese company Z.ai's open-weight GLM-5.2 model is only a few months behind OpenAI's GPT-5.5 and Anthropic's Claude Opus 4.7 on cyber capabilities, meaning serious offensive-hacking ability is spreading to models anyone can download. There is a regulatory angle too: Anthropic's newer Mythos 5 model was temporarily locked down over concerns about its advanced hacking capabilities."
+      }
+    }
+  ]
+}
+</script>
 </head>
 <body>
 <nav class="nav"><div class="nav-inner"><a href="/" class="nav-logo">Digitalaikart</a><div class="nav-links"><a href="/">Home</a><a href="/products/">Products</a><a href="/ai/">AI Assistant</a><a href="/blog/" class="active">Blog</a></div></div></nav>
@@ -200,6 +233,17 @@
       <li>Open-weight models like GLM-5.2 are closing in on frontier cyber capabilities</li>
       <li>AI hacking skill is now a tool — it strengthens security when used responsibly</li>
     </ul>
+
+    
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq">
+      <h3>Did an Anthropic model really hack OpenAI?</h3>
+      <p>Yes. A three-person security team at startup Hacktron AI, taking part in OpenAI's bug bounty programme, used Anthropic's Claude Opus 5 to find a path into OpenAI's systems. They chained a flaw in Discourse, the software behind OpenAI's community forum, with a second critical vulnerability to reach multiple employee ChatGPT accounts and internal software. OpenAI says the issues are resolved and paid a $6,500 award — around ₹5.5 lakh at current rates.</p>
+      <h3>How did Opus 5 compare with the earlier model?</h3>
+      <p>A cybersecurity version of Claude Opus 4.8, made available to security researchers, tried across several sessions to build a working exploit for the Discourse flaw and failed. When Anthropic released Opus 5, the team gave it the exact same problem within hours and it succeeded — one version bump, and a capability that did not exist in the morning existed by evening.</p>
+      <h3>Does this only affect closed frontier models?</h3>
+      <p>No. AI safety nonprofit SaferAI found that Chinese company Z.ai's open-weight GLM-5.2 model is only a few months behind OpenAI's GPT-5.5 and Anthropic's Claude Opus 4.7 on cyber capabilities, meaning serious offensive-hacking ability is spreading to models anyone can download. There is a regulatory angle too: Anthropic's newer Mythos 5 model was temporarily locked down over concerns about its advanced hacking capabilities.</p>
+    </div>
 
     <h2>What This Means for You</h2>
     <p>For students and aspiring security professionals in India, this is a signal: bug bounty programmes are increasingly going to reward people who know how to direct AI models at security problems. You don't need to be a genius hacker — you need to be the person who knows how to use the genius hacker that lives inside the API. For businesses, the message is simpler and less comfortable: if an AI model can crack OpenAI, it can find the holes in your stack too. Basic hygiene — strong authentication, third-party software audits, least-privilege access — just became an AI-era survival skill. If you want to get genuinely good at directing these models (and doing it safely and cheaply), the GPT-6 Astra — Zero to Hero Guide is the practical next step — it covers prompting, agents, computer use and safety in one structured roadmap.</p>

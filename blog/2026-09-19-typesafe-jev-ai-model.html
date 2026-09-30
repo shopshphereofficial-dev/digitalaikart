@@ -62,6 +62,7 @@
 .post-body strong{color:#e2e8f0}
 .post-body ul{margin:0.6rem 0 0.6rem 1.4rem}
 .post-body li{font-size:0.85rem;color:var(--text-secondary);margin-bottom:0.35rem}
+.post-body .faq p{font-size:0.85rem;color:var(--text-secondary);margin:0.4rem 0 0.9rem}
 .product-box{background:var(--navy-card);border:1px solid rgba(245,197,66,0.35);border-radius:14px;padding:1.5rem;margin:2.5rem 0;position:relative;overflow:hidden}
 .product-box::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:var(--gold-gradient)}
 .product-box h4{color:var(--gold);font-size:0.72rem;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:0.5rem}
@@ -120,6 +121,38 @@
   },
   "mainEntityOfPage": "https://digitalkartai.shop/blog/2026-09-19-typesafe-jev-ai-model.html",
   "description": "TypeSafe's Jev model, from a ChatGPT inventor, returns calibrated decisions instead of text — 227 ms per choice, and why Indian developers are excited about it."
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is Jev and who made it?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Jev is the first AI model from startup TypeSafe AI, co-founded by Diogo Almeida, one of the inventors of ChatGPT. Instead of chat, it returns probabilities — \"calibrated decisions\" — such as a choice, a score or a boolean, along with a confidence estimate the application can act on. TypeSafe took Jev out of stealth on September 15, 2026 after a $40 million seed round led by DCVC."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why build an AI model that doesn't chat?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Almeida left OpenAI because most software does not need an essay — it needs a decision, such as whether to flag a transaction, which agent handles a ticket, or whether an input is safe to execute. Teams today bolt a large language model onto those questions and pay premium prices for tokens nobody reads. TypeSafe calls Jev a \"System One model,\" trained on synthetic data, and describes the developer experience as a \"frontier-intelligence function call\" rather than a conversation."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What makes Jev's confidence score important?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Because the confidence number lets your code decide to act automatically when Jev is sure of itself and escalate to a human when it isn't — a genuinely different safety model from a chatbot that confidently writes wrong answers in perfect grammar. In a recorded 12-second Pong demo, Jev returned 47 paddle decisions, averaging 227 milliseconds per decision with a 400 ms p95."
+      }
+    }
+  ]
 }
 </script>
 </head>
@@ -201,6 +234,17 @@
       <li>Best suited to routing, classification, verification, approvals and agent control — not open-ended writing.</li>
       <li>Performance claims are company-run evaluations, and the architecture details remain under wraps.</li>
     </ul>
+
+    
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq">
+      <h3>What is Jev and who made it?</h3>
+      <p>Jev is the first AI model from startup TypeSafe AI, co-founded by Diogo Almeida, one of the inventors of ChatGPT. Instead of chat, it returns probabilities — "calibrated decisions" — such as a choice, a score or a boolean, along with a confidence estimate the application can act on. TypeSafe took Jev out of stealth on September 15, 2026 after a $40 million seed round led by DCVC.</p>
+      <h3>Why build an AI model that doesn't chat?</h3>
+      <p>Almeida left OpenAI because most software does not need an essay — it needs a decision, such as whether to flag a transaction, which agent handles a ticket, or whether an input is safe to execute. Teams today bolt a large language model onto those questions and pay premium prices for tokens nobody reads. TypeSafe calls Jev a "System One model," trained on synthetic data, and describes the developer experience as a "frontier-intelligence function call" rather than a conversation.</p>
+      <h3>What makes Jev's confidence score important?</h3>
+      <p>Because the confidence number lets your code decide to act automatically when Jev is sure of itself and escalate to a human when it isn't — a genuinely different safety model from a chatbot that confidently writes wrong answers in perfect grammar. In a recorded 12-second Pong demo, Jev returned 47 paddle decisions, averaging 227 milliseconds per decision with a 400 ms p95.</p>
+    </div>
 
     <h2>What This Means for You</h2>
     <p>For developers and startup folks in India, Jev is a nudge to rethink architecture before you rewrite it. If you're building an automation product and currently paying a frontier chat model to make yes/no decisions, watch this space — a decision engine that costs a fraction per call could change your unit economics completely, and rupee margins are exactly where Indian products live or die. For students, the deeper lesson is bigger than one model: the industry is moving past "everything is a chatbot," and the people who understand when to use a chat model, when to use an agent, and when a simple calibrated decision is enough will build the leanest products in the room. That judgment — picking the right tool and keeping costs down — is exactly what the <a href="/products/gpt-6-astra-guide/">GPT-6 Astra — Zero to Hero Guide</a> teaches, from prompting and agents to cost optimization.</p>
