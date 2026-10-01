@@ -1,0 +1,47 @@
+name: Upload AI Teacher Toolkit to Repo
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  upload-ebook:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Set up Python 3.12
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install reportlab
+        run: pip install reportlab==5.0.1
+
+      - name: Build PDF (deterministic)
+        run: |
+          mkdir -p downloads
+          python3 products/ai-teacher-toolkit-2026/build.py downloads/ai-teacher-toolkit-2026.pdf
+
+      - name: Verify checksum
+        run: |
+          echo "29bcf1c9c14d4233627238b0930fc1974835acaf20b0fa79c0ee5b39f865d0cd  downloads/ai-teacher-toolkit-2026.pdf" | sha256sum -c
+
+      - name: Attach PDF to release
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh release upload ai-teacher-toolkit-2026-v1 downloads/ai-teacher-toolkit-2026.pdf --repo shopshphereofficial-dev/digitalaikart --clobber
+
+      - name: Commit ebook to repo
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add downloads/ai-teacher-toolkit-2026.pdf
+          git commit -m "Add AI Teacher Toolkit PDF to repo" || echo "No changes to commit"
+          git push
