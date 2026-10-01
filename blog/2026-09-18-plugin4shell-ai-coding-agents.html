@@ -124,7 +124,42 @@
 .related li:last-child{border-bottom:none}
 .related a{color:#e2e8f0;text-decoration:none}
 .related a:hover{color:var(--gold)}
+
+.post-body .faq h3{font-size:0.98rem;color:#f1f5f9;margin:1.5rem 0 0.3rem}
+.post-body .faq p{font-size:0.85rem;color:var(--text-secondary);margin:0.4rem 0 0.9rem}
 </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is Plugin4Shell?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Plugin4Shell is a zero-click remote code execution flaw disclosed by security startup Air on September 17, 2026. It affects all four major AI coding agents — Claude Code, OpenAI Codex, GitHub Copilot and Gemini CLI — and quietly breaks the SHA-pinning safety mechanism meant to keep plugins trustworthy."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which AI coding agents are affected, and have they been patched?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "All four major agents are affected. Anthropic and OpenAI have already shipped patches; Microsoft had not at the time of disclosure, and Google deprecated Gemini CLI without one."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I fix Plugin4Shell?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Update the coding agent itself. Because the flaw lives in the agent's own plugin-trust mechanism, marketplaces cannot patch it for you — only a full agent update closes the hole."
+      }
+    }
+  ]
+}
+</script>
 </head>
 <body>
 <nav class="nav"><div class="nav-inner"><a href="/" class="nav-logo">Digitalaikart</a><div class="nav-links"><a href="/">Home</a><a href="/products/">Products</a><a href="/ai/">AI Assistant</a><a href="/blog/" class="active">Blog</a></div></div></nav>
@@ -206,7 +241,13 @@
       <li>Only an agent-side update fixes it — no marketplace can protect you on its own</li>
     </ul>
 
-    <h2>What This Means for You</h2>
+        <h2>Frequently Asked Questions</h2>
+    <div class="faq">      <h3>What is Plugin4Shell?</h3>
+      <p>Plugin4Shell is a zero-click remote code execution flaw disclosed by security startup Air on September 17, 2026. It affects all four major AI coding agents — Claude Code, OpenAI Codex, GitHub Copilot and Gemini CLI — and quietly breaks the SHA-pinning safety mechanism meant to keep plugins trustworthy.</p>      <h3>Which AI coding agents are affected, and have they been patched?</h3>
+      <p>All four major agents are affected. Anthropic and OpenAI have already shipped patches; Microsoft had not at the time of disclosure, and Google deprecated Gemini CLI without one.</p>      <h3>How do I fix Plugin4Shell?</h3>
+      <p>Update the coding agent itself. Because the flaw lives in the agent's own plugin-trust mechanism, marketplaces cannot patch it for you — only a full agent update closes the hole.</p>    </div>
+
+<h2>What This Means for You</h2>
     <p>For Indian developers and startups, this is the first real taste of a problem that's only going to grow: AI agents have become infrastructure, and infrastructure gets attacked at its supply chain. The teams that stay safe won't be the ones who never install plugins — that's not realistic — but the ones who treat agent permissions, plugin audits, and version hygiene as seriously as they treat their CI/CD pipeline. If you're building with agents and want that discipline built into your workflow from day one, the <a href="/products/gpt-6-astra-guide/">GPT-6 Astra — Zero to Hero Guide</a> covers agents, safety, and cost control in one structured roadmap. Update your tools this weekend; it takes ten minutes.</p>
   </div>
 

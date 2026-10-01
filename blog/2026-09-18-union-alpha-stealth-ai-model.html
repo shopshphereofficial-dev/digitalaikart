@@ -122,7 +122,42 @@
 .summary-box p{font-size:0.85rem;color:#cbd5e1}
 .tag-pills{display:flex;flex-wrap:wrap;gap:0.5rem;margin:0.3rem 0 1.2rem}
 .tag-pills span{font-size:0.68rem;font-weight:600;color:#94a3b8;background:rgba(148,163,184,0.08);border:1px solid rgba(148,163,184,0.25);padding:0.18rem 0.7rem;border-radius:999px;letter-spacing:0.3px}
+
+.post-body .faq h3{font-size:0.98rem;color:#f1f5f9;margin:1.5rem 0 0.3rem}
+.post-body .faq p{font-size:0.85rem;color:var(--text-secondary);margin:0.4rem 0 0.9rem}
 </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is Union Alpha?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Union Alpha was a stealth model that appeared on OpenRouter on September 16, 2026 with no developer name, benchmarking at the same level as GPT-6 Astra and Claude Fable 5.1."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Who actually made Union Alpha?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It was later unmasked as unbiased.ai's Pareto 26.9, with an official release due October 10, 2026."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much will Union Alpha cost?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Paid pricing is $2.50 per million input tokens and $7.50 per million output tokens — under a quarter of GPT-6 Astra's original price. Its free trial crashed after one day under 1 billion tokens per minute of demand."
+      }
+    }
+  ]
+}
+</script>
 </head>
 <body>
 <nav class="nav"><div class="nav-inner"><a href="/" class="nav-logo">Digitalaikart</a><div class="nav-links"><a href="/">Home</a><a href="/products/">Products</a><a href="/ai/">AI Assistant</a><a href="/blog/" class="active">Blog</a></div></div></nav>
@@ -199,7 +234,13 @@
       <li>No independent evaluations yet — promising, but test before you trust it in production</li>
     </ul>
 
-    <h2>What This Means for You</h2>
+        <h2>Frequently Asked Questions</h2>
+    <div class="faq">      <h3>What is Union Alpha?</h3>
+      <p>Union Alpha was a stealth model that appeared on OpenRouter on September 16, 2026 with no developer name, benchmarking at the same level as GPT-6 Astra and Claude Fable 5.1.</p>      <h3>Who actually made Union Alpha?</h3>
+      <p>It was later unmasked as unbiased.ai's Pareto 26.9, with an official release due October 10, 2026.</p>      <h3>How much will Union Alpha cost?</h3>
+      <p>Paid pricing is $2.50 per million input tokens and $7.50 per million output tokens — under a quarter of GPT-6 Astra's original price. Its free trial crashed after one day under 1 billion tokens per minute of demand.</p>    </div>
+
+<h2>What This Means for You</h2>
     <p>For Indian developers and startups, the real lesson isn't "new model dropped." It's that the gap between frontier capability and affordable pricing is closing fast — and the builders who win are the ones who know how to test, route, and optimize across models instead of marrying one. Watch the October 10 release, run your own benchmarks on your own data, and keep cost discipline in your stack from day one. If you want that skill set properly built out, the <a href="/products/gpt-6-astra-guide/">GPT-6 Astra — Zero to Hero Guide</a> covers prompting, agents, and cost optimization in one structured roadmap.</p>
   </div>
 
