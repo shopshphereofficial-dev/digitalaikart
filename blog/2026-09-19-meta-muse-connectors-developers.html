@@ -123,6 +123,38 @@
 .related li{font-size:0.85rem;color:var(--text-secondary);padding:0.35rem 0}
 .related li a{color:var(--gold)}
 </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What did Meta open up?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "On September 18, Mark Zuckerberg opened Muse connectors, so any developer can plug their API into Meta's AI agent — his pitch was simply \"You bring the API.\""
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What does Muse handle on its own?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Muse handles the planning, browsing and user context, while users control read/write permissions per connector. Every Muse runs in an isolated VM, with the Sentinel system reviewing actions before they hit the internet."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why does connector ranking matter?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Which connector Muse picks for a request becomes the agent-era equivalent of search ranking or app store placement — and Meta has not yet explained how that ranking will work."
+      }
+    }
+  ]
+}
+</script>
 </head>
 <body>
 <nav class="nav"><div class="nav-inner"><a href="/" class="nav-logo">Digitalaikart</a><div class="nav-links"><a href="/">Home</a><a href="/products/">Products</a><a href="/ai/">AI Assistant</a><a href="/blog/" class="active">Blog</a></div></div></nav>
@@ -199,6 +231,16 @@
       <li>Connector ranking is the new search ranking — and Meta hasn't explained how it will work</li>
       <li>Meta shipped this 10 days after Muse's launch, while Google opened Google Home to agents the same week</li>
     </ul>
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq">
+      <h3>What did Meta open up?</h3>
+      <p>On September 18, Mark Zuckerberg opened Muse connectors, so any developer can plug their API into Meta's AI agent — his pitch was simply "You bring the API."</p>
+      <h3>What does Muse handle on its own?</h3>
+      <p>Muse handles the planning, browsing and user context, while users control read/write permissions per connector. Every Muse runs in an isolated VM, with the Sentinel system reviewing actions before they hit the internet.</p>
+      <h3>Why does connector ranking matter?</h3>
+      <p>Which connector Muse picks for a request becomes the agent-era equivalent of search ranking or app store placement — and Meta has not yet explained how that ranking will work.</p>
+    </div>
+
 
     <h2>What This Means for You</h2>
     <p>For Indian developers and startup founders, this is a genuine new distribution channel opening up — the same way the App Store in 2008 and the Play Store boom created entire companies out of small teams in Bengaluru, Indore and everywhere else. If your product has an API, it can now theoretically live inside an agent used by billions of people through WhatsApp alone. For everyone else, the shift is simpler: your next "app" might not be an app at all, just a conversation.</p>

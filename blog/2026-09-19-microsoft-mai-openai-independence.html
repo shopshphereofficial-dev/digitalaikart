@@ -123,6 +123,38 @@
 .related li{font-size:0.85rem;color:var(--text-secondary);padding:0.35rem 0}
 .related li a{color:var(--gold)}
 </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is Microsoft building?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Satya Nadella says Microsoft is building its own MAI models \"from the bottom\" rather than distilling anyone else's work."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is Nadella's guiding philosophy?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "\"Use all but be independent of all\" — no more defaulting to a single AI partner."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which products are affected?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Microsoft has already started routing work in GitHub Copilot, Excel and Outlook away from OpenAI and Anthropic models, with Copilot Chat and PowerPoint next. The driver is economics — software now has a real marginal cost, so every token counts."
+      }
+    }
+  ]
+}
+</script>
 </head>
 <body>
 <nav class="nav"><div class="nav-inner"><a href="/" class="nav-logo">Digitalaikart</a><div class="nav-links"><a href="/">Home</a><a href="/products/">Products</a><a href="/ai/">AI Assistant</a><a href="/blog/" class="active">Blog</a></div></div></nav>
@@ -201,6 +233,16 @@
       <li>Software has a <strong>real marginal cost</strong> now — model choice is a business decision, not a technical one</li>
       <li>Hyperscalers won't accept being mere suppliers to two model companies</li>
     </ul>
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq">
+      <h3>What is Microsoft building?</h3>
+      <p>Satya Nadella says Microsoft is building its own MAI models "from the bottom" rather than distilling anyone else's work.</p>
+      <h3>What is Nadella's guiding philosophy?</h3>
+      <p>"Use all but be independent of all" — no more defaulting to a single AI partner.</p>
+      <h3>Which products are affected?</h3>
+      <p>Microsoft has already started routing work in GitHub Copilot, Excel and Outlook away from OpenAI and Anthropic models, with Copilot Chat and PowerPoint next. The driver is economics — software now has a real marginal cost, so every token counts.</p>
+    </div>
+
 
     <h2>What This Means for You</h2>
     <p>If you're a developer or an IT decision-maker in India, stop building your product around one AI vendor. Nadella — the man who wrote the biggest AI cheques in history — is telling you the winning strategy: keep the option to swap models without your quality collapsing. That means clean abstraction layers, proper evals for your own use cases, and ruthless cost tracking. And if you're early in your AI journey, the GPT-6 Astra — Zero to Hero Guide covers model selection, cost optimization and agent-building from a beginner's level — the same skills Microsoft is betting its entire product line on.</p>

@@ -123,6 +123,38 @@
 .related li{font-size:0.85rem;color:var(--text-secondary);padding:0.35rem 0}
 .related li a{color:var(--gold)}
 </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What does OpenAI claim its agents did?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "OpenAI says an unreleased internal model — \"significantly more capable than GPT-6 Astra\" — produced a proof of the forced Navier-Stokes problem, one of the seven Millennium Prize problems worth $1 million each."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How did the agents work on it?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "About 10,000 concurrent AI agents worked on it, exchanging 2.7 million messages over 88 hours, with verification in Lean taking another 17 hours."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the controversy around the proof?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Two mathematicians — Tristan Buckmaster (NYU) and Levent Alpöge (Anthropic) — had been chasing the same result for a year and published one day before OpenAI. OpenAI says it won't claim the $1M prize."
+      }
+    }
+  ]
+}
+</script>
 </head>
 <body>
 <nav class="nav"><div class="nav-inner"><a href="/" class="nav-logo">Digitalaikart</a><div class="nav-links"><a href="/">Home</a><a href="/products/">Products</a><a href="/ai/">AI Assistant</a><a href="/blog/" class="active">Blog</a></div></div></nav>
@@ -199,6 +231,16 @@
       <li>Buckmaster and Alpöge had the closely related Euler result first; OpenAI denies their work influenced its model</li>
       <li>The bigger signal: months of expert mathematical work compressed into days by coordinated AI agents</li>
     </ul>
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq">
+      <h3>What does OpenAI claim its agents did?</h3>
+      <p>OpenAI says an unreleased internal model — "significantly more capable than GPT-6 Astra" — produced a proof of the forced Navier-Stokes problem, one of the seven Millennium Prize problems worth $1 million each.</p>
+      <h3>How did the agents work on it?</h3>
+      <p>About 10,000 concurrent AI agents worked on it, exchanging 2.7 million messages over 88 hours, with verification in Lean taking another 17 hours.</p>
+      <h3>What is the controversy around the proof?</h3>
+      <p>Two mathematicians — Tristan Buckmaster (NYU) and Levent Alpöge (Anthropic) — had been chasing the same result for a year and published one day before OpenAI. OpenAI says it won't claim the $1M prize.</p>
+    </div>
+
 
     <h2>What This Means for You</h2>
     <p>If you're a student in India, this should settle the old "maths or coding?" debate for good — the answer is now maths and AI. The tools that solved a 180-year-old fluid dynamics question are the same class of tools you can learn to direct today, and the gap between "knowing how to prompt" and "coordinating a swarm of agents" is where the interesting careers are forming. You don't need $22 million of compute to start; you need to understand how these systems think, how to keep their costs under control, and how to verify what they produce. That's exactly the path our <a href="/products/gpt-6-astra-guide/">GPT-6 Astra — Zero to Hero Guide</a> walks you through, from your first serious prompt to running your own agent workflows.</p>
