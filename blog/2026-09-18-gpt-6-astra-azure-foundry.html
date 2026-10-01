@@ -122,7 +122,41 @@
 .summary-box p{font-size:0.85rem;color:#cbd5e1}
 .tag-pills{display:flex;flex-wrap:wrap;gap:0.5rem;margin:0.3rem 0 1.2rem}
 .tag-pills span{font-size:0.68rem;font-weight:600;color:#94a3b8;background:rgba(148,163,184,0.08);border:1px solid rgba(148,163,184,0.25);padding:0.18rem 0.7rem;border-radius:999px;letter-spacing:0.3px}
+.post-body .faq h3{font-size:0.98rem;color:#f1f5f9;margin:1.5rem 0 0.3rem}
+.post-body .faq p{font-size:0.85rem;color:var(--text-secondary);margin:0.4rem 0 0.9rem}
 </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Is GPT-6 Astra available on Microsoft Azure?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. GPT-6 Astra is now generally available in Foundry Models, the model catalog inside Microsoft's Azure AI Foundry, where it sits at the top of the catalog as the most capable and most expensive offering. It is a managed offering operated and billed by Microsoft under license, which is different from a model merely being hosted on Azure."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much does GPT-6 Astra cost on Azure AI Foundry?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "On Standard Global pricing, GPT-6 Astra costs $10 per million input tokens and $50 per million output tokens on short context, rising to $20 and $75 on long context. The US Data Zone carries a 10% premium throughout, and cached input runs at a tenth of the input rate. Agentic workflows that accumulate context across steps are the most likely to land in the expensive long-context tier."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What safety and governance controls come with GPT-6 Astra on Azure?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Foundry supplies Entra identity and access management, private networking, role-based access control, content filtering, safety evaluations and monitoring. Microsoft is careful to note these controls help customers configure safeguards but do not eliminate risk. Because Astra can interact with on-screen information, Microsoft's documentation warns that the capability demands containment: scoped credentials, approved resources, human checkpoints for consequential actions and activity records."
+      }
+    }
+  ]
+}
+</script>
 </head>
 <body>
 <nav class="nav"><div class="nav-inner"><a href="/" class="nav-logo">Digitalaikart</a><div class="nav-links"><a href="/">Home</a><a href="/products/">Products</a><a href="/ai/">AI Assistant</a><a href="/blog/" class="active">Blog</a></div></div></nav>
@@ -199,6 +233,16 @@
       <li>Microsoft&rsquo;s guidance: computer-use capability &ldquo;demands containment&rdquo; &mdash; scoped credentials, approved resources, human checkpoints</li>
       <li>Agentic, context-heavy workflows are the most likely to hit the pricier long-context tier</li>
     </ul>
+
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq">
+      <h3>Is GPT-6 Astra available on Microsoft Azure?</h3>
+      <p>Yes. GPT-6 Astra is now generally available in Foundry Models, the model catalog inside Microsoft&rsquo;s Azure AI Foundry, where it sits at the top of the catalog as the most capable and most expensive offering. It is a managed offering operated and billed by Microsoft under license &mdash; which is different from a model merely being hosted on Azure.</p>
+      <h3>How much does GPT-6 Astra cost on Azure AI Foundry?</h3>
+      <p>On Standard Global pricing, GPT-6 Astra costs $10 per million input tokens and $50 per million output tokens on short context, rising to $20 and $75 on long context. The US Data Zone carries a 10% premium throughout, and cached input runs at a tenth of the input rate. Agentic workflows that accumulate context across steps are the most likely to land in the expensive long-context tier.</p>
+      <h3>What safety and governance controls come with GPT-6 Astra on Azure?</h3>
+      <p>Foundry supplies Entra identity and access management, private networking, role-based access control, content filtering, safety evaluations and monitoring. Microsoft is careful to note these controls help customers configure safeguards but do not eliminate risk. Because Astra can interact with on-screen information, Microsoft&rsquo;s documentation warns that the capability &ldquo;demands containment&rdquo;: scoped credentials, approved resources, human checkpoints for consequential actions and activity records.</p>
+    </div>
 
     <h2>What This Means for You</h2>
     <p>If you work at an Indian company that runs on Azure, the barrier to experimenting with the most capable model on the planet just dropped &mdash; it is now a line item inside a cloud contract you already have, not a new vendor to onboard. For developers and freelancers, this is a good moment to get serious about building agentic workflows properly: scoping permissions, designing human checkpoints and controlling costs from day one. The practical next step is our <a href="/products/gpt-6-astra-guide/">GPT-6 Astra &mdash; Zero to Hero Guide</a>, which covers prompting, computer use, AI agents, cost optimization and safety &mdash; the exact skills this Azure release puts a premium on.</p>
