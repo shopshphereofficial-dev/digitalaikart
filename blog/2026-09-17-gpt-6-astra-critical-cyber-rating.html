@@ -67,6 +67,8 @@
 .post-body strong{color:#e2e8f0}
 .post-body ul{margin:0.6rem 0 0.6rem 1.4rem}
 .post-body li{font-size:0.85rem;color:var(--text-secondary);margin-bottom:0.35rem}
+.post-body .faq h3{font-size:0.98rem;color:#f1f5f9;margin:1.5rem 0 0.3rem}
+.post-body .faq p{font-size:0.85rem;color:var(--text-secondary);margin:0.4rem 0 0.9rem}
 .product-box{background:var(--navy-card);border:1px solid rgba(245,197,66,0.35);border-radius:14px;padding:1.5rem;margin:2.5rem 0;position:relative;overflow:hidden}
 .product-box::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:var(--gold-gradient)}
 .product-box h4{color:var(--gold);font-size:0.72rem;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:0.5rem}
@@ -123,6 +125,30 @@
   },
   "mainEntityOfPage": "https://digitalkartai.shop/blog/2026-09-17-gpt-6-astra-critical-cyber-rating.html",
   "description": "GPT-6 Astra is the first AI model OpenAI rates Critical for cybersecurity — 100% on ExploitBench, gated attacks, and Microsoft Foundry pricing explained."
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Why did GPT-6 Astra get a “Critical” cybersecurity rating?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "GPT-6 Astra is the first AI model OpenAI has classified as “Critical” for cybersecurity capability under its own Preparedness Framework. It scored 100% on ExploitBench and found two previously unknown zero-days during pre-release testing."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can the public use Astra for offensive security work?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. The public model refuses to write exploits; offensive capability is gated behind OpenAI's vetted “Daybreak” programme. Microsoft made Astra generally available on Foundry the same week at $10/$50 per million tokens."
+      }
+    }
+  ]
 }
 </script>
 </head>
@@ -212,6 +238,12 @@
       <li>Cached input at one-tenth the rate is your biggest saving if you build on Astra seriously</li>
     </ul>
 
+
+
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq">      <h3>Why did GPT-6 Astra get a “Critical” cybersecurity rating?</h3>
+      <p>GPT-6 Astra is the first AI model OpenAI has classified as “Critical” for cybersecurity capability under its own Preparedness Framework. It scored 100% on ExploitBench and found two previously unknown zero-days during pre-release testing.</p>      <h3>Can the public use Astra for offensive security work?</h3>
+      <p>No. The public model refuses to write exploits; offensive capability is gated behind OpenAI's vetted “Daybreak” programme. Microsoft made Astra generally available on Foundry the same week at $10/$50 per million tokens.</p>    </div>
     <h2>What This Means for You</h2>
     <p>Most of us will never write an exploit or touch the Daybreak programme, and that's fine — that's the system working as intended. What you should take away is simpler. One: if you run any kind of business, this is the moment to get serious about AI permissions — don't connect agents to systems you can't afford to have compromised, and keep a human in the loop for anything consequential. Two: if you're building your career in AI, security literacy just became a premium skill, and understanding what frontier models can and can't be trusted to do is part of the job now. We walk through exactly that — safe agent setups, permission hygiene and cost control — in the <a href="/products/gpt-6-astra-guide/">GPT-6 Astra — Zero to Hero Guide</a>, which is the practical next step if this story made you want to build with Astra responsibly rather than just read about it.</p>
   </div>

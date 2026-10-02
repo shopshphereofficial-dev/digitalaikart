@@ -97,6 +97,8 @@
 .post-body strong{color:#e2e8f0}
 .post-body ul{margin:.6rem 0 .6rem 1.4rem}
 .post-body li{font-size:.85rem;color:var(--text-secondary);margin-bottom:.35rem}
+.post-body .faq h3{font-size:0.98rem;color:#f1f5f9;margin:1.5rem 0 0.3rem}
+.post-body .faq p{font-size:0.85rem;color:var(--text-secondary);margin:0.4rem 0 0.9rem}
 .product-box{background:var(--navy-card);border:1px solid rgba(245,197,66,.35);border-radius:14px;padding:1.5rem;margin:2.5rem 0;position:relative;overflow:hidden}
 .product-box::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:var(--gold-gradient)}
 .product-box h4{color:var(--gold);font-size:.72rem;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:.5rem}
@@ -125,6 +127,30 @@
 .summary-box h4{color:var(--gold);font-size:.75rem;letter-spacing:1px;text-transform:uppercase;margin-bottom:.4rem}
 .summary-box p{font-size:.85rem;color:#cbd5e1}
 </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is Jensen Huang's view on AI safety?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Nvidia CEO Jensen Huang says AI safety is “an engineering problem, not a legal one” — no new laws or regulations needed. He rejected the “safe or fast” framing as a false choice: “You could definitely have both at the same time.”"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why was Huang's comment notable?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "He spoke hours after Anthropic's Dario Amodei made the slowdown case on the very same Dreamforce stage. Critics like Anthropic's Jack Clark call a fully self-regulated AI industry “rolling dice with immense risks.”"
+      }
+    }
+  ]
+}
+</script>
 </head>
 <body>
 <nav class="nav"><div class="nav-inner"><a href="/" class="nav-logo">Digitalaikart</a><div class="nav-links"><a href="/">Home</a><a href="/products/">Products</a><a href="/ai/">AI Assistant</a><a href="/blog/" class="active">Blog</a></div></div></nav>
@@ -202,6 +228,12 @@
       <li>For users and teams, the practical response is building guardrails into your own AI workflows</li>
     </ul>
 
+
+
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq">      <h3>What is Jensen Huang's view on AI safety?</h3>
+      <p>Nvidia CEO Jensen Huang says AI safety is “an engineering problem, not a legal one” — no new laws or regulations needed. He rejected the “safe or fast” framing as a false choice: “You could definitely have both at the same time.”</p>      <h3>Why was Huang's comment notable?</h3>
+      <p>He spoke hours after Anthropic's Dario Amodei made the slowdown case on the very same Dreamforce stage. Critics like Anthropic's Jack Clark call a fully self-regulated AI industry “rolling dice with immense risks.”</p>    </div>
     <h2>What This Means for You</h2>
     <p>For students, professionals and founders in India, this debate will decide the rules of the road — but it won't change your Tuesday. Whether or not governments write new laws, the person responsible for using AI safely at your desk, your startup or your college project is you. Start with the boring stuff: don't give agents permissions they don't need, keep a human approval step before anything consequential, and watch your costs like a hawk. If you want a structured path instead of guessing, the <a href="/products/gpt-6-astra-guide/">GPT-6 Astra — Zero to Hero Guide</a> covers exactly this — prompting, AI agents, computer use, cost optimization and safety — step by step, written for beginners.</p>
   </div>

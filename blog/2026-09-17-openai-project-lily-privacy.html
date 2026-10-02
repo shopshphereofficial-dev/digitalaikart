@@ -97,6 +97,8 @@
 .post-body strong{color:#e2e8f0}
 .post-body ul{margin:0.6rem 0 0.6rem 1.4rem}
 .post-body li{font-size:0.85rem;color:var(--text-secondary);margin-bottom:0.35rem}
+.post-body .faq h3{font-size:0.98rem;color:#f1f5f9;margin:1.5rem 0 0.3rem}
+.post-body .faq p{font-size:0.85rem;color:var(--text-secondary);margin:0.4rem 0 0.9rem}
 .product-box{background:var(--navy-card);border:1px solid rgba(245,197,66,0.35);border-radius:14px;padding:1.5rem;margin:2.5rem 0;position:relative;overflow:hidden}
 .product-box::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:var(--gold-gradient)}
 .product-box h4{color:var(--gold);font-size:0.72rem;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:0.5rem}
@@ -125,6 +127,30 @@
 .summary-box h4{color:var(--gold);font-size:0.75rem;letter-spacing:1px;text-transform:uppercase;margin-bottom:0.4rem}
 .summary-box p{font-size:0.85rem;color:#cbd5e1}
 </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is OpenAI's “Project Lily”?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A 404 Media investigation reveals OpenAI pays hundreds of contractors to read real ChatGPT user prompts under the codename “Project Lily.” Reviewers see whole conversations, sometimes with a “user memories summary” that can hint at your location and life context."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How can you stop your chats from being reviewed?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "OpenAI's Privacy Filter strips personal info first, but the company admits it can miss things. The fix is two minutes long: turn off “Improve the model for everyone” in Settings → Data Controls."
+      }
+    }
+  ]
+}
+</script>
 </head>
 <body>
 <nav class="nav"><div class="nav-inner"><a href="/" class="nav-logo">Digitalaikart</a><div class="nav-links"><a href="/">Home</a><a href="/products/">Products</a><a href="/ai/">AI Assistant</a><a href="/blog/" class="active">Blog</a></div></div></nav>
@@ -208,6 +234,12 @@
       <li>Anthropic and Google run similar human review programmes — check those settings too</li>
     </ul>
 
+
+
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq">      <h3>What is OpenAI's “Project Lily”?</h3>
+      <p>A 404 Media investigation reveals OpenAI pays hundreds of contractors to read real ChatGPT user prompts under the codename “Project Lily.” Reviewers see whole conversations, sometimes with a “user memories summary” that can hint at your location and life context.</p>      <h3>How can you stop your chats from being reviewed?</h3>
+      <p>OpenAI's Privacy Filter strips personal info first, but the company admits it can miss things. The fix is two minutes long: turn off “Improve the model for everyone” in Settings → Data Controls.</p>    </div>
     <h2>What This Means for You</h2>
     <p>Here's the thing nobody's talking about: in India, a huge number of people use ChatGPT as a free therapist, career counsellor and doctor rolled into one. That's exactly the kind of intimate content that shouldn't be floating past anonymous contractors' screens — especially when the filter that's supposed to protect you is, by OpenAI's own admission, imperfect. I'm not saying delete your account. I'm saying spend two minutes in Data Controls tonight, and treat every chat window like what it is — a message that might someday be read by a stranger. Then use AI deliberately, for the brilliant tool it is.</p>
   </div>

@@ -97,6 +97,8 @@
 .post-body strong{color:#e2e8f0}
 .post-body ul{margin:0.6rem 0 0.6rem 1.4rem}
 .post-body li{font-size:0.85rem;color:var(--text-secondary);margin-bottom:0.35rem}
+.post-body .faq h3{font-size:0.98rem;color:#f1f5f9;margin:1.5rem 0 0.3rem}
+.post-body .faq p{font-size:0.85rem;color:var(--text-secondary);margin:0.4rem 0 0.9rem}
 .product-box{background:var(--navy-card);border:1px solid rgba(245,197,66,0.35);border-radius:14px;padding:1.5rem;margin:2.5rem 0;position:relative;overflow:hidden}
 .product-box::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:var(--gold-gradient)}
 .product-box h4{color:var(--gold);font-size:0.72rem;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:0.5rem}
@@ -125,6 +127,30 @@
 .summary-box h4{color:var(--gold);font-size:0.75rem;letter-spacing:1px;text-transform:uppercase;margin-bottom:0.4rem}
 .summary-box p{font-size:0.85rem;color:#cbd5e1}
 </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What changed in Anthropic's Claude interface?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Anthropic merged Claude chat and Cowork into a single interface, so Claude now picks the right mode itself. It also added new beta tools — Claude Docs and Claude Slides — with exports to Word, Google Docs, PowerPoint and PDF."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which plans get Claude Docs and Slides first?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Rollout starts with Pro and Max plans on web, desktop and mobile; Team and Free plans come later. Agentic work burns far more tokens than chat, so heavy users should watch their usage."
+      }
+    }
+  ]
+}
+</script>
 </head>
 <body>
 <nav class="nav"><div class="nav-inner"><a href="/" class="nav-logo">Digitalaikart</a><div class="nav-links"><a href="/">Home</a><a href="/products/">Products</a><a href="/ai/">AI Assistant</a><a href="/blog/" class="active">Blog</a></div></div></nav>
@@ -200,6 +226,12 @@
       <li>The move is Anthropic's answer to ChatGPT Work and Gemini-in-Workspace in the race for the AI superapp</li>
     </ul>
 
+
+
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq">      <h3>What changed in Anthropic's Claude interface?</h3>
+      <p>Anthropic merged Claude chat and Cowork into a single interface, so Claude now picks the right mode itself. It also added new beta tools — Claude Docs and Claude Slides — with exports to Word, Google Docs, PowerPoint and PDF.</p>      <h3>Which plans get Claude Docs and Slides first?</h3>
+      <p>Rollout starts with Pro and Max plans on web, desktop and mobile; Team and Free plans come later. Agentic work burns far more tokens than chat, so heavy users should watch their usage.</p>    </div>
     <h2>What This Means for You</h2>
     <p>If you're a student or working professional in India, this quietly removes the biggest excuse for not using AI daily — the friction of switching between tools. Your reports, project decks, and client proposals can now be drafted, discussed, and edited inside one window, then exported to whatever format your college or office demands. For freelancers and small agencies, that's hours saved per week. My suggestion: don't just wait for the rollout to reach your account. Learn how to direct agentic tools properly now — prompting, permissions, and cost control — because that's the skill this new interface rewards. Our <a href="/products/gpt-6-astra-guide/">GPT-6 Astra — Zero to Hero Guide</a> is the practical next step for exactly that.</p>
   </div>

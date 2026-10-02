@@ -97,6 +97,8 @@
 .post-body strong{color:#e2e8f0}
 .post-body ul{margin:0.6rem 0 0.6rem 1.4rem}
 .post-body li{font-size:0.85rem;color:var(--text-secondary);margin-bottom:0.35rem}
+.post-body .faq h3{font-size:0.98rem;color:#f1f5f9;margin:1.5rem 0 0.3rem}
+.post-body .faq p{font-size:0.85rem;color:var(--text-secondary);margin:0.4rem 0 0.9rem}
 .product-box{background:var(--navy-card);border:1px solid rgba(245,197,66,0.35);border-radius:14px;padding:1.5rem;margin:2.5rem 0;position:relative;overflow:hidden}
 .product-box::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:var(--gold-gradient)}
 .product-box h4{color:var(--gold);font-size:0.72rem;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:0.5rem}
@@ -125,6 +127,30 @@
 .summary-box h4{color:var(--gold);font-size:0.75rem;letter-spacing:1px;text-transform:uppercase;margin-bottom:0.4rem}
 .summary-box p{font-size:0.85rem;color:#cbd5e1}
 </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is the latest on IndiaAI Mission LLM funding?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Union Minister Ashwini Vaishnaw says evaluation of LLM applications under the IndiaAI Mission is in its final stage, and funding for selected teams will be awarded in the coming weeks."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How many firms could get funded, and under what scheme?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Around eight homegrown firms are expected to receive incentives, including subsidised GPU compute, under MeitY's ₹1,500 crore scheme. It drew roughly 500 applications; BharatGen, the IIT-led consortium, is a likely beneficiary."
+      }
+    }
+  ]
+}
+</script>
 </head>
 <body>
 <nav class="nav"><div class="nav-inner"><a href="/" class="nav-logo">Digitalaikart</a><div class="nav-links"><a href="/">Home</a><a href="/products/">Products</a><a href="/ai/">AI Assistant</a><a href="/blog/" class="active">Blog</a></div></div></nav>
@@ -198,6 +224,12 @@
       <li>The wider mission is worth ₹10,371.92 crore, with 38,000+ GPUs deployed against a 10,000 target and 40% compute subsidies</li>
     </ul>
 
+
+
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq">      <h3>What is the latest on IndiaAI Mission LLM funding?</h3>
+      <p>Union Minister Ashwini Vaishnaw says evaluation of LLM applications under the IndiaAI Mission is in its final stage, and funding for selected teams will be awarded in the coming weeks.</p>      <h3>How many firms could get funded, and under what scheme?</h3>
+      <p>Around eight homegrown firms are expected to receive incentives, including subsidised GPU compute, under MeitY's ₹1,500 crore scheme. It drew roughly 500 applications; BharatGen, the IIT-led consortium, is a likely beneficiary.</p>    </div>
     <h2>What This Means for You</h2>
     <p>If you're a student or early-career engineer, funded Indian LLM teams will soon be hiring for roles that barely existed two years ago — evaluation, Indic data curation, model ops. For startup founders, the arrival of subsidised compute and indigenous models means the cost of building India-specific AI products is dropping. And when it's time to fund your own venture beyond AI mission grants, our <a href="/products/govt-funding-handbook-2026/"><strong>Govt Funding Handbook 2026-27</strong></a> maps every PMEGP, MUDRA and Stand-Up India scheme with current limits. And for working professionals, the practical move is to get fluent with these tools now: understanding how to prompt, deploy and control costs on modern models is becoming table stakes. Our GPT-6 Astra — Zero to Hero Guide covers exactly that — prompting, agents, cost optimization and safe use — and the ₹149 digital edition is the cheapest serious investment you'll make in this shift.</p>
   </div>

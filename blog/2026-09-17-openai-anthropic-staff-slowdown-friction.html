@@ -97,6 +97,8 @@
 .post-body strong{color:#e2e8f0}
 .post-body ul{margin:0.6rem 0 0.6rem 1.4rem}
 .post-body li{font-size:0.85rem;color:var(--text-secondary);margin-bottom:0.35rem}
+.post-body .faq h3{font-size:0.98rem;color:#f1f5f9;margin:1.5rem 0 0.3rem}
+.post-body .faq p{font-size:0.85rem;color:var(--text-secondary);margin:0.4rem 0 0.9rem}
 .product-box{background:var(--navy-card);border:1px solid rgba(245,197,66,0.35);border-radius:14px;padding:1.5rem;margin:2.5rem 0;position:relative;overflow:hidden}
 .product-box::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:var(--gold-gradient)}
 .product-box h4{color:var(--gold);font-size:0.72rem;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:0.5rem}
@@ -125,6 +127,30 @@
 .summary-box h4{color:var(--gold);font-size:0.75rem;letter-spacing:1px;text-transform:uppercase;margin-bottom:0.4rem}
 .summary-box p{font-size:0.85rem;color:#cbd5e1}
 </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Why are OpenAI and Anthropic staff uneasy about the slowdown push?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A Financial Times report says employees at OpenAI and Anthropic were “blindsided” by their CEOs' AI slowdown announcements. The flashpoint is a plan to embed outside safety evaluators with employee-like access — badges, laptops and internal tools."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What do staff worry about?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Staff worry this could expose proprietary technology and create security holes in the middle of a commercial race. OpenAI says it has already paused some frontier training; Anthropic hasn't paused research but wants an evaluator embedded soon."
+      }
+    }
+  ]
+}
+</script>
 </head>
 <body>
 <nav class="nav"><div class="nav-inner"><a href="/" class="nav-logo">Digitalaikart</a><div class="nav-links"><a href="/">Home</a><a href="/products/">Products</a><a href="/ai/">AI Assistant</a><a href="/blog/" class="active">Blog</a></div></div></nav>
@@ -200,6 +226,12 @@
       <li>The slowdown faces political headwinds — from the White House, competitors, and antitrust law itself</li>
     </ul>
 
+
+
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq">      <h3>Why are OpenAI and Anthropic staff uneasy about the slowdown push?</h3>
+      <p>A Financial Times report says employees at OpenAI and Anthropic were “blindsided” by their CEOs' AI slowdown announcements. The flashpoint is a plan to embed outside safety evaluators with employee-like access — badges, laptops and internal tools.</p>      <h3>What do staff worry about?</h3>
+      <p>Staff worry this could expose proprietary technology and create security holes in the middle of a commercial race. OpenAI says it has already paused some frontier training; Anthropic hasn't paused research but wants an evaluator embedded soon.</p>    </div>
     <h2>What This Means for You</h2>
     <p>For Indian professionals and students, don't read this as "AI is stalling" — it isn't. Models keep shipping, and the competition between labs is as fierce as ever. What's changing is that safety is becoming an engineering requirement, not a PR line, and the companies that figure out how to verify their systems will win enterprise trust. If you're building anything with AI — a side project, a service business, automation for your employer — the same principle applies at your scale: put boundaries around what your agents can touch before you scale them. The practical skills for doing that well (prompting, agent design, cost control, safe deployment) are exactly what our GPT-6 Astra — Zero to Hero Guide teaches, and at ₹149 it costs less than a pizza night to get properly good at this.</p>
   </div>

@@ -97,6 +97,8 @@
 .post-body strong{color:#e2e8f0}
 .post-body ul{margin:0.6rem 0 0.6rem 1.4rem}
 .post-body li{font-size:0.85rem;color:var(--text-secondary);margin-bottom:0.35rem}
+.post-body .faq h3{font-size:0.98rem;color:#f1f5f9;margin:1.5rem 0 0.3rem}
+.post-body .faq p{font-size:0.85rem;color:var(--text-secondary);margin:0.4rem 0 0.9rem}
 .product-box{background:var(--navy-card);border:1px solid rgba(245,197,66,0.35);border-radius:14px;padding:1.5rem;margin:2.5rem 0;position:relative;overflow:hidden}
 .product-box::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:var(--gold-gradient)}
 .product-box h4{color:var(--gold);font-size:0.72rem;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:0.5rem}
@@ -125,6 +127,30 @@
 .summary-box h4{color:var(--gold);font-size:0.75rem;letter-spacing:1px;text-transform:uppercase;margin-bottom:0.4rem}
 .summary-box p{font-size:0.85rem;color:#cbd5e1}
 </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What did the US appeals court rule in the Copilot lawsuit?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The court ruled that GitHub Copilot and Codex did not violate the DMCA by outputting open-source code without attribution, holding that AI-generated code is a “new work” — not a copy with copyright info stripped off."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Are all the programmers' claims dead?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The programmers' $9 billion penalties claim is dead for now, though breach-of-contract claims continue. Normal copyright infringement claims are still open — this ruling only killed the DMCA theory."
+      }
+    }
+  ]
+}
+</script>
 </head>
 <body>
 <nav class="nav"><div class="nav-inner"><a href="/" class="nav-logo">Digitalaikart</a><div class="nav-links"><a href="/">Home</a><a href="/products/">Products</a><a href="/ai/">AI Assistant</a><a href="/blog/" class="active">Blog</a></div></div></nav>
@@ -201,6 +227,12 @@
       <li>The EFF backed the outcome, warning an expanded DMCA would hurt small creators most</li>
     </ul>
 
+
+
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq">      <h3>What did the US appeals court rule in the Copilot lawsuit?</h3>
+      <p>The court ruled that GitHub Copilot and Codex did not violate the DMCA by outputting open-source code without attribution, holding that AI-generated code is a “new work” — not a copy with copyright info stripped off.</p>      <h3>Are all the programmers' claims dead?</h3>
+      <p>The programmers' $9 billion penalties claim is dead for now, though breach-of-contract claims continue. Normal copyright infringement claims are still open — this ruling only killed the DMCA theory.</p>    </div>
     <h2>What This Means for You</h2>
     <p>If you're an Indian developer using Copilot, Cursor or Codex daily, two practical takeaways. One: your licence obligations didn't disappear — if you paste AI output into a product, you're still the one responsible for compliance, so review anything that looks suspiciously complete. Two: if you publish open-source code, assume AI models have learned from it; add clear licence files and enforcement now depends on traditional copyright, which still works. And if you're building products on top of these models, understanding what they can and can't legally reproduce is becoming a core skill — <a href="/products/gpt-6-astra-guide/">the GPT-6 Astra — Zero to Hero Guide</a> covers AI agents, prompting and safe deployment practices in plain language, so legal surprises don't ambush your project. One more thing worth knowing: <a href="/blog/2026-09-17-openai-misalignment-incidents.html">OpenAI just disclosed six incidents of its models misbehaving</a>, so keep an eye on what your tools do with your credentials, not just your code.</p>
   </div>

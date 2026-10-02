@@ -97,6 +97,8 @@
 .post-body strong{color:#e2e8f0}
 .post-body ul{margin:0.6rem 0 0.6rem 1.4rem}
 .post-body li{font-size:0.85rem;color:var(--text-secondary);margin-bottom:0.35rem}
+.post-body .faq h3{font-size:0.98rem;color:#f1f5f9;margin:1.5rem 0 0.3rem}
+.post-body .faq p{font-size:0.85rem;color:var(--text-secondary);margin:0.4rem 0 0.9rem}
 .product-box{background:var(--navy-card);border:1px solid rgba(245,197,66,0.35);border-radius:14px;padding:1.5rem;margin:2.5rem 0;position:relative;overflow:hidden}
 .product-box::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:var(--gold-gradient)}
 .product-box h4{color:var(--gold);font-size:0.72rem;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:0.5rem}
@@ -125,6 +127,30 @@
 .summary-box h4{color:var(--gold);font-size:0.75rem;letter-spacing:1px;text-transform:uppercase;margin-bottom:0.4rem}
 .summary-box p{font-size:0.85rem;color:#cbd5e1}
 </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is Arcee AI and why did it become a unicorn?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Arcee AI raised a Series B valuing it at over $1 billion, with India's Wipro among the investors. Its Trinity Large model has 400 billion parameters and was the first US-built frontier open-weight model since Meta stopped releasing Llama."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much did Arcee's models cost to build?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The company built its entire 2025 model lineup for roughly $20 million (about ₹170 crore). Its pitch: America has fallen behind China in open-weight AI, and Arcee wants to close that gap."
+      }
+    }
+  ]
+}
+</script>
 </head>
 <body>
 <nav class="nav"><div class="nav-inner"><a href="/" class="nav-logo">Digitalaikart</a><div class="nav-links"><a href="/">Home</a><a href="/products/">Products</a><a href="/ai/">AI Assistant</a><a href="/blog/" class="active">Blog</a></div></div></nav>
@@ -204,6 +230,12 @@
       <li>The stated goal is to catch up with <strong>Chinese open-weight models</strong> like Z.ai's GLM Flash</li>
     </ul>
 
+
+
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq">      <h3>What is Arcee AI and why did it become a unicorn?</h3>
+      <p>Arcee AI raised a Series B valuing it at over $1 billion, with India's Wipro among the investors. Its Trinity Large model has 400 billion parameters and was the first US-built frontier open-weight model since Meta stopped releasing Llama.</p>      <h3>How much did Arcee's models cost to build?</h3>
+      <p>The company built its entire 2025 model lineup for roughly $20 million (about ₹170 crore). Its pitch: America has fallen behind China in open-weight AI, and Arcee wants to close that gap.</p>    </div>
     <h2>What This Means for You</h2>
     <p>For Indian developers and startups, this is genuinely good news. When capable models ship with open weights, you're no longer locked to one vendor's pricing, data policies or uptime. You can host the model yourself, fine-tune it on your own data, and stop worrying about an API price hike killing your margins. That matters whether you're a student experimenting with local models on a rented GPU or a Bengaluru SaaS company serving enterprise clients. And the Wipro angle suggests Indian IT majors are positioning themselves in this ecosystem early — meaning jobs and projects around deploying and customising open models are coming. The practical move? Learn how these models actually work — prompting, deployment, cost control, agents — before the wave arrives. That's exactly the skillset our <a href="/products/gpt-6-astra-guide/">GPT-6 Astra — Zero to Hero Guide</a> was built to teach, at a launch price of ₹149.</p>
   </div>

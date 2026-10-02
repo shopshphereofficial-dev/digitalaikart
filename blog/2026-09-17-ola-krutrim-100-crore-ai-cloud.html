@@ -97,6 +97,8 @@
 .post-body strong{color:#e2e8f0}
 .post-body ul{margin:0.6rem 0 0.6rem 1.4rem}
 .post-body li{font-size:0.85rem;color:var(--text-secondary);margin-bottom:0.35rem}
+.post-body .faq h3{font-size:0.98rem;color:#f1f5f9;margin:1.5rem 0 0.3rem}
+.post-body .faq p{font-size:0.85rem;color:var(--text-secondary);margin:0.4rem 0 0.9rem}
 .product-box{background:var(--navy-card);border:1px solid rgba(245,197,66,0.35);border-radius:14px;padding:1.5rem;margin:2.5rem 0;position:relative;overflow:hidden}
 .product-box::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:var(--gold-gradient)}
 .product-box h4{color:var(--gold);font-size:0.72rem;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:0.5rem}
@@ -125,6 +127,30 @@
 .summary-box h4{color:var(--gold);font-size:0.75rem;letter-spacing:1px;text-transform:uppercase;margin-bottom:0.4rem}
 .summary-box p{font-size:0.85rem;color:#cbd5e1}
 </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Why did Ola Electric's payments to Krutrim jump?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ola Electric's payments to Bhavish Aggarwal's AI firm Krutrim nearly quadrupled to ₹100 crore in FY26, because Ola Electric has moved its entire cloud and AI infrastructure to Krutrim — external cloud spend is now zero."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How is Krutrim performing?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Krutrim reported FY26 revenue of about ₹300 crore and its first annual profit, with a PAT margin above 10%. The related-party angle has governance experts asking questions."
+      }
+    }
+  ]
+}
+</script>
 </head>
 <body>
 <nav class="nav"><div class="nav-inner"><a href="/" class="nav-logo">Digitalaikart</a><div class="nav-links"><a href="/">Home</a><a href="/products/">Products</a><a href="/ai/">AI Assistant</a><a href="/blog/" class="active">Blog</a></div></div></nav>
@@ -200,6 +226,12 @@
       <li>Krutrim has pivoted from LLMs and chips to an <strong>"AI-first cloud"</strong> for Indian teams</li>
     </ul>
 
+
+
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq">      <h3>Why did Ola Electric's payments to Krutrim jump?</h3>
+      <p>Ola Electric's payments to Bhavish Aggarwal's AI firm Krutrim nearly quadrupled to ₹100 crore in FY26, because Ola Electric has moved its entire cloud and AI infrastructure to Krutrim — external cloud spend is now zero.</p>      <h3>How is Krutrim performing?</h3>
+      <p>Krutrim reported FY26 revenue of about ₹300 crore and its first annual profit, with a PAT margin above 10%. The related-party angle has governance experts asking questions.</p>    </div>
     <h2>What This Means for You</h2>
     <p>If you're an engineer or a cloud professional in India, Krutrim's AI-cloud pivot is worth watching — a homegrown hyperscaler alternative means new jobs, new pricing pressure, and a new "sovereign infrastructure" line on your resume. If you run a business, the Ola case study is a useful reminder that cloud and AI spend is now a board-level number, not an IT line item. And if you're a student trying to make sense of where India's AI economy is actually making money today — it's not in chatbots, it's in the boring, profitable layer underneath: compute, migration and infrastructure. To work in that layer, you need solid fundamentals — prompting, agents, cost optimization, safety — and our <a href="/products/gpt-6-astra-guide/">GPT-6 Astra — Zero to Hero Guide</a> covers all of it in one practical package.</p>
   </div>

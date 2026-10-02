@@ -97,6 +97,8 @@
 .post-body strong{color:#e2e8f0}
 .post-body ul{margin:0.6rem 0 0.6rem 1.4rem}
 .post-body li{font-size:0.85rem;color:var(--text-secondary);margin-bottom:0.35rem}
+.post-body .faq h3{font-size:0.98rem;color:#f1f5f9;margin:1.5rem 0 0.3rem}
+.post-body .faq p{font-size:0.85rem;color:var(--text-secondary);margin:0.4rem 0 0.9rem}
 .post-body a{color:var(--gold)}
 .product-box{background:var(--navy-card);border:1px solid rgba(245,197,66,0.35);border-radius:14px;padding:1.5rem;margin:2.5rem 0;position:relative;overflow:hidden}
 .product-box::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:var(--gold-gradient)}
@@ -126,6 +128,30 @@
 .summary-box h4{color:var(--gold);font-size:0.75rem;letter-spacing:1px;text-transform:uppercase;margin-bottom:0.4rem}
 .summary-box p{font-size:0.85rem;color:#cbd5e1}
 </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What did Anthropic launch with Claude Fable 5.1?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Anthropic launched Claude Fable 5.1, generally available everywhere, plus Mythos 5.1 — the same model with looser guardrails for vetted security and life-sciences researchers."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much cheaper is Fable 5.1?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Typical workloads cost about 25% less than Fable 5, and agentic work saves up to 45%; cache reads are down 75% to $0.25 per million tokens. Safety filters also got smarter, with about 60% fewer false alarms in cybersecurity tasks."
+      }
+    }
+  ]
+}
+</script>
 </head>
 <body>
 <nav class="nav"><div class="nav-inner"><a href="/" class="nav-logo">Digitalaikart</a><div class="nav-links"><a href="/">Home</a><a href="/products/">Products</a><a href="/ai/">AI Assistant</a><a href="/blog/" class="active">Blog</a></div></div></nav>
@@ -216,6 +242,12 @@
       <li>Mythos access is US-only for now, with international expansion being coordinated</li>
     </ul>
 
+
+
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq">      <h3>What did Anthropic launch with Claude Fable 5.1?</h3>
+      <p>Anthropic launched Claude Fable 5.1, generally available everywhere, plus Mythos 5.1 — the same model with looser guardrails for vetted security and life-sciences researchers.</p>      <h3>How much cheaper is Fable 5.1?</h3>
+      <p>Typical workloads cost about 25% less than Fable 5, and agentic work saves up to 45%; cache reads are down 75% to $0.25 per million tokens. Safety filters also got smarter, with about 60% fewer false alarms in cybersecurity tasks.</p>    </div>
     <h2>What This Means for You</h2>
     <p>If you're a developer or founder in India, this is a good week to revisit your AI stack costs. The people who win the next round of AI-powered services won't be the ones with the best ideas — they'll be the ones whose unit economics actually work, and every price cut like this quietly moves the finish line. Students should note that "prompt caching" and "agentic workloads" are now interview-worthy topics. And if you want to genuinely understand how to build agents, control costs and spot business opportunities around models like these, the GPT-6 Astra — Zero to Hero Guide is the practical starting point — the cost-optimization and AI-agents chapters map directly onto news like this.</p>
   </div>
