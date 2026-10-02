@@ -1,0 +1,34 @@
+name: Upload Diwali 2026 Home & Budget Playbook
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  assemble:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Assemble PDF from verified parts
+        run: |
+          cat .github/pdf-parts/diwali-2026-home-budget-playbook.part*.txt | tr -d '[:space:]' | base64 -d > diwali-2026-home-budget-playbook.pdf
+          test "$(md5sum diwali-2026-home-budget-playbook.pdf | cut -d' ' -f1)" = "a362bca5090ab41369c785ea1b38e343" || (echo 'MD5 mismatch'; exit 1)
+          test "$(wc -c < diwali-2026-home-budget-playbook.pdf)" = "95571" || (echo 'Byte count mismatch'; exit 1)
+          mkdir -p downloads
+          mv diwali-2026-home-budget-playbook.pdf downloads/
+
+      - name: Commit PDF to repo
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add downloads/diwali-2026-home-budget-playbook.pdf
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "Publish Diwali 2026 Home & Budget Playbook PDF"
+            git push
+          fi
