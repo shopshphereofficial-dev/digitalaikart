@@ -15,7 +15,7 @@ jobs:
 
       - name: Assemble PDF from verified parts
         run: |
-          cat .github/pdf-parts/diwali-2026-home-budget-playbook.part*.txt | tr -d '[:space:]' | base64 -d > diwali-2026-home-budget-playbook.pdf
+          cat .github/pdf-parts/diwali-2026-home-budget-playbook.part*.txt > diwali-2026-home-budget-playbook.pdf
           test "$(md5sum diwali-2026-home-budget-playbook.pdf | cut -d' ' -f1)" = "a362bca5090ab41369c785ea1b38e343" || (echo 'MD5 mismatch'; exit 1)
           test "$(wc -c < diwali-2026-home-budget-playbook.pdf)" = "95571" || (echo 'Byte count mismatch'; exit 1)
           mkdir -p downloads
