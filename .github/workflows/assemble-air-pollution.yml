@@ -1,0 +1,34 @@
+name: Assemble Winter Air Pollution Survival Playbook 2026 PDF
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  assemble:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Assemble PDF from verified parts
+        run: |
+          cat .github/pdf-parts/air-pollution-survival-playbook-2026.part*.txt | tr -d '[:space:]' | base64 -d > air-pollution-survival-playbook-2026.pdf
+          test "$(md5sum air-pollution-survival-playbook-2026.pdf | cut -d' ' -f1)" = "64c215af757671c4f1547b8f118c7b24" || (echo 'MD5 mismatch'; exit 1)
+          test "$(wc -c < air-pollution-survival-playbook-2026.pdf)" = "42666" || (echo 'Byte count mismatch'; exit 1)
+          mkdir -p downloads
+          mv air-pollution-survival-playbook-2026.pdf downloads/
+
+      - name: Commit PDF to repo
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add downloads/air-pollution-survival-playbook-2026.pdf
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "Publish Winter Air Pollution Survival Playbook 2026 PDF"
+            git push
+          fi
