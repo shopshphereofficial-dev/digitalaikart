@@ -1,0 +1,37 @@
+name: Upload Dhanteras Gold Playbook to Repo
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  upload-ebook:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Set up Python 3.12
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install reportlab
+        run: pip install reportlab==5.0.1
+
+      - name: Build PDF
+        run: |
+          mkdir -p downloads
+          python3 products/dhanteras-diwali-2026-gold-buying-playbook/build.py downloads/dhanteras-diwali-2026-gold-buying-playbook.pdf
+
+      - name: Commit ebook to repo
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add downloads/dhanteras-diwali-2026-gold-buying-playbook.pdf
+          git commit -m "Add Dhanteras & Diwali 2026 Gold Buying Playbook PDF to repo" || echo "No changes to commit"
+          git push
