@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-07",
+  "updated": "2026-10-08",
   "note": "Single source of truth for ALL products on digitalkartai.shop. The blog agent MUST read this file at the start of every run and promote the best-matching product per post. The product agent MUST append new products here when publishing them. Never delete or modify existing entries.",
   "products": [
     {
@@ -2330,6 +2330,58 @@
         "bhajan",
         "bhangra",
         "Punjabi pop"
+      ]
+    },
+    {
+      "slug": "indian-renters-playbook-2026-27",
+      "name": "The Indian Renter's Playbook 2026-27 — Digital Edition",
+      "tagline": "The complete 30-page renter's system for India — what deposit is really legal where you live, the Bengaluru 'two-month cap' that isn't real, the 14-day flat hunt, nine 2026 scams, the rent agreement clause by clause, HRA and TDS on rent, and the escalation ladder that gets your deposit back. Every fact verified from official sources, October 2026.",
+      "price": "₹99",
+      "mrp": "₹499",
+      "url": "/products/indian-renters-playbook-2026-27/",
+      "topics": [
+        "renting in India",
+        "rent agreement",
+        "security deposit",
+        "deposit refund",
+        "tenant rights",
+        "landlord tenant",
+        "Model Tenancy Act",
+        "Karnataka Rent Act",
+        "Rent Authority",
+        "rent control act",
+        "leave and licence",
+        "11 month agreement",
+        "rent agreement registration",
+        "stamp duty rent agreement",
+        "broker fee",
+        "no brokerage",
+        "flat hunting",
+        "PG vs flat",
+        "co-living",
+        "rental scams",
+        "fake rental listing",
+        "token advance scam",
+        "tenant police verification",
+        "HRA exemption",
+        "landlord PAN",
+        "TDS on rent",
+        "194IB",
+        "194I",
+        "Section 195 NRI landlord",
+        "Income-tax Act 2025",
+        "move-out inspection",
+        "deposit demand letter",
+        "eviction India",
+        "rent increase",
+        "society maintenance charges",
+        "Bengaluru rent",
+        "Mumbai rent",
+        "Delhi rent",
+        "Hyderabad rent",
+        "first rental",
+        "freshers renting",
+        "relocating India"
       ]
     }
   ]
