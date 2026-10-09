@@ -1,12 +1,12 @@
 {
   "updated": "2026-10-09",
-  "note": "Single source of truth for the Apps section on digitalkartai.shop. The /apps/ page reads this file. To ship a new version: upload the new APK to /apps/, then update version, versionCode, size, download_url and changelog here. Nothing else needs to change.",
+  "note": "Single source of truth for the Apps section on digitalkartai.shop. The /apps/ page reads this file. To ship a new version: bump the version in the app repo (the release is published automatically), then update version, versionCode, size, download_url and changelog here. Nothing else needs to change.",
   "apps": [
     {
       "slug": "pulsechat",
       "name": "PulseChat",
       "package": "com.pulsechat.app",
-      "tagline": "Chat with friends \u2014 Google sign-in, unique usernames, and voice & video calls.",
+      "tagline": "Chat with friends - Google sign-in, unique usernames, and voice & video calls.",
       "icon": "\ud83d\udcac",
       "version": "4.0",
       "versionCode": 8,
@@ -14,17 +14,17 @@
       "min_sdk": 24,
       "size": "~40 MB",
       "price": "Free",
-      "download_url": "/apps/pulsechat-v4.0.apk",
+      "download_url": "https://github.com/shopshphereofficial-dev/pulsechat/releases/download/v4.0/pulsechat-v4.0.apk",
       "source_url": "https://github.com/shopshphereofficial-dev/pulsechat",
       "updated": "2026-10-09",
       "changelog": [
-        "Version 4.0 \u2014 latest release.",
+        "Version 4.0 - latest release.",
         "Google sign-in and a unique username claimed on first login.",
         "Find friends by username and send or accept requests.",
         "1-on-1 and group chat, plus voice and video calls."
       ],
       "features": [
-        "Sign in with Google \u2014 no passwords to remember",
+        "Sign in with Google - no passwords to remember",
         "Claim your own unique username",
         "Find friends by username, send & accept requests",
         "1-on-1 and group chat",
