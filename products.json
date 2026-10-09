@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-08",
+  "updated": "2026-10-09",
   "note": "Single source of truth for ALL products on digitalkartai.shop. The blog agent MUST read this file at the start of every run and promote the best-matching product per post. The product agent MUST append new products here when publishing them. Never delete or modify existing entries.",
   "products": [
     {
@@ -2456,6 +2456,45 @@
         "claim denied",
         "health policy India"
       ]
-    }
+    },
+  {
+      "slug": "cloud-career-playbook-india",
+      "name": "The Cloud Career Playbook - AWS, Azure & GCP Certification Roadmap for India",
+      "tagline": "The complete 32-page guide to a cloud computing career in India - verified AWS, Azure and GCP certification fees, the 0-12 month roadmap, the free study stack, 12 hands-on projects, the interview playbook and 50 AI study prompts.",
+      "price": "₹149",
+      "mrp": "₹999",
+      "url": "/products/cloud-career-playbook-india/",
+      "topics": [
+          "cloud computing",
+          "AWS",
+          "AWS certification",
+          "Azure",
+          "Microsoft Azure",
+          "Google Cloud",
+          "GCP",
+          "cloud career",
+          "cloud engineer",
+          "DevOps",
+          "Solutions Architect",
+          "SAA-C03",
+          "CLF-C02",
+          "AZ-104",
+          "AZ-900",
+          "Associate Cloud Engineer",
+          "cloud certification India",
+          "IT jobs",
+          "tech jobs",
+          "career switch",
+          "freshers",
+          "upskilling",
+          "salary negotiation",
+          "cloud skills",
+          "GCC",
+          "interview preparation",
+          "study roadmap",
+          "prompt pack",
+          "India tech careers"
+      ]
+  }
   ]
 }
