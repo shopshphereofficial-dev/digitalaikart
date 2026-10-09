@@ -1,0 +1,46 @@
+name: Upload GenAI Engineer Career Kit 2026 PDF to Repo
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  upload-ebook:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Assemble PDF from verified parts
+        run: |
+          cat .github/pdf-parts/genai-engineer-career-kit-2026.part01.txt \
+              .github/pdf-parts/genai-engineer-career-kit-2026.part02.txt \
+              .github/pdf-parts/genai-engineer-career-kit-2026.part03.txt \
+              .github/pdf-parts/genai-engineer-career-kit-2026.part04.txt \
+              .github/pdf-parts/genai-engineer-career-kit-2026.part05.txt \
+              .github/pdf-parts/genai-engineer-career-kit-2026.part06.txt \
+              .github/pdf-parts/genai-engineer-career-kit-2026.part07.txt \
+              .github/pdf-parts/genai-engineer-career-kit-2026.part08.txt \
+              .github/pdf-parts/genai-engineer-career-kit-2026.part09.txt \
+              .github/pdf-parts/genai-engineer-career-kit-2026.part10.txt \
+              | tr -d '[:space:]' | base64 -d > genai-engineer-career-kit-2026.pdf
+          test "$(md5sum genai-engineer-career-kit-2026.pdf | cut -d' ' -f1)" = "c4f9a3d0b8e0c142e32f5b10c508785c" || (echo 'MD5 mismatch'; exit 1)
+          test "$(wc -c < genai-engineer-career-kit-2026.pdf)" = "109636" || (echo 'Byte count mismatch'; exit 1)
+          mkdir -p downloads
+          mv genai-engineer-career-kit-2026.pdf downloads/
+
+      - name: Commit ebook to repo
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add downloads/genai-engineer-career-kit-2026.pdf
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "Add GenAI Engineer Career Kit 2026 PDF to repo"
+            git push
+          fi
