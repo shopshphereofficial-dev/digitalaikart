@@ -1,0 +1,50 @@
+name: Build site knowledge (help bot)
+
+# Keeps site-knowledge.json current so the website help bot always knows the
+# latest products, blog articles, downloads and pages — with no manual step.
+on:
+  push:
+    branches: [main]
+    paths:
+      - "products.json"
+      - "products/**"
+      - "blog/**"
+      - "downloads/**"
+      - "index.html"
+      - "ai/**"
+      - "*-policy.html"
+      - "terms.html"
+      - "thank-you.html"
+      - "tools/build_site_knowledge.py"
+      - ".github/workflows/build-site-knowledge.yml"
+  workflow_dispatch:
+  schedule:
+    - cron: "17 3 * * *"   # daily safety net (03:17 UTC)
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+
+      - name: Generate site-knowledge.json
+        run: python3 tools/build_site_knowledge.py
+
+      - name: Commit if changed
+        run: |
+          if [ -n "$(git status --porcelain site-knowledge.json)" ]; then
+            git config user.name  "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add site-knowledge.json
+            git commit -m "chore: refresh site-knowledge.json for help bot"
+            git push
+          else
+            echo "site-knowledge.json already up to date."
+          fi
