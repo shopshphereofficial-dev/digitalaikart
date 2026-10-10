@@ -400,10 +400,21 @@
       "icon": "",
       "screenshots": [],
       "video": "",
-      "downloads": [],
+      "downloads": [
+        {
+          "label": "Download APK",
+          "url": "https://github.com/shopshphereofficial-dev/python-king/releases/latest/download/app.apk",
+          "style": "gold"
+        },
+        {
+          "label": "View on GitHub",
+          "url": "https://github.com/shopshphereofficial-dev/python-king",
+          "style": "outline"
+        }
+      ],
       "repo": "",
       "featured": false,
-      "badge": "SOON"
+      "badge": ""
     },
     {
       "slug": "voltaura",
@@ -430,10 +441,21 @@
       "icon": "",
       "screenshots": [],
       "video": "",
-      "downloads": [],
+      "downloads": [
+        {
+          "label": "Download APK",
+          "url": "https://github.com/shopshphereofficial-dev/voltaura/releases/latest/download/app.apk",
+          "style": "gold"
+        },
+        {
+          "label": "View on GitHub",
+          "url": "https://github.com/shopshphereofficial-dev/voltaura",
+          "style": "outline"
+        }
+      ],
       "repo": "",
       "featured": false,
-      "badge": "SOON"
+      "badge": ""
     },
     {
       "slug": "vaultly",
