@@ -250,6 +250,23 @@ def main():
         "pages": pages,
     }
     out = os.path.join(ROOT, "site-knowledge.json")
+
+    # Idempotent: if nothing but the "generated" timestamp would change, leave the
+    # file untouched so the CI job does not create an empty commit on every run.
+    if os.path.exists(out):
+        try:
+            with open(out, "r", encoding="utf-8") as f:
+                old = json.load(f)
+            old_body = {k: v for k, v in old.items() if k != "generated"}
+            new_body = {k: v for k, v in doc.items() if k != "generated"}
+            if old_body == new_body:
+                print("site-knowledge.json unchanged — not rewritten "
+                      "(products=%d blogs=%d downloads=%d pages=%d)"
+                      % (len(products), len(blogs), len(downloads), len(pages)))
+                return
+        except (OSError, ValueError):
+            pass
+
     with open(out, "w", encoding="utf-8") as f:
         json.dump(doc, f, ensure_ascii=False, indent=1)
     size = os.path.getsize(out)
