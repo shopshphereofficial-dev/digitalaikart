@@ -1,0 +1,430 @@
+{
+  "updated": "2026-10-10",
+  "note": "Single source of truth for the Digitalaikart Apps store. tools/build_apps.py reads this file and generates /apps/index.html plus one page per app at /apps/<slug>/. Add an entry here (and drop icon/screenshots into /apps/icons and /apps/shots) to publish an app. Never delete existing entries.",
+  "apps": [
+    {
+      "slug": "neon-calculator",
+      "name": "Neon Calculator",
+      "tagline": "A colourful, kid-friendly calculator with glowing neon buttons.",
+      "category": "Tools",
+      "price": "Free",
+      "description": "Neon Calculator is a bright, playful calculator built for kids and anyone who wants maths to feel fun. Every key glows in neon, the buttons are big and easy to hit, and the whole app works fully offline with no ads and no sign-up.\n\nIt is small, fast and free — the perfect first calculator on a child's phone or tablet.",
+      "features": [
+        "Glowing neon button design",
+        "Big, kid-friendly keys",
+        "Works fully offline",
+        "No ads, no sign-up",
+        "Lightweight and fast"
+      ],
+      "tags": [
+        "calculator",
+        "kids",
+        "neon",
+        "offline",
+        "ad-free",
+        "maths"
+      ],
+      "platform": "Android",
+      "icon": "",
+      "screenshots": [],
+      "video": "",
+      "downloads": [
+        {
+          "label": "Get it on GitHub",
+          "url": "https://github.com/shopshphereofficial-dev/neon-calculator",
+          "style": "gold"
+        }
+      ],
+      "repo": "https://github.com/shopshphereofficial-dev/neon-calculator",
+      "featured": true,
+      "badge": "POPULAR"
+    },
+    {
+      "slug": "neon-piano",
+      "name": "Neon Piano + Calculator",
+      "tagline": "A neon piano and a calculator in one playful app.",
+      "category": "Music",
+      "price": "Free",
+      "description": "Neon Piano + Calculator puts a glowing neon piano and a full calculator in the same app. Tap the colourful keys to play, or switch to the calculator when you need to do some maths.\n\nIt is built to be fun and simple — great for kids, quick tunes, and everyday sums. Works offline, with no ads.",
+      "features": [
+        "Playable neon piano",
+        "Built-in calculator",
+        "Colourful glowing keys",
+        "Offline, no ads",
+        "Simple and kid-friendly"
+      ],
+      "tags": [
+        "piano",
+        "music",
+        "calculator",
+        "kids",
+        "neon",
+        "offline"
+      ],
+      "platform": "Android",
+      "icon": "",
+      "screenshots": [],
+      "video": "",
+      "downloads": [
+        {
+          "label": "Get it on GitHub",
+          "url": "https://github.com/shopshphereofficial-dev/neon-piano-android",
+          "style": "gold"
+        }
+      ],
+      "repo": "https://github.com/shopshphereofficial-dev/neon-piano-android",
+      "featured": false,
+      "badge": ""
+    },
+    {
+      "slug": "car-simulator",
+      "name": "Car Simulator",
+      "tagline": "A top-down open-city car driving simulator for Android.",
+      "category": "Games",
+      "price": "Free",
+      "description": "Car Simulator is a smooth top-down driving game set in an open city. Cruise the streets, take corners, and enjoy simple, responsive driving built on a custom engine made for Android phones.\n\nIt runs offline, loads fast, and is light on storage — a quick driving fix without the ads or the wait.",
+      "features": [
+        "Open city map to drive around",
+        "Smooth top-down driving",
+        "Custom, lightweight game engine",
+        "Works offline",
+        "No ads"
+      ],
+      "tags": [
+        "game",
+        "car",
+        "driving",
+        "simulator",
+        "offline",
+        "arcade"
+      ],
+      "platform": "Android",
+      "icon": "",
+      "screenshots": [],
+      "video": "",
+      "downloads": [
+        {
+          "label": "Get it on GitHub",
+          "url": "https://github.com/shopshphereofficial-dev/car-simulator-android",
+          "style": "gold"
+        }
+      ],
+      "repo": "https://github.com/shopshphereofficial-dev/car-simulator-android",
+      "featured": true,
+      "badge": "NEW"
+    },
+    {
+      "slug": "grabit",
+      "name": "GrabIt",
+      "tagline": "An all-in-one media downloader, browser and phone cleaner.",
+      "category": "Tools",
+      "price": "Free",
+      "description": "GrabIt bundles three everyday tools into one clean app: a fast in-app browser, a media downloader, and a phone cleaner that frees up space. Browse, save what you need, and tidy your storage without hopping between apps.\n\nIt is designed to be simple and quick, with no clutter and no ads.",
+      "features": [
+        "Built-in fast browser",
+        "Media downloader",
+        "Phone cleaner / storage tidy-up",
+        "Clean, uncluttered design",
+        "No ads"
+      ],
+      "tags": [
+        "downloader",
+        "browser",
+        "cleaner",
+        "tools",
+        "media",
+        "utilities"
+      ],
+      "platform": "Android",
+      "icon": "",
+      "screenshots": [],
+      "video": "",
+      "downloads": [
+        {
+          "label": "Get it on GitHub",
+          "url": "https://github.com/shopshphereofficial-dev/grabit",
+          "style": "gold"
+        }
+      ],
+      "repo": "https://github.com/shopshphereofficial-dev/grabit",
+      "featured": true,
+      "badge": ""
+    },
+    {
+      "slug": "media-vault",
+      "name": "MediaVault",
+      "tagline": "A privacy-focused media downloader and player.",
+      "category": "Media",
+      "price": "Free",
+      "description": "MediaVault keeps your saved videos and music in one private place. Download media, store it in your own vault, and play it back offline — away from prying eyes and without ads.\n\nIt is built around privacy first: your library stays on your device.",
+      "features": [
+        "Private on-device media library",
+        "Media downloader",
+        "Built-in player",
+        "Offline playback",
+        "No ads, privacy-first"
+      ],
+      "tags": [
+        "media",
+        "downloader",
+        "player",
+        "privacy",
+        "offline",
+        "video"
+      ],
+      "platform": "Android",
+      "icon": "",
+      "screenshots": [],
+      "video": "",
+      "downloads": [
+        {
+          "label": "Get it on GitHub",
+          "url": "https://github.com/shopshphereofficial-dev/media-vault",
+          "style": "gold"
+        }
+      ],
+      "repo": "https://github.com/shopshphereofficial-dev/media-vault",
+      "featured": false,
+      "badge": ""
+    },
+    {
+      "slug": "soulstream",
+      "name": "SoulStream",
+      "tagline": "A gamer-grade media downloader with a neon animated UI.",
+      "category": "Media",
+      "price": "Free",
+      "description": "SoulStream is a media downloader built with a bold, neon, gamer-style interface. It browses, downloads and plays back media with speed and flair, and it stays ad-free.\n\nFast downloads, an animated UI, and a built-in player — all in one app.",
+      "features": [
+        "Neon animated interface",
+        "Fast media downloads",
+        "Built-in browser and player",
+        "Ad-free",
+        "Made for power users"
+      ],
+      "tags": [
+        "media",
+        "downloader",
+        "neon",
+        "video",
+        "music",
+        "ad-free"
+      ],
+      "platform": "Android",
+      "icon": "",
+      "screenshots": [],
+      "video": "",
+      "downloads": [
+        {
+          "label": "Get it on GitHub",
+          "url": "https://github.com/shopshphereofficial-dev/soulstream",
+          "style": "gold"
+        }
+      ],
+      "repo": "https://github.com/shopshphereofficial-dev/soulstream",
+      "featured": false,
+      "badge": ""
+    },
+    {
+      "slug": "omnitask-ai",
+      "name": "OmniTask AI",
+      "tagline": "Give tasks to any AI — OpenAI, Grok, Gemini, DeepSeek, Kimi, Sarvam or your own.",
+      "category": "AI",
+      "price": "Free",
+      "description": "OmniTask AI lets you send a task to the AI of your choice — OpenAI, Grok, Gemini, DeepSeek, Kimi, Sarvam, or a custom endpoint — from one clean app. Bring your own API key and switch models whenever you like.\n\nIt is a single, tidy workspace for all your AI tools, without juggling browser tabs.",
+      "features": [
+        "Switch between many AI providers",
+        "Bring your own API key",
+        "One clean, unified interface",
+        "Supports custom endpoints",
+        "No ads"
+      ],
+      "tags": [
+        "ai",
+        "chatgpt",
+        "gemini",
+        "productivity",
+        "tools",
+        "byok"
+      ],
+      "platform": "Android",
+      "icon": "",
+      "screenshots": [],
+      "video": "",
+      "downloads": [
+        {
+          "label": "Get it on GitHub",
+          "url": "https://github.com/shopshphereofficial-dev/omnitask-ai",
+          "style": "gold"
+        }
+      ],
+      "repo": "https://github.com/shopshphereofficial-dev/omnitask-ai",
+      "featured": true,
+      "badge": ""
+    },
+    {
+      "slug": "pulsechat",
+      "name": "PulseChat",
+      "tagline": "A simple chat app with unique usernames and friends.",
+      "category": "Social",
+      "price": "Free",
+      "description": "PulseChat is a lightweight chat app where you pick a unique username and add friends to talk with. Sign in with Google and start chatting in a clean, distraction-free interface.\n\nIt is built to be simple and friendly — no clutter, no noise.",
+      "features": [
+        "Google sign-in",
+        "Unique usernames",
+        "Add friends and chat",
+        "Clean, simple design",
+        "Lightweight"
+      ],
+      "tags": [
+        "chat",
+        "social",
+        "messaging",
+        "friends",
+        "android"
+      ],
+      "platform": "Android",
+      "icon": "",
+      "screenshots": [],
+      "video": "",
+      "downloads": [
+        {
+          "label": "Get it on GitHub",
+          "url": "https://github.com/shopshphereofficial-dev/pulsechat",
+          "style": "gold"
+        }
+      ],
+      "repo": "https://github.com/shopshphereofficial-dev/pulsechat",
+      "featured": false,
+      "badge": ""
+    },
+    {
+      "slug": "twinspace",
+      "name": "TwinSpace",
+      "tagline": "Run a second copy of any app in an isolated space.",
+      "category": "Utilities",
+      "price": "Free",
+      "description": "TwinSpace lets you run a second, separate copy of an app on the same phone — perfect for two accounts on one device. Each copy lives in its own isolated space, keeping your data apart.\n\nBuilt from scratch for privacy and simplicity.",
+      "features": [
+        "Clone an app into a second copy",
+        "Isolated space for each copy",
+        "Great for two accounts",
+        "Privacy-focused",
+        "Simple to set up"
+      ],
+      "tags": [
+        "cloner",
+        "dual-app",
+        "privacy",
+        "utilities",
+        "tools",
+        "android"
+      ],
+      "platform": "Android",
+      "icon": "",
+      "screenshots": [],
+      "video": "",
+      "downloads": [
+        {
+          "label": "Get it on GitHub",
+          "url": "https://github.com/shopshphereofficial-dev/twinspace",
+          "style": "gold"
+        }
+      ],
+      "repo": "https://github.com/shopshphereofficial-dev/twinspace",
+      "featured": false,
+      "badge": ""
+    },
+    {
+      "slug": "python-king",
+      "name": "Python King",
+      "tagline": "Run Python 3.13 offline on Android.",
+      "category": "Education",
+      "price": "Free",
+      "description": "Python King runs Python 3.13 right on your phone, fully offline. Write and run code anywhere, learn Python on the go, and export your Python animations as MP4 video.\n\nAn ad-free pocket coding lab for students and developers.",
+      "features": [
+        "Full Python 3.13, offline",
+        "Code editor built in",
+        "Export animations as MP4",
+        "Ad-free",
+        "Great for learning on the go"
+      ],
+      "tags": [
+        "python",
+        "coding",
+        "education",
+        "developer",
+        "offline",
+        "programming"
+      ],
+      "platform": "Android",
+      "icon": "",
+      "screenshots": [],
+      "video": "",
+      "downloads": [],
+      "repo": "",
+      "featured": false,
+      "badge": "SOON"
+    },
+    {
+      "slug": "voltaura",
+      "name": "VoltAura",
+      "tagline": "Premium charging animations and notification edge-glow.",
+      "category": "Personalisation",
+      "price": "Free",
+      "description": "VoltAura makes your phone feel premium with beautiful charging animations and a glowing edge effect when notifications arrive. It is light on battery and easy to set up.\n\nA simple way to make your Android look and feel more special.",
+      "features": [
+        "Premium charging animations",
+        "Edge-glow for notifications",
+        "Lightweight and battery-friendly",
+        "Easy setup",
+        "No ads"
+      ],
+      "tags": [
+        "charging",
+        "animation",
+        "personalisation",
+        "neon",
+        "android"
+      ],
+      "platform": "Android",
+      "icon": "",
+      "screenshots": [],
+      "video": "",
+      "downloads": [],
+      "repo": "",
+      "featured": false,
+      "badge": "SOON"
+    },
+    {
+      "slug": "vaultly",
+      "name": "Vaultly",
+      "tagline": "A clean, privacy-respecting video & music downloader and offline hub.",
+      "category": "Media",
+      "price": "Free",
+      "description": "Vaultly is a tidy, privacy-respecting home for your downloaded videos and music. Save media, keep it organised in one place, and enjoy it offline — with a clean, modern look.\n\nNo clutter, no ads, and your library stays on your device.",
+      "features": [
+        "Video and music downloads",
+        "Offline media hub",
+        "Clean modern design",
+        "Privacy-respecting",
+        "No ads"
+      ],
+      "tags": [
+        "media",
+        "downloader",
+        "privacy",
+        "video",
+        "music",
+        "offline"
+      ],
+      "platform": "Android",
+      "icon": "",
+      "screenshots": [],
+      "video": "",
+      "downloads": [],
+      "repo": "",
+      "featured": false,
+      "badge": "SOON"
+    }
+  ]
+}

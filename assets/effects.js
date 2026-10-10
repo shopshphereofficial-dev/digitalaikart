@@ -342,4 +342,22 @@
       if (!pticking) { pticking = true; requestAnimationFrame(pupdate); }
     }, { passive: true });
   }
+
+  /* ---------- 6. APPS LINK IN NAV & FOOTER (site-wide) ---------- */
+  (function () {
+    function add(sel, label) {
+      var box = document.querySelector(sel);
+      if (!box || box.querySelector('a[href="/apps/"]')) return;
+      var a = document.createElement('a');
+      a.href = '/apps/';
+      a.textContent = label;
+      var after = box.querySelector('a[href="/products/"]');
+      if (after && after.nextSibling) box.insertBefore(a, after.nextSibling);
+      else box.appendChild(a);
+    }
+    function run() { add('.nav-links', 'Apps'); add('.footer-links', 'Apps'); }
+    if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', run);
+    else run();
+  })();
+
 })();

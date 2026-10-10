@@ -1,0 +1,47 @@
+name: Build apps store
+
+# Regenerates the /apps/ store pages from apps.json on every change, so adding
+# an app (or its icon/screenshots) republishes the listing automatically.
+on:
+  push:
+    branches: [main]
+    paths:
+      - "apps.json"
+      - "tools/build_apps.py"
+      - "apps/icons/**"
+      - "apps/shots/**"
+      - ".github/workflows/build-apps.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: build-apps
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+
+      - name: Generate apps pages
+        run: python3 tools/build_apps.py
+
+      - name: Commit if changed
+        run: |
+          if [ -z "$(git status --porcelain apps sitemap.xml)" ]; then
+            echo "apps store already up to date."
+            exit 0
+          fi
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add apps sitemap.xml
+          git commit -m "chore: rebuild apps store"
+          git pull --rebase origin "${GITHUB_REF_NAME}"
+          git push

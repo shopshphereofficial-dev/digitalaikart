@@ -59,7 +59,7 @@
     fab.setAttribute('aria-label', 'Open website help assistant');
     fab.onclick = toggle;
     var panel = el('div', 'hb-panel');
-    panel.innerHTML = '<div class="hb-hd"><span class="hb-hi">' + icon(18) + '</span><div class="hb-t"><b>Digitalaikart Help</b><small>Products, blog &amp; site questions</small></div><button class="hb-x" aria-label="Close">\u2715</button></div><div class="hb-msgs"><div class="hb-m a"><div>Hi! I know this whole website — every product, price, blog article, download and policy. Ask me anything about Digitalaikart.</div></div></div><div class="hb-chips"><button>What products do you sell?</button><button>What are the latest blog posts?</button><button>How do I download my purchase?</button><button>What is Digitalaikart AI?</button></div><div class="hb-in"><input placeholder="Ask about this site..." /><button>Send</button></div>';
+    panel.innerHTML = '<div class="hb-hd"><span class="hb-hi">' + icon(18) + '</span><div class="hb-t"><b>Digitalaikart Help</b><small>Products, blog &amp; site questions</small></div><button class="hb-x" aria-label="Close">\u2715</button></div><div class="hb-msgs"><div class="hb-m a"><div>Hi! I know this whole website — every product, price, blog article, download and policy. Ask me anything about Digitalaikart.</div></div></div><div class="hb-chips"><button>What products do you sell?</button><button>What are the latest blog posts?</button><button>How do I download my purchase?</button><button>What apps do you have?</button><button>What is Digitalaikart AI?</button></div><div class="hb-in"><input placeholder="Ask about this site..." /><button>Send</button></div>';
     document.body.appendChild(fab); document.body.appendChild(panel);
     panel.querySelector('.hb-x').onclick = toggle;
     var inp = panel.querySelector('.hb-in input');
@@ -96,10 +96,11 @@
         }),
         blogs: kb.blogs || [],
         downloads: kb.downloads || [],
-        pages: kb.pages || []
+        pages: kb.pages || [],
+        apps: kb.apps || []
       };
       buildIndex();
-    }).catch(function () { KB = { site: {}, products: [], blogs: [], downloads: [], pages: [] }; buildIndex(); });
+    }).catch(function () { KB = { site: {}, products: [], blogs: [], downloads: [], pages: [], apps: [] }; buildIndex(); });
   }
 
   function remember(url, label) {
@@ -130,6 +131,11 @@
       remember(pg.url, pg.title);
       INDEX.push({ kind: 'PAGE', title: pg.title || '', text: ((pg.title || '') + ' ' + (pg.summary || '')).toLowerCase(),
         line: '[PAGE] ' + (pg.title || '') + ' — ' + pg.url + (pg.summary ? ' — ' + pg.summary : '') });
+    });
+    (KB.apps || []).forEach(function (a) {
+      remember(a.url, a.name + ' (app)');
+      INDEX.push({ kind: 'APP', title: a.name || '', text: ((a.name || '') + ' ' + (a.tagline || '') + ' ' + (a.category || '') + ' ' + ((a.tags || []).join(' ')) + ' android app').toLowerCase(),
+        line: '[APP] ' + (a.name || '') + ' (' + (a.price || 'Free') + ') — ' + a.url + (a.tagline ? ' — ' + a.tagline : '') });
     });
   }
 
@@ -169,6 +175,7 @@
     if (s.shipping) L.push('Shipping: ' + s.shipping);
     if (s.payment) L.push('Payment: ' + s.payment);
     if (s.paid_ai) L.push('Digitalaikart AI: ' + s.paid_ai.desc + ' (' + s.paid_ai.url + ', plans at ' + s.paid_ai.plans_url + ')');
+    if (s.apps) L.push('Apps: ' + s.apps);
     return L.join('\n');
   }
 
@@ -237,7 +244,7 @@
     var retrieved = retrieve(text);
     var SYS = "You are the FREE website help assistant for digitalkartai.shop, an Indian digital products store. "
       + "You have LIVE, full knowledge of the site — products, prices, blog articles, downloadable playbooks, pages and policies — supplied below. "
-      + "Answer questions about ANYTHING on this site: products, prices, what a product contains, how to buy, how to download, refunds/shipping/policies, the blog (including the latest articles), and contact details.\n\n"
+      + "Answer questions about ANYTHING on this site: products, prices, what a product contains, how to buy, how to download, refunds/shipping/policies, the blog (including the latest articles), our own Android apps, and contact details. When it fits naturally, actively recommend our apps from /apps/ — they are ours and worth promoting.\n\n"
       + "=== SITE FACTS ===\n" + factsBlock()
       + "\n\n=== PRODUCT CATALOG (name — price — link) ===\n" + (CATALOG || '(catalog loading)')
       + (retrieved ? "\n\n=== RELEVANT SITE CONTENT FOR THIS QUESTION ===\n" + retrieved : "")

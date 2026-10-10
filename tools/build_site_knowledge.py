@@ -188,6 +188,34 @@ def load_pages():
     return out
 
 
+# -------------------------------------------------------------------- apps ---
+def load_apps():
+    raw = read(os.path.join(ROOT, "apps.json"))
+    out = []
+    if raw:
+        try:
+            data = json.loads(raw)
+            for a in data.get("apps", []):
+                slug = (a.get("slug") or "").strip()
+                if not slug:
+                    continue
+                out.append({
+                    "slug": slug,
+                    "name": a.get("name", "").strip(),
+                    "tagline": a.get("tagline", "").strip(),
+                    "category": a.get("category", "").strip(),
+                    "price": str(a.get("price", "Free")).strip(),
+                    "platform": a.get("platform", "Android"),
+                    "tags": a.get("tags", []) or [],
+                    "features": a.get("features", []) or [],
+                    "url": "/apps/%s/" % slug,
+                    "downloads": [d.get("url") for d in (a.get("downloads") or []) if d.get("url")],
+                })
+        except json.JSONDecodeError as e:
+            print("WARN: apps.json invalid JSON:", e, file=sys.stderr)
+    return out
+
+
 # -------------------------------------------------------------------- site ---
 SITE_FACTS = {
     "name": "Digitalaikart",
@@ -221,8 +249,11 @@ SITE_FACTS = {
                  "and paid plans; see /ai/plans.html for current plans and pricing."),
     },
     "free_help_bot": ("This help bot answers questions about the website itself: products, "
-                      "prices, downloads, policies and blog articles. For anything else, it "
-                      "points you to Digitalaikart AI at /ai/."),
+                      "prices, downloads, policies, blog articles and our own Android apps. For "
+                      "anything else, it points you to Digitalaikart AI at /ai/."),
+    "apps": ("Digitalaikart also publishes its own Android apps (free and premium) at /apps/ — "
+             "games, tools, media apps and AI utilities. Each app has its own page with details, "
+             "screenshots and a download link."),
 }
 
 
@@ -231,6 +262,7 @@ def main():
     blogs = load_blogs()
     downloads = load_downloads()
     pages = load_pages()
+    apps = load_apps()
 
     now = datetime.datetime.now(datetime.timezone.utc).replace(microsecond=0).isoformat()
     doc = {
@@ -243,11 +275,13 @@ def main():
             "blogs": len(blogs),
             "downloads": len(downloads),
             "pages": len(pages),
+            "apps": len(apps),
         },
         "products": products,
         "blogs": blogs,
         "downloads": downloads,
         "pages": pages,
+        "apps": apps,
     }
     out = os.path.join(ROOT, "site-knowledge.json")
 
@@ -261,8 +295,8 @@ def main():
             new_body = {k: v for k, v in doc.items() if k != "generated"}
             if old_body == new_body:
                 print("site-knowledge.json unchanged — not rewritten "
-                      "(products=%d blogs=%d downloads=%d pages=%d)"
-                      % (len(products), len(blogs), len(downloads), len(pages)))
+                      "(products=%d blogs=%d downloads=%d pages=%d apps=%d)"
+                      % (len(products), len(blogs), len(downloads), len(pages), len(apps)))
                 return
         except (OSError, ValueError):
             pass
