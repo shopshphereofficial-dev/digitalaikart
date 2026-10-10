@@ -221,7 +221,7 @@
   (function () {
     if (location.pathname.indexOf('/ai') === 0) return;
     var s = document.createElement('script');
-    s.src = '/assets/helpbot.js?v=1';
+    s.src = '/assets/helpbot.js?v=2';
     document.head.appendChild(s);
   })();
 
