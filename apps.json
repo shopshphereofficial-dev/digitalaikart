@@ -400,21 +400,10 @@
       "icon": "",
       "screenshots": [],
       "video": "",
-      "downloads": [
-        {
-          "label": "Download APK",
-          "url": "https://github.com/shopshphereofficial-dev/python-king/releases/latest/download/app.apk",
-          "style": "gold"
-        },
-        {
-          "label": "View on GitHub",
-          "url": "https://github.com/shopshphereofficial-dev/python-king",
-          "style": "outline"
-        }
-      ],
+      "downloads": [],
       "repo": "",
       "featured": false,
-      "badge": ""
+      "badge": "SOON"
     },
     {
       "slug": "voltaura",
