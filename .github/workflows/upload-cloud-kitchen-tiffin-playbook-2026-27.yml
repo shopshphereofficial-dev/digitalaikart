@@ -1,0 +1,41 @@
+name: Upload Cloud Kitchen & Tiffin Playbook to Repo
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  upload-ebook:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Assemble PDF from verified parts
+        run: |
+          python3 - <<'PYEOF'
+          import glob, base64, hashlib, os
+          slug = "cloud-kitchen-tiffin-playbook-2026-27"
+          b64 = ""
+          for p in sorted(glob.glob("pdf-src/" + slug + "/part*.txt")):
+              b64 += open(p).read().strip()
+          pdf = base64.b64decode(b64)
+          md5 = hashlib.md5(pdf).hexdigest()
+          assert md5 == "9aa3903a84803a0ee83af0dfadef2b7c", "MD5 mismatch: " + md5
+          assert len(pdf) == 129340, "Byte count mismatch: " + str(len(pdf))
+          os.makedirs("downloads", exist_ok=True)
+          open("downloads/" + slug + ".pdf", "wb").write(pdf)
+          print("Assembled OK, bytes:", len(pdf), "md5:", md5)
+          PYEOF
+
+      - name: Commit PDF to repo
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add downloads/cloud-kitchen-tiffin-playbook-2026-27.pdf
+          git commit -m "Add Cloud Kitchen & Tiffin Business Playbook PDF to repo" || echo "No changes to commit"
+          git push
