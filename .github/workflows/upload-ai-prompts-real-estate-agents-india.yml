@@ -1,0 +1,47 @@
+name: Upload AI Prompt Pack for Indian Real Estate Agents to Repo
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  upload-ebook:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Set up Python 3.12
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install reportlab
+        run: pip install reportlab==5.0.1
+
+      - name: Build PDF (deterministic)
+        run: |
+          mkdir -p downloads
+          python3 products/ai-prompts-real-estate-agents-india/build.py downloads/ai-prompts-real-estate-agents-india.pdf
+
+      - name: Verify checksum
+        run: |
+          echo "b012e05d1f3e251274f4e47bada565e26858ac2380612cc7d4e996da130b7919  downloads/ai-prompts-real-estate-agents-india.pdf" | sha256sum -c
+
+      - name: Attach PDF to release
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh release upload ai-prompts-real-estate-agents-india-v1 downloads/ai-prompts-real-estate-agents-india.pdf --repo shopshphereofficial-dev/digitalaikart --clobber
+
+      - name: Commit ebook to repo
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add downloads/ai-prompts-real-estate-agents-india.pdf
+          git commit -m "Add AI Prompt Pack for Indian Real Estate Agents PDF to repo" || echo "No changes to commit"
+          git push
