@@ -1,16 +1,17 @@
 /* Digitalaikart — Adsterra ads (site-wide). Loaded from /assets/effects.js.
  *
- * Balanced setup, all above-the-fold / in-content (footer gets almost no views
- * and can return near-zero CPM). Deliberately NOT overloading the page:
+ * Balanced setup, spread through the page (top → middle → lower), never all in
+ * one block and never dumped in the footer:
  *
  *   Popunder (1 only)      pl31810111 ...  — Adsterra: max one popunder per page
- *   Native Banner          pl31810114 ...  — high-CPM, above the fold
- *   Banner 728x90 / 320x50 298e... / 6a5a... — one leaderboard, desktop/mobile split
- *   Banner 300x250         4a26...         — in-content medium rectangle
- *   Direct Link            zd5auhku...     — small in-content link
+ *   Native Banner          pl31810114 ...  — slot 2 (middle)
+ *   Banner 728x90 / 320x50 298e... / 6a5a... — slot 1 (top), desktop/mobile split
+ *   Banner 300x250         4a26...         — slot 3 (lower)
+ *   Direct Link            zd5auhku...     — small link, with slot 3
  *
- * Units 468x60, 160x300, 160x600 and the 2nd popunder are intentionally left
- * out (they were clutter / footer placements that hurt CPM).
+ * The page is split into equal "content blocks" (a blog post's paragraphs, or a
+ * page's <section>s) and the three slots are dropped after block 1, the middle
+ * block, and the last block — so they are spaced out instead of stacked.
  *
  * Banners load from /ads/banner.html and the native from /ads/native.html, each
  * in its own iframe (Adsterra banners share one global `atOptions`, and their
@@ -30,7 +31,7 @@
   var DIRECT_LINK = 'https://www.profitableratecpmnetwork.com/zd5auhku?key=ee60637529c45d25ec412af6a3feb679';
 
   var CSS = ''
-    + '.dak-unit{margin:1.6rem auto;max-width:100%;overflow-x:auto;overflow-y:hidden}'
+    + '.dak-unit{margin:1.7rem auto;max-width:100%;overflow-x:auto;overflow-y:hidden}'
     + '.dak-unit iframe{display:block;margin:0 auto;border:0;background:transparent}'
     + '.dak-desk{display:none}'
     + '@media (min-width:768px){.dak-desk{display:block}.dak-mob{display:none}}'
@@ -129,6 +130,41 @@
     return true;
   }
 
+  /* Ordered list of content blocks we can drop ads between. */
+  function pickAnchors() {
+    var pb = document.querySelector('.post-body');
+    if (pb) {
+      var ps = pb.querySelectorAll('p');
+      if (ps.length >= 2) return [].slice.call(ps);
+    }
+
+    var secs = [].slice.call(document.querySelectorAll('section')).filter(function (s) {
+      var p = s.parentNode;
+      return p && (p.tagName === 'BODY' || p.tagName === 'MAIN');
+    });
+    if (secs.length >= 2) return secs;
+
+    var host = document.querySelector('main') || document.querySelector('.legal') || document.querySelector('.page-wrap') || document.body;
+    var blocks = [].slice.call(host.children).filter(function (el) {
+      var t = el.tagName;
+      return t !== 'SCRIPT' && t !== 'STYLE' && t !== 'LINK' && t !== 'NAV' && t !== 'FOOTER' && t !== 'HEADER';
+    });
+    if (blocks.length >= 2) return blocks;
+    if (secs.length) return secs;
+    return blocks;
+  }
+
+  /* Evenly spaced indices 0..n-1 for k slots. */
+  function spread(n, k) {
+    var out = [];
+    if (n <= 1) { for (var j = 0; j < k; j++) out.push(0); return out; }
+    for (var i = 0; i < k; i++) {
+      var v = Math.round(i * (n - 1) / (k - 1));
+      out.push(Math.max(0, Math.min(n - 1, v)));
+    }
+    return out;
+  }
+
   function mount() {
     try {
       /* Keep the checkout / thank-you page clean. */
@@ -142,47 +178,32 @@
       ps.src = POPUNDER;
       doc.body.appendChild(ps);
 
-      var postBody = doc.querySelector('.post-body');
-      var productInfo = doc.querySelector('.product-info');
-      var hero = doc.querySelector('section.hero');
-      var grid = doc.querySelector('.product-grid') || doc.querySelector('.blog-grid');
-      var nav = doc.querySelector('.nav') || doc.querySelector('nav');
+      var a = pickAnchors();
+      var n = a.length;
 
-      var topRef = null, midRef = null, topBefore = false;
-
-      if (postBody) {
-        var ps1 = postBody.querySelectorAll('p');
-        topRef = ps1[0] || postBody;
-        midRef = ps1.length >= 4 ? ps1[Math.floor(ps1.length / 2)] : null;
-      } else if (productInfo) {
-        topRef = productInfo;
-        midRef = doc.querySelector('.pricing-grid') || null;
-      } else if (hero) {
-        topRef = hero;
-        midRef = doc.querySelector('.community') || null;
-      } else if (grid) {
-        topRef = grid;
-        topBefore = true;
-      } else if (nav) {
-        topRef = nav;
-      }
-
-      var topNodes = [
-        bannerNode(B.desk, 'dak-desk'),
-        bannerNode(B.mob, 'dak-mob'),
-        nativeNode()
-      ];
-
-      if (topRef) {
-        if (topBefore) before(topRef, topNodes);
-        else after(topRef, topNodes);
-      } else {
+      if (n) {
+        var idx = spread(n, 3);           // top / middle / lower
+        var nav = doc.querySelector('.nav') || doc.querySelector('nav');
         var footer = doc.querySelector('footer');
-        if (footer && footer.parentNode) before(footer, topNodes);
-      }
 
-      var midAnchor = (midRef && midRef.parentNode) ? midRef : topNodes[topNodes.length - 1];
-      after(midAnchor, [bannerNode(B.mid), linkNode()]);
+        /* Slot 1 — top banner. If the first block is the hero, go right after it. */
+        if (!after(a[idx[0]], [bannerNode(B.desk, 'dak-desk'), bannerNode(B.mob, 'dak-mob')])) {
+          if (nav) after(nav, [bannerNode(B.desk, 'dak-desk'), bannerNode(B.mob, 'dak-mob')]);
+        }
+
+        /* Slot 2 — native banner, in the middle. */
+        after(a[idx[1]], [nativeNode()]);
+
+        /* Slot 3 — medium rectangle + direct link, lower down. */
+        after(a[idx[2]], [bannerNode(B.mid), linkNode()]);
+      } else {
+        var nav2 = doc.querySelector('.nav') || doc.querySelector('nav');
+        var foot = doc.querySelector('footer');
+        if (nav2) after(nav2, [bannerNode(B.desk, 'dak-desk'), bannerNode(B.mob, 'dak-mob')]);
+        if (foot && foot.parentNode) {
+          before(foot, [nativeNode(), bannerNode(B.mid), linkNode()]);
+        }
+      }
     } catch (e) { /* never break the page */ }
   }
 
