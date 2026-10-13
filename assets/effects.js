@@ -369,7 +369,7 @@
 (function () {
   if (window.__dakAds) return; window.__dakAds = true;
   var s = document.createElement('script');
-  s.src = '/assets/ads.js?v=3';
+  s.src = '/assets/ads.js?v=4';
   s.defer = true;
   document.head.appendChild(s);
 })();

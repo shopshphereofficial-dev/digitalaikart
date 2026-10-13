@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Advertisement</title>
+<style>html,body{margin:0;padding:0;overflow:hidden;background:transparent}</style>
+</head>
+<body>
+<script>
+(function () {
+  var raw = (location.search || '').replace(/^\?/, '');
+  var parts = raw.split('&'), q = {};
+  for (var i = 0; i < parts.length; i++) {
+    if (!parts[i]) continue;
+    var kv = parts[i].split('=');
+    q[decodeURIComponent(kv[0])] = decodeURIComponent(kv[1] || '');
+  }
+  var k = q.k || '', w = parseInt(q.w, 10) || 0, h = parseInt(q.h, 10) || 0;
+  if (!k || !w || !h) return;
+  window.atOptions = { key: k, format: 'iframe', height: h, width: w, params: {} };
+  document.write('<scr' + 'ipt type="text/javascript" src="https://www.highrevenueformat.com/' + k + '/invoke.js"></scr' + 'ipt>');
+})();
+</script>
+</body>
+</html>
