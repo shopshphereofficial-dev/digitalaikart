@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-12",
+  "updated": "2026-10-13",
   "note": "Single source of truth for ALL products on digitalkartai.shop. The blog agent MUST read this file at the start of every run and promote the best-matching product per post. The product agent MUST append new products here when publishing them. Never delete or modify existing entries.",
   "products": [
     {
@@ -2880,6 +2880,40 @@
         "prospecting",
         "Hinglish outreach",
         "India"
+      ]
+    },
+    {
+      "slug": "home-food-business-playbook",
+      "name": "The Home Food Business Playbook — India 2026-27 Edition",
+      "tagline": "The complete 32-page playbook to start and grow a tiffin service, home bakery or cloud kitchen from your own kitchen — FSSAI licensing after the April 2026 reform, unit economics, Swiggy, Zomato and ONDC onboarding, MUDRA and PMFME funding, presumptive tax, templates and a 90-day plan. Verified from official sources, October 2026.",
+      "price": "₹149",
+      "mrp": "₹999",
+      "url": "/products/home-food-business-playbook/",
+      "topics": [
+        "home food business",
+        "tiffin service",
+        "dabba service",
+        "home bakery",
+        "cloud kitchen",
+        "FSSAI licence",
+        "FSSAI registration 2026",
+        "FoSCoS",
+        "home chef",
+        "Swiggy partner",
+        "Zomato partner",
+        "ONDC seller",
+        "Udyam registration",
+        "MSME",
+        "PMFME",
+        "MUDRA loan",
+        "food business India",
+        "home based business",
+        "women entrepreneurs",
+        "food labelling",
+        "GST for restaurants",
+        "presumptive taxation",
+        "small business India",
+        "home kitchen"
       ]
     }
   ]
