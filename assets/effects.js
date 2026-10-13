@@ -361,3 +361,141 @@
   })();
 
 })();
+
+/* ---------- 7. ADSTERRA ADS (site-wide) ----------
+ * Adsterra *Direct Link* (Smartlink) placement.
+ *
+ * A Direct Link is a plain URL with no visual ad format of its own, so it is
+ * placed as a clearly-labelled "Sponsored" link (never auto-opened or hidden,
+ * which would break Adsterra's policy). Each placement appends &psid=... so the
+ * Adsterra dashboard can report which slot earns.
+ *
+ * To add real visual ad units later (Banner / Native Banner / Social Bar /
+ * Popunder), create the unit in the Adsterra dashboard, copy the whole <script>
+ * block it gives you, and paste it as a string into DAK_ADS.units.inline or
+ * DAK_ADS.units.footer below. Whatever is present there is rendered instead of
+ * the fallback link card.
+ */
+(function () {
+  'use strict';
+
+  var DAK_ADS = {
+    smartlink: 'https://www.profitableratecpmnetwork.com/ihsrwhnv5?key=9f5c8df66b946865982c450a0400d19f',
+    units: {
+      inline: '',
+      footer: ''
+    }
+  };
+  window.DAK_ADS = DAK_ADS;
+
+  function injectStyles() {
+    if (document.getElementById('dak-ad-css')) return;
+    var css = '' +
+      '.dak-ad{margin:1.75rem auto;max-width:760px;padding:.7rem 1rem 1rem;border:1px solid rgba(148,163,184,.3);border-radius:14px;background:rgba(15,23,42,.04)}' +
+      '.dak-ad-label{display:inline-block;font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;font-weight:700;color:#64748b;margin-bottom:.55rem}' +
+      '.dak-ad-link{display:flex;gap:.85rem;align-items:center;text-decoration:none;color:inherit}' +
+      '.dak-ad-badge{flex:0 0 auto;width:46px;height:46px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:.8rem;color:#0f172a;background:linear-gradient(135deg,#f5c542,#f59e0b)}' +
+      '.dak-ad-title{display:block;font-weight:700;font-size:1rem;line-height:1.25;color:#0f172a}' +
+      '.dak-ad-desc{display:block;font-size:.82rem;color:#475569;margin-top:.15rem}' +
+      '.dak-ad:hover .dak-ad-title{text-decoration:underline}' +
+      '.dak-ad-slot{overflow:hidden}';
+    var s = document.createElement('style');
+    s.id = 'dak-ad-css';
+    s.textContent = css;
+    document.head.appendChild(s);
+  }
+
+  function linkFor(psid) {
+    var u = DAK_ADS.smartlink;
+    if (psid) u += (u.indexOf('?') > -1 ? '&' : '?') + 'psid=' + encodeURIComponent(psid);
+    return u;
+  }
+
+  function linkCard(psid) {
+    var wrap = document.createElement('aside');
+    wrap.className = 'dak-ad';
+    wrap.setAttribute('aria-label', 'Advertisement');
+
+    var label = document.createElement('span');
+    label.className = 'dak-ad-label';
+    label.textContent = 'Advertisement';
+
+    var a = document.createElement('a');
+    a.className = 'dak-ad-link';
+    a.href = linkFor(psid);
+    a.target = '_blank';
+    a.rel = 'nofollow noopener sponsored';
+
+    var badge = document.createElement('span');
+    badge.className = 'dak-ad-badge';
+    badge.textContent = 'AD';
+
+    var txt = document.createElement('span');
+    var t = document.createElement('span');
+    t.className = 'dak-ad-title';
+    t.textContent = 'Sponsored offer';
+    var d = document.createElement('span');
+    d.className = 'dak-ad-desc';
+    d.textContent = 'Open a sponsored offer from our partner.';
+    txt.appendChild(t);
+    txt.appendChild(d);
+
+    a.appendChild(badge);
+    a.appendChild(txt);
+    wrap.appendChild(label);
+    wrap.appendChild(a);
+    return wrap;
+  }
+
+  function unitBlock(html) {
+    var box = document.createElement('div');
+    box.className = 'dak-ad dak-ad-slot';
+    box.innerHTML = html;
+    return box;
+  }
+
+  function blockFor(psid, slotKey) {
+    var html = DAK_ADS.units[slotKey];
+    return (html && html.trim()) ? unitBlock(html) : linkCard(psid);
+  }
+
+  function mount() {
+    try {
+      injectStyles();
+
+      /* 1) In-content slot — blog articles, product pages, then homepage. */
+      var host = document.querySelector('.post-body') ||
+                 document.querySelector('.product-info');
+      var anchor = null;
+      if (host) {
+        anchor = (host === document.querySelector('.post-body'))
+          ? (function () {
+              var p = host.querySelector('p');
+              return (p && p.parentNode === host) ? p.nextSibling : host.firstChild;
+            })()
+          : host.firstChild;
+      }
+      if (!host) {
+        var hero = document.querySelector('section.hero');
+        if (hero && hero.parentNode) {
+          host = hero.parentNode;
+          anchor = hero.nextSibling;
+        }
+      }
+      if (host && !host.querySelector('.dak-ad')) {
+        host.insertBefore(blockFor('inline', 'inline'), anchor);
+      }
+
+      /* 2) Footer slot — every page. */
+      var footer = document.querySelector('footer');
+      if (footer && footer.parentNode && !document.querySelector('.dak-ad-footer')) {
+        var f = blockFor('footer', 'footer');
+        f.classList.add('dak-ad-footer');
+        footer.parentNode.insertBefore(f, footer);
+      }
+    } catch (e) { /* never break the page */ }
+  }
+
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', mount);
+  else mount();
+})();
