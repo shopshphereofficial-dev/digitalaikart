@@ -322,39 +322,92 @@
   }
 
   /* ---------- plans sheet ---------- */
-  var PLAN_CATALOG = [
-    { id: 'free',     name: 'Free',     price: 0,   tagline: 'Try it out',      url: '/ai/',
-      features: ['50 credits every month', 'Astral Lite tier', '5 free messages as a guest', 'Chat history saved when you log in'] },
-    { id: 'starter',  name: 'Starter',  price: 199, tagline: 'For casual users', url: 'https://rzp.io/rzp/y7aVauN',
-      features: ['4,000 credits every month', 'Every Astral tier, including Max', 'Chat history saved', 'AI Job Hunt Kit free (worth ₹99)'] },
-    { id: 'pro',      name: 'Pro',      price: 499, tagline: 'Most popular',     url: 'https://rzp.io/rzp/DPTeSSA',
-      features: ['10,000 credits every month', 'Every Astral tier, including Max', 'Longer memory of your conversations', 'Custom instructions and roleplay', 'AI Job Hunt Kit free (worth ₹99)'] },
-    { id: 'ultimate', name: 'Ultimate', price: 999, tagline: 'For power users',  url: 'https://rzp.io/rzp/MMtjP37i',
-      features: ['20,000 credits every month', 'Every Astral tier, including Max', 'Longest memory of your conversations', 'Custom instructions and roleplay', 'ALL Digitalaikart products free, including future ones'] }
-  ];
-  var planTab = 'pro';
+  var PLANS_DATA = {
+    monthly: [
+      { id:'starter',  name:'Starter',    inr:199,   usd:2.99,   daily:130,   tagline:'For everyday questions', url:'https://rzp.io/rzp/y7aVauN' },
+      { id:'pro',      name:'Pro',        inr:499,   usd:6.99,   daily:350,   tagline:'Most popular', popular:true, url:'https://rzp.io/rzp/DPTeSSA' },
+      { id:'creator',  name:'Creator',    inr:999,   usd:12.99,  daily:800,   tagline:'Built for images & video', url:'https://rzp.io/rzp/MMtjP37i' },
+      { id:'ultra',    name:'Ultra',      inr:1999,  usd:24,     daily:1800,  tagline:'For heavy daily use' },
+      { id:'business', name:'Business',   inr:4999,  usd:59.99,  daily:5000,  tagline:'For teams & agencies' },
+      { id:'enterprise', name:'Enterprise', inr:29999, usd:349.99, daily:30000, tagline:'Maximum everything' }
+    ],
+    yearly: [
+      { id:'starter-yearly', name:'Starter (Yearly)', inr:1899,  usd:28.99,  daily:130,  tagline:'Save 20%' },
+      { id:'pro-yearly',     name:'Pro (Yearly)',     inr:4799,  usd:69.99,  daily:350,  tagline:'Best value', popular:true },
+      { id:'creator-yearly', name:'Creator (Yearly)', inr:9599,  usd:129.99, daily:800,  tagline:'For image & video makers' },
+      { id:'ultra-yearly',   name:'Ultra (Yearly)',   inr:19199, usd:249.99, daily:1800, tagline:'For heavy daily use' }
+    ],
+    packs: [
+      { id:'pack-small', name:'1,800 credits', inr:99,   usd:1.49,  credits:1800,  tagline:'One-time, no subscription' },
+      { id:'pack-mid',   name:'5,400 credits', inr:299,  usd:3.99,  credits:5400,  tagline:'One-time, no subscription' },
+      { id:'pack-large', name:'18,000 credits', inr:999, usd:12.99, credits:18000, tagline:'One-time, no subscription' },
+      { id:'pack-max',   name:'54,000 credits', inr:2999, usd:38.99, credits:54000, tagline:'One-time, no subscription' }
+    ]
+  };
+  var planGroup = 'monthly', currency = localStorage.getItem('dskAI_cur') || 'INR';
+
+  function money(inr, usd) {
+    return currency === 'USD' ? '$' + usd : '\u20b9' + nfmt(inr);
+  }
 
   function renderPlans() {
+    var groups = [['monthly', 'Monthly'], ['yearly', 'Yearly'], ['packs', 'Credit packs']];
     var tabs = $('pl-tabs');
     tabs.innerHTML = '';
-    PLAN_CATALOG.forEach(function (p) {
+    groups.forEach(function (g) {
       var b = document.createElement('button');
-      b.type = 'button';
-      b.textContent = p.name;
-      b.className = p.id === planTab ? 'on' : '';
-      b.onclick = function () { planTab = p.id; renderPlans(); };
+      b.type = 'button'; b.textContent = g[1];
+      b.className = planGroup === g[0] ? 'on' : '';
+      b.onclick = function () { planGroup = g[0]; renderPlans(); };
       tabs.appendChild(b);
     });
-    var p = PLAN_CATALOG.filter(function (x) { return x.id === planTab; })[0];
-    var mine = D.profile && D.profile.plan === p.id;
-    var panel = $('pl-panel');
-    panel.innerHTML = '<h3>' + p.name + '</h3>'
-      + '<div class="plp-price">' + (p.price ? '₹' + p.price : '₹0') + '<span>/month</span></div>'
-      + '<div class="plp-tag">' + p.tagline + '</div>'
-      + '<ul>' + p.features.map(function (f) { return '<li>' + f + '</li>'; }).join('') + '</ul>'
-      + (mine
-          ? '<a class="btn-primary" href="/ai/plans.html">Your current plan</a>'
-          : '<a class="btn-primary" href="' + p.url + '">' + (p.price ? 'Choose ' + p.name : 'Start free') + '</a>');
+
+    var cur = document.createElement('button');
+    cur.type = 'button';
+    cur.style.cssText = 'margin-left:auto;font-size:.72rem;padding:.45rem .7rem';
+    cur.textContent = currency === 'INR' ? '\u20b9 INR' : '$ USD';
+    cur.onclick = function () {
+      currency = currency === 'INR' ? 'USD' : 'INR';
+      localStorage.setItem('dskAI_cur', currency);
+      renderPlans();
+    };
+    tabs.appendChild(cur);
+
+    var list = PLANS_DATA[planGroup];
+    var box = $('pl-panel');
+    box.style.padding = '0';
+    box.style.border = '0';
+    box.innerHTML = '';
+
+    list.forEach(function (p) {
+      var mine = D.profile && D.profile.plan === p.id;
+      var isPack = planGroup === 'packs';
+      var el = document.createElement('div');
+      el.style.cssText = 'border:1px solid var(--border);border-radius:14px;padding:1rem;margin-bottom:.7rem'
+        + (p.popular ? ';border-color:#1d4ed8' : '');
+      var per = isPack
+        ? '<div class="plp-tag">' + p.tagline + '</div>'
+        : '<div class="plp-tag">' + p.tagline + ' \u00b7 ' + nfmt(p.daily) + ' credits every day</div>';
+      var price = isPack
+        ? money(p.inr, p.usd) + '<span> one-time</span>'
+        : money(p.inr, p.usd) + '<span>/' + (planGroup === 'yearly' ? 'year' : 'month') + '</span>';
+      var cta = mine
+        ? '<a class="btn-primary" style="display:block;text-align:center;text-decoration:none" href="/ai/plans.html">Your current plan</a>'
+        : (p.url
+            ? '<a class="btn-primary" style="display:block;text-align:center;text-decoration:none" href="' + p.url + '">Buy ' + p.name + '</a>'
+            : '<a class="btn-primary" style="display:block;text-align:center;text-decoration:none" href="https://wa.me/919682600301">Contact us</a>');
+      el.innerHTML = '<h3 style="margin:0 0 .2rem;font-size:1.05rem">' + p.name + '</h3>'
+        + '<div class="plp-price" style="font-size:1.5rem;font-weight:800">' + price + '</div>'
+        + per + cta;
+      box.appendChild(el);
+    });
+
+    var note = document.createElement('div');
+    note.className = 'set-hint';
+    note.style.marginTop = '.6rem';
+    note.textContent = 'Prices in ' + (currency === 'USD' ? 'US dollars' : 'Indian rupees')
+      + '. Subscriptions give you a fresh allowance every day. Credit packs never expire for 12 months.';
+    box.appendChild(note);
   }
 
   /* ---------- boot ---------- */
