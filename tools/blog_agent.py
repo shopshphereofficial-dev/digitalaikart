@@ -90,6 +90,31 @@ def png_size(data):
     return 1200, 630
 
 
+def save_cover(raw, out_path, w=1200, h=630):
+    """Centre-crop to 16:9 and save an optimised JPEG. Falls back to raw bytes."""
+    try:
+        import io as _io
+        from PIL import Image
+        im = Image.open(_io.BytesIO(raw)).convert('RGB')
+        iw, ih = im.size
+        target = w / h
+        if iw / ih > target:
+            nw = int(round(ih * target))
+            left = (iw - nw) // 2
+            im = im.crop((left, 0, left + nw, ih))
+        else:
+            nh = int(round(iw / target))
+            top = (ih - nh) // 2
+            im = im.crop((0, top, iw, top + nh))
+        im = im.resize((w, h), Image.LANCZOS)
+        im.save(out_path, 'JPEG', quality=82, optimize=True, progressive=True)
+        return w, h
+    except Exception as e:
+        print('pillow unavailable (%s) - saving raw image' % str(e)[:60])
+        open(out_path, 'wb').write(raw)
+        return png_size(raw)
+
+
 def strip_tags(s):
     s = re.sub(r'<script.*?</script>', ' ', s, flags=re.S | re.I)
     s = re.sub(r'<style.*?</style>', ' ', s, flags=re.S | re.I)
@@ -502,9 +527,10 @@ def cleanup_today():
                     lambda m: '' if slug in m.group(0) else m.group(0), fd, flags=re.S)
         open(FEED, 'w', encoding='utf-8').write(fd)
         os.remove(path)
-        img = os.path.join(OG, slug + '.png')
-        if os.path.exists(img):
-            os.remove(img)
+        for ext in ('.png', '.jpg'):
+            img = os.path.join(OG, slug + ext)
+            if os.path.exists(img):
+                os.remove(img)
         print('force: removed', f)
 
 
@@ -534,15 +560,14 @@ def main():
         print('post already exists:', fname)
         return
 
-    img_name = '%s-%s.png' % (pubdate.isoformat(), slug)
+    img_name = '%s-%s.jpg' % (pubdate.isoformat(), slug)
     img_w, img_h = 1200, 630
     try:
         data = gemini_image(post.get('image_prompt') or (
             'a natural, photorealistic editorial image for a news story about: ' + post['title'] +
             '. Wide 16:9, no text.'))
         if data:
-            img_w, img_h = png_size(data)
-            open(os.path.join(OG, img_name), 'wb').write(data)
+            img_w, img_h = save_cover(data, os.path.join(OG, img_name))
             print('image written:', img_name, img_w, 'x', img_h)
         else:
             img_name = ''
