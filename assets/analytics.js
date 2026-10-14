@@ -47,7 +47,17 @@
     }
   }, true);
 
-  /* newsletter / contact form submits, if any are added later */
+  /* newsletter signup: the Tally form lives in an iframe, so listen for its event */
+  window.addEventListener('message', function (e) {
+    var d = e && e.data;
+    if (!d) return;
+    var name = (typeof d === 'string') ? d : (d.event || d.type || '');
+    if (String(name).indexOf('Tally') === -1) return;
+    if (String(name).toLowerCase().indexOf('submit') === -1) return;
+    gtag('event', 'generate_lead', { form_id: 'newsletter', form_name: 'Digitalaikart newsletter' });
+  });
+
+  /* plain HTML forms, if any are added later */
   document.addEventListener('submit', function (e) {
     var f = e.target;
     if (!f || !f.querySelector) return;
