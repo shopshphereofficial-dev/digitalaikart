@@ -1,0 +1,12 @@
+
+/* apps: preview banner, faq, hashtags */
+.app-showcase{max-width:900px;margin:0 auto}
+.app-showcase img{width:100%;display:block;border-radius:16px;border:1px solid var(--border,#d6dee9);box-shadow:0 10px 30px rgba(15,23,42,.10)}
+.faq-list{max-width:760px;margin:0 auto}
+.faq{border:1px solid var(--border,#d6dee9);border-radius:12px;margin-bottom:10px;background:#fff;overflow:hidden}
+.faq summary{cursor:pointer;padding:14px 18px;font-weight:700;font-size:.88rem;color:var(--text-primary,#0f172a);list-style:none}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary:after{content:'+';float:right;color:var(--gold,#b8860b);font-weight:900}
+.faq[open] summary:after{content:'\2013'}
+.faq p{padding:0 18px 16px;color:var(--text-secondary,#475569);font-size:.84rem;line-height:1.6}
+.app-hash{margin-top:1.4rem;font-size:.72rem;color:var(--text-muted,#64748b);letter-spacing:.02em;line-height:1.9}

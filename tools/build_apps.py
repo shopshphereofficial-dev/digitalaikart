@@ -70,8 +70,8 @@ def price_html(app):
     return '<span class="app-price">%s</span>' % esc(price)
 
 
-def head(title, desc, url, ld=None, keywords=None):
-    og_img = SITE + "/assets/og-default.png"
+def head(title, desc, url, ld=None, keywords=None, og_image=None):
+    og_img = og_image or (SITE + "/assets/og-default.png")
     parts = [
         '<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8">',
         '<meta name="viewport" content="width=device-width, initial-scale=1.0">',
@@ -92,6 +92,7 @@ def head(title, desc, url, ld=None, keywords=None):
         '<meta name="twitter:image" content="%s">' % og_img,
         '<link rel="canonical" href="%s">' % esc(url),
         '<link rel="stylesheet" href="/assets/style.css">',
+        '<link rel="stylesheet" href="/assets/apps.css">',
     ]
     if ld:
         parts.append('<script type="application/ld+json">%s</script>' % json.dumps(ld, ensure_ascii=False))
@@ -168,6 +169,13 @@ def listing(apps):
 
 
 # ------------------------------------------------------------------- detail ---
+def preview_image(app):
+    if not app.get("og"):
+        return ""
+    return ('<div class="app-showcase"><img src="%s" alt="%s preview" loading="lazy"></div>'
+            % (esc(app["og"]), esc(app["name"])))
+
+
 def download_buttons(app):
     dls = app.get("downloads") or []
     if not dls:
@@ -187,8 +195,7 @@ def detail(app, all_apps):
         shot_html = '<div class="shot-strip">' + "".join(
             '<img src="%s" alt="%s screenshot">' % (esc(s), esc(app["name"])) for s in shots) + '</div>'
     else:
-        shot_html = ('<div class="shot-strip">' + "".join(
-            '<div class="shot-ph">Screenshot %d</div>' % (i + 1) for i in range(3)) + '</div>')
+        shot_html = preview_image(app)
 
     video = app.get("video") or ""
     vid_html = ""
@@ -220,7 +227,8 @@ def detail(app, all_apps):
         meta_bits.append('<div><b>%s</b>Size</div>' % esc(app["size"]))
     meta_bits.append('<div><b>%s</b>Price</div>' % esc(app.get("price", "Free")))
 
-    ld = {
+    faq = app.get("faq") or []
+    ld = [{
         "@context": "https://schema.org", "@type": "SoftwareApplication",
         "name": app["name"], "operatingSystem": "Android",
         "applicationCategory": app.get("category", "Utilities"),
@@ -229,12 +237,28 @@ def detail(app, all_apps):
         "offers": {"@type": "Offer", "price": "0" if (app.get("price", "Free").lower() == "free") else re.sub(r"[^0-9.]", "", app.get("price", "")),
                    "priceCurrency": "INR"},
         "publisher": {"@type": "Organization", "name": "Digitalaikart", "url": SITE},
-    }
+    },
+    {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "Home", "item": SITE + "/"},
+        {"@type": "ListItem", "position": 2, "name": "Apps", "item": SITE + "/apps/"},
+        {"@type": "ListItem", "position": 3, "name": app["name"], "item": "%s/apps/%s/" % (SITE, app["slug"])}]}]
+    if faq:
+        ld.append({"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [
+            {"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in faq]})
+    faq_html = ""
+    if faq:
+        faq_html = ('<section class="section"><h2 class="section-title">Questions</h2><div class="gold-divider"></div>'
+                    '<div class="faq-list">' + "".join(
+            '<details class="faq"><summary>%s</summary><p>%s</p></details>' % (esc(q), esc(a)) for q, a in faq) + '</div></section>')
+    hash_html = ""
+    if app.get("hashtags"):
+        hash_html = ('<p class="app-hash">' + " ".join("#" + esc(h) for h in app["hashtags"]) + '</p>')
 
     return (
         head("%s — Android app by Digitalaikart" % app["name"],
              (app.get("tagline") or "").strip(), "%s/apps/%s/" % (SITE, app["slug"]), ld,
-             keywords=", ".join((app.get("tags") or []) + [app["name"], "Android app", "Digitalaikart"]))
+             keywords=", ".join((app.get("tags") or []) + (app.get("hashtags") or []) + [app["name"], "Android app", "Digitalaikart"]),
+             og_image=(SITE + app["og"]) if app.get("og") else None)
         + NAV
         + '<div style="max-width:1000px;margin:0 auto;padding:6.5rem 1.5rem 0"><a href="/apps/" '
           'style="color:var(--gold);font-size:.8rem">&larr; All apps</a></div>'
@@ -247,13 +271,17 @@ def detail(app, all_apps):
           + download_buttons(app)
           + '<div class="app-tags" style="margin-top:1rem">' + tags + '</div></div>'
         + '</section>'
-        + '<section class="section"><h2 class="section-title">Screenshots</h2><div class="gold-divider"></div>'
-          '<p class="section-sub">A look at the app</p>' + shot_html + '</section>'
+        + ('<section class="section"><h2 class="section-title">Screenshots</h2><div class="gold-divider"></div>'
+           '<p class="section-sub">A look at the app</p>' if shots else
+           '<section class="section"><h2 class="section-title">Preview</h2><div class="gold-divider"></div>'
+           '<p class="section-sub">A look at the app</p>') + shot_html + '</section>'
         + vid_html
         + feats_html
         + '<section class="section"><h2 class="section-title">About this app</h2><div class="gold-divider"></div>'
           '<div style="max-width:720px;margin:0 auto;color:var(--text-secondary);font-size:.85rem">' + paras + '</div></section>'
         + rel_html
+        + faq_html
+        + hash_html
         + WA + FOOTER + '</body></html>'
     )
 
@@ -286,7 +314,7 @@ def update_sitemap(slugs):  # drop stale app urls, then add current ones
     today = datetime.date.today().isoformat()
     block = "".join('<url><loc>%s</loc><lastmod>%s</lastmod><changefreq>weekly</changefreq>'
                     '<priority>0.8</priority></url>' % (u, today) for u in add)
-    xml = xml.replace("</urlset>", block + "</ur|set>") if "</urlset>" in xml else xml + block
+    xml = xml.replace("</urlset>", block + "</urlset>") if "</urlset>" in xml else xml + block
     with open(path, "w", encoding="utf-8") as f:
         f.write(xml)
 
