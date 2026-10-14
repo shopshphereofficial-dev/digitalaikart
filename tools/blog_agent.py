@@ -374,7 +374,7 @@ def render_post(p, item, img_name, img_w, img_h, pubdate):
 <style>%(css)s%(extra)s</style>
 </head>
 <body>
-<nav class="nav"><div class="nav-inner"><a href="/" class="nav-logo">Digitalaikart</a><div class="nav-links"><a href="/">Home</a><a href="/products/">Products</a><a href="/ai/">AI Assistant</a><a href="/blog/" class="active">Blog</a></div></div></nav>
+<nav class="nav"><div class="nav-inner"><a href="/" class="nav-logo">Digitalaikart</a><div class="nav-links"><a href="/">Home</a><a href="/products/">Products</a><a href="/apps/">Apps</a><a href="/ai/">AI Assistant</a><a href="/blog/" class="active">Blog</a></div></div></nav>
 
 <div class="post-wrap">
   <img class="post-cover" src="/assets/og/%(imgsrc)s" alt="%(title)s" width="%(iw)d" height="%(ih)d">
