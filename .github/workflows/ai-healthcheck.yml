@@ -1,0 +1,27 @@
+name: AI function health check
+
+# One-off test: calls the deployed 'ai' Edge Function from GitHub's runners
+# (which have open internet) and prints what comes back.
+on:
+  workflow_dispatch:
+
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Guest chat request
+        run: |
+          echo "--- chat ---"
+          curl -sS --max-time 90 -X POST \
+            "https://guoxqlojsslwetlymbvj.supabase.co/functions/v1/ai" \
+            -H "Content-Type: application/json" \
+            -d '{"kind":"chat","prompt":"Reply with exactly: server works"}' \
+            | head -c 1200
+          echo
+          echo "--- image request ---"
+          curl -sS --max-time 120 -X POST \
+            "https://guoxqlojsslwetlymbvj.supabase.co/functions/v1/ai" \
+            -H "Content-Type: application/json" \
+            -d '{"kind":"image","prompt":"a simple red circle on white"}' \
+            | head -c 300
+          echo
