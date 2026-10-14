@@ -70,7 +70,7 @@ def price_html(app):
     return '<span class="app-price">%s</span>' % esc(price)
 
 
-def head(title, desc, url, ld=None):
+def head(title, desc, url, ld=None, keywords=None):
     og_img = SITE + "/assets/og-default.png"
     parts = [
         '<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8">',
@@ -78,6 +78,7 @@ def head(title, desc, url, ld=None):
         FONTS,
         '<title>%s</title>' % esc(title),
         '<meta name="description" content="%s">' % esc(desc),
+        ('<meta name="keywords" content="%s">' % esc(keywords)) if keywords else '',
         '<meta property="og:title" content="%s">' % esc(title),
         '<meta property="og:description" content="%s">' % esc(desc),
         '<meta property="og:type" content="website">',
@@ -100,7 +101,7 @@ def head(title, desc, url, ld=None):
 
 # ------------------------------------------------------------------ listing ---
 def card(app):
-    tags = "".join('<span class="app-tag">%s</span>' % esc(t) for t in (app.get("tags") or [])[:4])
+    tags = "".join('<span class="app-tag">%s</span>' % esc(t) for t in (app.get("tags") or [])[:6])
     badge = ('<span class="app-badge">%s</span>' % esc(app["badge"])) if app.get("badge") else ""
     hay = (app.get("name", "") + " " + " ".join(app.get("tags") or []) + " " + app.get("category", "")).lower()
     return (
@@ -232,7 +233,8 @@ def detail(app, all_apps):
 
     return (
         head("%s — Android app by Digitalaikart" % app["name"],
-             (app.get("tagline") or "").strip(), "%s/apps/%s/" % (SITE, app["slug"]), ld)
+             (app.get("tagline") or "").strip(), "%s/apps/%s/" % (SITE, app["slug"]), ld,
+             keywords=", ".join((app.get("tags") or []) + [app["name"], "Android app", "Digitalaikart"]))
         + NAV
         + '<div style="max-width:1000px;margin:0 auto;padding:6.5rem 1.5rem 0"><a href="/apps/" '
           'style="color:var(--gold);font-size:.8rem">&larr; All apps</a></div>'
@@ -256,13 +258,22 @@ def detail(app, all_apps):
     )
 
 
-def update_sitemap(slugs):
+def update_sitemap(slugs):  # drop stale app urls, then add current ones
     path = os.path.join(ROOT, "sitemap.xml")
     try:
         with open(path, "r", encoding="utf-8") as f:
             xml = f.read()
     except OSError:
         return
+    keep = set(slugs)
+    def _drop(m):
+        mm = re.search(r'/apps/([^/]+)/$', m.group(1))
+        return '' if (mm and mm.group(1) not in keep) else m.group(0)
+    _new = re.sub(r'<url><loc>([^<]+)</loc>.*?</url>', _drop, xml, flags=re.S)
+    if _new != xml:
+        xml = _new
+        with open(path, "w", encoding="utf-8") as f:
+            f.write(xml)
     add = []
     if SITE + "/apps/" not in xml:
         add.append(SITE + "/apps/")
@@ -275,7 +286,7 @@ def update_sitemap(slugs):
     today = datetime.date.today().isoformat()
     block = "".join('<url><loc>%s</loc><lastmod>%s</lastmod><changefreq>weekly</changefreq>'
                     '<priority>0.8</priority></url>' % (u, today) for u in add)
-    xml = xml.replace("</urlset>", block + "</urlset>") if "</urlset>" in xml else xml + block
+    xml = xml.replace("</urlset>", block + "</ur|set>") if "</urlset>" in xml else xml + block
     with open(path, "w", encoding="utf-8") as f:
         f.write(xml)
 

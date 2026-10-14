@@ -1,6 +1,6 @@
 {
-  "updated": "2026-10-10",
-  "note": "Single source of truth for the Digitalaikart Apps store. tools/build_apps.py reads this file and generates /apps/index.html plus one page per app at /apps/<slug>/. Add an entry here (and drop icon/screenshots into /apps/icons and /apps/shots) to publish an app. Never delete existing entries.",
+  "updated": "2026-10-14",
+  "note": "Single source of truth for the Digitalaikart Apps store. tools/build_apps.py reads this file and generates /apps/index.html plus one page per app at /apps/<slug>/. Add an entry here (and drop the icon into /apps/icons) to publish an app.",
   "apps": [
     {
       "slug": "neon-calculator",
@@ -22,10 +22,13 @@
         "neon",
         "offline",
         "ad-free",
-        "maths"
+        "maths",
+        "calculator app",
+        "kids calculator",
+        "offline calculator"
       ],
       "platform": "Android",
-      "icon": "",
+      "icon": "/apps/icons/neon-calculator.svg",
       "screenshots": [],
       "video": "",
       "downloads": [
@@ -64,10 +67,14 @@
         "calculator",
         "kids",
         "neon",
-        "offline"
+        "offline",
+        "piano app",
+        "learn piano",
+        "kids music",
+        "offline piano"
       ],
       "platform": "Android",
-      "icon": "",
+      "icon": "/apps/icons/neon-piano.svg",
       "screenshots": [],
       "video": "",
       "downloads": [
@@ -106,10 +113,14 @@
         "driving",
         "simulator",
         "offline",
-        "arcade"
+        "arcade",
+        "car game",
+        "driving simulator",
+        "open world",
+        "offline game"
       ],
       "platform": "Android",
-      "icon": "",
+      "icon": "/apps/icons/car-simulator.svg",
       "screenshots": [],
       "video": "",
       "downloads": [
@@ -148,10 +159,18 @@
         "cleaner",
         "tools",
         "media",
-        "utilities"
+        "utilities",
+        "snaptube",
+        "snaptube alternative",
+        "video downloader",
+        "youtube downloader",
+        "instagram downloader",
+        "reels downloader",
+        "whatsapp status saver",
+        "ad-free"
       ],
       "platform": "Android",
-      "icon": "",
+      "icon": "/apps/icons/grabit.svg",
       "screenshots": [],
       "video": "",
       "downloads": [
@@ -168,43 +187,6 @@
       ],
       "repo": "https://github.com/shopshphereofficial-dev/grabit",
       "featured": true,
-      "badge": ""
-    },
-    {
-      "slug": "media-vault",
-      "name": "MediaVault",
-      "tagline": "A privacy-focused media downloader and player.",
-      "category": "Media",
-      "price": "Free",
-      "description": "MediaVault keeps your saved videos and music in one private place. Download media, store it in your own vault, and play it back offline — away from prying eyes and without ads.\n\nIt is built around privacy first: your library stays on your device.",
-      "features": [
-        "Private on-device media library",
-        "Media downloader",
-        "Built-in player",
-        "Offline playback",
-        "No ads, privacy-first"
-      ],
-      "tags": [
-        "media",
-        "downloader",
-        "player",
-        "privacy",
-        "offline",
-        "video"
-      ],
-      "platform": "Android",
-      "icon": "",
-      "screenshots": [],
-      "video": "",
-      "downloads": [
-        {
-          "label": "Get it on GitHub",
-          "url": "https://github.com/shopshphereofficial-dev/media-vault",
-          "style": "gold"
-        }
-      ],
-      "repo": "https://github.com/shopshphereofficial-dev/media-vault",
-      "featured": false,
       "badge": ""
     },
     {
@@ -227,10 +209,16 @@
         "neon",
         "video",
         "music",
-        "ad-free"
+        "ad-free",
+        "snaptube alternative",
+        "video downloader",
+        "youtube downloader",
+        "instagram downloader",
+        "reels downloader",
+        "offline player"
       ],
       "platform": "Android",
-      "icon": "",
+      "icon": "/apps/icons/soulstream.svg",
       "screenshots": [],
       "video": "",
       "downloads": [
@@ -247,48 +235,6 @@
       ],
       "repo": "https://github.com/shopshphereofficial-dev/soulstream",
       "featured": false,
-      "badge": ""
-    },
-    {
-      "slug": "omnitask-ai",
-      "name": "OmniTask AI",
-      "tagline": "Give tasks to any AI — OpenAI, Grok, Gemini, DeepSeek, Kimi, Sarvam or your own.",
-      "category": "AI",
-      "price": "Free",
-      "description": "OmniTask AI lets you send a task to the AI of your choice — OpenAI, Grok, Gemini, DeepSeek, Kimi, Sarvam, or a custom endpoint — from one clean app. Bring your own API key and switch models whenever you like.\n\nIt is a single, tidy workspace for all your AI tools, without juggling browser tabs.",
-      "features": [
-        "Switch between many AI providers",
-        "Bring your own API key",
-        "One clean, unified interface",
-        "Supports custom endpoints",
-        "No ads"
-      ],
-      "tags": [
-        "ai",
-        "chatgpt",
-        "gemini",
-        "productivity",
-        "tools",
-        "byok"
-      ],
-      "platform": "Android",
-      "icon": "",
-      "screenshots": [],
-      "video": "",
-      "downloads": [
-        {
-          "label": "Download APK",
-          "url": "https://github.com/shopshphereofficial-dev/omnitask-ai/releases/latest/download/app.apk",
-          "style": "gold"
-        },
-        {
-          "label": "View on GitHub",
-          "url": "https://github.com/shopshphereofficial-dev/omnitask-ai",
-          "style": "outline"
-        }
-      ],
-      "repo": "https://github.com/shopshphereofficial-dev/omnitask-ai",
-      "featured": true,
       "badge": ""
     },
     {
@@ -310,10 +256,12 @@
         "social",
         "messaging",
         "friends",
-        "android"
+        "android",
+        "chat app",
+        "google login"
       ],
       "platform": "Android",
-      "icon": "",
+      "icon": "/apps/icons/pulsechat.svg",
       "screenshots": [],
       "video": "",
       "downloads": [
@@ -352,10 +300,14 @@
         "privacy",
         "utilities",
         "tools",
-        "android"
+        "android",
+        "app cloner",
+        "dual app",
+        "clone app",
+        "work profile"
       ],
       "platform": "Android",
-      "icon": "",
+      "icon": "/apps/icons/twinspace.svg",
       "screenshots": [],
       "video": "",
       "downloads": [
@@ -373,37 +325,6 @@
       "repo": "https://github.com/shopshphereofficial-dev/twinspace",
       "featured": false,
       "badge": ""
-    },
-    {
-      "slug": "python-king",
-      "name": "Python King",
-      "tagline": "Run Python 3.13 offline on Android.",
-      "category": "Education",
-      "price": "Free",
-      "description": "Python King runs Python 3.13 right on your phone, fully offline. Write and run code anywhere, learn Python on the go, and export your Python animations as MP4 video.\n\nAn ad-free pocket coding lab for students and developers.",
-      "features": [
-        "Full Python 3.13, offline",
-        "Code editor built in",
-        "Export animations as MP4",
-        "Ad-free",
-        "Great for learning on the go"
-      ],
-      "tags": [
-        "python",
-        "coding",
-        "education",
-        "developer",
-        "offline",
-        "programming"
-      ],
-      "platform": "Android",
-      "icon": "",
-      "screenshots": [],
-      "video": "",
-      "downloads": [],
-      "repo": "",
-      "featured": false,
-      "badge": "SOON"
     },
     {
       "slug": "voltaura",
@@ -424,10 +345,14 @@
         "animation",
         "personalisation",
         "neon",
-        "android"
+        "android",
+        "charging animation",
+        "battery",
+        "edge glow",
+        "customisation"
       ],
       "platform": "Android",
-      "icon": "",
+      "icon": "/apps/icons/voltaura.svg",
       "screenshots": [],
       "video": "",
       "downloads": [
@@ -445,37 +370,6 @@
       "repo": "",
       "featured": false,
       "badge": ""
-    },
-    {
-      "slug": "vaultly",
-      "name": "Vaultly",
-      "tagline": "A clean, privacy-respecting video & music downloader and offline hub.",
-      "category": "Media",
-      "price": "Free",
-      "description": "Vaultly is a tidy, privacy-respecting home for your downloaded videos and music. Save media, keep it organised in one place, and enjoy it offline — with a clean, modern look.\n\nNo clutter, no ads, and your library stays on your device.",
-      "features": [
-        "Video and music downloads",
-        "Offline media hub",
-        "Clean modern design",
-        "Privacy-respecting",
-        "No ads"
-      ],
-      "tags": [
-        "media",
-        "downloader",
-        "privacy",
-        "video",
-        "music",
-        "offline"
-      ],
-      "platform": "Android",
-      "icon": "",
-      "screenshots": [],
-      "video": "",
-      "downloads": [],
-      "repo": "",
-      "featured": false,
-      "badge": "SOON"
     }
   ]
 }
