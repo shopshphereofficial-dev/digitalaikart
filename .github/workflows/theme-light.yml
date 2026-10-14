@@ -1,0 +1,56 @@
+name: Light theme
+
+# One-off, idempotent colour-only theme pass: dark navy + gold -> light + blue.
+# Run it with scope "test" first (3 staging pages + assets/style.css), review,
+# then run it with scope "all" for the whole site. Nothing but colour values
+# change. See tools/theme_light.py for exactly what is replaced.
+on:
+  workflow_dispatch:
+    inputs:
+      scope:
+        description: "test = 3 staging pages + style.css; all = whole site"
+        type: choice
+        options:
+          - test
+          - all
+        default: test
+      rgba:
+        description: "Also recolour rgba() gold/slate tints (off = hex only)"
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+concurrency:
+  group: light-theme
+  cancel-in-progress: false
+
+jobs:
+  theme:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+      - name: Apply light theme
+        env:
+          SCOPE: ${{ inputs.scope }}
+          RGBA: ${{ inputs.rgba }}
+        run: |
+          ARGS="--scope $SCOPE"
+          if [ "$RGBA" = "true" ]; then ARGS="$ARGS --rgba"; fi
+          python3 tools/theme_light.py $ARGS
+      - name: Commit
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "nothing to change"
+          else
+            git commit -m "Theme: light palette (scope=${{ inputs.scope }})"
+            git pull --rebase origin main
+            git push
+          fi
