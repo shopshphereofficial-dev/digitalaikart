@@ -1,0 +1,21 @@
+name: Rename AI Assistant to Astral AI
+
+on:
+  workflow_dispatch:
+
+jobs:
+  rename:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - name: Rewrite the nav link on every page
+        run: python3 tools/fix_nav.py
+      - name: Commit
+        run: |
+          git config user.name "digitalaikart-bot"
+          git config user.email "actions@github.com"
+          git add -A
+          git diff --cached --quiet || git commit -m "Rename nav link to Astral AI"
+          git push
