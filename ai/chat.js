@@ -2,7 +2,7 @@
  *
  * All model calls go to our own server function; the browser never holds an
  * upstream key and never learns which model is behind a tier. The user picks
- * an "Astryn" tier and the server decides what runs and what it costs.
+ * an "Astral" tier and the server decides what runs and what it costs.
  *
  * Chats live in Supabase, so the sidebar can list past conversations and the
  * assistant remembers the person across them.
@@ -20,15 +20,15 @@
      to is decided on the server and is never sent to the browser. */
   var TIERS = {
     chat: [
-      { id: 'astryn-lite', name: 'Astryn Lite', cost: 10, blurb: 'Fast and light — everyday questions' },
-      { id: 'astryn-core', name: 'Astryn Core', cost: 10, blurb: 'Balanced speed and smarts' },
-      { id: 'astryn-pro',  name: 'Astryn Pro',  cost: 20, blurb: 'Sharper reasoning for tougher work' },
-      { id: 'astryn-max',  name: 'Astryn Max',  cost: 50, blurb: 'Deepest thinking for complex problems' }
+      { id: 'astryn-lite', name: 'Astral Lite', cost: 10, blurb: 'Fast and light — everyday questions' },
+      { id: 'astryn-core', name: 'Astral Core', cost: 10, blurb: 'Balanced speed and smarts' },
+      { id: 'astryn-pro',  name: 'Astral Pro',  cost: 20, blurb: 'Sharper reasoning for tougher work' },
+      { id: 'astryn-max',  name: 'Astral Max',  cost: 50, blurb: 'Deepest thinking for complex problems' }
     ],
     image: [
-      { id: 'astryn-image',       name: 'Astryn Image',       cost: 300,  blurb: 'Quick images, lowest cost' },
-      { id: 'astryn-image-pro',   name: 'Astryn Image Pro',   cost: 550,  blurb: 'High quality, strong detail' },
-      { id: 'astryn-image-ultra', name: 'Astryn Image Ultra', cost: 1100, blurb: 'Best quality, crisp text' }
+      { id: 'astryn-image',       name: 'Astral Image',       cost: 300,  blurb: 'Quick images, lowest cost' },
+      { id: 'astryn-image-pro',   name: 'Astral Image Pro',   cost: 550,  blurb: 'High quality, strong detail' },
+      { id: 'astryn-image-ultra', name: 'Astral Image Ultra', cost: 1100, blurb: 'Best quality, crisp text' }
     ]
   };
   var GUEST_TIER = { chat: 'astryn-lite', image: 'astryn-image' };
@@ -142,7 +142,7 @@
   function newChat() {
     convoId = null;
     $('msgs').innerHTML = '';
-    addMsg('ai', 'Hi ' + ((D.profile && D.profile.name) || 'there') + '! I am Astryn. What shall we work on?');
+    addMsg('ai', 'Hi ' + ((D.profile && D.profile.name) || 'there') + '! I am Astral. What shall we work on?');
     renderSidebar();
     var sb = document.getElementById('sb'); if (sb) sb.classList.remove('on');
   }
@@ -236,7 +236,7 @@
       note.textContent = t.name + ' — ' + t.blurb + ' · ' + nfmt(t.cost) + ' credits per ' + (mode === 'chat' ? 'message' : 'image');
       sel.disabled = false;
     } else {
-      note.textContent = 'Guest mode: ' + GUEST_LIMIT + ' free messages on Astryn Lite. Log in to unlock higher tiers.';
+      note.textContent = 'Guest mode: ' + GUEST_LIMIT + ' free messages on Astral Lite. Log in to unlock higher tiers.';
       sel.disabled = true;
     }
   }
