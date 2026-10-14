@@ -390,6 +390,8 @@
 (function () {
   function build() {
     if (document.getElementById('newsletter')) return;
+    /* No newsletter signup on the AI assistant — the page stays just the app. */
+    if (/^\/ai(\/|$)/.test(location.pathname)) return;
     var footer = document.querySelector('footer');
     if (!footer || !footer.parentNode) return;
     var s = document.createElement('section');
