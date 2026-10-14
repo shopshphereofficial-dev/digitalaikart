@@ -37,7 +37,7 @@ window.DSK = (function () {
   D.ym = ym;
 
   D.loadProfile = function () {
-    return client().from('profiles').select('id,name,email,phone,plan,tokens,tokens_month,role').eq('id', D.user.id).maybeSingle()
+    return client().from('profiles').select('id,name,email,plan,tokens,tokens_month,role').eq('id', D.user.id).maybeSingle()
       .then(function (r) { D.profile = r.data || null; return D.profile; });
   };
 
@@ -57,7 +57,6 @@ window.DSK = (function () {
   D.signup = function () {
     var name = $('su-name').value.trim(),
         email = $('su-email').value.trim().toLowerCase(),
-        phone = $('su-phone').value.trim(),
         pass = $('su-pass').value;
     if (!name) return am('Please enter your name.');
     if (!email) return am('Please enter your email — it is how you log in.');
@@ -67,7 +66,7 @@ window.DSK = (function () {
     client().auth.signUp({
       email: email,
       password: pass,
-      options: { data: { name: name, phone: phone } }
+      options: { data: { name: name } }
     }).then(function (r) {
       if (r.error) {
         var m = r.error.message || '';
