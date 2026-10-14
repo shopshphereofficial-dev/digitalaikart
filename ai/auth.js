@@ -15,10 +15,10 @@ window.DSK = (function () {
   /* What each plan gets. The server enforces the real numbers; this is only
      for showing the user where they stand. */
   var PLANS = {
-    free:     { name: 'FREE',     tokens: 5,    mem: 12, role: false, products: [] },
-    starter:  { name: 'STARTER',  tokens: 400,  mem: 12, role: false, products: [['AI Job Hunt Kit', '/downloads/ai-job-hunt-kit.pdf']] },
-    pro:      { name: 'PRO',      tokens: 700,  mem: 30, role: true,  products: [['AI Job Hunt Kit', '/downloads/ai-job-hunt-kit.pdf']] },
-    ultimate: { name: 'ULTIMATE', tokens: 1600, mem: 50, role: true,  products: [['AI Job Hunt Kit', '/downloads/ai-job-hunt-kit.pdf'], ['GPT-6 Astra Guide', '/GPT6_Astra_Zero_to_Hero_Guide_FINAL.pdf']] }
+    free:     { name: 'FREE',     tokens: 50,   mem: 12, role: false, products: [] },
+    starter:  { name: 'STARTER',  tokens: 4000, mem: 12, role: false, products: [['AI Job Hunt Kit', '/downloads/ai-job-hunt-kit.pdf']] },
+    pro:      { name: 'PRO',      tokens: 10000, mem: 30, role: true,  products: [['AI Job Hunt Kit', '/downloads/ai-job-hunt-kit.pdf']] },
+    ultimate: { name: 'ULTIMATE', tokens: 20000, mem: 50, role: true,  products: [['AI Job Hunt Kit', '/downloads/ai-job-hunt-kit.pdf'], ['GPT-6 Astra Guide', '/GPT6_Astra_Zero_to_Hero_Guide_FINAL.pdf']] }
   };
 
   var D = { PLANS: PLANS, ready: false, user: null, profile: null, sb: null };
