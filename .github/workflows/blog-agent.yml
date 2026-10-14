@@ -44,5 +44,6 @@ jobs:
             echo "nothing new to publish"
           else
             git commit -m "Auto blog: new AI news post"
+            git pull --rebase origin main
             git push
           fi
