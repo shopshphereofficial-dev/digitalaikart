@@ -325,9 +325,9 @@
   var USD_INR = 95.17;   // one rate, everything else derives from it
   var PLANS_DATA = {
     monthly: [
-      { id:'starter',    name:'Starter',    usd:2.99,   daily:130,   tagline:'For everyday questions', url:'https://rzp.io/rzp/y7aVauN' },
-      { id:'pro',        name:'Pro',        usd:5.99,   daily:350,   tagline:'Most popular', popular:true, url:'https://rzp.io/rzp/DPTeSSA' },
-      { id:'creator',    name:'Creator',    usd:11.99,  daily:800,   tagline:'Built for images & video', url:'https://rzp.io/rzp/MMtjP37i' },
+      { id:'starter',    name:'Starter',    usd:2.99,   daily:130,   tagline:'For everyday questions' },
+      { id:'pro',        name:'Pro',        usd:5.99,   daily:350,   tagline:'Most popular', popular:true },
+      { id:'creator',    name:'Creator',    usd:11.99,  daily:800,   tagline:'Built for images & video' },
       { id:'ultra',      name:'Ultra',      usd:24.99,  daily:1800,  tagline:'For heavy daily use' },
       { id:'business',   name:'Business',   usd:59.99,  daily:5000,  tagline:'For teams & agencies' },
       { id:'enterprise', name:'Enterprise', usd:150,    daily:30000, tagline:'Our top plan — maximum everything' }
@@ -395,11 +395,16 @@
       var price = isPack
         ? money(p.usd) + '<span> one-time</span>'
         : money(p.usd) + '<span>/' + (planGroup === 'yearly' ? 'year' : 'month') + '</span>';
-      var cta = mine
-        ? '<a class="btn-primary" style="display:block;text-align:center;text-decoration:none" href="/ai/plans.html">Your current plan</a>'
-        : (p.url
-            ? '<a class="btn-primary" style="display:block;text-align:center;text-decoration:none" href="' + p.url + '">Buy ' + p.name + '</a>'
-            : '<a class="btn-primary" style="display:block;text-align:center;text-decoration:none" href="https://wa.me/919682600301">Contact us</a>');
+      var cta;
+      if (mine) {
+        cta = '<span class="btn-primary" style="display:block;text-align:center;opacity:.6">Your current plan</span>';
+      } else if (!D.profile) {
+        cta = '<button class="btn-primary buy-btn" style="width:100%" data-plan="' + p.id + '">Sign in to buy</button>';
+      } else if (p.usd > 100) {
+        cta = '<a class="btn-primary" style="display:block;text-align:center;text-decoration:none" href="https://wa.me/919682600301">Talk to us</a>';
+      } else {
+        cta = '<button class="btn-primary buy-btn" style="width:100%" data-plan="' + p.id + '">Buy ' + p.name + '</button>';
+      }
       el.innerHTML = '<h3 style="margin:0 0 .2rem;font-size:1.05rem">' + p.name + '</h3>'
         + '<div class="plp-price" style="font-size:1.5rem;font-weight:800">' + price + '</div>'
         + per + cta;
@@ -412,6 +417,36 @@
     note.textContent = 'Prices in ' + (currency === 'USD' ? 'US dollars' : 'Indian rupees')
       + '. Subscriptions give you a fresh allowance every day. Credit packs never expire for 12 months.';
     box.appendChild(note);
+  }
+
+
+  /* ---------- buy ---------- */
+  function buy(planId, btn) {
+    if (!D.profile) {
+      toast('Please sign in first.');
+      $('plans-sheet').classList.remove('on');
+      $('settings').classList.remove('on');
+      return;
+    }
+    var was = btn.textContent;
+    btn.textContent = 'Opening Razorpay...';
+    btn.disabled = true;
+    D.client().auth.getSession().then(function (r) {
+      var tok = r.data && r.data.session ? r.data.session.access_token : null;
+      return fetch(FN.replace('/ai', '/create-order'), {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', Authorization: 'Bearer ' + tok },
+        body: JSON.stringify({ plan_id: planId })
+      });
+    }).then(function (r) { return r.json(); }).then(function (d) {
+      if (d.url) { window.location.href = d.url; return; }
+      btn.textContent = was; btn.disabled = false;
+      if (d.error === 'payments_not_configured') toast('Payments are being set up — please try again soon.');
+      else toast('Could not start the payment. Please try again.');
+    }).catch(function () {
+      btn.textContent = was; btn.disabled = false;
+      toast('Network error — please try again.');
+    });
   }
 
   /* ---------- boot ---------- */
@@ -458,6 +493,10 @@
     };
 
     $('plans-close').onclick = function () { $('plans-sheet').classList.remove('on'); };
+    $('pl-panel').addEventListener('click', function (e) {
+      var b = e.target.closest('.buy-btn');
+      if (b) buy(b.dataset.plan, b);
+    });
     $('up-later').onclick = function () { $('upgrade').classList.remove('on'); };
     $('up-cta').onclick = function () { $('upgrade').classList.remove('on'); renderPlans(); $('plans-sheet').classList.add('on'); };
 
@@ -465,6 +504,11 @@
       if (!window.supabase) { showApp(); refreshPlanRow(); newChat(); return; }
       if (!user) { showAuth(); return; }
       start();
+      if (new URLSearchParams(location.search).get('paid')) {
+        history.replaceState(null, '', '/ai/');
+        toast('Payment received — your credits will appear in a moment.');
+        setTimeout(function () { D.loadProfile().then(refreshPlanRow); }, 4000);
+      }
     }).catch(function () { showAuth(); });
   });
 })();
