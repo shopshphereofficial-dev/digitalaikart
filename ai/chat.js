@@ -1,11 +1,11 @@
-/* Digitalaikart AI — chat engine.
+/* Digitalaikart AI — Astral chat engine.
  *
- * All model calls go to our own server function; the browser never holds an
- * upstream key and never learns which model is behind a tier. The user picks
- * an "Astral" tier and the server decides what runs and what it costs.
+ * Model calls go to our own server function; the browser never holds an
+ * upstream key and never learns which model is behind a tier.
  *
- * Chats live in Supabase, so the sidebar can list past conversations and the
- * assistant remembers the person across them.
+ * The chat itself stays clean: no credit counters, no per-message price. The
+ * user's balance and everything else lives in Settings. Upgrade prompts appear
+ * once before the first free message, and whenever the credits run out.
  */
 (function () {
   'use strict';
@@ -15,6 +15,7 @@
   var u = null, busy = false, mode = 'chat', tier = null, convoId = null, convos = [];
   var guest = { used: +(localStorage.getItem('dskAI_used') || 0) };
   var GUEST_LIMIT = 5;
+  var askedUpgrade = localStorage.getItem('dskAI_upgrade_seen') === '1';
 
   /* Public tier list — names and credit prices only. Which model each one maps
      to is decided on the server and is never sent to the browser. */
@@ -33,7 +34,7 @@
   };
   var GUEST_TIER = { chat: 'astryn-lite', image: 'astryn-image' };
 
-  function toast(t) { var e = $('toast'); e.textContent = t; e.classList.add('on'); setTimeout(function () { e.classList.remove('on'); }, 3000); }
+  function toast(t) { var e = $('toast'); if (!e) return; e.textContent = t; e.classList.add('on'); setTimeout(function () { e.classList.remove('on'); }, 3000); }
   function plan() { return D.PLANS[(D.profile && D.profile.plan) || 'free']; }
   function creditsLeft() { return D.profile ? D.profile.tokens : Math.max(0, GUEST_LIMIT - guest.used); }
   function tierFor(id) {
@@ -43,68 +44,82 @@
   }
   function chosen() { return u ? (tier || TIERS[mode][0].id) : GUEST_TIER[mode]; }
   function nfmt(n) { return String(n).replace(/\B(?=(\d{3})+(?!\d))/g, ','); }
+  function initial(n) { return ((n || 'A').trim().charAt(0) || 'A').toUpperCase(); }
 
-  function badge() {
-    var p = plan();
-    $('plan-badge').textContent = D.profile ? p.name + ' PLAN' : 'GUEST MODE';
-    var c = creditsLeft();
-    $('tok-badge').textContent = nfmt(c) + ' credit' + (c === 1 ? '' : 's');
+  function showApp() { $('auth-screen').style.display = 'none'; $('app-screen').style.display = 'flex'; }
+  function showAuth() { $('app-screen').style.display = 'none'; $('auth-screen').style.display = 'block'; }
+
+  /* ---------- theme ---------- */
+  function applyTheme(t) {
+    document.documentElement.setAttribute('data-theme', t);
+    localStorage.setItem('dskAI_theme', t);
+    var b = $('theme-btn'); if (b) b.innerHTML = t === 'dark' ? '&#9790;' : '&#9788;';
+    var s = $('set-theme'); if (s) s.textContent = t === 'dark' ? 'Dark' : 'Light';
+  }
+  function toggleTheme() {
+    var t = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+    applyTheme(t);
   }
 
-  function addMsg(role, text, cls) {
-    var m = document.createElement('div');
-    m.className = 'msg ' + (role === 'user' ? 'user' : 'ai') + (cls ? ' ' + cls : '');
-    m.textContent = text;
-    $('msgs').appendChild(m);
-    $('msgs').scrollTop = $('msgs').scrollHeight;
-    return m;
-  }
-  function linkify(m) { m.innerHTML = m.textContent.replace(/(https?:\/\/[^\s)]+)/g, '<a href="$1" target="_blank" rel="noopener">$1</a>'); }
+  /* ---------- model picker ---------- */
+  function openModelMenu() {
+    var old = document.getElementById('model-menu');
+    if (old) { old.remove(); return; }
+    var btn = $('model-btn');
+    var menu = document.createElement('div');
+    menu.id = 'model-menu';
+    menu.style.cssText = 'position:absolute;z-index:130;background:#fff;border:1px solid var(--border);border-radius:14px;box-shadow:0 18px 45px rgba(15,23,42,.18);padding:.4rem;min-width:250px';
+    var r = btn.getBoundingClientRect();
+    menu.style.top = (r.bottom + 6) + 'px';
+    menu.style.left = Math.max(8, r.left) + 'px';
 
-  function showChat() { $('auth-screen').style.display = 'none'; $('chat-screen').style.display = 'flex'; }
-  function showAuth() { $('chat-screen').style.display = 'none'; $('auth-screen').style.display = 'block'; }
+    ['chat', 'image'].forEach(function (k) {
+      var h = document.createElement('div');
+      h.style.cssText = 'font-size:.6rem;letter-spacing:.08em;color:#94a3b8;font-weight:800;padding:.45rem .6rem .2rem';
+      h.textContent = k === 'chat' ? 'CHAT' : 'CREATE IMAGE';
+      menu.appendChild(h);
+      TIERS[k].forEach(function (t) {
+        var b = document.createElement('button');
+        b.type = 'button';
+        b.style.cssText = 'display:flex;flex-direction:column;align-items:flex-start;gap:.1rem;width:100%;text-align:left;background:' +
+          (mode === k && chosen() === t.id ? '#eef2ff' : 'none') + ';border:none;border-radius:10px;padding:.5rem .6rem;cursor:pointer;font-family:inherit';
+        b.innerHTML = '<b style="font-size:.82rem;color:#0f172a">' + t.name + '</b>' +
+          '<small style="font-size:.68rem;color:#64748b">' + t.blurb + '</small>';
+        b.onclick = function () { mode = k; tier = t.id; closeModelMenu(); updateModelLabel(); };
+        menu.appendChild(b);
+      });
+    });
+    document.body.appendChild(menu);
+    setTimeout(function () { document.addEventListener('click', closeModelMenu, { once: true }); }, 10);
+  }
+  function closeModelMenu() { var m = document.getElementById('model-menu'); if (m) m.remove(); }
+  function updateModelLabel() {
+    $('model-name').textContent = tierFor(chosen()).name;
+    $('ai-in').placeholder = mode === 'image' ? 'Describe the image you want...' : 'Ask Astral anything...';
+  }
+
+  /* ---------- upgrade popup ---------- */
+  function showUpgrade(kind) {
+    var t = $('up-title'), x = $('up-text'), b = $('up-badge');
+    if (kind === 'out') {
+      b.innerHTML = '&#9888;';
+      t.textContent = 'You are out of credits';
+      x.textContent = D.profile
+        ? 'Your credits for this month are used up. Upgrade for thousands more every month.'
+        : 'You have used your ' + GUEST_LIMIT + ' free messages. Create a free account for 50 credits a month, or pick a plan.';
+    } else {
+      b.innerHTML = '&#9733;';
+      t.textContent = 'Unlock more of Astral';
+      x.textContent = D.profile
+        ? 'You have ' + nfmt(creditsLeft()) + ' credits on the ' + plan().name + ' plan. Upgrade for thousands every month.'
+        : 'You have ' + GUEST_LIMIT + ' free messages to try Astral. Free accounts get 50 credits a month; paid plans get thousands.';
+    }
+    $('upgrade').classList.add('on');
+  }
 
   /* ---------- sidebar ---------- */
-  function buildSidebar() {
-    var st = document.createElement('style');
-    st.textContent =
-      '.ai-wrap{max-width:1080px}'
-      + '#chat-screen{gap:.9rem;align-items:stretch}'
-      + '#sb{width:236px;flex:0 0 236px;background:#ffffff;border:1px solid var(--border);border-radius:16px;padding:.7rem;display:flex;flex-direction:column;gap:.4rem;max-height:74vh}'
-      + '#sb .sb-new{background:linear-gradient(135deg,#1d4ed8,#1e40af);color:#fff;border:none;border-radius:11px;padding:.6rem;font-weight:800;font-size:.82rem;cursor:pointer;font-family:inherit}'
-      + '#sb .sb-h{font-size:.62rem;letter-spacing:.06em;color:#94a3b8;font-weight:700;margin:.5rem .2rem .1rem}'
-      + '#sb .sb-list{flex:1;overflow-y:auto;display:flex;flex-direction:column;gap:.2rem}'
-      + '#sb .sb-item{display:flex;align-items:center;gap:.35rem;padding:.45rem .5rem;border-radius:9px;cursor:pointer;font-size:.76rem;color:#334155;line-height:1.3}'
-      + '#sb .sb-item:hover{background:#f1f5f9}'
-      + '#sb .sb-item.on{background:#eef2ff;color:#1d4ed8;font-weight:700}'
-      + '#sb .sb-item span{flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}'
-      + '#sb .sb-del{opacity:0;border:none;background:none;color:#94a3b8;cursor:pointer;font-size:.8rem;padding:0 .15rem}'
-      + '#sb .sb-item:hover .sb-del{opacity:1}'
-      + '#sb .sb-del:hover{color:#dc2626}'
-      + '#sb .sb-empty{font-size:.72rem;color:#94a3b8;padding:.5rem;line-height:1.5}'
-      + '#sb-toggle{display:none;background:#fff;border:1px solid var(--border);border-radius:10px;padding:.35rem .6rem;font-size:.75rem;cursor:pointer;font-family:inherit}'
-      + '@media(max-width:820px){#sb{position:fixed;left:.6rem;right:.6rem;top:5.4rem;z-index:60;width:auto;flex:1 1 auto;box-shadow:0 24px 60px rgba(15,23,42,.25);display:none}#sb.on{display:flex}#sb-toggle{display:inline-block}}';
-    document.head.appendChild(st);
-
-    var sb = document.createElement('aside');
-    sb.id = 'sb';
-    sb.innerHTML = '<button class="sb-new" type="button">+ New chat</button>'
-      + '<div class="sb-h">RECENT</div><div class="sb-list" id="sb-list"></div>';
-    var host = $('chat-screen');
-    host.insertBefore(sb, host.firstChild.nextSibling);
-    sb.querySelector('.sb-new').onclick = newChat;
-
-    var tb = document.createElement('button');
-    tb.id = 'sb-toggle';
-    tb.type = 'button';
-    tb.textContent = '☰ Chats';
-    tb.onclick = function () { sb.classList.toggle('on'); };
-    var topbar = document.querySelector('.topbar');
-    topbar.insertBefore(tb, topbar.firstChild);
-  }
-
   function renderSidebar() {
-    var box = document.getElementById('sb-list');
+    var box = $('sb-list');
     if (!box) return;
     box.innerHTML = '';
     if (!u) {
@@ -119,12 +134,10 @@
       var row = document.createElement('div');
       row.className = 'sb-item' + (c.id === convoId ? ' on' : '');
       var label = document.createElement('span');
+      label.className = 't';
       label.textContent = c.title || 'New chat';
       var del = document.createElement('button');
-      del.className = 'sb-del';
-      del.type = 'button';
-      del.title = 'Delete';
-      del.textContent = '✕';
+      del.className = 'sb-del'; del.type = 'button'; del.title = 'Delete'; del.textContent = '\u2715';
       del.onclick = function (e) { e.stopPropagation(); deleteConvo(c.id); };
       row.appendChild(label); row.appendChild(del);
       row.onclick = function () { openConvo(c.id); };
@@ -142,17 +155,25 @@
   function newChat() {
     convoId = null;
     $('msgs').innerHTML = '';
-    addMsg('ai', 'Hi ' + ((D.profile && D.profile.name) || 'there') + '! I am Astral. What shall we work on?');
+    greet();
     renderSidebar();
-    var sb = document.getElementById('sb'); if (sb) sb.classList.remove('on');
+    var sb = $('sb'); if (sb) sb.classList.remove('on');
+  }
+
+  function greet() {
+    var name = (D.profile && D.profile.name) || '';
+    var m = document.createElement('div');
+    m.className = 'msg ai';
+    m.textContent = name
+      ? 'Hi ' + name + '! I am Astral. What shall we work on?'
+      : 'Hi! I am Astral, Digitalaikart\'s assistant. What shall we work on?';
+    $('msgs').appendChild(m);
   }
 
   function openConvo(id) {
     convoId = id;
-    var sb = document.getElementById('sb'); if (sb) sb.classList.remove('on');
+    var sb = $('sb'); if (sb) sb.classList.remove('on');
     $('msgs').innerHTML = '';
-    var c = convos.filter(function (x) { return x.id === id; })[0];
-    if (c && c.title) $('msgs').dataset.title = c.title;
     D.client().from('conversations').select('msgs').eq('id', id).maybeSingle().then(function (r) {
       var msgs = (r.data && r.data.msgs) || [];
       if (!msgs.length) return newChat();
@@ -172,82 +193,29 @@
     });
   }
 
-  /* ---------- mode + tier picker ---------- */
-  function buildPicker() {
-    var bar = document.createElement('div');
-    bar.id = 'tier-bar';
-    bar.style.cssText = 'display:flex;flex-wrap:wrap;gap:.4rem;align-items:center;padding:.5rem .6rem 0';
-
-    ['chat', 'image'].forEach(function (k) {
-      var b = document.createElement('button');
-      b.type = 'button';
-      b.dataset.mode = k;
-      b.textContent = k === 'chat' ? 'Chat' : 'Create image';
-      b.className = 'tier-mode';
-      b.onclick = function () {
-        if (mode === k) return;
-        mode = k; tier = null;
-        $('ai-in').placeholder = k === 'chat' ? 'Type your question...' : 'Describe the image you want...';
-        renderPicker();
-      };
-      bar.appendChild(b);
-    });
-
-    var sel = document.createElement('select');
-    sel.id = 'tier-select';
-    sel.style.cssText = 'margin-left:auto;background:#fff;border:1px solid #cbd5e1;border-radius:9px;padding:.4rem .5rem;font-size:.75rem;font-family:inherit;color:#0f172a';
-    sel.onchange = function () { tier = sel.value; renderPicker(); };
-    bar.appendChild(sel);
-
-    var host = document.querySelector('.ai-input');
-    host.parentNode.insertBefore(bar, host);
-
-    var note = document.createElement('div');
-    note.id = 'tier-note';
-    note.style.cssText = 'padding:.25rem .7rem 0;font-size:.68rem;color:#64748b';
-    host.parentNode.insertBefore(note, host);
-
-    var st = document.createElement('style');
-    st.textContent = '.tier-mode{background:#fff;border:1px solid #cbd5e1;color:#1d4ed8;border-radius:99px;padding:.3rem .8rem;font-size:.72rem;font-weight:700;cursor:pointer;font-family:inherit}'
-      + '.tier-mode.on{background:linear-gradient(135deg,#1d4ed8,#1e40af);color:#fff;border-color:transparent}';
-    document.head.appendChild(st);
-
-    renderPicker();
+  /* ---------- messages ---------- */
+  function addMsg(role, text, cls) {
+    var m = document.createElement('div');
+    m.className = 'msg ' + (role === 'user' ? 'user' : 'ai') + (cls ? ' ' + cls : '');
+    m.textContent = text;
+    $('msgs').appendChild(m);
+    $('msgs').scrollTop = $('msgs').scrollHeight;
+    return m;
   }
-
-  function renderPicker() {
-    var bar = document.getElementById('tier-bar');
-    if (!bar) return;
-    bar.querySelectorAll('.tier-mode').forEach(function (b) { b.classList.toggle('on', b.dataset.mode === mode); });
-
-    var sel = document.getElementById('tier-select');
-    sel.innerHTML = '';
-    TIERS[mode].forEach(function (t) {
-      var o = document.createElement('option');
-      o.value = t.id;
-      o.textContent = t.name + ' · ' + nfmt(t.cost) + ' credits';
-      sel.appendChild(o);
-    });
-    sel.value = chosen();
-
-    var t = tierFor(chosen());
-    var note = document.getElementById('tier-note');
-    if (u) {
-      note.textContent = t.name + ' — ' + t.blurb + ' · ' + nfmt(t.cost) + ' credits per ' + (mode === 'chat' ? 'message' : 'image');
-      sel.disabled = false;
-    } else {
-      note.textContent = 'Guest mode: ' + GUEST_LIMIT + ' free messages on Astral Lite. Log in to unlock higher tiers.';
-      sel.disabled = true;
-    }
-  }
+  function linkify(m) { m.innerHTML = m.textContent.replace(/(https?:\/\/[^\s)]+)/g, '<a href="$1" target="_blank" rel="noopener">$1</a>'); }
 
   /* ---------- send ---------- */
   function send(text) {
     text = (text || '').trim();
     if (!text || busy) return;
+
     var need = tierFor(chosen()).cost;
-    if (u && creditsLeft() < need) { $('paywall').classList.add('on'); return; }
-    if (!u && creditsLeft() <= 0) { $('paywall').classList.add('on'); return; }
+    if (creditsLeft() < need) { showUpgrade('out'); return; }
+    if (!askedUpgrade) {
+      askedUpgrade = true;
+      localStorage.setItem('dskAI_upgrade_seen', '1');
+      showUpgrade('first');
+    }
 
     busy = true;
     addMsg('user', text);
@@ -262,52 +230,44 @@
         if (payload.reply) { var cap = document.createElement('div'); cap.textContent = payload.reply; wrap.appendChild(cap); }
         var img = document.createElement('img');
         img.src = 'data:image/jpeg;base64,' + payload.image;
-        img.alt = 'Image created with Digitalaikart AI';
+        img.alt = 'Image created with Astral AI';
         img.style.cssText = 'max-width:100%;border-radius:12px;margin-top:.4rem;display:block';
         wrap.appendChild(img);
         $('msgs').appendChild(wrap);
         $('msgs').scrollTop = $('msgs').scrollHeight;
       } else {
-        var m = addMsg('ai', payload.reply);
-        linkify(m);
+        linkify(addMsg('ai', payload.reply));
       }
       if (payload.conversation_id) convoId = payload.conversation_id;
       if (D.profile && typeof payload.credits === 'number') D.profile.tokens = payload.credits;
       else if (!D.profile) { guest.used++; localStorage.setItem('dskAI_used', guest.used); }
-      badge(); renderPicker();
+      refreshPlanRow();
       if (u) loadConvos();
       busy = false;
-      if (creditsLeft() <= 0) setTimeout(function () { $('paywall').classList.add('on'); }, 900);
+      if (creditsLeft() < tierFor(chosen()).cost) setTimeout(function () { showUpgrade('out'); }, 800);
     }
 
     function fail(msg, code) {
       think.remove();
       addMsg('ai', msg);
       busy = false;
-      if (code === 'not_enough_credits' || code === 'guest_limit') {
-        setTimeout(function () { $('paywall').classList.add('on'); }, 700);
-      }
-    }
-
-    function call(token) {
-      var headers = { 'Content-Type': 'application/json' };
-      if (token) headers.Authorization = 'Bearer ' + token;
-      return fetch(FN, {
-        method: 'POST',
-        headers: headers,
-        body: JSON.stringify({ kind: mode, tier: chosen(), prompt: text, conversation_id: convoId })
-      }).then(function (r) { return r.json(); });
+      if (code === 'not_enough_credits' || code === 'guest_limit') setTimeout(function () { showUpgrade('out'); }, 600);
     }
 
     var p = D.client ? D.client().auth.getSession() : Promise.resolve({ data: {} });
     p.then(function (s) {
       var token = s.data && s.data.session ? s.data.session.access_token : null;
-      return call(token);
+      var headers = { 'Content-Type': 'application/json' };
+      if (token) headers.Authorization = 'Bearer ' + token;
+      return fetch(FN, {
+        method: 'POST', headers: headers,
+        body: JSON.stringify({ kind: mode, tier: chosen(), prompt: text, conversation_id: convoId })
+      }).then(function (r) { return r.json(); });
     }).then(function (b) {
       if (b.reply || b.image) return finish(b);
-      if (b.error === 'not_enough_credits') return fail('You are out of credits. Upgrade to keep going — plans start at ₹199/month.', b.error);
-      if (b.error === 'guest_limit') return fail('You have used your ' + GUEST_LIMIT + ' free guest messages. Create a free account to keep chatting.', b.error);
-      if (b.error === 'ai_not_configured') return fail('The assistant is being set up right now — please try again shortly.', b.error);
+      if (b.error === 'not_enough_credits') return fail('You are out of credits for this month.', b.error);
+      if (b.error === 'guest_limit') return fail('You have used your free guest messages. Create an account to keep going.', b.error);
+      if (b.error === 'ai_not_configured') return fail('Astral is being set up right now — please try again shortly.', b.error);
       fail('Sorry, something went wrong. Please try again.', b.error);
     }).catch(function () {
       fail('Network error — check your internet and try again.');
@@ -315,31 +275,96 @@
   }
 
   /* ---------- settings ---------- */
+  function refreshPlanRow() {
+    var pf = D.profile;
+    var pname = pf ? plan().name : 'Guest';
+    var left = creditsLeft();
+    $('set-plan-name').textContent = pf ? pname + ' plan' : 'Guest';
+    $('set-plan-credits').textContent = pf
+      ? nfmt(left) + ' credits left this month'
+      : GUEST_LIMIT + ' free messages (used ' + guest.used + ')';
+    $('sb-plan').textContent = pf ? pname : 'Guest';
+    $('sb-name').textContent = (pf && pf.name) || (u ? 'You' : 'Guest');
+    $('sb-av').textContent = initial(pf && pf.name);
+    var av = $('set-account').querySelector('.sb-av'); if (av) av.textContent = initial(pf && pf.name);
+    $('set-acct-name').textContent = (pf && pf.name) || 'You';
+    $('set-acct-mail').textContent = (u && u.email) || 'not signed in';
+  }
+
+  function renderProducts() {
+    var box = $('set-products');
+    box.innerHTML = '';
+    if (!D.profile) { box.innerHTML = '<div class="set-hint">Log in to see the products included in your plan.</div>'; return; }
+    var p = plan();
+    if (!p.products.length) {
+      box.innerHTML = '<div class="set-hint">No products included on the ' + p.name + ' plan. Starter, Pro and Ultimate include free products.</div>';
+      return;
+    }
+    p.products.forEach(function (pr) {
+      var a = document.createElement('a');
+      a.href = pr[1]; a.textContent = '\u2913 ' + pr[0]; a.setAttribute('download', '');
+      box.appendChild(a);
+    });
+  }
+
   function renderSettings() {
     var pf = D.profile;
     $('set-name').value = (pf && pf.name) || '';
     var ta = $('set-role');
     ta.value = (pf && pf.role) || '';
-    if (pf && plan().role) { ta.disabled = false; ta.placeholder = 'e.g. You are my strict startup mentor. Give blunt, actionable advice.'; }
-    else { ta.disabled = true; ta.placeholder = 'Custom AI role is available on Pro and Ultimate plans.'; }
-    var fp = $('free-prods');
-    fp.innerHTML = '';
-    if (pf && plan().products.length) {
-      var h = document.createElement('div');
-      h.innerHTML = '<strong style="color:var(--gold)">Free products included in your plan:</strong><br>';
-      fp.appendChild(h);
-      plan().products.forEach(function (pr) {
-        var a = document.createElement('a');
-        a.href = pr[1]; a.textContent = '⬇ ' + pr[0]; a.download = ''; a.style.display = 'block'; a.style.margin = '.2rem 0';
-        fp.appendChild(a);
-      });
-    }
+    var canRole = pf && plan().role;
+    ta.disabled = !canRole;
+    $('set-role-hint').textContent = canRole
+      ? 'Astral will follow this in every chat.'
+      : 'Custom instructions are available on Pro and Ultimate.';
+    renderProducts();
+    refreshPlanRow();
   }
 
+  /* ---------- plans sheet ---------- */
+  var PLAN_CATALOG = [
+    { id: 'free',     name: 'Free',     price: 0,   tagline: 'Try it out',      url: '/ai/',
+      features: ['50 credits every month', 'Astral Lite tier', '5 free messages as a guest', 'Chat history saved when you log in'] },
+    { id: 'starter',  name: 'Starter',  price: 199, tagline: 'For casual users', url: 'https://rzp.io/rzp/y7aVauN',
+      features: ['4,000 credits every month', 'Every Astral tier, including Max', 'Chat history saved', 'AI Job Hunt Kit free (worth ₹99)'] },
+    { id: 'pro',      name: 'Pro',      price: 499, tagline: 'Most popular',     url: 'https://rzp.io/rzp/DPTeSSA',
+      features: ['10,000 credits every month', 'Every Astral tier, including Max', 'Longer memory of your conversations', 'Custom instructions and roleplay', 'AI Job Hunt Kit free (worth ₹99)'] },
+    { id: 'ultimate', name: 'Ultimate', price: 999, tagline: 'For power users',  url: 'https://rzp.io/rzp/MMtjP37i',
+      features: ['20,000 credits every month', 'Every Astral tier, including Max', 'Longest memory of your conversations', 'Custom instructions and roleplay', 'ALL Digitalaikart products free, including future ones'] }
+  ];
+  var planTab = 'pro';
+
+  function renderPlans() {
+    var tabs = $('pl-tabs');
+    tabs.innerHTML = '';
+    PLAN_CATALOG.forEach(function (p) {
+      var b = document.createElement('button');
+      b.type = 'button';
+      b.textContent = p.name;
+      b.className = p.id === planTab ? 'on' : '';
+      b.onclick = function () { planTab = p.id; renderPlans(); };
+      tabs.appendChild(b);
+    });
+    var p = PLAN_CATALOG.filter(function (x) { return x.id === planTab; })[0];
+    var mine = D.profile && D.profile.plan === p.id;
+    var panel = $('pl-panel');
+    panel.innerHTML = '<h3>' + p.name + '</h3>'
+      + '<div class="plp-price">' + (p.price ? '₹' + p.price : '₹0') + '<span>/month</span></div>'
+      + '<div class="plp-tag">' + p.tagline + '</div>'
+      + '<ul>' + p.features.map(function (f) { return '<li>' + f + '</li>'; }).join('') + '</ul>'
+      + (mine
+          ? '<a class="btn-primary" href="/ai/plans.html">Your current plan</a>'
+          : '<a class="btn-primary" href="' + p.url + '">' + (p.price ? 'Choose ' + p.name : 'Start free') + '</a>');
+  }
+
+  /* ---------- boot ---------- */
   function start() {
     u = D.user;
-    if (!u) { showChat(); badge(); renderPicker(); newChat(); return; }
-    showChat(); badge(); renderPicker(); renderSettings();
+    showApp();
+    updateModelLabel();
+    refreshPlanRow();
+    if (!u) { newChat(); return; }
+    renderSettings();
     loadConvos().then(function () {
       if (convos.length) openConvo(convos[0].id); else newChat();
     });
@@ -347,28 +372,40 @@
   window.DSK_START = start;
 
   document.addEventListener('DOMContentLoaded', function () {
-    buildSidebar();
-    buildPicker();
+    applyTheme(localStorage.getItem('dskAI_theme') || 'light');
+
+    $('theme-btn').onclick = toggleTheme;
+    $('model-btn').onclick = openModelMenu;
+    $('sb-new').onclick = newChat;
+    $('sb-settings').onclick = function () { renderSettings(); $('settings').classList.add('on'); };
+    $('avatar-btn').onclick = function () { renderSettings(); $('settings').classList.add('on'); };
+    $('sb-toggle').onclick = function () { $('sb').classList.toggle('on'); };
+
     $('ai-send').onclick = function () { send($('ai-in').value); };
     $('ai-in').addEventListener('keydown', function (e) { if (e.key === 'Enter') send($('ai-in').value); });
-    document.querySelectorAll('.ai-suggest button').forEach(function (b) {
+    document.querySelectorAll('#suggest button').forEach(function (b) {
       b.onclick = function () { send(b.dataset.q || b.textContent); };
     });
-    $('btn-later').onclick = function () { $('paywall').classList.remove('on'); };
-    $('btn-logout').onclick = function () { D.logout(); };
-    $('btn-new').onclick = function () { newChat(); };
-    $('btn-settings').onclick = function () { renderSettings(); $('settings').classList.add('on'); };
+
     $('set-close').onclick = function () { $('settings').classList.remove('on'); };
+    $('set-theme').onclick = toggleTheme;
+    $('set-upgrade').onclick = function () { $('settings').classList.remove('on'); renderPlans(); $('plans-sheet').classList.add('on'); };
+    $('set-allplans').onclick = function () { $('settings').classList.remove('on'); renderPlans(); $('plans-sheet').classList.add('on'); };
+    $('set-logout').onclick = function () { D.logout(); };
     $('set-save').onclick = function () {
-      if (!D.profile) return;
+      if (!D.profile) { toast('Create an account to save your settings.'); return; }
       var patch = {};
       var n = $('set-name').value.trim(); if (n) patch.name = n;
       if (plan().role) patch.role = $('set-role').value.trim().slice(0, 500);
-      D.saveProfile(patch).then(function () { toast('Saved!'); $('settings').classList.remove('on'); });
+      D.saveProfile(patch).then(function () { refreshPlanRow(); toast('Saved!'); $('settings').classList.remove('on'); });
     };
 
+    $('plans-close').onclick = function () { $('plans-sheet').classList.remove('on'); };
+    $('up-later').onclick = function () { $('upgrade').classList.remove('on'); };
+    $('up-cta').onclick = function () { $('upgrade').classList.remove('on'); renderPlans(); $('plans-sheet').classList.add('on'); };
+
     D.readyCheck().then(function (user) {
-      if (!window.supabase) { showChat(); badge(); return; }
+      if (!window.supabase) { showApp(); refreshPlanRow(); newChat(); return; }
       if (!user) { showAuth(); return; }
       start();
     }).catch(function () { showAuth(); });
