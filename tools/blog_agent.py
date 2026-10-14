@@ -12,6 +12,7 @@ Environment:
 import os
 import re
 import json
+import time
 import base64
 import html
 import datetime
@@ -37,12 +38,13 @@ IMAGE_MODELS = ['gemini-3.1-flash-image', 'gemini-3-pro-image', 'gemini-2.5-flas
 API = 'https://generativelanguage.googleapis.com/v1beta/models/'
 
 FEEDS = [
-    'https://news.google.com/rss/search?q=artificial+intelligence+India+when:3d&hl=en-IN&gl=IN&ceid=IN:en',
-    'https://news.google.com/rss/search?q=%22artificial+intelligence%22+when:2d&hl=en-IN&gl=IN&ceid=IN:en',
+    'https://news.google.com/rss/search?q=artificial+intelligence+India+when:3d&hl=en-IN&gl=in&ceid=IN:en',
+    'https://news.google.com/rss/search?q=%22artificial+intelligence%22+when:2d&hl=en-IN&gl=in&ceid=IN:en',
     'https://techcrunch.com/category/artificial-intelligence/feed/',
 ]
 
 UA = 'Mozilla/5.0 (compatible; DigitalaikartBlogBot/1.0)'
+TRANSIENT = ('503', '500', '502', '504', '429', 'timed out', 'TimeoutError', 'URLError', 'RemoteDisconnected', 'Connection reset')
 
 
 # ---------------------------------------------------------------- helpers
@@ -50,6 +52,29 @@ def http_get(url, timeout=30):
     req = urllib.request.Request(url, headers={'User-Agent': UA})
     with urllib.request.urlopen(req, timeout=timeout) as r:
         return r.read()
+
+
+def post_json(url, payload, timeout=180):
+    body = json.dumps(payload).encode()
+    req = urllib.request.Request(url, data=body, headers={'Content-Type': 'application/json'})
+    with urllib.request.urlopen(req, timeout=timeout) as r:
+        return json.loads(r.read())
+
+
+def with_retries(fn, label='', attempts=3, base=6):
+    """Ride out transient Google 503/429/network blips."""
+    last = None
+    for i in range(attempts):
+        try:
+            return fn()
+        except Exception as e:
+            last = e
+            msg = str(e)
+            print('%s attempt %d/%d failed: %s' % (label, i + 1, attempts, msg[:90]))
+            if not any(t in msg for t in TRANSIENT) or i == attempts - 1:
+                break
+            time.sleep(base * (2 ** i))
+    raise last
 
 
 def slugify(s, maxlen=60):
@@ -75,17 +100,15 @@ def strip_tags(s):
 
 # ---------------------------------------------------------------- gemini
 def gemini_text(prompt):
-    body = json.dumps({
+    payload = {
         'contents': [{'parts': [{'text': prompt}]}],
         'generationConfig': {'responseMimeType': 'application/json', 'temperature': 0.8},
-    }).encode()
+    }
     last = None
     for model in TEXT_MODELS:
         try:
-            req = urllib.request.Request(API + model + ':generateContent?key=' + KEY,
-                                         data=body, headers={'Content-Type': 'application/json'})
-            with urllib.request.urlopen(req, timeout=180) as r:
-                d = json.loads(r.read())
+            d = with_retries(lambda m=model: post_json(API + m + ':generateContent?key=' + KEY, payload, 180),
+                             label='text ' + model)
             txt = d['candidates'][0]['content']['parts'][0]['text']
             print('text model:', model)
             return json.loads(txt)
@@ -96,13 +119,11 @@ def gemini_text(prompt):
 
 
 def gemini_image(prompt):
-    body = json.dumps({'contents': [{'parts': [{'text': prompt}]}]}).encode()
+    payload = {'contents': [{'parts': [{'text': prompt}]}]}
     for model in IMAGE_MODELS:
         try:
-            req = urllib.request.Request(API + model + ':generateContent?key=' + KEY,
-                                         data=body, headers={'Content-Type': 'application/json'})
-            with urllib.request.urlopen(req, timeout=240) as r:
-                d = json.loads(r.read())
+            d = with_retries(lambda m=model: post_json(API + m + ':generateContent?key=' + KEY, payload, 240),
+                             label='image ' + model)
             for part in d['candidates'][0]['content']['parts']:
                 if 'inlineData' in part:
                     print('image model:', model)
