@@ -56,6 +56,23 @@ HEX_MAP = {
     '#334155': '#64748b',
     '#475569': '#94a3b8',
     '#22c55e': '#16a34a',   # --green in :root (per the specified :root block)
+    # --- palette completion: same roles as the table above, on the few
+    #     elements that used near-duplicate tones. Needed so no text is left
+    #     light-on-light or dark-on-dark (e.g. the /ai/ app, the hero book
+    #     cover and the spotlight cover). Colour values only. ---
+    '#eef4fb': '#0f172a',   # light text -> dark text
+    '#e8eef7': '#0f172a',
+    '#c7d2e2': '#334155',
+    '#8fa0b8': '#475569',
+    '#7c8aa0': '#475569',
+    '#5d6c84': '#64748b',
+    '#0d1f38': '#ffffff',   # dark surface -> white
+    '#0d1b33': '#f8fafc',
+    '#13274a': '#d6dee9',   # book / spotlight cover navy -> light tint
+    '#1e3f70': '#c2ccda',
+    '#183156': '#ccd5e0',
+    '#16294a': '#d6dee9',
+    '#1f3a66': '#c2ccda',
 }
 
 # Optional rgba() tint recolour (off by default): rgb triple -> rgb triple.
@@ -68,6 +85,19 @@ RGBA_MAP = {
 HEX_RE = re.compile(r'#([0-9a-fA-F]{6})(?![0-9a-fA-F])')
 CSS_MARKER = '/* theme:light */'
 HTML_MARKER = '<!-- theme:light -->'
+
+# Palette-completion entries. Applied as a second pass to files that already
+# carry the marker, so an already-converted tree can pick up later additions
+# without re-running the whole map (which is not idempotent). None of these
+# source values is an output of HEX_MAP, so the second pass can never touch an
+# already-mapped value.
+SECOND_PASS = {
+    '#eef4fb': '#0f172a', '#e8eef7': '#0f172a', '#c7d2e2': '#334155',
+    '#8fa0b8': '#475569', '#7c8aa0': '#475569', '#5d6c84': '#64748b',
+    '#0d1f38': '#ffffff', '#0d1b33': '#f8fafc',
+    '#13274a': '#d6dee9', '#1e3f70': '#c2ccda', '#183156': '#ccd5e0',
+    '#16294a': '#d6dee9', '#1f3a66': '#c2ccda',
+}
 
 # Files never touched (generated / explicitly excluded by the brief).
 EXCLUDE = {'blog/index.html'}
@@ -86,6 +116,8 @@ def all_pages():
         if f.endswith('.html'):
             out.append(f)
     pdir = os.path.join(ROOT, 'products')
+    if os.path.isfile(os.path.join(pdir, 'index.html')):
+        out.append('products/index.html')   # the /products/ listing page
     for d in sorted(os.listdir(pdir)):
         p = os.path.join(pdir, d, 'index.html')
         if os.path.isfile(p):
@@ -106,10 +138,11 @@ def all_pages():
     return [p for p in out if p not in EXCLUDE]
 
 
-def convert_hex(text):
+def convert_hex(text, mapping=None):
+    mapping = HEX_MAP if mapping is None else mapping
     def repl(m):
         key = '#' + m.group(1).lower()
-        return HEX_MAP.get(key, m.group(0))
+        return mapping.get(key, m.group(0))
     return HEX_RE.sub(repl, text)
 
 
@@ -128,20 +161,19 @@ def fix_nav(text):
 def process(path, dry, use_rgba, contrast_fix):
     full = os.path.join(ROOT, path)
     src = open(full, encoding='utf-8').read()
-    if CSS_MARKER in src or HTML_MARKER in src:
-        return ('skip', path)
-    out = convert_hex(src)
+    already = CSS_MARKER in src or HTML_MARKER in src
+    out = convert_hex(src, SECOND_PASS if already else None)
     if use_rgba:
         out = convert_rgba(out)
     if contrast_fix and path == 'assets/style.css':
         out = fix_nav(out)
     if out == src:
-        return ('unchanged', path)
+        return ('skip' if already else 'unchanged', path)
     if not dry:
-        if path.endswith('.css'):
-            out = out.rstrip('\n') + '\n' + CSS_MARKER + '\n'
-        else:
-            if re.search(r'<head[^>]*>', out, re.I):
+        if not already:
+            if path.endswith('.css'):
+                out = out.rstrip('\n') + '\n' + CSS_MARKER + '\n'
+            elif re.search(r'<head[^>]*>', out, re.I):
                 out = re.sub(r'(<head[^>]*>)', r'\1' + HTML_MARKER, out, count=1, flags=re.I)
             else:
                 out = HTML_MARKER + '\n' + out
