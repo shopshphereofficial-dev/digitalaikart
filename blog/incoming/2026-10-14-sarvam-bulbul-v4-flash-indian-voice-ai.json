@@ -1,0 +1,84 @@
+{
+  "date": "2026-10-14",
+  "title": "Sarvam's Bulbul V4 Flash: cheaper, faster Indian-language voice AI",
+  "slug": "sarvam-bulbul-v4-flash-indian-voice-ai",
+  "category": "AI Products",
+  "description": "Sarvam AI's new Bulbul V4 Flash brings natural, expressive text-to-speech to 11 Indian languages at Rs 20 per 10,000 characters, a third cheaper than Bulbul V3.",
+  "emoji": "🔊",
+  "keywords": [
+    "Sarvam AI",
+    "Bulbul V4 Flash",
+    "text to speech",
+    "Indian languages",
+    "voice AI"
+  ],
+  "tags": [
+    "#AI",
+    "#SarvamAI",
+    "#VoiceAI",
+    "#IndiaAI"
+  ],
+  "tldr": [
+    "Sarvam AI has launched Bulbul V4 Flash, its latest text-to-speech model for Indian languages.",
+    "It costs Rs 20 per 10,000 characters, a third less than Bulbul V3, and runs up to 40 per cent faster.",
+    "It offers 83 voices across 11 Indian languages and returns first audio in under 250 milliseconds.",
+    "It lands as India's AI ecosystem shifts towards smaller, cheaper, localised models."
+  ],
+  "sections": [
+    {
+      "heading": "A new voice model built for Indian languages",
+      "paragraphs": [
+        "Bengaluru-based Sarvam AI has launched Bulbul V4 Flash, its latest text-to-speech model, which it says delivers more natural and expressive speech across Indian languages while being faster and cheaper to run. The company describes it as its best voice model yet, built specifically for real-time conversations rather than slow, batch narration.",
+        "According to Sarvam, Bulbul V4 Flash returns the first audio in under 250 milliseconds in production and runs up to 40 per cent faster than its previous model, Bulbul V3, under comparable load. It is priced at Rs 20 per 10,000 characters, down from Rs 30 for Bulbul V3, on the same API, so the improvement does not require a new integration. Sarvam says the speed is designed to hold up even when thousands of calls are running at the same time."
+        ,"Bulbul V4 Flash is available now through the Sarvam API, the Playground and Content Studio. Output can be tuned with configurable controls and sample rates from 8 kHz to 48 kHz, in formats including WAV, MP3, FLAC and AAC."
+      ]
+    },
+    {
+      "heading": "Why price and latency decide voice AI in India",
+      "paragraphs": [
+        "For voice agents, latency is everything. On a phone call, a pause of even a second makes a conversation feel broken. Indian companies are increasingly deploying AI voices for customer care, sales, collections, banking and e-commerce helplines that handle thousands of calls at once, and Sarvam says it rebuilt its inference stack to keep responses fast and predictable when many conversations run in parallel.",
+        "Cost matters just as much. As AI infrastructure costs rise, India's ecosystem is moving towards smaller, more efficient models that do a specific job well, rather than giant models for everything. The opportunity is large: Rajan Anandan of Peak XV Partners estimates the addressable market for voice AI in India's banking, financial services and insurance sector alone at at least Rs 50,000 crore, and has called voice AI the likely first billion-dollar enterprise AI category in India outside coding."
+      ]
+    },
+    {
+      "heading": "Trained from scratch for the depth of Indian speech",
+      "paragraphs": [
+        "Sarvam says the new model is the result of lessons from its wider V4 research, during which it scaled training data to more than 400 billion audio tokens and expanded its proprietary speech datasets nearly seven times compared with V3. That data spans languages, regional accents, speakers, emotional registers and conversational styles.",
+        "A single compact model trained on many languages tends to average them out, blurring the features that make each one distinct. To avoid that, Sarvam says it pretrained V4 from scratch with Indian language representation as a primary objective and then used a language-balanced training curriculum to reinforce native pronunciation and expressive delivery throughout."
+      ]
+    },
+    {
+      "heading": "What it handles, and where it still struggles",
+      "paragraphs": [
+        "Sarvam says the model reads Indian names, numbers and abbreviations correctly in context, including booking references, PNR and train numbers, PAN and Aadhaar details, dates and times, even inside a flowing Hindi-English conversation. It ships with 83 voices across 11 languages and 224 voice-and-style combinations, covering Hindi, Bengali, Gujarati, Kannada, Malayalam, Marathi, Odia, Punjabi, Tamil, Telugu and Indian English.",
+        "Switching is simple: Bulbul V4 Flash keeps the same request shape as Bulbul V3, so existing users change one line, the model name, in their code. Sarvam's own documentation, however, flags a limitation. Romanised Indic text such as Aapka order confirm ho gaya hai still reduces output quality, so developers are told to write Indic words in their native script for the best results."
+      ]
+    },
+    {
+      "heading": "India's push for sovereign AI, and what it means for you",
+      "paragraphs": [
+        "The launch lands amid a broader Indian effort to build AI that fits local languages and needs. Under the IndiaAI Mission, the government selected 12 organisations and consortia, Sarvam AI among them, to develop indigenous foundation models, with reported support of about Rs 2,194 crore for those projects. Analysts argue India's edge lies in affordable, localised AI rather than in trying to replicate frontier models built elsewhere.",
+        "For businesses, a cheaper and faster Indian-language voice model lowers the cost of building automated call agents that sound natural in a customer's own language. For developers, the one-line switch makes it easy to test without rewriting integrations. For everyday users, the practical effect is smoother, more human-sounding automated calls and apps, provided the text behind them is written correctly in the right script.",
+        "What to watch next is how quickly businesses adopt it, and whether the quality holds up across all 11 languages and accents in real customer calls rather than in demos. Sarvam itself notes that the sample conversations it published are scripted, with both speakers' audio generated by the model."
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "q": "What is Bulbul V4 Flash?",
+      "a": "It is Sarvam AI's latest text-to-speech model, built for real-time voice applications in Indian languages. It returns first audio in under 250 milliseconds in production and costs Rs 20 per 10,000 characters."
+    },
+    {
+      "q": "Which Indian languages does it support?",
+      "a": "It covers 11 languages: Hindi, Bengali, Gujarati, Kannada, Malayalam, Marathi, Odia, Punjabi, Tamil, Telugu and Indian English, with 83 voices and 224 voice-and-style combinations."
+    },
+    {
+      "q": "How is it different from the older Bulbul V3?",
+      "a": "Sarvam says it is more expressive, handles Indian names, numbers and abbreviations in context, and costs Rs 20 per 10,000 characters against Rs 30 for Bulbul V3. It also runs up to 40 per cent faster under comparable load."
+    }
+  ],
+  "image_prompt": "A natural, photorealistic editorial photo: a young Indian software developer at a bright modern desk wearing headphones, smiling as she listens to audio from a laptop that shows a simple sound waveform, warm daylight through a window. Real scene, real person, natural lighting. No text, no letters, no logos, no watermarks. Wide 16:9 landscape.",
+  "source_name": "Sarvam AI",
+  "source_url": "https://www.sarvam.ai/blogs/bulbul-v4-flash",
+  "source_link": "https://www.sarvam.ai/blogs/bulbul-v4-flash"
+}
