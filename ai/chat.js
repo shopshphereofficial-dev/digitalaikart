@@ -322,7 +322,7 @@
   }
 
   /* ---------- plans sheet ---------- */
-  var USD_INR = 88;   // one rate, everything else derives from it
+  var USD_INR = 95.17;   // one rate, everything else derives from it
   var PLANS_DATA = {
     monthly: [
       { id:'starter',    name:'Starter',    usd:2.99,   daily:130,   tagline:'For everyday questions', url:'https://rzp.io/rzp/y7aVauN' },
