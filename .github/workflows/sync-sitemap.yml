@@ -1,7 +1,7 @@
 name: Sync sitemap
 
 # Keeps sitemap.xml current so every new blog / product / app page is discoverable
-# by Google. Runs whenever a product, blog post or the sync script changes.
+# by Google. Runs on every content change and once a day as a safety net.
 on:
   push:
     branches: [main]
@@ -12,7 +12,10 @@ on:
       - "products/**"
       - "blog/**"
       - "apps/**"
+      - "*.html"
   workflow_dispatch:
+  schedule:
+    - cron: "15 1 * * *"   # 06:45 IST daily safety net
 
 permissions:
   contents: write
