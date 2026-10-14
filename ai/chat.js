@@ -420,6 +420,72 @@
   }
 
 
+
+  /* ---------- notifications ---------- */
+  function loadNotifications() {
+    if (!D.profile) { var d = $('bell-dot'); if (d) d.style.display = 'none'; return Promise.resolve(); }
+    return D.client().from('notifications')
+      .select('id,title,body,icon,read,created_at')
+      .order('created_at', { ascending: false }).limit(30)
+      .then(function (r) {
+        var list = r.data || [];
+        var dot = $('bell-dot');
+        if (dot) dot.style.display = list.some(function (n) { return !n.read; }) ? 'block' : 'none';
+        var box = $('notif-body');
+        if (!box) return;
+        box.innerHTML = '';
+        if (!list.length) { box.innerHTML = '<div class="set-hint">No notifications yet.</div>'; return; }
+        list.forEach(function (n) {
+          var el = document.createElement('div');
+          el.className = 'notif' + (n.read ? '' : ' unread');
+          el.innerHTML = '<b>' + n.title + '</b><p>' + n.body + '</p><small>'
+            + new Date(n.created_at).toLocaleDateString('en-IN', { day: 'numeric', month: 'short', year: 'numeric' })
+            + '</small>';
+          box.appendChild(el);
+        });
+      });
+  }
+
+  function openNotifications() {
+    loadNotifications().then(function () {
+      $('notif-sheet').classList.add('on');
+      var unread = D.profile ? D.client().from('notifications').update({ read: true }).eq('read', false) : null;
+      if (unread) unread.then(function () { var d = $('bell-dot'); if (d) d.style.display = 'none'; });
+    });
+  }
+
+  /* ---------- orders ---------- */
+  function loadOrders() {
+    var box = $('set-orders');
+    if (!box) return Promise.resolve();
+    if (!D.profile) { box.innerHTML = '<div class="set-hint">Sign in to see your orders.</div>'; return Promise.resolve(); }
+    return D.client().from('purchases')
+      .select('product_name,url,amount,kind,interval,credits,currency,created_at,razorpay_payment_id')
+      .order('created_at', { ascending: false })
+      .then(function (r) {
+        var list = r.data || [];
+        box.innerHTML = '';
+        if (!list.length) {
+          box.innerHTML = '<div class="set-hint">No orders yet. Anything you buy will appear here with its details.</div>';
+          return;
+        }
+        list.forEach(function (o) {
+          var when = new Date(o.created_at).toLocaleDateString('en-IN', { day: 'numeric', month: 'short', year: 'numeric' });
+          var money = o.currency === 'USD' ? '$' + o.amount : '\u20b9' + o.amount;
+          var what = o.kind === 'pack'
+            ? 'Credit pack \u00b7 ' + nfmt(o.credits) + ' credits'
+            : (o.kind === 'subscription' ? 'Subscription (' + o.interval + ')' : 'Digital product');
+          var el = document.createElement('div');
+          el.className = 'order';
+          el.innerHTML = '<b>' + o.product_name + '</b>'
+            + '<div class="o-meta">' + what + '<br>Paid ' + money + ' on ' + when
+            + (o.razorpay_payment_id ? '<br>Payment ID: ' + o.razorpay_payment_id : '') + '</div>'
+            + '<a href="' + o.url + '">Open \u2192</a>';
+          box.appendChild(el);
+        });
+      });
+  }
+
   /* ---------- buy ---------- */
   function buy(planId, btn) {
     if (!D.profile) {
@@ -490,6 +556,8 @@
     refreshPlanRow();
     if (!u) { newChat(); return; }
     renderSettings();
+    loadOrders();
+    loadNotifications();
     loadConvos().then(function () {
       if (convos.length) openConvo(convos[0].id); else newChat();
     });
@@ -502,8 +570,8 @@
     $('theme-btn').onclick = toggleTheme;
     $('model-btn').onclick = openModelMenu;
     $('sb-new').onclick = newChat;
-    $('sb-settings').onclick = function () { renderSettings(); $('settings').classList.add('on'); };
-    $('avatar-btn').onclick = function () { renderSettings(); $('settings').classList.add('on'); };
+    $('sb-settings').onclick = function () { renderSettings(); loadOrders(); $('settings').classList.add('on'); };
+    $('avatar-btn').onclick = function () { renderSettings(); loadOrders(); $('settings').classList.add('on'); };
     $('sb-toggle').onclick = function () { $('sb').classList.toggle('on'); };
 
     $('ai-send').onclick = function () { send($('ai-in').value); };
@@ -513,6 +581,8 @@
     });
 
     $('set-close').onclick = function () { $('settings').classList.remove('on'); };
+    $('bell-btn').onclick = openNotifications;
+    $('notif-close').onclick = function () { $('notif-sheet').classList.remove('on'); };
     $('set-theme').onclick = toggleTheme;
     $('set-upgrade').onclick = function () { $('settings').classList.remove('on'); renderPlans(); $('plans-sheet').classList.add('on'); };
     $('set-allplans').onclick = function () { $('settings').classList.remove('on'); renderPlans(); $('plans-sheet').classList.add('on'); };
