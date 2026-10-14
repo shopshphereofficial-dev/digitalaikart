@@ -2,15 +2,15 @@
 """Digitalaikart — AI news blog agent.
 
 Fetches the latest AI news, writes a blog post in the site's own format,
-generates a related cover image with Gemini, and updates the blog index and
-the RSS feed. Runs daily from GitHub Actions.
+generates a natural, story-specific cover image with Gemini, and updates the
+blog index and the RSS feed. Runs daily from GitHub Actions.
 
 Environment:
     GEMINI_API_KEY   required (set as a GitHub Actions secret — never committed)
+    FORCE_TODAY      optional; "1" re-generates today's post from scratch
 """
 import os
 import re
-import io
 import json
 import base64
 import html
@@ -27,8 +27,10 @@ FEED = os.path.join(ROOT, 'feed.xml')
 USED = os.path.join(BLOG, 'agent-used.json')
 BASE = 'https://digitalkartai.shop'
 AUTHOR = 'Digitalaikart Editorial'
+SIGNATURE = 'Digitalaikart Editorial'
 
 KEY = os.environ.get('GEMINI_API_KEY', '').strip()
+FORCE = os.environ.get('FORCE_TODAY', '').strip().lower() in ('1', 'true', 'yes')
 # Newest first; older ones are kept as fallbacks because Google retires models.
 TEXT_MODELS = ['gemini-3.8-flash', 'gemini-3.7-flash', 'gemini-flash-latest', 'gemini-2.5-flash']
 IMAGE_MODELS = ['gemini-3.1-flash-image', 'gemini-3-pro-image', 'gemini-2.5-flash-image']
@@ -161,13 +163,42 @@ def article_text(url, limit=5000):
     """Best-effort fetch of the source page for grounding. Never fatal."""
     try:
         raw = http_get(url, timeout=25).decode('utf-8', 'ignore')
-        txt = strip_tags(raw)
-        return txt[:limit]
+        return strip_tags(raw)[:limit]
     except Exception:
         return ''
 
 
+def recent_posts(exclude_slug, n=3):
+    """Newest existing posts, for the 'related' block (internal linking)."""
+    out = []
+    files = sorted([f for f in os.listdir(BLOG) if f.endswith('.html') and f != 'index.html'], reverse=True)
+    for f in files:
+        if exclude_slug in f:
+            continue
+        try:
+            s = open(os.path.join(BLOG, f), encoding='utf-8').read()
+        except Exception:
+            continue
+        m = re.search(r'<title>(.*?)</title>', s, re.S)
+        if not m:
+            continue
+        title = re.sub(r'\s*[—\-]\s*Digitalaikart\s*$', '', m.group(1)).strip()
+        out.append((title, '/blog/' + f))
+        if len(out) >= n:
+            break
+    return out
+
+
 # ---------------------------------------------------------------- prompt
+IMAGE_STYLE = (
+    "a striking, natural editorial image for this specific story. Make it look REAL and different every time: "
+    "a photorealistic scene (or a realistic photographic-style rendering) with people, places or objects that suit "
+    "THIS story, natural lighting and believable colour. Do NOT use a flat corporate vector look and do NOT force any "
+    "fixed brand palette or the website's colours. Wide 16:9 landscape composition, one clear subject, no text, "
+    "no letters, no logos, no watermarks, no UI screenshots."
+)
+
+
 def build_prompt(item, body_text):
     today = datetime.date.today().strftime('%B %d, %Y')
     return """You are the editor of Digitalaikart, an India-focused AI news blog (audience: Indian students, professionals, entrepreneurs). Write ONE news-explainer blog post about the story below.
@@ -183,7 +214,6 @@ RULES
 - Write in clear, plain English. India-first framing: what it means for Indian users, students, professionals or businesses.
 - FACTUAL: only use facts present in the material above. Never invent quotes, numbers, dates or names. If a detail is missing, stay general instead of guessing.
 - No emojis inside the article text. Do not use markdown.
-- The post must have a "sources" list that credits the original reporting (name the source).
 - Today's date is %s.
 
 Return ONLY JSON, exactly this shape:
@@ -198,10 +228,10 @@ Return ONLY JSON, exactly this shape:
  "tldr": ["3-4 one-line takeaways"],
  "sections": [{"heading": "short heading without numbering", "paragraphs": ["paragraph", "paragraph"]}],
  "faq": [{"q": "question", "a": "2-line answer"}],
- "image_prompt": "a clean editorial illustration prompt for the cover, describing scene, style (flat vector illustration), colour palette (dark navy #0a1628 and gold #f5c542), and NO text or letters in the image"
+ "image_prompt": "%s"
 }
 Provide 4-5 sections with 1-2 paragraphs each (aim 700-900 words total) and 3 FAQ items.""" % (
-        item['title'], item['source'], item['link'], item['desc'][:600], body_text[:3500], today)
+        item['title'], item['source'], item['link'], item['desc'][:600], body_text[:3500], today, IMAGE_STYLE)
 
 
 # ---------------------------------------------------------------- render
@@ -217,12 +247,13 @@ def post_css():
 
 
 EXTRA_CSS = (
-    '.post-cover{width:100%;height:auto;border-radius:14px;border:1px solid var(--border);display:block;aspect-ratio:1200/630;object-fit:cover}'
+    '.post-cover{width:100%;height:auto;border-radius:14px;border:1px solid var(--border);display:block;aspect-ratio:16/9;object-fit:cover}'
 )
 
 
 def render_post(p, item, img_name, img_w, img_h, pubdate):
-    url = '%s/blog/%s.html' % (BASE, p['slug'])
+    slug = '%s-%s' % (pubdate.isoformat(), p['slug'])
+    url = '%s/blog/%s.html' % (BASE, slug)
     img = '%s/assets/og/%s' % (BASE, img_name)
     words = sum(len(s.get('paragraphs', [])) * 60 for s in p['sections']) + 120
     mins = max(3, round(words / 200))
@@ -240,6 +271,12 @@ def render_post(p, item, img_name, img_w, img_h, pubdate):
     kw_meta = ''.join('<meta property="article:tag" content="%s">' % html.escape(k) for k in p.get('keywords', []))
     share_t = urllib.parse.quote(p['title'])
     share_u = urllib.parse.quote(url)
+
+    rel = recent_posts(slug, 4)
+    if rel:
+        rel_html = '\n'.join('      <li><a href="%s">%s</a></li>' % (r[1], html.escape(r[0])) for r in rel)
+    else:
+        rel_html = '      <li><a href="/blog/">All AI news &amp; explainers →</a></li>'
 
     return """<!DOCTYPE html>
 <html lang="en">
@@ -325,7 +362,7 @@ def render_post(p, item, img_name, img_w, img_h, pubdate):
   <div class="sources">
     <h4>Source</h4>
     <ul>
-      <li>%(source)s — <a href="%(link)s" target="_blank" rel="noopener nofollow">%(link)s</a></li>
+      <li><strong>%(source)s</strong> — <a href="%(link)s" target="_blank" rel="noopener nofollow">original report</a></li>
       <li>Published: %(date_h)s · Compiled by Digitalaikart</li>
     </ul>
   </div>
@@ -333,7 +370,7 @@ def render_post(p, item, img_name, img_w, img_h, pubdate):
   <div class="related">
     <h4>More AI news</h4>
     <ul>
-      <li><a href="/blog/">All AI news &amp; explainers →</a></li>
+%(related)s
     </ul>
   </div>
 </div>
@@ -348,27 +385,42 @@ def render_post(p, item, img_name, img_w, img_h, pubdate):
         category=html.escape(p['category']), iso=iso, date_h=date_h, mins=mins,
         author=AUTHOR, tags=tags, tldr=tldr, sections='\n'.join(sections), faq=faq,
         share_t=share_t, share_u=share_u, source=html.escape(item['source']), link=html.escape(item['link']),
-        css=post_css(), extra=EXTRA_CSS, year=pubdate.year,
+        css=post_css(), extra=EXTRA_CSS, year=pubdate.year, related=rel_html,
         title_json=json.dumps(p['title']), desc_json=json.dumps(p['description']),
         keywords_json=json.dumps(keywords),
     )
 
 
 # ---------------------------------------------------------------- index + feed
-def update_index(p, slug, pubdate):
+CARD_CSS = '<style id="dak-card-img">.blog-card-img img{width:100%;height:100%;object-fit:cover;display:block}</style>'
+
+
+def ensure_card_css(s):
+    if 'dak-card-img' in s:
+        return s
+    return s.replace('</head>', CARD_CSS + '\n</head>', 1)
+
+
+def update_index(p, slug, img_name, pubdate):
     s = open(INDEX, encoding='utf-8').read()
+    s = ensure_card_css(s)
     anchor = '<!-- NEW POSTS: insert new blog post cards directly below this line, above existing cards -->'
     if anchor not in s:
         print('index anchor missing; skipping index update')
+        open(INDEX, 'w', encoding='utf-8').write(s)
         return
+    if img_name:
+        img_html = '<img src="/assets/og/%s" alt="%s" loading="lazy">' % (img_name, html.escape(p['title']))
+    else:
+        img_html = '<span>%s</span>' % p.get('emoji', '🤖')
     card = ('\n  <a class="blog-card" href="/blog/%s.html">\n'
-            '    <div class="blog-card-img"><span>%s</span></div>\n'
+            '    <div class="blog-card-img">%s</div>\n'
             '    <div class="blog-card-body">\n'
             '      <h3>%s</h3>\n'
             '      <p>%s</p>\n'
             '      <div class="date">%s · %s min read</div>\n'
             '    </div>\n'
-            '  </a>') % (slug, p.get('emoji', '🤖'), html.escape(p['title']),
+            '  </a>') % (slug, img_html, html.escape(p['title']),
                           html.escape(p['description']), pubdate.strftime('%B %d, %Y'),
                           max(3, round(900 / 200)))
     s = s.replace(anchor, anchor + card, 1)
@@ -407,10 +459,41 @@ def mark_used(link):
     json.dump(used[-200:], open(USED, 'w', encoding='utf-8'), indent=1)
 
 
+def cleanup_today():
+    """Remove today's agent post so it can be regenerated (FORCE_TODAY=1)."""
+    today = datetime.date.today().isoformat()
+    for f in list(os.listdir(BLOG)):
+        if not (f.startswith(today + '-') and f.endswith('.html')):
+            continue
+        path = os.path.join(BLOG, f)
+        try:
+            body = open(path, encoding='utf-8').read()
+        except Exception:
+            continue
+        if SIGNATURE not in body:
+            continue
+        slug = f[:-5]
+        s = open(INDEX, encoding='utf-8').read()
+        s = re.sub(r'\s*<a class="blog-card" href="/blog/%s\.html">.*?</a>' % re.escape(slug), '', s, flags=re.S)
+        open(INDEX, 'w', encoding='utf-8').write(s)
+        fd = open(FEED, encoding='utf-8').read()
+        fd = re.sub(r'\s*<item>(?:(?!</item>).)*?</item>',
+                    lambda m: '' if slug in m.group(0) else m.group(0), fd, flags=re.S)
+        open(FEED, 'w', encoding='utf-8').write(fd)
+        os.remove(path)
+        img = os.path.join(OG, slug + '.png')
+        if os.path.exists(img):
+            os.remove(img)
+        print('force: removed', f)
+
+
 # ---------------------------------------------------------------- main
 def main():
     if not KEY:
         raise SystemExit('GEMINI_API_KEY is not set')
+
+    if FORCE:
+        cleanup_today()
 
     items = fetch_news()
     print('news items found:', len(items))
@@ -430,23 +513,27 @@ def main():
         print('post already exists:', fname)
         return
 
-    # cover image
     img_name = '%s-%s.png' % (pubdate.isoformat(), slug)
     img_w, img_h = 1200, 630
     try:
-        data = gemini_image(post.get('image_prompt') or ('editorial illustration about: ' + post['title']))
+        data = gemini_image(post.get('image_prompt') or (
+            'a natural, photorealistic editorial image for a news story about: ' + post['title'] +
+            '. Wide 16:9, no text.'))
         if data:
             img_w, img_h = png_size(data)
             open(os.path.join(OG, img_name), 'wb').write(data)
             print('image written:', img_name, img_w, 'x', img_h)
+        else:
+            img_name = ''
     except Exception as e:
         print('image generation failed (post still published):', e)
+        img_name = ''
 
     html_doc = render_post(post, item, img_name, img_w, img_h, pubdate)
     open(os.path.join(BLOG, fname), 'w', encoding='utf-8').write(html_doc)
     print('post written:', fname)
 
-    update_index(post, '%s-%s' % (pubdate.isoformat(), slug), pubdate)
+    update_index(post, '%s-%s' % (pubdate.isoformat(), slug), img_name, pubdate)
     update_feed(post, '%s-%s' % (pubdate.isoformat(), slug), pubdate)
     mark_used(item['link'])
     print('done')
