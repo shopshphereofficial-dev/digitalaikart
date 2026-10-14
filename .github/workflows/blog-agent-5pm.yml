@@ -1,0 +1,43 @@
+name: AI blog agent (5 PM)
+
+# Publishes one AI-news blog post a day at 5:00 PM IST.
+# Reuses the existing tools/blog_agent.py and the GEMINI_API_KEY repo secret.
+# Two slots so a delayed schedule still gets the post out; the script no-ops if
+# today's post already exists.
+on:
+  schedule:
+    - cron: "30 11 * * *"   # 5:00 PM IST
+    - cron: "30 12 * * *"   # 6:00 PM IST (retry slot)
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: blog-agent-5pm
+  cancel-in-progress: false
+
+jobs:
+  post:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+      - name: Generate today's AI news post
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: python3 tools/blog_agent.py
+      - name: Commit
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A blog assets/og feed.xml
+          if git diff --cached --quiet; then
+            echo "nothing new to publish"
+          else
+            git commit -m "Auto blog: new AI news post (5 PM)"
+            git pull --rebase origin main
+            git push
+          fi
