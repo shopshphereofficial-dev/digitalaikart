@@ -1,0 +1,40 @@
+name: Site polish
+
+# One-off, idempotent polish pass:
+#   - unify the top nav on every page (Home, Products, Apps, AI Assistant, Blog)
+#     so no option ever disappears, and keep it visible on small screens;
+#   - add each product's existing cover image to its card on /products/;
+#   - restyle the help-chat widget to the light theme with a drawn robot mark.
+# See tools/site_polish.py for exactly what changes.
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: site-polish
+  cancel-in-progress: false
+
+jobs:
+  polish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+      - name: Apply site polish
+        run: python3 tools/site_polish.py
+      - name: Commit
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "nothing to change"
+          else
+            git commit -m "Polish: unified nav, product card images, light help widget"
+            git pull --rebase origin main
+            git push
+          fi
