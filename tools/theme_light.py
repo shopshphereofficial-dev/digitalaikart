@@ -94,6 +94,15 @@ def all_pages():
     for f in sorted(os.listdir(bdir)):
         if f.endswith('.html'):
             out.append(os.path.join('blog', f))
+    # Other sections that load the shared stylesheet (so they are not left
+    # half-themed): /ai/ and /apps/.
+    for sub in ('ai', 'apps'):
+        sdir = os.path.join(ROOT, sub)
+        if os.path.isdir(sdir):
+            for base, _dirs, files in os.walk(sdir):
+                for f in sorted(files):
+                    if f.endswith('.html'):
+                        out.append(os.path.relpath(os.path.join(base, f), ROOT))
     return [p for p in out if p not in EXCLUDE]
 
 
