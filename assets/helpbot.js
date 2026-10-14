@@ -5,7 +5,7 @@
    Answers render site links as tappable buttons, not plain text. */
 (function () {
   'use strict';
-  var KEY = ['AQ.Ab8RN6', 'ITUSWs46', 'ygTturdr', 'Xe0HahT2', '2Y1Yix_v', 's6yXiil2', 'NzNg'].join('');
+  var KEY = '';
   var MODEL = 'gemini-3.1-flash-lite';
   var hist = [], busy = false, open = false;
   var KB = null;            // { site, products[], blogs[], downloads[], pages[] }
