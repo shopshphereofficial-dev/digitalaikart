@@ -240,17 +240,17 @@ html[data-theme="dark"] .set-toggle{background:#16213a;border-color:#1e293b;colo
 html[data-theme="dark"] .mcard{background:#0f172a;border-color:#1e293b}
 html[data-theme="dark"] #model-menu{background:#0f172a;border-color:#1e293b}
 html[data-theme="dark"] #model-menu b{color:#e2e8f0 !important}
+
+.set-links{display:flex;flex-wrap:wrap;gap:.4rem}
+.set-links a{background:#f8fafc;border:1px solid var(--border);border-radius:99px;padding:.4rem .8rem;font-size:.75rem;color:#334155;text-decoration:none}
+.set-links a:hover{border-color:#1d4ed8;color:#1d4ed8}
+html[data-theme="dark"] .set-links a{background:#16213a;border-color:#1e293b;color:#cbd5e1}
 </style>
 </head>
 <body>
 <nav class="nav"><div class="nav-inner"><a href="/" class="nav-logo">Digitalaikart</a><div class="nav-links"><a href="/">Home</a><a href="/products/">Products</a><a href="/apps/">Apps</a><a href="/ai/" class="active">AI Assistant</a><a href="/blog/">Blog</a></div></div></nav>
 
 <div class="ai-wrap">
-  <div class="ai-head">
-    <h1>Astral AI</h1>
-    <p>Digitalaikart's own assistant. Ask anything, or create an image — direct answers, no fluff.</p>
-  </div>
-
   <!-- AUTH SCREEN -->
   <div class="auth-card" id="auth-screen">
     <div class="auth-tabs">
@@ -343,6 +343,20 @@ html[data-theme="dark"] #model-menu b{color:#e2e8f0 !important}
         <div id="set-products" class="set-products"></div>
         <div class="set-sec">APPEARANCE</div>
         <div class="set-row"><div>Theme</div><button class="set-toggle" id="set-theme" type="button">Light</button></div>
+        <div class="set-sec">MORE FROM DIGITALAIKART</div>
+        <div class="set-links">
+          <a href="/">Home</a>
+          <a href="/products/">Products</a>
+          <a href="/apps/">Apps</a>
+          <a href="/blog/">Blog</a>
+          <a href="/ai/plans.html">Plans</a>
+          <a href="/privacy-policy.html">Privacy Policy</a>
+          <a href="/refund-policy.html">Refund Policy</a>
+          <a href="/terms.html">Terms &amp; Conditions</a>
+        </div>
+        <div class="set-sec">SUPPORT</div>
+        <a class="set-item" href="https://wa.me/919682600301">WhatsApp us <span>&#8250;</span></a>
+        <a class="set-item" href="mailto:lonefaisal977@gmail.com">lonefaisal977@gmail.com <span>&#8250;</span></a>
         <div class="set-sec">ACCOUNT</div>
         <button class="set-item" id="set-logout" type="button">Log out</button>
         <button class="btn-primary" id="set-save" type="button" style="margin-top:1rem;width:100%">Save changes</button>
@@ -424,7 +438,7 @@ html[data-theme="dark"] #model-menu b{color:#e2e8f0 !important}
 
 <div class="toast" id="toast"></div>
 
-<footer><div class="footer-links"><a href="/">Home</a><a href="/products/">Products</a><a href="/blog/">Blog</a><a href="/ai/plans.html">AI Plans</a><a href="/privacy-policy.html">Privacy Policy</a><a href="/refund-policy.html">Refund Policy</a><a href="/terms.html">Terms & Conditions</a></div><p><strong>Digitalaikart</strong> — Premium AI Digital Products</p><p>Feedback & Inquiries: <a href="mailto:lonefaisal977@gmail.com">lonefaisal977@gmail.com</a> | WhatsApp: <a href="https://wa.me/919682600301">+91 96826 00301</a></p><p style="margin-top:0.5rem;color:#64748b">&copy; 2026 Digitalaikart. All rights reserved.</p></footer>
+
 
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4"></script>
 <script src="/ai/auth.js?v=3"></script>
