@@ -1,0 +1,52 @@
+name: Product cover images
+
+# Gives every product page a natural cover image (Gemini image model only).
+# Idempotent — finished products are skipped, so it can be run in batches.
+on:
+  workflow_dispatch:
+    inputs:
+      limit:
+        description: "How many products this run (0 = all)"
+        type: string
+        default: "0"
+      offset:
+        description: "Start index (for batching)"
+        type: string
+        default: "0"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: product-images
+  cancel-in-progress: false
+
+jobs:
+  images:
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+      - name: Install Pillow
+        run: pip install --quiet pillow
+      - name: Generate product images
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          PRODUCT_LIMIT: ${{ github.event.inputs.limit }}
+          PRODUCT_OFFSET: ${{ github.event.inputs.offset }}
+        run: python3 tools/product_images.py
+      - name: Commit
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A products assets/products
+          if git diff --cached --quiet; then
+            echo "nothing new"
+          else
+            git commit -m "Product cover images"
+            git pull --rebase origin main
+            git push
+          fi
