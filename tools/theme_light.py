@@ -73,6 +73,8 @@ HEX_MAP = {
     '#183156': '#ccd5e0',
     '#16294a': '#d6dee9',
     '#1f3a66': '#c2ccda',
+    '#ff9c9c': '#dc2626',   # error red (too light on white) -> readable red
+    '#ff7b7b': '#dc2626',
 }
 
 # Optional rgba() tint recolour (off by default): rgb triple -> rgb triple.
@@ -97,6 +99,7 @@ SECOND_PASS = {
     '#0d1f38': '#ffffff', '#0d1b33': '#f8fafc',
     '#13274a': '#d6dee9', '#1e3f70': '#c2ccda', '#183156': '#ccd5e0',
     '#16294a': '#d6dee9', '#1f3a66': '#c2ccda',
+    '#ff9c9c': '#dc2626', '#ff7b7b': '#dc2626',
 }
 
 # Files never touched (generated / explicitly excluded by the brief).
