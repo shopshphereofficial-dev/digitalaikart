@@ -1,0 +1,24 @@
+name: Live site check
+
+on:
+  workflow_dispatch:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: What does the live site actually serve?
+        run: |
+          echo "=== /ai/ heading and nav ==="
+          curl -sS --max-time 60 "https://digitalkartai.shop/ai/?cb=$RANDOM" \
+            | grep -oE '<h1>[^<]*</h1>|>AI Assistant<|>Astral AI<|id="app-screen"|id="topbar"|card-img|newsletter|ai-guides' \
+            | sort | uniq -c
+          echo
+          echo "=== /products/ images ==="
+          curl -sS --max-time 60 "https://digitalkartai.shop/products/?cb=$RANDOM" \
+            | grep -c '<img' || true
+          echo "img count above"
+          echo
+          echo "=== nav link text ==="
+          curl -sS --max-time 60 "https://digitalkartai.shop/?cb=$RANDOM" \
+            | grep -oE '>/ai/"[^>]*>[^<]*<' | head -3
