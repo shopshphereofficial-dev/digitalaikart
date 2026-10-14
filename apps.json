@@ -45,7 +45,33 @@
       ],
       "repo": "https://github.com/shopshphereofficial-dev/neon-calculator",
       "featured": true,
-      "badge": "POPULAR"
+      "badge": "POPULAR",
+      "og": "/assets/apps/og/neon-calculator.png",
+      "faq": [
+        [
+          "Is Neon Calculator free?",
+          "Yes - Neon Calculator is completely free, with no ads and no sign-up."
+        ],
+        [
+          "Does it work offline?",
+          "Yes. Neon Calculator works fully offline, so it works without Wi-Fi or mobile data."
+        ],
+        [
+          "Is it good for kids?",
+          "Yes. It has big, glowing keys that are easy for children to tap."
+        ]
+      ],
+      "hashtags": [
+        "calculator",
+        "kidsCalculator",
+        "neon",
+        "offlineApp",
+        "freeApp",
+        "android",
+        "maths",
+        "calculatorApp",
+        "digitalkart"
+      ]
     },
     {
       "slug": "neon-piano",
@@ -91,7 +117,34 @@
       ],
       "repo": "https://github.com/shopshphereofficial-dev/neon-piano-android",
       "featured": false,
-      "badge": ""
+      "badge": "",
+      "og": "/assets/apps/og/neon-piano.png",
+      "faq": [
+        [
+          "Is Neon Piano + Calculator free?",
+          "Yes - it is free, ad-free and works offline."
+        ],
+        [
+          "Can I actually play tunes on it?",
+          "Yes. Tap the colourful neon keys to play, and switch to the calculator whenever you need it."
+        ],
+        [
+          "Does it need internet?",
+          "No. The app works completely offline."
+        ]
+      ],
+      "hashtags": [
+        "piano",
+        "neonPiano",
+        "musicApp",
+        "calculator",
+        "kids",
+        "offlineApp",
+        "freeApp",
+        "android",
+        "learnPiano",
+        "digitalkart"
+      ]
     },
     {
       "slug": "car-simulator",
@@ -137,7 +190,33 @@
       ],
       "repo": "https://github.com/shopshphereofficial-dev/car-simulator-android",
       "featured": true,
-      "badge": "NEW"
+      "badge": "NEW",
+      "og": "/assets/apps/og/car-simulator.png",
+      "faq": [
+        [
+          "What kind of game is Car Simulator?",
+          "It is a top-down, open-city driving simulator built for Android phones."
+        ],
+        [
+          "Does it work offline?",
+          "Yes. Car Simulator runs offline and loads fast."
+        ],
+        [
+          "Is it free?",
+          "Yes - free, with no ads."
+        ]
+      ],
+      "hashtags": [
+        "carGame",
+        "drivingSimulator",
+        "openWorld",
+        "androidGame",
+        "offlineGame",
+        "freeGame",
+        "arcade",
+        "carSimulator",
+        "digitalkart"
+      ]
     },
     {
       "slug": "grabit",
@@ -187,7 +266,40 @@
       ],
       "repo": "https://github.com/shopshphereofficial-dev/grabit",
       "featured": true,
-      "badge": ""
+      "badge": "",
+      "og": "/assets/apps/og/grabit.png",
+      "faq": [
+        [
+          "Can I download videos with GrabIt?",
+          "Yes. GrabIt has an in-app browser and a media downloader - open a page and save the video, audio or image you want."
+        ],
+        [
+          "Is GrabIt a SnapTube alternative?",
+          "Yes. It is a free, ad-free alternative with a built-in browser, a media downloader and a phone cleaner."
+        ],
+        [
+          "Does it clean my phone?",
+          "Yes. GrabIt includes a storage cleaner that frees up space by clearing junk files."
+        ],
+        [
+          "Is GrabIt free?",
+          "Yes - completely free, with no ads."
+        ]
+      ],
+      "hashtags": [
+        "snaptube",
+        "snaptubeAlternative",
+        "videoDownloader",
+        "youtubeDownloader",
+        "instagramDownloader",
+        "reelsDownloader",
+        "whatsappStatusSaver",
+        "mediaDownloader",
+        "browser",
+        "adFree",
+        "android",
+        "digitalkart"
+      ]
     },
     {
       "slug": "soulstream",
@@ -235,7 +347,34 @@
       ],
       "repo": "https://github.com/shopshphereofficial-dev/soulstream",
       "featured": false,
-      "badge": ""
+      "badge": "",
+      "og": "/assets/apps/og/soulstream.png",
+      "faq": [
+        [
+          "Is SoulStream a SnapTube alternative?",
+          "Yes. SoulStream downloads video, audio and images from YouTube, Instagram, Facebook, TikTok and 1000+ other sites, without ads."
+        ],
+        [
+          "Can I play what I downloaded?",
+          "Yes. SoulStream has a built-in player for everything you save."
+        ],
+        [
+          "Is it free?",
+          "Yes - SoulStream is free and ad-free."
+        ]
+      ],
+      "hashtags": [
+        "snaptubeAlternative",
+        "videoDownloader",
+        "youtubeDownloader",
+        "instagramDownloader",
+        "reelsDownloader",
+        "offlinePlayer",
+        "mediaDownloader",
+        "adFree",
+        "android",
+        "digitalkart"
+      ]
     },
     {
       "slug": "pulsechat",
@@ -278,7 +417,32 @@
       ],
       "repo": "https://github.com/shopshphereofficial-dev/pulsechat",
       "featured": false,
-      "badge": ""
+      "badge": "",
+      "og": "/assets/apps/og/pulsechat.png",
+      "faq": [
+        [
+          "How do I sign in to PulseChat?",
+          "Sign in with your Google account, pick a unique username and start chatting."
+        ],
+        [
+          "Is PulseChat free?",
+          "Yes - PulseChat is free to use."
+        ],
+        [
+          "Can I add friends?",
+          "Yes. Add friends by username and chat with them in a clean, simple interface."
+        ]
+      ],
+      "hashtags": [
+        "chatApp",
+        "messaging",
+        "socialApp",
+        "friends",
+        "android",
+        "freeApp",
+        "googleLogin",
+        "digitalkart"
+      ]
     },
     {
       "slug": "twinspace",
@@ -324,7 +488,33 @@
       ],
       "repo": "https://github.com/shopshphereofficial-dev/twinspace",
       "featured": false,
-      "badge": ""
+      "badge": "",
+      "og": "/assets/apps/og/twinspace.png",
+      "faq": [
+        [
+          "What does TwinSpace do?",
+          "TwinSpace runs a second, separate copy of an app on the same phone - each copy in its own isolated space."
+        ],
+        [
+          "Can I use two accounts on one phone?",
+          "Yes. TwinSpace is perfect for running two accounts of the same app on one device."
+        ],
+        [
+          "Is it free?",
+          "Yes - TwinSpace is free."
+        ]
+      ],
+      "hashtags": [
+        "appCloner",
+        "dualApp",
+        "twoAccounts",
+        "cloneApp",
+        "privacy",
+        "android",
+        "utilities",
+        "freeApp",
+        "digitalkart"
+      ]
     },
     {
       "slug": "voltaura",
@@ -369,7 +559,33 @@
       ],
       "repo": "",
       "featured": false,
-      "badge": ""
+      "badge": "",
+      "og": "/assets/apps/og/voltaura.png",
+      "faq": [
+        [
+          "What does VoltAura do?",
+          "VoltAura adds premium charging animations and a glowing edge effect when notifications arrive."
+        ],
+        [
+          "Will it drain my battery?",
+          "No. VoltAura is designed to be lightweight and battery-friendly."
+        ],
+        [
+          "Is it free?",
+          "Yes - VoltAura is free, with no ads."
+        ]
+      ],
+      "hashtags": [
+        "chargingAnimation",
+        "edgeGlow",
+        "batteryAnimation",
+        "customisation",
+        "personalisation",
+        "neon",
+        "android",
+        "freeApp",
+        "digitalkart"
+      ]
     }
   ]
 }
