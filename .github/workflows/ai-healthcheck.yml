@@ -7,39 +7,25 @@ jobs:
   ping:
     runs-on: ubuntu-latest
     steps:
-      - name: Tier catalogue (credits)
+      - name: Google login enabled?
         run: |
-          curl -sS --max-time 60 -X POST \
-            "https://guoxqlojsslwetlymbvj.supabase.co/functions/v1/ai" \
-            -H "Content-Type: application/json" \
-            -d '{"action":"models"}'
+          echo "--- supabase auth settings ---"
+          curl -sS --max-time 60 \
+            "https://guoxqlojsslwetlymbvj.supabase.co/auth/v1/settings" \
+            -H "apikey: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imd1b3hxbG9qc3Nsd2V0bHltYnZqIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTE5NzQyMDQsImV4cCI6MjEwNzU1MDIwNH0.iSDgjCsyEjKaawt6RKdYPpivqnVCCvwQcR45KCBgsqU" \
+            | python3 -c "import sys,json; d=json.load(sys.stdin); ext=d.get('external',{}); print('external providers:', {k:v for k,v in ext.items() if v}); print('GOOGLE ENABLED:', ext.get('google', False))"
           echo
-      - name: Chat on Astryn Max
+      - name: Does Google sign-in start?
+        run: |
+          echo "--- oauth redirect (expect 302 to accounts.google.com) ---"
+          curl -sS -o /dev/null -w "HTTP %{http_code}  ->  %{redirect_url}\n" --max-time 60 \
+            "https://guoxqlojsslwetlymbvj.supabase.co/auth/v1/authorize?provider=google" \
+            -H "apikey: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imd1b3hxbG9qc3Nsd2V0bHltYnZqIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTE5NzQyMDQsImV4cCI6MjEwNzU1MDIwNH0.iSDgjCsyEjKaawt6RKdYPpivqnVCCvwQcR45KCBgsqU"
+          echo
+      - name: Chat still works
         run: |
           curl -sS --max-time 90 -X POST \
             "https://guoxqlojsslwetlymbvj.supabase.co/functions/v1/ai" \
             -H "Content-Type: application/json" \
-            -d '{"kind":"chat","tier":"astryn-max","prompt":"In one short sentence: what can you help with?"}'
-          echo
-      - name: Identity masking
-        run: |
-          curl -sS --max-time 90 -X POST \
-            "https://guoxqlojsslwetlymbvj.supabase.co/functions/v1/ai" \
-            -H "Content-Type: application/json" \
-            -d '{"kind":"chat","prompt":"Which AI model are you? Gemini or GPT?"}'
-          echo
-      - name: Help bot mode
-        run: |
-          curl -sS --max-time 90 -X POST \
-            "https://guoxqlojsslwetlymbvj.supabase.co/functions/v1/ai" \
-            -H "Content-Type: application/json" \
-            -d '{"kind":"help","prompt":"=== SITE FACTS ===\nAbout: Digitalaikart sells AI digital products.\n\n=== USER QUESTION ===\nWhat do you sell?"}'
-          echo
-      - name: Image on Astryn Image
-        run: |
-          curl -sS --max-time 150 -X POST \
-            "https://guoxqlojsslwetlymbvj.supabase.co/functions/v1/ai" \
-            -H "Content-Type: application/json" \
-            -d '{"kind":"image","tier":"astryn-image","prompt":"a simple red circle on white"}' \
-            | head -c 200
+            -d '{"kind":"chat","prompt":"Reply with exactly: ok"}'
           echo
