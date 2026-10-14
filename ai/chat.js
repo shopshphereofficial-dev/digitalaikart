@@ -436,7 +436,7 @@
       return fetch(FN.replace('/ai', '/create-order'), {
         method: 'POST',
         headers: { 'Content-Type': 'application/json', Authorization: 'Bearer ' + tok },
-        body: JSON.stringify({ plan_id: planId })
+        body: JSON.stringify({ plan_id: planId, currency: currency })
       });
     }).then(function (r) { return r.json(); }).then(function (d) {
       if (d.url) { window.location.href = d.url; return; }
@@ -447,6 +447,39 @@
       btn.textContent = was; btn.disabled = false;
       toast('Network error — please try again.');
     });
+  }
+
+
+  /* ---------- thank you ---------- */
+  function thankYou() {
+    var wrap = document.createElement('div');
+    wrap.id = 'thanks';
+    wrap.style.cssText = 'position:fixed;inset:0;z-index:200;display:flex;align-items:center;justify-content:center;padding:1.2rem;background:rgba(15,23,42,.55);backdrop-filter:blur(4px)';
+    wrap.innerHTML = '<div style="background:var(--navy-card);border:1px solid var(--border);border-radius:20px;max-width:420px;width:100%;padding:2rem 1.5rem;text-align:center">'
+      + '<div style="width:64px;height:64px;margin:0 auto .9rem;border-radius:50%;background:linear-gradient(135deg,#16a34a,#15803d);display:flex;align-items:center;justify-content:center;font-size:1.9rem;color:#fff">&#10003;</div>'
+      + '<h2 style="margin:0 0 .5rem;font-size:1.3rem">Payment successful</h2>'
+      + '<p id="thanks-body" style="font-size:.88rem;color:var(--text-secondary);line-height:1.6;margin:0 0 1.3rem">Thank you! Your credits are being added — they will show in Settings in a few seconds.</p>'
+      + '<button class="btn-primary" id="thanks-ok" style="width:100%">Start using Astral</button>'
+      + '<p style="font-size:.7rem;color:var(--text-muted);margin:.9rem 0 0">A receipt has been emailed to you by Razorpay.</p>'
+      + '</div>';
+    document.body.appendChild(wrap);
+
+    document.getElementById('thanks-ok').onclick = function () {
+      wrap.remove();
+      D.loadProfile().then(function () { refreshPlanRow(); renderProducts(); });
+    };
+
+    /* pull the balance in a couple of times — the webhook can lag a moment */
+    var tries = 0;
+    var t = setInterval(function () {
+      tries++;
+      D.loadProfile().then(function () {
+        refreshPlanRow();
+        var b = document.getElementById('thanks-body');
+        if (b) b.textContent = 'Thank you! You now have ' + nfmt(creditsLeft()) + ' credits. Your plan is ' + plan().name + '.';
+      });
+      if (tries >= 4) clearInterval(t);
+    }, 3000);
   }
 
   /* ---------- boot ---------- */
@@ -506,8 +539,7 @@
       start();
       if (new URLSearchParams(location.search).get('paid')) {
         history.replaceState(null, '', '/ai/');
-        toast('Payment received — your credits will appear in a moment.');
-        setTimeout(function () { D.loadProfile().then(refreshPlanRow); }, 4000);
+        thankYou();
       }
     }).catch(function () { showAuth(); });
   });
