@@ -1,14 +1,21 @@
 name: AI blog agent
 
-# Publishes the queued AI-news post (written by the agent) at 6:00 AM IST.
-# Gemini is used ONLY for the cover image. If nothing is queued the run does
-# nothing. Also refreshes sitemap.xml in the same commit.
+# Publishes one AI-news blog post a day at 6:00 AM IST.
+# This slot writes its own article with Gemini (text) AND makes the cover image
+# with Gemini, so it never depends on any agent being awake. Three morning slots
+# so a delayed schedule still gets today's post out; the script no-ops if today's
+# post already exists. Also refreshes sitemap.xml in the same commit.
 on:
   schedule:
     - cron: "30 0 * * *"   # 06:00 IST
     - cron: "30 1 * * *"   # 07:00 IST (retry slot)
     - cron: "30 2 * * *"   # 08:00 IST (retry slot)
   workflow_dispatch:
+    inputs:
+      force:
+        description: "Re-generate today's post from scratch"
+        type: boolean
+        default: false
 
 permissions:
   contents: write
@@ -27,10 +34,11 @@ jobs:
           python-version: "3.x"
       - name: Install Pillow
         run: pip install --quiet pillow
-      - name: Publish queued post
+      - name: Generate today's AI news post
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
-        run: python3 tools/publish_queued.py
+          FORCE_TODAY: ${{ (github.event.inputs.force == 'true') && '1' || '' }}
+        run: python3 tools/blog_agent.py
       - name: Sync sitemap
         run: python3 tools/sync_sitemap.py
       - name: Commit
@@ -41,7 +49,7 @@ jobs:
           if git diff --cached --quiet; then
             echo "nothing new to publish"
           else
-            git commit -m "Auto blog: publish queued AI news post"
+            git commit -m "Auto blog: new AI news post (6 AM)"
             git pull --rebase origin main
             git push
           fi
