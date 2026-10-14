@@ -1,10 +1,8 @@
 name: AI blog agent (12 PM)
 
-# Publishes one AI-news blog post a day at 12:00 PM IST.
-# The article text is written by the blog agent (not by Gemini). This workflow
-# uses the GEMINI_API_KEY repo secret ONLY to generate the cover image: it picks
-# up any spec the agent dropped in blog/pending/, compresses the cover, and
-# renders + commits the post.
+# Publishes the queued AI-news post (written by the agent) at 12:00 PM IST.
+# Gemini is used ONLY for the cover image. If nothing is queued the run does
+# nothing. Also refreshes sitemap.xml in the same commit.
 on:
   schedule:
     - cron: "30 6 * * *"    # 12:00 PM IST
@@ -28,10 +26,10 @@ jobs:
           python-version: "3.x"
       - name: Install Pillow
         run: pip install --quiet pillow
-      - name: Publish agent-written post (Gemini image only, compressed)
+      - name: Publish queued post
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
-        run: python3 tools/blog_image.py
+        run: python3 tools/publish_queued.py
       - name: Sync sitemap
         run: python3 tools/sync_sitemap.py
       - name: Commit
@@ -42,8 +40,7 @@ jobs:
           if git diff --cached --quiet; then
             echo "nothing new to publish"
           else
-            git commit -m "Auto blog: new AI news post (12 PM)"
-            for i in 1 2 3; do
-              git pull --rebase origin main && git push && break || sleep 5
-            done
+            git commit -m "Auto blog: publish queued AI news post (12 PM)"
+            git pull --rebase origin main
+            git push
           fi
