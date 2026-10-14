@@ -368,8 +368,11 @@
  */
 (function () {
   if (window.__dakAds) return; window.__dakAds = true;
+  /* No ads on the AI assistant. It is a paid product, and ads there get in the
+     way of the chat. Every other page still loads them. */
+  if (/^\/ai(\/|$)/.test(location.pathname)) return;
   var s = document.createElement('script');
-  s.src = '/assets/ads.js?v=6';
+  s.src = '/assets/ads.js?v=7';
   s.defer = true;
   document.head.appendChild(s);
 })();
