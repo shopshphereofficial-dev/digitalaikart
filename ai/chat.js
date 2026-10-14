@@ -322,32 +322,36 @@
   }
 
   /* ---------- plans sheet ---------- */
+  var USD_INR = 88;   // one rate, everything else derives from it
   var PLANS_DATA = {
     monthly: [
-      { id:'starter',  name:'Starter',    inr:199,   usd:2.99,   daily:130,   tagline:'For everyday questions', url:'https://rzp.io/rzp/y7aVauN' },
-      { id:'pro',      name:'Pro',        inr:499,   usd:6.99,   daily:350,   tagline:'Most popular', popular:true, url:'https://rzp.io/rzp/DPTeSSA' },
-      { id:'creator',  name:'Creator',    inr:999,   usd:12.99,  daily:800,   tagline:'Built for images & video', url:'https://rzp.io/rzp/MMtjP37i' },
-      { id:'ultra',    name:'Ultra',      inr:1999,  usd:24,     daily:1800,  tagline:'For heavy daily use' },
-      { id:'business', name:'Business',   inr:4999,  usd:59.99,  daily:5000,  tagline:'For teams & agencies' },
-      { id:'enterprise', name:'Enterprise', inr:29999, usd:349.99, daily:30000, tagline:'Maximum everything' }
+      { id:'starter',    name:'Starter',    usd:2.99,   daily:130,   tagline:'For everyday questions', url:'https://rzp.io/rzp/y7aVauN' },
+      { id:'pro',        name:'Pro',        usd:5.99,   daily:350,   tagline:'Most popular', popular:true, url:'https://rzp.io/rzp/DPTeSSA' },
+      { id:'creator',    name:'Creator',    usd:11.99,  daily:800,   tagline:'Built for images & video', url:'https://rzp.io/rzp/MMtjP37i' },
+      { id:'ultra',      name:'Ultra',      usd:24.99,  daily:1800,  tagline:'For heavy daily use' },
+      { id:'business',   name:'Business',   usd:59.99,  daily:5000,  tagline:'For teams & agencies' },
+      { id:'enterprise', name:'Enterprise', usd:150,    daily:30000, tagline:'Our top plan — maximum everything' }
     ],
     yearly: [
-      { id:'starter-yearly', name:'Starter (Yearly)', inr:1899,  usd:28.99,  daily:130,  tagline:'Save 20%' },
-      { id:'pro-yearly',     name:'Pro (Yearly)',     inr:4799,  usd:69.99,  daily:350,  tagline:'Best value', popular:true },
-      { id:'creator-yearly', name:'Creator (Yearly)', inr:9599,  usd:129.99, daily:800,  tagline:'For image & video makers' },
-      { id:'ultra-yearly',   name:'Ultra (Yearly)',   inr:19199, usd:249.99, daily:1800, tagline:'For heavy daily use' }
+      { id:'starter-yearly', name:'Starter (Yearly)', usd:28.99,   daily:130,  tagline:'Save 20%' },
+      { id:'pro-yearly',     name:'Pro (Yearly)',     usd:57.99,   daily:350,  tagline:'Best value', popular:true },
+      { id:'creator-yearly', name:'Creator (Yearly)', usd:114.99,  daily:800,  tagline:'For image & video makers' },
+      { id:'ultra-yearly',   name:'Ultra (Yearly)',   usd:239.99,  daily:1800, tagline:'For heavy daily use' }
     ],
     packs: [
-      { id:'pack-small', name:'1,800 credits', inr:99,   usd:1.49,  credits:1800,  tagline:'One-time, no subscription' },
-      { id:'pack-mid',   name:'5,400 credits', inr:299,  usd:3.99,  credits:5400,  tagline:'One-time, no subscription' },
-      { id:'pack-large', name:'18,000 credits', inr:999, usd:12.99, credits:18000, tagline:'One-time, no subscription' },
-      { id:'pack-max',   name:'54,000 credits', inr:2999, usd:38.99, credits:54000, tagline:'One-time, no subscription' }
+      { id:'pack-small', name:'1,800 credits',  usd:1.49,  credits:1800,  tagline:'One-time, no subscription' },
+      { id:'pack-mid',   name:'5,400 credits',  usd:3.99,  credits:5400,  tagline:'One-time, no subscription' },
+      { id:'pack-large', name:'18,000 credits', usd:12.99, credits:18000, tagline:'One-time, no subscription' },
+      { id:'pack-max',   name:'54,000 credits', usd:38.99, credits:54000, tagline:'One-time, no subscription' }
     ]
   };
   var planGroup = 'monthly', currency = localStorage.getItem('dskAI_cur') || 'INR';
 
-  function money(inr, usd) {
-    return currency === 'USD' ? '$' + usd : '\u20b9' + nfmt(inr);
+  function money(usd) {
+    if (currency === 'USD') return '$' + usd;
+    /* rupees are derived from the dollar price with one rate */
+    var inr = Math.round(usd * USD_INR / 10) * 10;
+    return '\u20b9' + nfmt(inr);
   }
 
   function renderPlans() {
@@ -389,8 +393,8 @@
         ? '<div class="plp-tag">' + p.tagline + '</div>'
         : '<div class="plp-tag">' + p.tagline + ' \u00b7 ' + nfmt(p.daily) + ' credits every day</div>';
       var price = isPack
-        ? money(p.inr, p.usd) + '<span> one-time</span>'
-        : money(p.inr, p.usd) + '<span>/' + (planGroup === 'yearly' ? 'year' : 'month') + '</span>';
+        ? money(p.usd) + '<span> one-time</span>'
+        : money(p.usd) + '<span>/' + (planGroup === 'yearly' ? 'year' : 'month') + '</span>';
       var cta = mine
         ? '<a class="btn-primary" style="display:block;text-align:center;text-decoration:none" href="/ai/plans.html">Your current plan</a>'
         : (p.url
