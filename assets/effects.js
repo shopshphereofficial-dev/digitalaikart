@@ -382,3 +382,29 @@
   s.defer = true;
   document.head.appendChild(s);
 })();
+
+/* ---------- 9. NEWSLETTER SIGNUP (fallback for pages without it) ---------- */
+(function () {
+  function build() {
+    if (document.getElementById('newsletter')) return;
+    var footer = document.querySelector('footer');
+    if (!footer || !footer.parentNode) return;
+    var s = document.createElement('section');
+    s.className = 'newsletter';
+    s.id = 'newsletter';
+    s.innerHTML = '<div class="newsletter-inner">' +
+      '<h2>Get new AI guides &amp; tips first</h2>' +
+      '<p>One short email whenever we publish something genuinely useful &mdash; new AI guides, tools and India-specific playbooks. No spam, unsubscribe anytime.</p>' +
+      '<iframe data-tally-src="https://tally.so/embed/rjNXyX?alignLeft=1&amp;hideTitle=1&amp;transparentBackground=1&amp;dynamicHeight=1" loading="lazy" width="100%" height="230" frameborder="0" marginheight="0" marginwidth="0" title="Digitalaikart newsletter signup"></iframe>' +
+      '</div>';
+    footer.parentNode.insertBefore(s, footer);
+    if (!document.querySelector('script[src*="tally.so/widgets"]')) {
+      var t = document.createElement('script');
+      t.async = true;
+      t.src = 'https://tally.so/widgets/embed.js';
+      document.head.appendChild(t);
+    }
+  }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', build);
+  else build();
+})();
