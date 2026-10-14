@@ -359,3 +359,7 @@ img[src*="netlify"],a[href*="netlify.com"] img,div[id*="netlify"],.netlify-badge
 .shot-ph{aspect-ratio:9/16;border-radius:14px;border:1px dashed var(--border);display:flex;align-items:center;justify-content:center;color:var(--text-muted);font-size:.75rem;background:linear-gradient(135deg,var(--navy-card),#16294a)}
 .video-wrap{max-width:800px;margin:0 auto;aspect-ratio:16/9;border-radius:14px;overflow:hidden;border:1px solid var(--border)}
 .video-wrap iframe{width:100%;height:100%;border:0}
+
+/* --- added: homepage H1 descriptor + product covers --- */
+.hero-brand-sub{display:block;font-size:0.34em;font-weight:600;letter-spacing:0;margin-top:0.45rem;background:none;-webkit-text-fill-color:var(--text-secondary);color:var(--text-secondary)}
+.product-cover{width:100%;height:auto;border-radius:16px;border:1px solid var(--border);display:block;aspect-ratio:16/9;object-fit:cover;box-shadow:0 18px 50px rgba(0,0,0,0.35)}

@@ -373,3 +373,12 @@
   s.defer = true;
   document.head.appendChild(s);
 })();
+
+/* ---------- 8. GOOGLE ANALYTICS 4 (site-wide) ---------- */
+(function () {
+  if (window.__dakGAloader) return; window.__dakGAloader = true;
+  var s = document.createElement('script');
+  s.src = '/assets/analytics.js?v=1';
+  s.defer = true;
+  document.head.appendChild(s);
+})();
