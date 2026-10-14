@@ -1,0 +1,31 @@
+name: Upload AI Insurance Advisor Kit to Repo
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  upload-ebook:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Download ebook from release
+        run: |
+          mkdir -p downloads
+          gh release download ai-insurance-advisor-kit-v1 --repo shopshphereofficial-dev/digitalaikart --output "downloads/ai-insurance-advisor-kit.pdf"
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Commit ebook to repo
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add downloads/ai-insurance-advisor-kit.pdf
+          git commit -m "Add AI Insurance Advisor Kit PDF to repo" || echo "No changes to commit"
+          git push
