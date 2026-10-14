@@ -1,11 +1,19 @@
 name: AI blog agent
 
-# Publishes one AI-news blog post a day (cover image + sources + ads), at
-# 06:00 IST. Needs the GEMINI_API_KEY repository secret.
+# Publishes one AI-news blog post a day (natural cover image + sources + ads).
+# Three morning slots so a delayed schedule still gets today's post out; the
+# script no-ops if today's post already exists. Needs the GEMINI_API_KEY secret.
 on:
   schedule:
-    - cron: "30 0 * * *"   # 00:30 UTC = 06:00 IST
+    - cron: "30 0 * * *"   # 06:00 IST
+    - cron: "30 1 * * *"   # 07:00 IST (retry slot)
+    - cron: "30 2 * * *"   # 08:00 IST (retry slot)
   workflow_dispatch:
+    inputs:
+      force:
+        description: "Re-generate today's post from scratch"
+        type: boolean
+        default: false
 
 permissions:
   contents: write
@@ -25,6 +33,7 @@ jobs:
       - name: Generate today's AI news post
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          FORCE_TODAY: ${{ (github.event.inputs.force == 'true') && '1' || '' }}
         run: python3 tools/blog_agent.py
       - name: Commit
         run: |
