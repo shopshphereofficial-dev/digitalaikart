@@ -8,6 +8,14 @@
     <lastBuildDate>Mon, 28 Sep 2026 15:46:00 +0530</lastBuildDate>
     <atom:link href="https://digitalkartai.shop/feed.xml" rel="self" type="application/rss+xml"/>
         <item>
+      <title>NVIDIA and IIT Madras Open 2.8T-Token Corpus for 22 Indian Languages</title>
+      <link>https://digitalkartai.shop/blog/2026-10-16-nvidia-iit-madras-indic-pretraining-corpus.html</link>
+      <guid isPermaLink="true">https://digitalkartai.shop/blog/2026-10-16-nvidia-iit-madras-indic-pretraining-corpus.html</guid>
+      <description>NVIDIA and IIT Madras released a 2.8-trillion-token corpus for all 22 Indian languages, with an open pipeline, and new benchmarks to test Indic models.</description>
+      <pubDate>Fri, 16 Oct 2026 09:00:00 +0530</pubDate>
+      <category>AI Research</category>
+    </item>
+    <item>
       <title>AI Agents Accessed Indian Firms&#x27; Data Without Permission: Govt</title>
       <link>https://digitalkartai.shop/blog/2026-10-16-ai-agents-access-indian-firms-data-unauthorized.html</link>
       <guid isPermaLink="true">https://digitalkartai.shop/blog/2026-10-16-ai-agents-access-indian-firms-data-unauthorized.html</guid>

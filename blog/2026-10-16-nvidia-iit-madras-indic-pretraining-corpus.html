@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<title>NVIDIA and IIT Madras Open 2.8T-Token Corpus for 22 Indian Languages — Digitalaikart</title>
+<meta name="description" content="NVIDIA and IIT Madras released a 2.8-trillion-token corpus for all 22 Indian languages, with an open pipeline, and new benchmarks to test Indic models.">
+<meta name="news_keywords" content="NVIDIA Indic corpus, AI4Bharat IIT Madras, Nemotron-pretraining-Indic-v1, Indic pretraining data, Indian language AI models">
+<link rel="alternate" type="application/rss+xml" title="Digitalaikart Blog — AI News RSS Feed" href="https://digitalkartai.shop/feed.xml">
+<link rel="canonical" href="https://digitalkartai.shop/blog/2026-10-16-nvidia-iit-madras-indic-pretraining-corpus.html">
+<meta property="og:title" content="NVIDIA and IIT Madras Open 2.8T-Token Corpus for 22 Indian Languages">
+<meta property="og:description" content="NVIDIA and IIT Madras released a 2.8-trillion-token corpus for all 22 Indian languages, with an open pipeline, and new benchmarks to test Indic models.">
+<meta property="og:type" content="article">
+<meta property="article:section" content="AI Research">
+<meta property="article:published_time" content="2026-10-16">
+<meta property="og:url" content="https://digitalkartai.shop/blog/2026-10-16-nvidia-iit-madras-indic-pretraining-corpus.html">
+<meta property="og:site_name" content="Digitalaikart">
+<meta property="og:locale" content="en_IN">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="NVIDIA and IIT Madras Open 2.8T-Token Corpus for 22 Indian Languages">
+<meta name="twitter:description" content="NVIDIA and IIT Madras released a 2.8-trillion-token corpus for all 22 Indian languages, with an open pipeline, and new benchmarks to test Indic models.">
+<meta property="og:image" content="https://digitalkartai.shop/assets/og/2026-10-16-nvidia-iit-madras-indic-pretraining-corpus.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="NVIDIA and IIT Madras Open 2.8T-Token Corpus for 22 Indian Languages — Digitalaikart blog cover">
+<meta name="twitter:image" content="https://digitalkartai.shop/assets/og/2026-10-16-nvidia-iit-madras-indic-pretraining-corpus.jpg">
+<meta property="article:tag" content="NVIDIA Indic corpus"><meta property="article:tag" content="AI4Bharat IIT Madras"><meta property="article:tag" content="Nemotron-pretraining-Indic-v1"><meta property="article:tag" content="Indic pretraining data"><meta property="article:tag" content="Indian language AI models">
+<link rel="stylesheet" href="/assets/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "NewsArticle",
+  "articleSection": "AI Research",
+  "headline": "NVIDIA and IIT Madras Open 2.8T-Token Corpus for 22 Indian Languages",
+  "description": "NVIDIA and IIT Madras released a 2.8-trillion-token corpus for all 22 Indian languages, with an open pipeline, and new benchmarks to test Indic models.",
+  "image": ["https://digitalkartai.shop/assets/og/2026-10-16-nvidia-iit-madras-indic-pretraining-corpus.jpg"],
+  "datePublished": "2026-10-16",
+  "publisher": {"@type": "Organization", "name": "Digitalaikart", "url": "https://digitalkartai.shop", "logo": {"@type": "ImageObject", "url": "https://digitalkartai.shop/assets/og-default.png", "width": 1200, "height": 630}},
+  "author": {"@type": "Organization", "name": "Digitalaikart"},
+  "mainEntityOfPage": "https://digitalkartai.shop/blog/2026-10-16-nvidia-iit-madras-indic-pretraining-corpus.html",
+  "keywords": "NVIDIA Indic corpus, AI4Bharat IIT Madras, Nemotron-pretraining-Indic-v1, Indic pretraining data, Indian language AI models"
+}
+</script>
+<style>
+.post-wrap{max-width:800px;margin:0 auto;padding:7rem 1.5rem 3rem}
+.post-svg{width:100%;height:auto;border-radius:14px;border:1px solid var(--border);display:block}
+.post-meta{display:flex;gap:0.8rem;flex-wrap:wrap;align-items:center;margin:1.2rem 0 0.3rem;font-size:0.75rem;color:var(--text-muted)}
+.post-meta .cat{background:rgba(245,197,66,0.12);border:1px solid rgba(245,197,66,0.3);color:var(--gold);padding:0.15rem 0.7rem;border-radius:999px;font-weight:700;font-size:0.68rem;letter-spacing:0.5px;text-transform:uppercase}
+.post-title{font-size:1.7rem;color:#0f172a;font-weight:800;line-height:1.25;margin-bottom:0.6rem}
+.tldr{background:var(--navy-card);border-left:3px solid var(--gold);border-radius:0 12px 12px 0;padding:1.2rem 1.4rem;margin:1.8rem 0}
+.tldr h4{color:var(--gold);font-size:0.8rem;letter-spacing:1px;text-transform:uppercase;margin-bottom:0.5rem}
+.tldr ul{list-style:none}
+.tldr li{font-size:0.85rem;color:#334155;padding:0.2rem 0 0.2rem 1.2rem;position:relative}
+.tldr li::before{content:'→';position:absolute;left:0;color:var(--gold)}
+.post-body h2{font-size:1.15rem;color:#0f172a;margin:2rem 0 0.6rem;padding-bottom:0.3rem;border-bottom:1px solid var(--border)}
+.post-body h2 .num{color:var(--gold);margin-right:0.5rem}
+.post-body p{font-size:0.88rem;color:var(--text-secondary);margin:0.7rem 0}
+.post-body strong{color:#0f172a}
+.post-body ul{margin:0.6rem 0 0.6rem 1.4rem}
+.post-body li{font-size:0.85rem;color:var(--text-secondary);margin-bottom:0.35rem}
+.post-body .faq h3{font-size:0.98rem;color:#0f172a;margin:1.5rem 0 0.3rem}
+.post-body .faq p{font-size:0.85rem;color:var(--text-secondary);margin:0.4rem 0 0.9rem}
+.product-box{background:var(--navy-card);border:1px solid rgba(245,197,66,0.35);border-radius:14px;padding:1.5rem;margin:2.5rem 0;position:relative;overflow:hidden}
+.product-box::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:var(--gold-gradient)}
+.product-box h4{color:var(--gold);font-size:0.72rem;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:0.5rem}
+.product-box h3{color:#0f172a;font-size:1.05rem;margin-bottom:0.4rem}
+.product-box p{font-size:0.82rem;color:var(--text-secondary);margin-bottom:1rem}
+.product-box a{display:inline-block;background:var(--gold-gradient);color:var(--navy);padding:0.6rem 1.4rem;border-radius:10px;font-weight:700;font-size:0.82rem}
+.engage{margin:2.5rem 0;padding:1.4rem;background:var(--navy-card);border:1px solid var(--border);border-radius:14px;text-align:center}
+.engage h4{font-size:0.95rem;color:#0f172a;margin-bottom:0.8rem}
+.engage-row{display:flex;gap:0.6rem;justify-content:center;flex-wrap:wrap}
+.engage-btn{display:inline-flex;align-items:center;gap:0.4rem;padding:0.45rem 1rem;border-radius:999px;border:1px solid var(--border);background:#ffffff;color:var(--text-secondary);font-size:0.75rem;font-weight:600;cursor:pointer;transition:border-color 0.2s,color 0.2s;text-decoration:none}
+.engage-btn:hover{border-color:var(--gold);color:var(--gold)}
+.like-btn.liked{border-color:var(--gold);color:var(--gold)}
+.comment-note{font-size:0.72rem;color:var(--text-muted);margin-top:0.9rem}
+.related{margin:2.5rem 0;padding:1.3rem 1.5rem;background:var(--navy-card);border:1px solid var(--border);border-radius:14px}
+.related h4{font-size:0.8rem;color:var(--gold);letter-spacing:1px;text-transform:uppercase;margin-bottom:0.6rem}
+.related ul{list-style:none}
+.related li{font-size:0.85rem;color:var(--text-secondary);padding:0.35rem 0}
+.related li a{color:var(--gold)}
+.comment-note a{color:var(--whatsapp)}
+.sources{margin:2.5rem 0;padding:1.3rem 1.5rem;background:var(--navy-card);border:1px solid var(--border);border-radius:14px}
+.sources h4{font-size:0.8rem;color:var(--gold);letter-spacing:1px;text-transform:uppercase;margin-bottom:0.6rem}
+.sources ul{list-style:none}
+.sources li{font-size:0.75rem;color:var(--text-secondary);padding:0.25rem 0}
+.sources a{color:var(--gold);word-break:break-all}
+.summary-box{background:rgba(245,197,66,0.06);border:1px dashed rgba(245,197,66,0.35);border-radius:12px;padding:1.2rem 1.4rem;margin:2rem 0}
+.summary-box h4{color:var(--gold);font-size:0.75rem;letter-spacing:1px;text-transform:uppercase;margin-bottom:0.4rem}
+.summary-box p{font-size:0.85rem;color:#334155}
+.tag-pills{display:flex;flex-wrap:wrap;gap:0.5rem;margin:0.3rem 0 1.2rem}
+.tag-pills span{font-size:0.68rem;font-weight:600;color:#475569;background:rgba(148,163,184,0.08);border:1px solid rgba(148,163,184,0.25);padding:0.18rem 0.7rem;border-radius:999px;letter-spacing:0.3px}
+.post-cover{width:100%;height:auto;border-radius:14px;border:1px solid var(--border);display:block;aspect-ratio:16/9;object-fit:cover}</style>
+</head>
+<body>
+<nav class="nav"><div class="nav-inner"><a href="/" class="nav-logo">Digitalaikart</a><div class="nav-links"><a href="/">Home</a><a href="/products/">Products</a><a href="/apps/">Apps</a><a href="/ai/">AI Assistant</a><a href="/blog/" class="active">Blog</a></div></div></nav>
+
+<div class="post-wrap">
+  <img class="post-cover" src="/assets/og/2026-10-16-nvidia-iit-madras-indic-pretraining-corpus.jpg" alt="NVIDIA and IIT Madras Open 2.8T-Token Corpus for 22 Indian Languages" width="1200" height="630">
+
+  <div class="post-meta"><span class="cat">AI Research</span><span>October 16, 2026</span><span>4 min read</span><span>By Digitalaikart Editorial</span></div>
+  <h1 class="post-title">NVIDIA and IIT Madras Open 2.8T-Token Corpus for 22 Indian Languages</h1>
+  <div class="tag-pills" aria-label="Topics"><span>#AIIndia</span><span>#AIResearch</span><span>#IndicAI</span><span>#NVIDIA</span></div>
+
+  <div class="tldr">
+    <h4>TL;DR</h4>
+    <ul><li>NVIDIA and IIT Madras&#x27; AI4Bharat lab released Nemotron-pretraining-Indic-v1, about 2.8 trillion tokens across all 22 languages in India&#x27;s Constitution.</li><li>It carries native-script data for 22 languages and romanised text for 12, built from English source documents through an open, published pipeline.</li><li>A repair-and-rescore step recovered 438.4 billion tokens that would otherwise have been thrown away.</li><li>AI4Bharat also released Indic-LLM-Eval-Suite, open benchmarks for comparing models across Indian languages.</li></ul>
+  </div>
+
+  <div class="post-body">
+<h2><span class="num">01.</span>A data gap India has lived with for years</h2><p>Indian-language AI has trailed English largely for one reason: too little training data. Mitesh Khapra, who heads AI4Bharat at IIT Madras, has put the problem plainly, saying Indian language technology trails English because we do not have enough data for Indian languages. On October 16, NVIDIA and IIT Madras&#x27; AI4Bharat lab released Nemotron-pretraining-Indic-v1, a corpus of about 2.8 trillion tokens covering all 22 languages listed in India&#x27;s Constitution, along with the open pipeline used to build it. The release builds on AI4Bharat&#x27;s earlier Sangraha corpus, which NVIDIA describes as having helped lay the foundation for open Indic language-model research.</p><p>The 22 languages are the first languages for 97 percent of Indians, or nearly 1.2 billion people at the 2011 Census, according to the announcement. For a country where most people do not work in English, that is the point: more training material in people&#x27;s own languages is the raw ingredient for assistants, translators and classroom tools that actually work, rather than tools that only half-understand the person using them.</p>
+<h2><span class="num">02.</span>What is actually inside the corpus</h2><p>The corpus contains 2,601.0 billion native-script tokens and 224.6 billion romanised tokens, counted with the Gemma-4 tokeniser. Native script means a language&#x27;s own writing system; romanised means Indian-language text written in Latin letters. Twelve languages get both, among them Hindi, Bengali, Tamil, Telugu, Marathi and Urdu, while ten get native script only, including Assamese, Kashmiri, Sanskrit and Santali. That works out to 34 language-and-script combinations. On Hugging Face the records are tagged by language, script and region, so a reader can tell Hindi in Devanagari from romanised Hindi before downloading anything.</p><p>The data does not start from scratch. The team began with English documents from 15 Nemotron-CC-v2 subsets covering web text, question-and-answer material, mathematics and code, then used NVIDIA&#x27;s open-source NeMo Data Designer to translate, score and repair them. For the twelve dual-script languages the translation model was Google&#x27;s Gemma-4-31B-it; for the other ten it was Indic Translate, a document-level model from Bodhan AI, a nonprofit incubated at IIT Madras. Every record keeps a link back to its English source, so the text stays auditable. The team also published a Nemotron Bharat translation plugin for NeMo Data Designer, so other builders can reuse the same prompts, windowing and script remapping.</p>
+<h2><span class="num">03.</span>The repair step that saved 438 billion tokens</h2><p>Quality control was strict. Each translation was scored against its source using a rubric inspired by Multidimensional Quality Metrics, covering meaning, fluency, terminology, style and formatting, and only outputs scoring at least 75 out of 100 were kept. Lower-scoring translations were repaired using the assessment feedback and then rescored. That loop alone recovered 438.4 billion tokens that would otherwise have been discarded, a figure already counted in the corpus total.</p><p>Handling every language took some improvisation. Longer Santali documents were translated in overlapping windows and stitched back together, while Manipuri was translated into Bengali script and then converted to Meitei Mayek, its native script. The team is candid about the limits too: automated scoring was complemented by sampled human review whose coverage varies by language, and in the twelve-language workflow the same model that translated also judged the result. NVIDIA says the corpus is meant to sit alongside naturally written Indian-language text rather than replace it, and that translation does not by itself capture local knowledge and culture.</p>
+<h2><span class="num">04.</span>Proof it helps: Nemotron 3.5 Super VL</h2><p>The corpus is already feeding a model. Continued pretraining for NVIDIA&#x27;s Nemotron 3.5 Super VL used a 100-billion-token budget, of which 10 billion tokens were a mix of synthetic and natural Indic text. Scores rose on all five reported Indic benchmarks, namely MILU, Indic MMLU-Pro, Indic ARC-Challenge, Indic ARC-Easy and Indic GSM8K, with gains of 4.98 to 9.82 percentage points, according to the technical report.</p><p>NVIDIA is careful to note that the comparison covers a training stage blending synthetic and natural Indic data rather than isolating the new corpus, and that instruction-following on IFEval 1.5 dipped 2.04 points. The model did improve across all four dimensions of IndiVibe, Sarvam AI&#x27;s open benchmark of assistant-style prompts in Indian languages, covering usefulness, fluency, language and script fidelity, and appropriate verbosity. Still, the direction is clear: more and better Indic data moves the needle on tasks in Indian languages.</p>
+<h2><span class="num">05.</span>New benchmarks, and what it means for India</h2><p>Alongside the data, AI4Bharat released Indic-LLM-Eval-Suite, an open set of offline benchmarks for judging models across eight capability areas including general chat, instruction following, mathematics, STEM, code and translation. The suite pulls together existing Indic benchmarks and refreshed versions such as MILU-1.5 and IndicIFEval-1.5, and is wired into NVIDIA&#x27;s NeMo-Gym so scores share a common interface. After testing several open-weight Indic and multilingual models, the lab found that no single model performs best across all tasks, a useful reality check for anyone choosing a model.</p><p>For Indian startups, students and government services, the practical effect is lower friction. Teams can fine-tune on a large, openly documented Indic corpus instead of assembling data from scratch, and compare results on shared benchmarks rather than on marketing claims. The corpus is releasing soon, and NVIDIA says it plans to build on it in future Nemotron models.</p>
+    <div class="faq">
+      <h2>Frequently asked questions</h2>
+<p><strong>What did NVIDIA and IIT Madras release?</strong><br>Nemotron-pretraining-Indic-v1, a synthetic pretraining corpus of about 2.8 trillion tokens across all 22 languages in India&#x27;s Constitution, plus the open GPU-accelerated pipeline used to create it. It is releasing soon.</p><p><strong>Which Indian languages does the corpus cover?</strong><br>All 22 scheduled languages. Twelve, including Hindi, Bengali, Tamil, Telugu, Marathi and Urdu, have both native-script and romanised data, while the other ten, such as Assamese, Kashmiri, Sanskrit and Santali, have native-script data only, across 34 language-script combinations.</p><p><strong>Why does this matter for Indian users?</strong><br>More training data in Indian languages leads to better translation, voice and chatbot tools that work outside English. The corpus and its open pipeline let Indian developers and researchers build those tools faster and at lower cost.</p>
+    </div>
+  </div>
+
+  <div class="engage">
+    <h4>Found this useful? Share it</h4>
+    <div class="engage-row">
+      <a class="engage-btn" href="https://wa.me/?text=NVIDIA%20and%20IIT%20Madras%20Open%202.8T-Token%20Corpus%20for%2022%20Indian%20Languages%20https%3A//digitalkartai.shop/blog/2026-10-16-nvidia-iit-madras-indic-pretraining-corpus.html" target="_blank" rel="noopener">WhatsApp</a>
+      <a class="engage-btn" href="https://twitter.com/intent/tweet?text=NVIDIA%20and%20IIT%20Madras%20Open%202.8T-Token%20Corpus%20for%2022%20Indian%20Languages&url=https%3A//digitalkartai.shop/blog/2026-10-16-nvidia-iit-madras-indic-pretraining-corpus.html" target="_blank" rel="noopener">X / Twitter</a>
+      <a class="engage-btn" href="/products/">Explore AI guides</a>
+    </div>
+  </div>
+
+  <div class="sources">
+    <h4>Source</h4>
+    <ul>
+      <li><strong>NVIDIA AI (Hugging Face blog)</strong> — <a href="https://huggingface.co/blog/nvidia/scaling-indic-pretraining" target="_blank" rel="noopener nofollow">original report</a></li>
+      <li>Published: October 16, 2026 · Compiled by Digitalaikart</li>
+    </ul>
+  </div>
+
+  <div class="related">
+    <h4>More AI news</h4>
+    <ul>
+      <li><a href="/blog/gpt-6-astra-what-you-need-to-know.html">GPT-6 Astra Explained: 10 Things AI Beginners Should Know</a></li>
+      <li><a href="/blog/2026-10-16-cert-in-ai-agents-bypass-firewalls.html">CERT-In Warns AI Agents Bypassed Indian Corporate Firewalls</a></li>
+      <li><a href="/blog/2026-10-16-ai-agents-access-indian-firms-data-unauthorized.html">AI Agents Accessed Indian Firms&amp;#x27; Data Without Permission: Govt</a></li>
+      <li><a href="/blog/2026-10-15-india-ai-dividend-growth-challenges.html">India Pursues an AI Dividend Amid Tough Structural Hurdles</a></li>
+    </ul>
+  </div>
+</div>
+
+<footer><div class="footer-links"><a href="/">Home</a><a href="/products/">Products</a><a href="/blog/">Blog</a><a href="/privacy-policy.html">Privacy Policy</a><a href="/refund-policy.html">Refund Policy</a><a href="/terms.html">Terms &amp; Conditions</a></div><p><strong>Digitalaikart</strong> — Premium AI Digital Products</p><p style="margin-top:0.5rem;color:#334155">&copy; 2026 Digitalaikart. All rights reserved.</p></footer>
+<script src="/assets/effects.js"></script>
+</body>
+</html>
