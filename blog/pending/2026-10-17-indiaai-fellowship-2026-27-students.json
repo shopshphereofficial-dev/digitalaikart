@@ -1,0 +1,82 @@
+{
+  "date": "2026-10-17",
+  "title": "IndiaAI Fellowship 2026-27 Opens: Up to ₹2 Lakh for Students",
+  "slug": "indiaai-fellowship-2026-27-students",
+  "category": "AI India",
+  "description": "MeitY has opened the IndiaAI Fellowship 2026-27 for students, offering up to ₹2 lakh for AI research. Here is who is eligible and how to apply by 30 November.",
+  "emoji": "🎓",
+  "keywords": [
+    "IndiaAI Fellowship 2026-27",
+    "MeitY AI fellowship",
+    "AI research funding India",
+    "IndiaAI Mission FutureSkills",
+    "AI scholarship for students"
+  ],
+  "tags": [
+    "#AIIndia",
+    "#AIResearch",
+    "#Fellowship",
+    "#MeitY"
+  ],
+  "tldr": [
+    "MeitY's IndiaAI Mission has opened applications for the IndiaAI Fellowship 2026-27.",
+    "Undergraduate and Integrated Dual Degree students can receive up to ₹1 lakh; postgraduate students up to ₹2 lakh.",
+    "An extra ₹1 lakh is available for presenting a paper at a qualifying international AI conference.",
+    "The last date to apply on the official portal is 30 November 2026."
+  ],
+  "sections": [
+    {
+      "heading": "A government fellowship that pays for AI research",
+      "paragraphs": [
+        "The Ministry of Electronics and Information Technology (MeitY) has opened applications for the IndiaAI Fellowship 2026-27, a government programme that gives money to students who want to do research and build AI solutions. It runs under the IndiaAI Mission's FutureSkills pillar, which aims to lower the barriers to entering AI study at every level of higher education. The fellowship is meant for Indian students in undergraduate, Integrated Dual Degree (IDD) and postgraduate programmes, and it is open across disciplines such as engineering, science, medicine, law, commerce, business and the liberal arts, not only computer science.",
+        "For a student who has an idea but no budget for compute, data or conference travel, this is the kind of support that turns a project on paper into something that runs. Applications are live now, and the deadline is 30 November 2026."
+      ]
+    },
+    {
+      "heading": "What the fellowship offers",
+      "paragraphs": [
+        "The money depends on the level of study. Undergraduate and Integrated Dual Degree students can receive up to ₹1 lakh, while postgraduate students can receive up to ₹2 lakh. On top of that, students whose research papers are accepted at qualifying international AI conferences can get an additional ₹1 lakh to cover travel and accommodation. This is financial assistance during the programme, subject to the conditions in the official guidelines.",
+        "There is a separate track for doctoral students. MeitY's IndiaAI programme also offers PhD fellowships, with a monthly fellowship and a research contingency grant, and it has said the expanded fellowship programme is intended to support 13,500 scholars: 8,000 undergraduates, 5,000 postgraduates and 500 PhD researchers. Exact amounts and conditions can change between cycles, so the portal's current guidelines are the document that matters."
+      ]
+    },
+    {
+      "heading": "Who is eligible",
+      "paragraphs": [
+        "Eligibility is decided mainly by your programme and your semester. Students in a three-year undergraduate degree can apply from the beginning of the fifth semester; those in a four-year undergraduate degree from the beginning of the seventh semester; and students in a five-year Integrated Dual Degree programme from the beginning of the ninth semester. Postgraduate students can apply if they are in the first, second or third semester of their programme.",
+        "Applicants must be Indian nationals, and part-time students are not eligible. Undergraduate applicants also need to have completed at least three full-time courses in artificial intelligence and to meet the prescribed academic requirements, while postgraduate applicants must satisfy the grade criteria set out for their category. Because the fine print on grades and coursework decides who is actually selected, it is worth reading the official guidelines for your exact programme before you start the form."
+      ]
+    },
+    {
+      "heading": "How to apply, and what to keep ready",
+      "paragraphs": [
+        "Applications go through the official portal at fellowship.indiaai.gov.in. The process is straightforward: read the guidelines, confirm that your programme and semester match the rules, gather your academic records, and get the endorsements your institution requires. Your project guide and college will usually need to sign off, so start that part early rather than in the last week.",
+        "Keep the practical details ready: your academic transcripts and proof of your current semester, a short description of your AI project or research idea, banking details for the disbursement, and any documents the guidelines list for your category. Do not assume you will receive the full amount, since the announcement says up to ₹1 lakh or ₹2 lakh, and do not leave the application to the final days, when college offices are slow to respond."
+      ]
+    },
+    {
+      "heading": "Why this matters for India's AI talent",
+      "paragraphs": [
+        "The IndiaAI Mission was approved in March 2024 with an outlay of ₹10,371.92 crore over five years, and fellowships are one of the ways it tries to build a research workforce rather than only buying hardware. India has plenty of engineering students, but far fewer who have done funded, hands-on AI research. A fellowship that covers a year of work, and pays for a paper to be presented abroad, addresses a very specific gap: the step between coursework and real research.",
+        "For students, the arithmetic is simple. The fellowship is open across disciplines, so an AI project in medicine, law or agriculture can qualify, not just one in a computer science department. The deadline is 30 November 2026, and applying costs nothing but time. If you are in the right semester and you have an AI idea, this is one of the few national programmes built to back it, so it is worth checking your eligibility today rather than after the placements season begins."
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "q": "Who can apply for the IndiaAI Fellowship 2026-27?",
+      "a": "Indian students in undergraduate, Integrated Dual Degree and postgraduate programmes, in the semesters listed in the guidelines, such as the fifth semester of a three-year degree or the first to third semester of a postgraduate course. Part-time students are not eligible."
+    },
+    {
+      "q": "How much funding does the IndiaAI Fellowship provide?",
+      "a": "Up to ₹1 lakh for undergraduate and Integrated Dual Degree students, up to ₹2 lakh for postgraduate students, and an additional ₹1 lakh for presenting a paper at a qualifying international AI conference."
+    },
+    {
+      "q": "What is the last date to apply?",
+      "a": "The last date to apply for the IndiaAI Fellowship 2026-27 is 30 November 2026, through the official portal at fellowship.indiaai.gov.in."
+    }
+  ],
+  "image_prompt": "A photorealistic wide 16:9 editorial photo of a young Indian postgraduate student working at a desk in a university AI research lab, a laptop showing colourful data charts, a notebook and pen beside it, natural window light, candid documentary style, no text, no letters, no logos, no watermarks.",
+  "source_name": "IndiaAI Fellowship (MeitY)",
+  "source_link": "https://fellowship.indiaai.gov.in/",
+  "source_url": "https://fellowship.indiaai.gov.in/"
+}
