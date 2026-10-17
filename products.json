@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-16",
+  "updated": "2026-10-17",
   "note": "Single source of truth for ALL products on digitalkartai.shop. The blog agent MUST read this file at the start of every run and promote the best-matching product per post. The product agent MUST append new products here when publishing them. Never delete or modify existing entries.",
   "products": [
     {
@@ -3335,6 +3335,56 @@
         "India air pollution",
         "clean air India",
         "family health India"
+      ]
+    },
+    {
+      "slug": "ayushman-bharat-family-playbook-2026-27",
+      "name": "The Ayushman Bharat Family Playbook 2026-27 — Digital Edition",
+      "tagline": "The complete 33-page guide to Ayushman Bharat PM-JAY for Indian families — the five doors into the scheme, the new Ayushman Vay Vandana Card for every citizen aged 70 and above, step-by-step registration, the four fixes for rejected cards, hospital rights, portability, and a ready-to-use grievance template.",
+      "price": "₹99",
+      "mrp": "₹499",
+      "url": "/products/ayushman-bharat-family-playbook-2026-27/",
+      "topics": [
+        "Ayushman Bharat",
+        "PM-JAY",
+        "Ayushman card",
+        "Ayushman Vay Vandana card",
+        "senior citizen health cover",
+        "70 years health scheme",
+        "government health insurance",
+        "free health cover",
+        "Rs 5 lakh health cover",
+        "beneficiary.nha.gov.in",
+        "Ayushman app",
+        "eKYC",
+        "Ayushman card rejected",
+        "Ayushman card not working",
+        "PM-JAY eligibility",
+        "SECC 2011",
+        "empannelled hospital",
+        "Ayushman Mitra",
+        "PMAM",
+        "cashless treatment",
+        "hospital portability",
+        "health benefit package",
+        "National Health Authority",
+        "14555 helpline",
+        "cgrms grievance",
+        "e-Shram",
+        "gig workers health cover",
+        "state health scheme",
+        "Arogya Karnataka",
+        "CMCHIS",
+        "MJPJAY",
+        "Ayushman Arogya Mandir",
+        "ABHA health ID",
+        "eSanjeevani",
+        "Jan Aushadhi",
+        "medical emergency India",
+        "family health India",
+        "health scheme India 2026",
+        "senior citizens India",
+        "medical bills India"
       ]
     }
   ]
