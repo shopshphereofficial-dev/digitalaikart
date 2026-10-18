@@ -28,6 +28,35 @@
         "JSON backup and restore; data stored in the browser only",
         "Packaged as a ZIP with README, example data and licence"
       ]
+    },
+    {
+      "date": "2026-10-18",
+      "name": "The Calm Mind Playbook — Anxiety, Stress & Sleep Reset (India Edition 2026)",
+      "slug": "calm-mind-playbook-india-2026",
+      "category": "Self-help Playbook / Mental Wellbeing",
+      "type": "ebook",
+      "price": "₹149",
+      "mrp": "₹599",
+      "url": "https://digitalkartai.shop/products/calm-mind-playbook-india-2026/",
+      "download": "https://digitalkartai.shop/downloads/calm-mind-playbook-india-2026.pdf",
+      "payment_link": "https://rzp.io/rzp/dzEbaaR",
+      "status": "published",
+      "features": [
+        "32-page premium PDF, 13 chapters, 18 tools & worksheets",
+        "The 5-minute rescue toolkit (breathing, grounding, unhooking, making room) adapted from the WHO stress guide",
+        "CBT thought record with a worked Indian example + the seven thinking traps",
+        "The seven-rule sleep reset, 20-minute rule, 3 a.m. protocol and a 7-day sleep log",
+        "Exam & study stress: 7-day exam-week plan, test-anxiety routine, a page for parents",
+        "Work stress & burnout: what burnout is, five boundary scripts, Sunday-scaries reset",
+        "Phone & doomscroll rules and a three-step interrupt",
+        "Panic-attack first-aid (eight steps) and what not to do",
+        "Red-flag checklist and how to support someone else",
+        "Free-help roadmap (Tele-MANAS 14416, KIRAN, DMHP, government OPDs) + 2026 therapy costs",
+        "Insurance guide: Mental Healthcare Act 2017 s.21(4), IRDAI, how to check a policy in 5 minutes",
+        "30-day calm plan with daily core, weekly review and a 30-day tracker",
+        "Verified helpline directory (12 mental-health lines + 6 emergency numbers), October 2026",
+        "One-page cheat sheet"
+      ]
     }
   ]
 }
