@@ -1,0 +1,33 @@
+{
+  "updated": "2026-10-18",
+  "note": "Append-only log of products published to digitalkartai.shop. Newest last. Never delete or modify existing records.",
+  "history": [
+    {
+      "date": "2026-10-18",
+      "name": "GST Invoice Generator Pro — Offline Invoicing Tool for India",
+      "slug": "gst-invoice-generator-pro",
+      "category": "Software Tool / Offline Web App",
+      "type": "non-ebook",
+      "price": "₹149",
+      "mrp": "₹999",
+      "url": "https://digitalkartai.shop/products/gst-invoice-generator-pro/",
+      "download": "https://digitalkartai.shop/downloads/gst-invoice-generator-pro.zip",
+      "payment_link": "https://rzp.io/rzp/YrgnNl2o",
+      "status": "published",
+      "features": [
+        "Offline HTML/JS invoicing tool (no install, no sign-up)",
+        "Tax invoices and quotations",
+        "Automatic CGST/SGST vs IGST from place of supply",
+        "Per-line HSN/SAC, quantity, rate, discount and GST rate",
+        "Seven GST slabs: 0, 0.25, 3, 5, 12, 18, 28%",
+        "Amount in words (Indian lakh/crore style)",
+        "Saved client book",
+        "Paid/outstanding dashboard and status tracking",
+        "Round-off to nearest rupee",
+        "Print to A4 or save as PDF",
+        "JSON backup and restore; data stored in the browser only",
+        "Packaged as a ZIP with README, example data and licence"
+      ]
+    }
+  ]
+}
