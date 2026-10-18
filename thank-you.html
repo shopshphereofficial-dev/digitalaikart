@@ -96,9 +96,19 @@ function sendShipping(){
   }
   var combo=(p==='combo'||/-combo$/.test(p));
   var slug=p.replace(/-combo$/,'');
+  var zips={'gst-invoice-generator-pro':'/downloads/gst-invoice-generator-pro.zip'};
   if(slug&&slug!=='combo'&&slug!=='gpt-6-astra-guide'){
     var dl=document.querySelector('.download-btn');
-    if(dl){dl.setAttribute('href','/downloads/'+slug+'.pdf')}
+    if(dl){
+      if(zips[slug]){
+        dl.setAttribute('href',zips[slug]);
+        dl.textContent='\u2b07 Download Your Files (ZIP)';
+        var sb=document.querySelector('.thankyou .sub');
+        if(sb){sb.textContent='Your payment was successful. Your files are ready to download right now.'}
+      }else{
+        dl.setAttribute('href','/downloads/'+slug+'.pdf');
+      }
+    }
   }
   if(combo){document.getElementById('shipForm').style.display='block'}
 })();
