@@ -1,0 +1,80 @@
+{
+  "title": "Why AI firms are paying Indians to film their daily chores",
+  "slug": "india-workers-filming-chores-robot-training-data",
+  "category": "AI Jobs",
+  "description": "AI companies are paying workers across India to record household chores on camera, creating the training data that teaches robots to do those jobs.",
+  "emoji": "🤖",
+  "keywords": [
+    "robot training data",
+    "physical AI",
+    "India gig work",
+    "egocentric data",
+    "automation jobs"
+  ],
+  "tags": [
+    "#AIRobots",
+    "#AIJobs",
+    "#IndiaAI",
+    "#PhysicalAI"
+  ],
+  "tldr": [
+    "AI companies are paying thousands of people in India to record themselves doing everyday household and factory tasks.",
+    "The footage, called egocentric data, cannot be scraped online and is used to train robots that will do those jobs.",
+    "Some factory workers were filmed without being told the recordings were meant to train robots to replace them.",
+    "India's large workforce makes it a key global hub for this data work, but the jobs it creates may not last."
+  ],
+  "sections": [
+    {
+      "heading": "A new kind of paid work",
+      "paragraphs": [
+        "Across India, men and women are being paid to record themselves doing ordinary household work such as folding laundry, mopping floors, washing dishes and chopping vegetables, with a phone or camera mounted on their head. The footage is not for social media. It is training data for artificial intelligence systems that companies hope will one day power robots able to do those chores on their own. According to reporting by NPR, thousands of people across the country have taken up this work over the past year, recording themselves for about two or three hours a day and earning roughly 120 dollars a month.",
+        "The industry calls this egocentric data, meaning video captured from the point of view of a person and showing exactly what their hands are doing. This kind of footage cannot simply be scraped off the internet, because it has to show real people performing real tasks in real kitchens and living rooms. That is why AI companies are willing to pay for it, and why a quiet data collection economy has taken root in India."
+      ]
+    },
+    {
+      "heading": "Inside the data factory in Karur",
+      "paragraphs": [
+        "One of the companies at the centre of this work is Objectways, which operates out of several buildings in Karur, a town in Tamil Nadu. Senior employee Rajeshkumar Ramaswamy told NPR that the firm pays thousands of people to record themselves working, both in India and in countries such as the Philippines and Nigeria. Inside its offices, staff record themselves doing repetitive jobs while holding gripper tools that mimic robot hands. One worker unscrewed and screwed the lids of dozens of bottles, roughly a hundred times, so that a machine could learn what a water bottle looks like and how to grip it.",
+        "Upstairs, the company has built a set that looks like a three bedroom home, where people film themselves chopping onions, folding clothes and wiping surfaces. The data is sold to AI developers building household robots, and one well known domestic robot, which looks like a faceless servant, is already on sale for about 20,000 dollars. Most clients asking for first person recordings of chores are in the United States, so the firm also pays Americans to record their own housework, since a robot trained on Indian stainless steel plates might grip a fragile ceramic plate far too hard."
+      ]
+    },
+    {
+      "heading": "Why physical AI needs this data",
+      "paragraphs": [
+        "Prathosh A.P., a professor at the Indian Institute of Science in Bengaluru who studies machine learning in data scarce environments, describes this field as physical AI. Today's AI systems, he told NPR, are brains without a body. They can write and reason, but they cannot fold a shirt or pick up a cup. Giving them those abilities requires enormous volumes of recorded human movement.",
+        "India has become a key place to gather that footage because of its large population, relatively low wages and openness to new technology. The work is not limited to homes. Objectways told NPR that its Indian clients want robots for jobs they struggle to fill, such as tapping rubber from rubber trees, dusting solar panels in remote rural areas and removing stems from chillies."
+      ]
+    },
+    {
+      "heading": "The question of consent",
+      "paragraphs": [
+        "Not everyone recording is doing it by choice or with full knowledge. At a textile factory in Karur, workers were handed GoPro cameras and smart glasses and asked to wear them while they packed and folded aprons. Shoba Kirubakaran, a 40 year old who has worked there for ten years, six days a week, for about 90 dollars a month, told NPR that she had been asked to wear the camera three times and that nobody had explained the recordings were meant to train robots to take over her job. Other workers, like 42 year old Kannagi Periyasaamy, are paid about 2.60 dollars an hour and were told exactly what the footage was for.",
+        "Astha Kapoor, co-founder of the Aapti Institute, which studies how technology affects people, described the practice of recording workers without their understanding as exploitation of labour. The concerns go beyond pay. Recordings made inside homes capture private spaces, and it is often unclear who owns the footage or what the people appearing in it have actually agreed to."
+      ]
+    },
+    {
+      "heading": "What this means for Indian readers",
+      "paragraphs": [
+        "For students and young professionals, the rise of physical AI points to a new set of skills around data collection, annotation and robotics, even as routine factory and back office tasks come under pressure. India's workforce is the world's second largest, with about 600 million people working or looking for work, and economists warn that retraining people at that scale will be hard. Amit Basole of Azim Premji University told NPR he doubted whether the country has the policy agility to move workers into new occupations.",
+        "For small businesses, the shift cuts both ways. Data collection and annotation can bring paid work to towns like Karur, and Indian firms are building real expertise in it. But the same technology is aimed squarely at automating repetitive jobs, so the income it creates today may not last. The practical takeaway is to treat AI data work as a skill to build on rather than a long term destination, and to ask clear questions about consent and ownership before agreeing to be recorded."
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "q": "What is egocentric data?",
+      "a": "It is video recorded from a person's own point of view, usually with a head mounted camera. AI companies use it to teach robots how humans move their hands and handle everyday objects."
+    },
+    {
+      "q": "Why are AI companies collecting this data in India?",
+      "a": "India has a large population, relatively low wages and openness to new technology, which makes it a practical place to record millions of hours of real human activity. That footage cannot be scraped from the internet."
+    },
+    {
+      "q": "Could this work take away Indian jobs?",
+      "a": "The robots being trained are meant to do the same routine tasks that people are paid to perform today. Data collection creates income now, but it is unlikely to be a long term career on its own."
+    }
+  ],
+  "image_prompt": "A woman in a simple Indian kitchen wearing a lightweight head mounted phone rig, chopping vegetables on a steel plate beside a window, natural daylight, candid documentary style, wide landscape.",
+  "source_name": "NPR",
+  "source_url": "https://www.npr.org/2026/10/15/nx-s1-5991368/to-train-robots-ai-companies-are-paying-people-in-india-to-film-themselves-doing-chores"
+}
