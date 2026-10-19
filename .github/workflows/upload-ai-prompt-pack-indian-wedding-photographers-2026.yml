@@ -1,0 +1,32 @@
+name: Upload AI Prompt Pack for Indian Wedding Photographers to Repo
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  upload-ebook:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Download ebook and cover from release
+        run: |
+          mkdir -p downloads assets/products
+          gh release download ai-prompt-pack-indian-wedding-photographers-2026-v1 --repo shopshphereofficial-dev/digitalaikart --pattern "ai-prompt-pack-indian-wedding-photographers-2026.pdf" --dir downloads
+          gh release download ai-prompt-pack-indian-wedding-photographers-2026-v1 --repo shopshphereofficial-dev/digitalaikart --pattern "ai-prompt-pack-indian-wedding-photographers-2026.jpg" --dir assets/products
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Commit ebook and cover to repo
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add downloads/ai-prompt-pack-indian-wedding-photographers-2026.pdf assets/products/ai-prompt-pack-indian-wedding-photographers-2026.jpg
+          git commit -m "Add AI Prompt Pack for Indian Wedding Photographers PDF and cover" || echo "No changes to commit"
+          git push
