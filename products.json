@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-18",
+  "updated": "2026-10-19",
   "note": "Single source of truth for ALL products on digitalkartai.shop. The blog agent MUST read this file at the start of every run and promote the best-matching product per post. The product agent MUST append new products here when publishing them. Never delete or modify existing entries.",
   "products": [
     {
@@ -3655,6 +3655,55 @@
         "professional exams India",
         "commerce career",
         "India"
+      ]
+    },
+    {
+      "slug": "freelancer-finance-os-india",
+      "name": "Freelancer Finance OS — India (Excel & Google Sheets Tracker, FY 2026-27)",
+      "tagline": "A ready-to-use money system for Indian freelancers: log each invoice once and the workbook works out the invoice total, GST, TDS, net-to-bank, Paid / Due / Overdue status, client outstanding and a monthly April-to-March profit view — then estimates your FY 2026-27 advance tax under the new regime with the ₹12 lakh rebate, marginal relief and the four instalment dates. Nine live sheets with dropdowns and charts, no macros, works in Excel and Google Sheets.",
+      "price": "₹199",
+      "mrp": "₹1,499",
+      "url": "/products/freelancer-finance-os-india/",
+      "topics": [
+        "freelancer finance tracker",
+        "freelancer income tracker",
+        "excel template India",
+        "google sheets template",
+        "freelance bookkeeping",
+        "invoice tracker",
+        "payment tracker",
+        "TDS tracker",
+        "TDS on freelance income",
+        "GST tracker",
+        "input GST",
+        "expense tracker India",
+        "small business finance",
+        "one person business India",
+        "advance tax",
+        "advance tax dates",
+        "advance tax instalments",
+        "presumptive taxation",
+        "section 44ADA",
+        "section 44AD",
+        "new tax regime 2026-27",
+        "income tax slabs 2026-27",
+        "section 87A rebate",
+        "marginal relief",
+        "financial year April March",
+        "lakh crore format",
+        "excel dashboard India",
+        "monthly profit and loss",
+        "client book",
+        "outstanding payments",
+        "overdue invoices",
+        "consultant finance",
+        "designer finance",
+        "developer finance",
+        "tutor income tracker",
+        "freelance tax India",
+        "no macros spreadsheet",
+        "google sheets finance",
+        "digitalkartai"
       ]
     }
   ]
