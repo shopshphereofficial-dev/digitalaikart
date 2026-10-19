@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-18",
+  "updated": "2026-10-19",
   "note": "Append-only log of products published to digitalkartai.shop. Newest last. Never delete or modify existing records.",
   "history": [
     {
@@ -56,6 +56,37 @@
         "30-day calm plan with daily core, weekly review and a 30-day tracker",
         "Verified helpline directory (12 mental-health lines + 6 emergency numbers), October 2026",
         "One-page cheat sheet"
+      ]
+    },
+    {
+      "date": "2026-10-19",
+      "name": "Freelancer Finance OS — India (Excel & Google Sheets Tracker, FY 2026-27)",
+      "slug": "freelancer-finance-os-india",
+      "category": "Spreadsheet System / Business Finance Tool",
+      "type": "non-ebook",
+      "price": "₹199",
+      "mrp": "₹1,499",
+      "url": "https://digitalkartai.shop/products/freelancer-finance-os-india/",
+      "download": "https://digitalkartai.shop/downloads/freelancer-finance-os-india.zip",
+      "payment_link": "https://rzp.io/rzp/kVcv6gF",
+      "status": "published",
+      "features": [
+        "Microsoft Excel / Google Sheets workbook (.xlsx), 9 sheets, no macros",
+        "Dashboard: 12 KPIs + 'Invoiced vs Expenses by month' bar chart and cumulative-profit line chart",
+        "Invoices: 200 rows with auto invoice total, GST, TDS, net-to-bank, due date and Paid / Due / Overdue status",
+        "Colour-coded status via conditional formatting (overdue red, due amber, paid green)",
+        "Clients: 30 rows showing invoiced, received, outstanding, invoice count, average days to pay and share of income",
+        "Expenses: 200 rows with categories, input-GST column and a deductible flag",
+        "Monthly Summary: April to March invoiced, received, expenses, net profit, cumulative profit and suggested tax set-aside",
+        "Tax Planner: regular books vs presumptive (44ADA 50% / 44AD 8%), FY 2026-27 new-regime slabs",
+        "Includes the ₹60,000 section 87A rebate (nil tax up to ₹12 lakh) and marginal relief just above ₹12 lakh",
+        "TDS credit from paid invoices, advance tax already paid, balance payable / refund likely",
+        "Advance-tax instalment schedule (15 Jun / 15 Sep / 15 Dec / 15 Mar) with amounts and balance",
+        "GST quick view (output, input, net) and registration thresholds",
+        "Settings sheet with editable client, category, GST %, TDS % dropdown lists",
+        "Tax Rates (Reference) sheet: slabs, rebate, cess, surcharge, presumptive limits, advance-tax dates, GST slabs",
+        "Clearly-labelled example data; Indian rupee lakh/crore number format; April–March financial year",
+        "Packaged as a ZIP with the workbook, README.md instructions and LICENSE.txt"
       ]
     }
   ]
