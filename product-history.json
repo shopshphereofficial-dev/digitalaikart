@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-19",
+  "updated": "2026-10-20",
   "note": "Append-only log of products published to digitalkartai.shop. Newest last. Never delete or modify existing records.",
   "history": [
     {
@@ -116,6 +116,35 @@
         "Fill-in three-tier package sheet and a portfolio-consent clause (DPDP-aware)",
         "30-day season ramp-up plan (day-by-day)",
         "Sources named in the text: WedMeGood Annual Wedding Industry Report 2025-26, CAIT, DrikPanchang/MyPandit, CBIC Notification 11/2017, October 2026"
+      ]
+    },
+    {
+      "date": "2026-10-20",
+      "name": "Small Business Website Kit — 5 Ready-to-Use HTML/CSS Website Templates (India Edition)",
+      "slug": "small-business-website-kit",
+      "category": "Website Template Pack / HTML-CSS UI Kit",
+      "type": "non-ebook",
+      "price": "₹149",
+      "mrp": "₹799",
+      "url": "https://digitalkartai.shop/products/small-business-website-kit/",
+      "download": "https://digitalkartai.shop/downloads/small-business-website-kit.zip",
+      "payment_link": "https://rzp.io/rzp/BhphRFk",
+      "status": "published",
+      "features": [
+        "Five responsive HTML/CSS website templates in one ZIP",
+        "Local services page (services, rate table, work gallery, booking form)",
+        "Freelancer portfolio page (work grid, services, three packages, process, FAQ)",
+        "Product / course launch landing page (curriculum, audience, two price tiers, buy button)",
+        "Restaurant / cloud kitchen menu page (veg/non-veg marks, tiffin plans, order form)",
+        "Coming-soon page with live countdown and email sign-up",
+        "One shared stylesheet (kit.css) — re-theme the whole kit from five values",
+        "WhatsApp / email contact forms with no server or database",
+        "Small dependency-free script (mobile menu, form handoff, countdown)",
+        "Start-here hub previewing every template",
+        "One-page customisation cheat sheet",
+        "Read-me with free publishing steps (Netlify Drop, GitHub Pages)",
+        "Commercial licence for own business and unlimited client projects",
+        "No frameworks, no external fonts, works offline"
       ]
     }
   ]
