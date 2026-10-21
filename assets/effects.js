@@ -413,3 +413,15 @@
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', build);
   else build();
 })();
+
+/* ---------- 10. SECURITY: rel=noopener on external links ---------- */
+(function () {
+  function fixRel() {
+    var a = document.querySelectorAll('a[target="_blank"]');
+    for (var i = 0; i < a.length; i++) {
+      var rel = a[i].getAttribute('rel') || '';
+      if (rel.indexOf('noopener') === -1) a[i].setAttribute('rel', (rel ? rel + ' ' : '') + 'noopener noreferrer');
+    }
+  }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', fixRel); else fixRel();
+})();
