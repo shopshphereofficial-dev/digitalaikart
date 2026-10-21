@@ -1,0 +1,33 @@
+name: Upload AI Voice Receptionist Playbook to Repo
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  upload-ebook:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Download ebook from release
+        run: |
+          mkdir -p downloads assets/products products/ai-voice-receptionist-playbook-india-2026
+          gh release download ai-voice-receptionist-playbook-india-2026-v1 --repo shopshphereofficial-dev/digitalaikart --pattern "ai-voice-receptionist-playbook-india-2026.pdf" --output "downloads/ai-voice-receptionist-playbook-india-2026.pdf"
+          gh release download ai-voice-receptionist-playbook-india-2026-v1 --repo shopshphereofficial-dev/digitalaikart --pattern "cover.jpg" --output "assets/products/ai-voice-receptionist-playbook-india-2026.jpg"
+          cp assets/products/ai-voice-receptionist-playbook-india-2026.jpg products/ai-voice-receptionist-playbook-india-2026/cover.jpg
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Commit ebook to repo
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add downloads/ai-voice-receptionist-playbook-india-2026.pdf assets/products/ai-voice-receptionist-playbook-india-2026.jpg products/ai-voice-receptionist-playbook-india-2026/cover.jpg
+          git commit -m "Add AI Voice Receptionist Playbook PDF and cover to repo" || echo "No changes to commit"
+          git push
