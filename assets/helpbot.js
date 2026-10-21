@@ -11,6 +11,7 @@
   var INDEX = [];           // flat searchable items
   var LABELS = {};          // url -> friendly label
   var CATALOG = '';         // compact always-on product list
+  var kbLoaded = false;     // knowledge is fetched only when the bot is first opened
   var STOP = { the:1, and:1, for:1, you:1, your:1, are:1, can:1, how:1, what:1, does:1, with:1, this:1,
     that:1, have:1, from:1, about:1, any:1, all:1, get:1, its:1, into:1, not:1, but:1, out:1,
     which:1, when:1, where:1, who:1, why:1, will:1, there:1, their:1, our:1, was:1, were:1, is:1, do:1, i:1, a:1, an:1, of:1, to:1, in:1, on:1, me:1, my:1, we:1, it:1 };
@@ -77,18 +78,21 @@
     panel.querySelectorAll('.hb-chips button').forEach(function (b) {
       b.onclick = function () { send(b.textContent); };
     });
-    loadKnowledge();
   }
 
   function toggle() {
     var p = document.querySelector('.hb-panel');
     open = !open;
     p.classList.toggle('on', open);
-    if (open) setTimeout(function () { p.querySelector('.hb-in input').focus(); }, 80);
+    if (open) {
+      setTimeout(function () { p.querySelector('.hb-in input').focus(); }, 80);
+      if (!kbLoaded) { kbLoaded = true; loadKnowledge(); }
+    }
   }
 
   /* ---------- knowledge loading (live) ---------- */
   function loadKnowledge() {
+    kbLoaded = true;
     var t = Date.now();
     var jobs = [
       fetch('/products.json?v=' + t).then(function (r) { return r.json(); }).catch(function () { return null; }),
