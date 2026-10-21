@@ -2,5 +2,7 @@ User-agent: *
 Allow: /
 Disallow: /admin/
 Disallow: /ads/
+Disallow: /downloads/
+Disallow: /thank-you.html
 
 Sitemap: https://digitalkartai.shop/sitemap.xml
