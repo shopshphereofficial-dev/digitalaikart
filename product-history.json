@@ -177,6 +177,33 @@
         "Clearly-labelled fictional example profile included for demonstration",
         "Packaged as a ZIP with README.md instructions and LICENSE.txt (commercial licence, unlimited client work)"
       ]
+    },
+    {
+      "date": "2026-10-21",
+      "name": "The AI Voice Receptionist Playbook — India Edition 2026",
+      "slug": "ai-voice-receptionist-playbook-india-2026",
+      "category": "Business Playbook / AI Voice Agents",
+      "type": "ebook",
+      "price": "₹199",
+      "mrp": "₹999",
+      "url": "https://digitalkartai.shop/products/ai-voice-receptionist-playbook-india-2026/",
+      "download": "https://digitalkartai.shop/downloads/ai-voice-receptionist-playbook-india-2026.pdf",
+      "payment_link": "https://rzp.io/rzp/5R2isM0",
+      "status": "published",
+      "features": [
+        "32-page premium PDF, 14 parts + 4 appendices",
+        "The 2026 India missed-call economics and revenue-at-risk table",
+        "The five jobs worth automating and what never to automate",
+        "The five cost components of one AI call",
+        "13-vendor map from October 2026 pricing pages (India-first vs global)",
+        "Cost calculator with three worked Indian examples",
+        "DLT registration, TRAI 140/160 series and penalties explained",
+        "DPDP Rules 2025 phases, call-recording disclosure and retention",
+        "Hinglish, regional languages and the accent problem",
+        "14-day setup plan for one owner with no developer",
+        "Six ready call scripts in English and Hinglish",
+        "Synonym list, seven metrics, ROI worksheet and 20 mistakes"
+      ]
     }
   ]
 }
