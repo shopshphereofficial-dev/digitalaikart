@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-20",
+  "updated": "2026-10-21",
   "note": "Append-only log of products published to digitalkartai.shop. Newest last. Never delete or modify existing records.",
   "history": [
     {
@@ -145,6 +145,37 @@
         "Read-me with free publishing steps (Netlify Drop, GitHub Pages)",
         "Commercial licence for own business and unlimited client projects",
         "No frameworks, no external fonts, works offline"
+      ]
+    },
+    {
+      "date": "2026-10-21",
+      "name": "ATS Resume & Cover Letter Builder — India Edition (Offline Web App)",
+      "slug": "ats-resume-cover-letter-builder-india",
+      "category": "Offline Web App / Career Tool",
+      "type": "non-ebook",
+      "price": "₹149",
+      "mrp": "₹999",
+      "url": "https://digitalkartai.shop/products/ats-resume-cover-letter-builder-india/",
+      "download": "https://digitalkartai.shop/downloads/ats-resume-cover-letter-builder-india.zip",
+      "payment_link": "https://rzp.io/rzp/Z0gn3gf",
+      "status": "published",
+      "features": [
+        "Offline resume & cover letter builder — single HTML file, no install, no sign-up, no internet needed",
+        "Live true-A4 preview that updates as you type",
+        "Three single-column ATS-friendly templates: Classic ATS, Modern, Executive",
+        "Accent-colour picker applied across the resume and cover letter",
+        "Job-advert keyword check — extracts the advert's key terms and lists the ones you are missing",
+        "Eight-part readiness score: contact details, summary, skills, experience, measurable results, action verbs, education, keyword match",
+        "Every score bar carries a concrete fix-it tip",
+        "Cover letter generator with three tones (professional, warm, concise), fully editable",
+        "Resume as plain text — copy or download .txt for portals that require pasted text",
+        "Repeatable experience, education and project entries with add/remove",
+        "Save drafts in the browser plus JSON export / import for portable backup",
+        "Print / Save as PDF with no watermark and no app branding; prints only the active A4 document",
+        "Privacy by design — runs in the browser and never uploads your details",
+        "Bonus ATS Playbook reference: bullet formula, action verbs by intent, keyword banks by function, Indian conventions (CTC in LPA, declaration block, PSU bio-data), formatting checklist",
+        "Clearly-labelled fictional example profile included for demonstration",
+        "Packaged as a ZIP with README.md instructions and LICENSE.txt (commercial licence, unlimited client work)"
       ]
     }
   ]
