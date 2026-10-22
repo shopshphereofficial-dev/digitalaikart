@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-21",
+  "updated": "2026-10-22",
   "note": "Single source of truth for ALL products on digitalkartai.shop. The blog agent MUST read this file at the start of every run and promote the best-matching product per post. The product agent MUST append new products here when publishing them. Never delete or modify existing entries.",
   "products": [
     {
@@ -4562,6 +4562,35 @@
       "mrp": "",
       "url": "/products/whatsapp-business-ai-playbook/",
       "topics": []
+    },
+    {
+      "slug": "freelancer-contract-proposal-kit",
+      "name": "Freelancer Contract & Proposal Kit — India Edition (7 Print-Ready Templates)",
+      "tagline": "Seven print-ready documents for Indian freelancers — a Freelance Services Agreement, a Mutual NDA, a Project Proposal, a Scope of Work, a Change Request, a Payment Receipt and four escalating payment-reminder scripts — drafted around the Indian Contract Act 1872, GST, TDS under section 194J and the Arbitration and Conciliation Act 1996. Fill them in your browser and print or save as PDF, or edit the included Word (.docx) files. No install, no sign-up, no internet needed. One-time ₹199.",
+      "price": "₹199",
+      "mrp": "₹999",
+      "url": "/products/freelancer-contract-proposal-kit/",
+      "also_available": [
+        "freelancer-finance-os-india",
+        "gst-invoice-generator-pro",
+        "small-business-website-kit"
+      ],
+      "topics": [
+        "freelance contract",
+        "freelance agreement India",
+        "service agreement template India",
+        "NDA template India",
+        "freelance proposal template",
+        "scope of work template",
+        "change request template",
+        "payment reminder email",
+        "payment receipt template",
+        "get paid as a freelancer",
+        "independent contractor India",
+        "GST TDS 194J",
+        "client contract India",
+        "freelance document templates"
+      ]
     }
   ]
 }
