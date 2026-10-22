@@ -1,0 +1,80 @@
+{
+  "title": "Govt Tells TV Channels to Keep AI in an Assistive Role",
+  "slug": "mib-ai-advisory-tv-channels-assistive",
+  "category": "AI Policy",
+  "description": "The I&B ministry has told private TV channels to use AI, including generative AI, only in an assistive role on air. Here is what the advisory says.",
+  "emoji": "📺",
+  "keywords": [
+    "AI in broadcasting",
+    "MIB advisory",
+    "AI news anchors",
+    "media regulation",
+    "Programme Code"
+  ],
+  "tags": [
+    "#AI",
+    "#AIPolicy",
+    "#IndiaAI",
+    "#MediaAI"
+  ],
+  "tldr": [
+    "The Information and Broadcasting Ministry issued an advisory on October 21 asking private satellite TV channels to use AI only in an assistive capacity.",
+    "The advisory names generative AI, graphics and virtual news presentations as areas that need caution.",
+    "It does not define assistive use or say clearly whether AI news anchors are covered.",
+    "Channels were told to strengthen editorial oversight and follow the Programme Code."
+  ],
+  "sections": [
+    {
+      "heading": "What the ministry said",
+      "paragraphs": [
+        "On October 21, the Ministry of Information and Broadcasting issued an advisory to all private satellite TV channels. It asked them to exercise due caution while using artificial intelligence and its tools, including generative AI, in the telecast of programmes such as graphics and virtual news presentations. The use of AI tools, the ministry said, may be limited to an assistive capacity without compromising the accuracy, authenticity or sensitivity of news content, while adhering to the Programme Code.",
+        "The advisory was issued on the recommendation of an Inter-Departmental Committee set up under the Cable Television Networks (Amendment) Rules, 2021. The committee said it had observed instances of similar news and visuals being broadcast on multiple channels on similar topics, and found some telecasts not in conformity with the spirit of the Programme Code. It also said that inappropriate behaviour or language should not be normalised on air."
+      ]
+    },
+    {
+      "heading": "Why the government acted now",
+      "paragraphs": [
+        "The ministry tied its AI guidance to a wider push for compliance with the Programme Code prescribed under the Cable Television Networks (Regulation) Act, 1995, and the Cable Television Networks Rules, 1994. It warned that violations could invite action under that law. Broadcasters were asked to strengthen their editorial and content-review systems and to sensitise the staff involved in news gathering, editing, production, transmission and telecast.",
+        "The advisory also repeated older instructions. Channels were told to avoid live coverage of anti-terror operations, to time-stamp archival visuals so they are not mistaken for live feeds, to use only maps of India published by the Survey of India, and to avoid disclosing details that could identify victims of sexual offences. Broadcasters were encouraged to hold regular workshops and training sessions on the Programme Code for their editorial and production teams."
+      ]
+    },
+    {
+      "heading": "What is left unclear",
+      "paragraphs": [
+        "The advisory does not define what assistive capacity means, and it does not say clearly whether AI news anchors fall inside or outside the line. Several Indian channels already use AI presenters. Aaj Tak's AI anchor Sana, launched in March 2023, has interviewed Prime Minister Narendra Modi and actor Shah Rukh Khan, and the channel also runs Anjana 2.0, an AI version of its prime-time anchor Anjana Om Kashyap. The India Today Group unveiled an AI anchor called Sutra, built with the government-backed BharatGen, in February. News18, Odisha TV, Power TV and BIG TV also use AI anchors.",
+        "The advisory also does not require channels to label AI anchors. That matters because the ministry's own broadcaster, Doordarshan, uses them. DD Kisan introduced the AI anchors AI Krish and AI Bhoomi in May 2024, and in March the ministry told a parliamentary committee that it wanted to expand the use of AI in DD News, including AI anchors for recorded programmes and AI voice-overs. A labelling rule could help viewers tell an authorised AI anchor from a fake one."
+      ]
+    },
+    {
+      "heading": "Why AI anchors worry regulators",
+      "paragraphs": [
+        "Cost is part of the pull. BIG TV's chief executive Ajay Reddy Konda told Newslaundry in 2025 that an AI anchor costs about Rs 7,000 to Rs 8,000 a month, against Rs 70,000 to Rs 80,000 for a human anchor, although preparing a five-minute AI bulletin still takes two to three hours including writing and editing the script. Lower costs make the technology attractive, especially for smaller and regional channels.",
+        "At the same time, AI makes it easier to fake a familiar face. The fact-checking organisation Factly found a manipulated video that falsely showed Anjana Om Kashyap apologising for supporting the government, and BOOM reported a video that falsely showed NDTV's Abhishek Sengupta saying that a Tejas jet involved in a crash had not been cleared to fly. The Ministry of Electronics and Information Technology, which regulates online content, has separately asked social media platforms to label synthetic content."
+      ]
+    },
+    {
+      "heading": "What it means for Indian viewers and workers",
+      "paragraphs": [
+        "For viewers, the practical effect of the advisory is likely to be limited in the short term, because it is guidance rather than a ban and does not carry a clear penalty on its own. Still, it signals that the government wants a human editor to remain responsible for what goes on air, even when AI writes or presents it.",
+        "For people working in media, the message is mixed. AI tools can speed up graphics, translation and voice-overs, which the ministry itself has praised, but the advisory pushes channels to keep AI in a supporting role and to invest in training. For students and professionals eyeing media and content jobs, the takeaway is that AI skills will help, but editorial judgement and accountability remain the parts that are hardest to automate."
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "q": "What exactly did the ministry ask TV channels to do?",
+      "a": "In an advisory dated October 21, 2026, the Ministry of Information and Broadcasting asked private satellite TV channels to use AI, including generative AI, only in an assistive capacity and to keep news accurate, authentic and sensitive."
+    },
+    {
+      "q": "Does the advisory ban AI news anchors?",
+      "a": "No. It does not ban AI anchors and does not even define assistive capacity, so it is unclear whether virtual presenters used by several channels fall under the guidance. It also does not require channels to label AI anchors."
+    },
+    {
+      "q": "Why did the government issue the advisory?",
+      "a": "The ministry said an inter-departmental committee found that several telecasts were not in line with the spirit of the Programme Code, including similar news and visuals repeated across channels, and it wanted stronger editorial oversight and caution in the use of AI tools."
+    }
+  ],
+  "image_prompt": "A busy Indian television newsroom, a producer reviewing a live broadcast on a wall of screens while a news anchor prepares at a desk nearby, candid documentary style, warm indoor lighting, wide 16:9 landscape, no text, no logos.",
+  "source_name": "Medianama",
+  "source_url": "https://www.medianama.com/2026/10/223-government-tv-channels-ai-assistive-capacity/"
+}
