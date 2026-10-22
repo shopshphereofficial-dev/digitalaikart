@@ -1,0 +1,82 @@
+{
+  "date": "2026-10-22",
+  "title": "India Tells the UN It Has a Framework to Test Defence AI",
+  "slug": "india-un-trustworthy-ai-defence-framework",
+  "category": "AI Safety",
+  "description": "At the UN, India said it has a domestic framework for evaluating trustworthy AI in defence, built on five principles. Here is what it covers and why it matters.",
+  "emoji": "🛡️",
+  "keywords": [
+    "AI in defence",
+    "trustworthy AI",
+    "India AI governance",
+    "military AI",
+    "ETAI framework"
+  ],
+  "tags": [
+    "#AI",
+    "#AISafety",
+    "#IndiaAI",
+    "#AIPolicy"
+  ],
+  "tldr": [
+    "India told the UN General Assembly that it has a domestic framework for evaluating the trustworthiness of AI in defence.",
+    "The ETAI framework, launched by the DRDO in 2024, rests on five principles including reliability, safety and transparency.",
+    "India co-sponsored the first UN informal exchanges on AI in the military domain, held in Geneva in June.",
+    "It comes as the Centre weighs a dedicated AI law, with a consultation paper already being prepared."
+  ],
+  "sections": [
+    {
+      "heading": "What India told the United Nations",
+      "paragraphs": [
+        "Speaking at the United Nations General Assembly's First Committee, which handles disarmament, BJP Lok Sabha member Kamaljeet Sehrawat said India is developing safeguards for the use of artificial intelligence in defence. India has developed a domestic framework for evaluating the trustworthiness of AI in defence, she said, built around principles including reliability, safety and transparency. She was speaking at the First Committee on Wednesday, according to a report by the news agency IANS from the United Nations.",
+        "Sehrawat also said India was a co-sponsor of the first-ever UN informal exchanges on AI in the military domain, which were held in June in Geneva. Those talks follow General Assembly resolution 79/239, adopted in December, which called for an informal exchange on artificial intelligence in the military domain and its implications for international peace and security. India has been an active participant in the wider set of UN discussions on military AI, including the group of governmental experts on lethal autonomous weapons systems."
+      ]
+    },
+    {
+      "heading": "What the framework actually is",
+      "paragraphs": [
+        "The framework Sehrawat referred to is the Evaluating Trustworthy Artificial Intelligence (ETAI) Framework and Guidelines for the armed forces, launched in New Delhi in October 2024 by Chief of Defence Staff General Anil Chauhan and the chairman of the Defence Research and Development Organisation (DRDO), Dr Samir V Kamat. It was developed by DRDO's Scientific Analysis Group and is described as a risk-based assessment framework built specifically for the defence sector.",
+        "ETAI rests on five broad principles: reliability and robustness, safety and security, transparency, fairness, and privacy. Alongside the framework, the guidelines set out specific measures to be applied in the AI pipeline so that a system can meet those criteria. The aim is to give developers and evaluators a structured way to build and judge trustworthy AI, rather than treating trust as a slogan."
+      ]
+    },
+    {
+      "heading": "Why trustworthiness is hard for military AI",
+      "paragraphs": [
+        "The difficulty is that AI systems behave in ways that are hard to predict and hard to explain. Machine-learning models can be opaque, their outputs can shift as data changes, and they can inherit bias from the data they were trained on. In a high-stakes setting, a system that has never seen a particular scenario may respond unpredictably, and a misclassification can have serious consequences. Cybersecurity is another concern: systems can be attacked through poisoned training data or manipulated inputs.",
+        "That is why India's stated position is that human judgement and oversight must stay in the loop. In its statements to the UN, India has said accountability for decisions on the use of force must remain with humans and cannot be transferred to machines, and that the decision to use nuclear weapons would be taken by humans. The framework is meant to give that principle something concrete to stand on."
+      ]
+    },
+    {
+      "heading": "How it fits India's wider AI governance",
+      "paragraphs": [
+        "The defence framework sits inside a broader push on AI rules. India's Principal Scientific Adviser, Ajay Kumar Sood, told NDTV in an interview published on 21 October that the government is open to the idea of a dedicated law on AI, and that the process of preparing a consultation paper on AI regulation has already begun. He described the aim as targeted regulatory guardrails rather than sweeping bans.",
+        "That builds on steps already taken. In February the Centre tightened IT rules on AI-generated and synthetic content, including deepfakes, requiring platforms to take down flagged content within three hours. Separately, the Indian Computer Emergency Response Team, or CERT-In, has advised that agentic AI be deployed with a human in the loop to approve critical actions and with each agent isolated in a sandboxed environment."
+      ]
+    },
+    {
+      "heading": "What it means for Indian users and builders",
+      "paragraphs": [
+        "For most users, none of this changes what they do on their phone today. What it signals is direction: India wants a say in how military and high-risk AI is governed, and it is building the domestic machinery to back that up. For students and researchers working on AI safety, evaluation and assurance, that is a growing area of work with a clear public purpose. For defence and dual-use startups, a documented evaluation framework is the kind of thing that shapes procurement.",
+        "India's framing at the UN has been consistent: it supports collective efforts to regulate AI in the military domain, but argues that the concerns of developing countries, including access to technology and a real say in governance, must be part of any framework. The defence framework is India's attempt to bring its own experience to that table, not just its opinion."
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "q": "What is India's framework for trustworthy AI in defence?",
+      "a": "It is the Evaluating Trustworthy Artificial Intelligence (ETAI) Framework and Guidelines, launched by the DRDO and the Chief of Defence Staff in October 2024. It is built on five principles: reliability and robustness, safety and security, transparency, fairness, and privacy."
+    },
+    {
+      "q": "Has India announced a new AI law?",
+      "a": "Not yet. Principal Scientific Adviser Ajay Kumar Sood has said the government is open to a dedicated AI law and that a consultation paper on AI regulation is being prepared. Existing rules already cover AI-generated and deepfake content under India's IT rules."
+    },
+    {
+      "q": "Does the defence framework apply to civilian AI?",
+      "a": "The ETAI framework is designed for the defence sector, though its principles are described as applicable more widely. Civilian AI is covered separately by India's IT rules on synthetic content and by the IndiaAI Mission's programmes."
+    }
+  ],
+  "image_prompt": "A photorealistic wide 16:9 editorial photo of an Indian defence technology laboratory, engineers and a uniformed officer reviewing AI dashboards and test rigs on large wall-mounted monitors, clean modern room, natural daylight, candid documentary style, shallow depth of field, no text, no letters, no logos, no watermarks.",
+  "source_name": "IANS",
+  "source_link": "https://ianslive.in/india-developing-safeguards-for-ai-use-in-defence-through-framework-for-evaluation--20261022090303",
+  "source_url": "https://ianslive.in/india-developing-safeguards-for-ai-use-in-defence-through-framework-for-evaluation--20261022090303"
+}
