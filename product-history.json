@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-21",
+  "updated": "2026-10-22",
   "note": "Append-only log of products published to digitalkartai.shop. Newest last. Never delete or modify existing records.",
   "history": [
     {
@@ -203,6 +203,35 @@
         "14-day setup plan for one owner with no developer",
         "Six ready call scripts in English and Hinglish",
         "Synonym list, seven metrics, ROI worksheet and 20 mistakes"
+      ]
+    },
+    {
+      "date": "2026-10-22",
+      "name": "Freelancer Contract & Proposal Kit — India Edition (7 Print-Ready Templates)",
+      "slug": "freelancer-contract-proposal-kit",
+      "category": "Document Template Pack / Legal & Business Forms",
+      "type": "non-ebook",
+      "price": "₹199",
+      "mrp": "₹999",
+      "url": "https://digitalkartai.shop/products/freelancer-contract-proposal-kit/",
+      "download": "https://digitalkartai.shop/downloads/freelancer-contract-proposal-kit.zip",
+      "payment_link": "https://rzp.io/rzp/fiuA5QX",
+      "status": "published",
+      "features": [
+        "Seven print-ready documents as fill-in-the-browser HTML (print or save as PDF)",
+        "Editable Microsoft Word (.docx) versions of every document, no macros",
+        "Freelance Services Agreement — scope, term, fees with GST and TDS, IP assignment on full payment, confidentiality, independent-contractor status, termination and kill fee, liability cap, arbitration",
+        "Mutual NDA with exclusions, term, survival and return-or-destroy obligations",
+        "Project Proposal — brief, deliverables, timeline and milestones, investment table, acceptance block",
+        "Scope of Work (Annexure A) — deliverables, milestone payment schedule, out-of-scope list, assumptions, revision rounds, acceptance criteria",
+        "Change Request / Work Order to convert scope creep into signed, billable work",
+        "Payment Receipt — amount, mode, UTR, invoice reference, TDS and balance remaining",
+        "Four escalating payment-reminder scripts (email + WhatsApp): gentle, firm, hold-on-work, final notice",
+        "India-specific: Indian Contract Act 1872, GST, TDS section 194J, PAN/GSTIN, lakh formatting, Arbitration and Conciliation Act 1996",
+        "Click-to-fill fields with automatic in-browser saving; A4 print stylesheet; signature blocks",
+        "Clearly-labelled fictional example agreement, START-HERE guide, README and commercial licence",
+        "No install, no sign-up, works fully offline; nothing typed is uploaded",
+        "Packaged as a ZIP with the documents, Word files, example, read-me and licence"
       ]
     }
   ]
