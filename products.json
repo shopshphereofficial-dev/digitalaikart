@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-22",
+  "updated": "2026-10-23",
   "note": "Single source of truth for ALL products on digitalkartai.shop. The blog agent MUST read this file at the start of every run and promote the best-matching product per post. The product agent MUST append new products here when publishing them. Never delete or modify existing entries.",
   "products": [
     {
@@ -4687,7 +4687,7 @@
         "wedding planner tools"
       ]
     },
-{
+    {
       "slug": "ai-prompt-pack-doctors-clinics-2026",
       "name": "The AI Prompt Pack for Indian Doctors & Clinics — 2026-27 Edition",
       "tagline": "85 ready-to-use AI prompts for Indian doctors and clinics — patient communication, plain-language patient education, appointment reminders, Google Business Profile, safe review replies, OPD documentation, referral letters and practice growth. Plus a full compliance primer: the four things an AI assistant may never do in a clinic, the DPDP Act 2023 in plain words, and the NMC ethics rules that touch your marketing. Written for Indian medical practice and verified from the NMC Telemedicine Practice Guidelines 2020, the NMC Professional Conduct regulations 2002, the DPDP Act 2023, the National Health Authority and published 2026 healthcare research, October 2026.",
@@ -4762,6 +4762,78 @@
         "prompt pack doctors",
         "AI healthcare toolkit",
         "medical writing AI"
+      ]
+    },
+    {
+      "slug": "bizcalc-pro-india",
+      "name": "BizCalc Pro — India Business & Money Calculator Suite (Offline Web Tool)",
+      "tagline": "Eight everyday money calculators for Indian freelancers, shops and small businesses in one offline tool: reducing-balance loan EMI with a full month-by-month amortization schedule and prepayment savings, a side-by-side loan comparison for up to three offers, a loan eligibility (FOIR) calculator, GST added to or removed from a price with the CGST/SGST split, margin and markup, break-even units and revenue, SIP and lumpsum compound growth, and discount pricing. Everything updates live as you type, money is shown in the Indian lakh/crore format, and big totals are written out in words. Save scenarios by name in your browser, export and import them as JSON, and print or save any calculator's results as a PDF. A single self-contained web page — no install, no sign-up, no subscription, and nothing is uploaded, so it works with the internet switched off in Chrome, Edge, Firefox and Safari. Delivered as a ZIP with the tool, a user guide, a labelled example scenario and a licence.",
+      "price": "₹199",
+      "mrp": "₹1,499",
+      "url": "/products/bizcalc-pro-india/",
+      "also_available": [
+        "freelancer-finance-os-india",
+        "gst-invoice-generator-pro",
+        "first-home-buyer-playbook"
+      ],
+      "topics": [
+        "loan emi calculator",
+        "home loan emi calculator india",
+        "emi calculator",
+        "car loan calculator",
+        "personal loan calculator",
+        "loan amortization schedule",
+        "prepayment calculator",
+        "part payment home loan",
+        "loan comparison calculator",
+        "loan eligibility calculator",
+        "foir calculator",
+        "how much loan can i get",
+        "home loan eligibility india",
+        "gst calculator",
+        "gst calculator india",
+        "reverse gst calculator",
+        "cgst sgst calculator",
+        "igst calculator",
+        "gst inclusive price",
+        "margin calculator",
+        "markup calculator",
+        "profit margin calculator",
+        "selling price calculator",
+        "pricing calculator india",
+        "break even calculator",
+        "break even units",
+        "contribution margin",
+        "small business calculator",
+        "sip calculator",
+        "sip calculator india",
+        "compound interest calculator",
+        "lumpsum calculator",
+        "investment growth calculator",
+        "discount calculator",
+        "mrp discount calculator",
+        "final price calculator",
+        "business calculator india",
+        "money calculator",
+        "finance calculator offline",
+        "freelancer calculator",
+        "small business tool india",
+        "msme calculator",
+        "shop owner calculator",
+        "d2c pricing tool",
+        "offline calculator tool",
+        "no sign up calculator",
+        "html calculator tool",
+        "works offline",
+        "amount in words",
+        "lakh crore format",
+        "indian number format",
+        "rupees in words",
+        "no subscription calculator",
+        "one time calculator tool",
+        "browser calculator",
+        "data stays on device",
+        "digitalkartai"
       ]
     }
   ]

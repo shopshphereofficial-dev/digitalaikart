@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-22",
+  "updated": "2026-10-23",
   "note": "Append-only log of products published to digitalkartai.shop. Newest last. Never delete or modify existing records.",
   "history": [
     {
@@ -263,6 +263,39 @@
         "October 2026 AI tool stack with free-tier and paid pricing",
         "Fill-in proposal structure, quote-sheet columns and decor-brief sections",
         "30-day season ramp-up plan and a one-page cheat sheet"
+      ]
+    },
+    {
+      "date": "2026-10-23",
+      "name": "BizCalc Pro — India Business & Money Calculator Suite (Offline Web Tool)",
+      "slug": "bizcalc-pro-india",
+      "category": "Business Calculator Suite / Offline Web Tool",
+      "type": "non-ebook",
+      "price": "₹199",
+      "mrp": "₹1,499",
+      "url": "https://digitalkartai.shop/products/bizcalc-pro-india/",
+      "download": "https://digitalkartai.shop/downloads/bizcalc-pro-india.zip",
+      "payment_link": "https://rzp.io/rzp/AjPfTHq",
+      "status": "published",
+      "features": [
+        "Single self-contained offline HTML/JS tool — no install, no sign-up, no subscription",
+        "Loan EMI (reducing balance) with total interest and total payment",
+        "Full month-by-month amortization schedule (up to the full tenure)",
+        "Prepayment / part-payment calculator showing interest saved and months saved",
+        "Loan comparison for up to three offers with the lowest total cost flagged",
+        "Loan eligibility (FOIR) calculator from income, existing EMIs and lender FOIR",
+        "GST calculator: add GST or remove GST from an inclusive price",
+        "CGST/SGST split and IGST figure for every standard slab (0.25/3/5/12/18/28% + custom)",
+        "Margin & markup calculator, plus price-from-target-margin mode",
+        "Break-even calculator: contribution per unit, break-even units and revenue, target profit",
+        "SIP and lumpsum compound-growth projector with invested vs gains split",
+        "Discount calculator (forward and reverse) for MRP and final price",
+        "Indian lakh/crore money formatting and amount-in-words for big totals",
+        "Save scenarios by name in the browser; export/import as JSON",
+        "Print any calculator's results or save them as a PDF",
+        "Fully responsive (desktop and mobile), no horizontal overflow, zero external dependencies",
+        "Verified maths against independent reference calculations (EMI, GST, SIP, margin, break-even)",
+        "Packaged as a ZIP with the tool, a user guide, a labelled example scenario and a licence"
       ]
     }
   ]
