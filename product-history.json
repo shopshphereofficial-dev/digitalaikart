@@ -297,6 +297,39 @@
         "Verified maths against independent reference calculations (EMI, GST, SIP, margin, break-even)",
         "Packaged as a ZIP with the tool, a user guide, a labelled example scenario and a licence"
       ]
+    },
+    {
+      "date": "2026-10-23",
+      "name": "The AI Prompt Pack for Indian Travel Agents & Tour Operators — 2026-27 Season Edition",
+      "slug": "ai-prompt-pack-indian-travel-agents-2026-27",
+      "category": "AI Prompt Pack / Travel & Tourism Playbook",
+      "type": "ebook",
+      "price": "₹149",
+      "mrp": "₹599",
+      "url": "https://digitalkartai.shop/products/ai-prompt-pack-indian-travel-agents-2026-27/",
+      "download": "https://digitalkartai.shop/downloads/ai-prompt-pack-indian-travel-agents-2026-27.pdf",
+      "payment_link": "https://rzp.io/rzp/ZbsMgzi",
+      "status": "published",
+      "features": [
+        "42-page premium PDF with 100 copy-paste AI prompts across 10 parts",
+        "Part 1-2: enquiry replies (the 60-second reply, 'kitna lagega?', Hinglish) and discovery (pre-call questionnaire, budget reality-check)",
+        "Part 3: day-wise itinerary drafting for Himachal, Rajasthan, Kerala, Golden Triangle, Kashmir, honeymoons, the Gulf and group tours",
+        "Part 4: quotation structure, applying your markup, inclusions and exclusions, three-tier quotes and the discount-request answer",
+        "Part 5: client communication and the four-message follow-up sequence",
+        "Part 6: visa and document briefs, forex and insurance explainers, packing lists and the emergency card",
+        "Part 7: supplier rate requests, group negotiation, comparison matrices and escalation",
+        "Part 8: marketing — content pillars, a 30-day calendar, reel scripts and a WhatsApp broadcast that starts a conversation",
+        "Part 9: reviews, referrals, repeat business and a 90-day off-season plan",
+        "Part 10: GST-correct invoice notes, explaining TCS on overseas packages, place of supply, cash flow and the season debrief",
+        "Appendix A: the 2026-27 India travel calendar (Diwali, Pushkar, Dev Deepawali, Hornbill, Christmas and New Year, Makar Sankranti, Republic Day, Holi, the Sabarimala season)",
+        "Appendix B: verified GST and TCS quick reference (tour-operator GST at 5% without ITC or 18% with ITC; flat 2% TCS on overseas tour packages from 1 April 2026)",
+        "Appendix C: WhatsApp marketing cost sheet with Meta's India rates from 1 October 2026",
+        "Appendix D: the AI tool stack for travel agents",
+        "Appendix E: the verification checklist that keeps AI-drafted facts away from clients",
+        "Appendix F: a 30-day season ramp-up plan and one-page cheat sheet",
+        "Master Context block plus the five habits that make every prompt work",
+        "Verified against Meta, the GST Council, MoSPI, Ministry of Tourism and official festival sources, October 2026"
+      ]
     }
   ]
 }
