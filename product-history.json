@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-23",
+  "updated": "2026-10-24",
   "note": "Append-only log of products published to digitalkartai.shop. Newest last. Never delete or modify existing records.",
   "history": [
     {
@@ -329,6 +329,31 @@
         "Appendix F: a 30-day season ramp-up plan and one-page cheat sheet",
         "Master Context block plus the five habits that make every prompt work",
         "Verified against Meta, the GST Council, MoSPI, Ministry of Tourism and official festival sources, October 2026"
+      ]
+    },
+    {
+      "date": "2026-10-24",
+      "name": "Pitch & Proposal Deck Kit — India Edition (Editable PPTX + Google Slides Template Pack)",
+      "slug": "pitch-proposal-deck-kit",
+      "category": "Presentation Template Pack / Pitch & Proposal Decks",
+      "type": "template-pack",
+      "price": "₹199",
+      "mrp": "₹499",
+      "url": "https://digitalkartai.shop/products/pitch-proposal-deck-kit/",
+      "download": "https://digitalkartai.shop/downloads/pitch-proposal-deck-kit.zip",
+      "payment_link": "https://rzp.io/rzp/21xRf0M",
+      "status": "published",
+      "features": [
+        "01-Investor-Pitch-Deck.pptx — 15 fully designed 16:9 slides: cover, snapshot, problem, solution, why now, market (TAM/SAM/SOM), product, business model, traction, competition, go-to-market, team, financials, the ask, thank-you",
+        "02-Client-Proposal-Deck.pptx — 10 slides: cover, your goal, approach, scope, timeline, deliverables, investment options, why us, terms & next steps, thank-you",
+        "03-One-Page-Executive-Summary.pptx — a single-page summary slide for the investor email",
+        "04-Financial-Projections.xlsx — a live 36-month model across Assumptions, Model and Summary sheets (379 formula cells); edit six gold inputs and revenue, cost, gross profit, fixed costs, net profit and cumulative cash recalculate, with each year totalled",
+        "Speaker notes on all 26 slides telling the user what to write, what to leave out and the common mistake on that slide",
+        "Consistent navy-and-gold design system with a repeating header, gold rule and two standard fonts (Trebuchet MS headings, Calibri body)",
+        "GUIDE.html — 5-minute quick start, full slide-by-slide checklist for both decks, editing instructions for PowerPoint/Google Slides/Keynote/LibreOffice, financial-model walkthrough and India-specific tips (₹ lakh/crore formatting, GST on fees, payment schedules, 18-24 month runway)",
+        "START-HERE.txt and LICENSE.txt — single-user commercial licence covering unlimited decks for the buyer's own business and their clients' projects",
+        "Opens in PowerPoint, Google Slides, Keynote, LibreOffice Impress and PowerPoint Online; model opens in Excel, Google Sheets and LibreOffice Calc",
+        "Delivered as one ZIP (~152 KB); no subscription, no sign-up, one-time purchase"
       ]
     }
   ]
