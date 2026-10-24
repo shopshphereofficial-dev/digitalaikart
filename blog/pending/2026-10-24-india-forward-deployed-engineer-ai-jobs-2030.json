@@ -1,0 +1,82 @@
+{
+  "date": "2026-10-24",
+  "title": "88% of Indian Firms Want Forward Deployed Engineers by 2030",
+  "slug": "india-forward-deployed-engineer-ai-jobs-2030",
+  "category": "AI Jobs",
+  "description": "A new Scaler-CMR report says 88% of Indian enterprises expect demand for forward deployed engineers to grow by 2030, yet only 1% of engineers do the job today.",
+  "emoji": "🧑‍💻",
+  "keywords": [
+    "forward deployed engineer",
+    "AI jobs India",
+    "Scaler CMR report",
+    "AI skills gap",
+    "AI deployment"
+  ],
+  "tags": [
+    "#AI",
+    "#AIJobs",
+    "#IndiaAI",
+    "#AICareers"
+  ],
+  "tldr": [
+    "A new Scaler and CMR report says 88% of Indian enterprises expect demand for forward deployed engineers to grow by 2030, while only 1% of engineers do the job today.",
+    "Enterprises say the hardest skills to hire are production deployment and customer engagement, not coding.",
+    "Forward deployed roles are expected to pay up to 30% more, and most engineers already in them report Rs 40 lakh to Rs 1 crore a year.",
+    "Freshers face the toughest odds: only 8% of firms are open to hiring engineers with under three years of experience."
+  ],
+  "sections": [
+    {
+      "heading": "The AI job India cannot fill",
+      "paragraphs": [
+        "A new report has put a number on a role that Indian companies say they need but cannot hire for. The India's FDE Opportunity Report, released on October 22, 2026 by the upskilling company Scaler and the research firm CyberMedia Research, surveyed about 1,000 software engineers and 200 enterprise technology decision-makers across eight metro cities and select Tier II cities. Its headline finding is stark: 88% of Indian enterprises expect their need for forward deployed engineering capabilities to grow by 2030, but only 1% of the engineers surveyed currently work in an explicit forward deployed engineer role.",
+        "A forward deployed engineer, or FDE, works directly with a client to understand its business problem and then builds, integrates and deploys a technology solution until it runs reliably in production. The role sits at the meeting point of software engineering, AI and customer engagement. It is not a new kind of coder; it is the person who takes an AI system from a working demo to something a bank, hospital or logistics firm can depend on every day. The report says 98% of the enterprises it spoke to believe the role will grow beyond being a niche position, reported by The Economic Times."
+      ]
+    },
+    {
+      "heading": "The shortage is in deployment, not coding",
+      "paragraphs": [
+        "The report is clear about where the gap actually sits. Coding is the one skill enterprises say they can hire easily: 78% say software engineering talent is readily available. Everything around it is scarce. About 80% of enterprises say AI and generative AI skills matter for an FDE, but only 7% say they can find such talent in the market. Production deployment skills are prioritised by 77% of enterprises, yet only 19% say candidates with those skills are available. Customer engagement, which 61% of enterprises consider important for the role, is found in only about a quarter of candidates.",
+        "That mismatch is already changing how companies hire. The report finds that 51% of enterprises would rather give an FDE candidate a real deployment or troubleshooting problem to solve, while only 24% would prioritise a traditional coding test. In other words, enterprises are roughly twice as likely to test on deployment as on coding. One enterprise decision-maker quoted in the report said the combination that matters most is the ability to take an AI solution from a proof of concept to a reliable production implementation while working closely with the customer."
+      ]
+    },
+    {
+      "heading": "What the role pays",
+      "paragraphs": [
+        "The scarcity shows up in pay. Both engineers and employers told the researchers that they expect FDE roles to pay 21% to 30% more than conventional engineering roles. Among engineers already working in dedicated FDE positions, 80% report annual incomes between Rs 40 lakh and Rs 1 crore. The report itself cautions that this income finding comes from a small sample, so it is best read as a signal of where the ceiling sits rather than a guaranteed figure.",
+        "Even so, the direction is worth noting: the premium is being paid for a specific combination of skills, not for seniority alone."
+      ]
+    },
+    {
+      "heading": "Why freshers face the hardest path",
+      "paragraphs": [
+        "Interest in the role is high, but the route into it is not obvious. About 58% of the engineers surveyed said they want to move into FDE roles, and 52% said they simply do not know how to become one. Nine in ten engineers said they were unaware of a structured pathway or specialised programme to prepare for the job. When asked what holds them back, 37% pointed to a lack of experience working with customers and 32% said their AI and machine learning skills were not strong enough.",
+        "The timing mismatch makes it harder still. Interest peaks among engineers with six to eight years of experience, while employers mostly prefer candidates with three to five. Freshers have the toughest odds of all: only 8% of enterprises are open to hiring engineers with less than three years of experience. The demand, however, is near-term. About 60% of enterprises plan to hire FDE or FDE-like talent within the next 12 months, a figure that rises to 77% among multinational companies. Rather than hire from outside, 47% of enterprises said they plan to build the capability by upskilling their existing software engineers, and 56% said they already have engineers doing FDE-like work under other job titles."
+      ]
+    },
+    {
+      "heading": "What it means for Indian engineers and businesses",
+      "paragraphs": [
+        "For Indian engineers, the practical message is that the old dividing line between building software and working with a customer is closing. The report describes deployment as the new test, and the enterprises in it say they are willing to pay for people who can pass that test. The engineers who move early are the ones who pair AI and machine learning skills with real client-facing experience, even if that means volunteering for a deployment project inside their current job rather than waiting for a title to be created for them.",
+        "For Indian businesses, especially the large IT services and global capability centres that serve clients worldwide, the finding is a warning about how they staff AI work. If the scarce skill is deployment and customer engagement, then training existing engineers to work in front of clients may matter more than hiring more coders. The caveat is that all of these figures come from a survey, with self-reported answers from a sample of engineers and decision-makers, so they describe perceptions and intentions as much as settled outcomes."
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "q": "What is a forward deployed engineer?",
+      "a": "An FDE works directly with a client to understand its business problem, then builds, integrates and deploys a technology solution until it runs reliably in production. The role combines software engineering, AI and customer engagement."
+    },
+    {
+      "q": "How much do forward deployed engineers earn in India?",
+      "a": "The Scaler-CMR report says FDE roles are expected to pay 21% to 30% more than conventional engineering roles, and that 80% of engineers already in dedicated FDE roles report annual incomes between Rs 40 lakh and Rs 1 crore. The report notes this income figure comes from a small sample."
+    },
+    {
+      "q": "Can freshers become forward deployed engineers?",
+      "a": "It is difficult. Only 8% of the enterprises surveyed are open to hiring engineers with less than three years of experience, and employers mostly prefer candidates with three to five years. Many firms say they plan to build the skill by upskilling existing engineers instead."
+    }
+  ],
+  "image_prompt": "A photorealistic wide 16:9 editorial photo of a young Indian software engineer in a smart-casual shirt sitting beside a client in a bright modern office in Bengaluru, both looking at a laptop screen showing a dashboard, candid documentary style, warm natural daylight, shallow depth of field, no text, no letters, no logos, no watermarks.",
+  "source_name": "The Economic Times",
+  "source_link": "https://economictimes.indiatimes.com/ai/ai-insights/88-indian-firms-want-fdes-by-2030-only-1-of-engineers-fit-the-bill-scaler-cmr-report/articleshow/135117378.cms",
+  "source_url": "https://economictimes.indiatimes.com/ai/ai-insights/88-indian-firms-want-fdes-by-2030-only-1-of-engineers-fit-the-bill-scaler-cmr-report/articleshow/135117378.cms"
+}
