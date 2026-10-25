@@ -1,0 +1,82 @@
+{
+  "date": "2026-10-25",
+  "title": "Telangana Unveils India's First AI Minister at DevFest 2026",
+  "slug": "telangana-first-ai-minister-devfest-2026",
+  "category": "AI India",
+  "description": "Telangana has unveiled an AI avatar of IT minister D Sridhar Babu, described as India's first AI minister, at Google's DevFest 2026 in Hyderabad.",
+  "emoji": "🤖",
+  "keywords": [
+    "Telangana AI minister",
+    "digital twin",
+    "D Sridhar Babu",
+    "DevFest 2026",
+    "AI governance India"
+  ],
+  "tags": [
+    "#AI",
+    "#AIIndia",
+    "#AIinGovernance",
+    "#Telangana"
+  ],
+  "tldr": [
+    "Telangana unveiled an AI avatar of IT minister D Sridhar Babu, described as India's first AI minister, at GDG Hyderabad's DevFest 2026.",
+    "The digital twin, built on TensorGo's HumAIn platform, answered questions in English and Telugu before more than 3,300 attendees.",
+    "In the next phase, the state plans to let citizens share feedback and raise grievances through the avatar.",
+    "Public reports do not yet say how the avatar handles personal data or who is accountable when it is wrong."
+  ],
+  "sections": [
+    {
+      "heading": "What Telangana unveiled",
+      "paragraphs": [
+        "Telangana has unveiled what it calls India's first AI minister: a digital twin, or AI avatar, of the state's IT and industries minister, D Sridhar Babu. The avatar made its public debut live on stage at DevFest 2026, the annual Google Developer Group (GDG) Hyderabad conference, on Saturday, October 24, 2026. The Times of India reported the launch, and The New Indian Express described the avatar as a pre-AGI digital twin of the minister.",
+        "Both reports say the avatar was built on TensorGo's HumAIn platform under the guidance of Sai Krishna, IT adviser to the minister. It took questions from young attendees in real time in English and Telugu, and fielded queries on Telangana's vision and its technology-led growth. The room was not small: more than 3,300 developers, students, engineers, architects and startup founders were present."
+      ]
+    },
+    {
+      "heading": "A digital twin, not a second minister",
+      "paragraphs": [
+        "It is worth being precise about what this is. The AI minister is not a new office, and it holds no decision-making authority. It is a conversational avatar modelled on the minister, meant to change how citizens reach their government. In this opening phase it appeared on stage and answered questions from the audience. In the next phase, the state says, citizens will be able to interact with the avatar, share feedback and raise grievances, a step Sai Krishna called the need of the hour.",
+        "Sridhar Babu framed the launch around talent rather than the technology itself. The next big breakthrough in AI could come from a student, a startup or a young developer, he said, and Telangana wants to be the place where those ideas get the opportunity to grow. The state, he added, aims to become a global AI hub."
+      ]
+    },
+    {
+      "heading": "The setting: a developer conference, not a government hall",
+      "paragraphs": [
+        "The venue matters as much as the announcement. DevFest 2026 was themed Build, Secure, Scale: Developers and Builders in the Agentic Era, and featured hands-on sessions led by more than 30 industry experts. An experience zone used NFC-enabled smart badges so attendees could share digital resumes with recruiters, and companies including Google for Developers, Logitech, Lyric AI, MetLife and MSI took part.",
+        "GDG Hyderabad said its community has connected with more than 2 lakh technology enthusiasts over 13 years and has an active membership of around 20,000 developers. By launching the avatar at a developer event rather than a government function, the state was signalling to that community that it wants to be seen as a builder of AI products, not only a buyer of them."
+      ]
+    },
+    {
+      "heading": "Where it fits in India's wider AI push",
+      "paragraphs": [
+        "The launch lands in the middle of a fast-moving effort to put AI to work in Indian governance. The Union government is preparing a consultation paper on a dedicated AI law, with IT minister Ashwini Vaishnaw saying the risks of AI have crossed a threshold that calls for statutory safeguards, as reported from the NDTV World Summit. The 10,372-crore-rupee IndiaAI Mission is funding subsidised compute for domestic model builders, and states are moving too: Goa has announced a 250-crore-rupee AI policy with a target of 50,000 AI-ready professionals by 2030, according to The Financial Express.",
+        "Telangana's own push includes a Green Skills and Applied AI Centre of Excellence launched in Hyderabad with Microsoft, the 1M1B Foundation and MeitY Startup Hub, which announced 100 job offers on its opening day, The New Indian Express reported. The AI avatar sits inside that same strategy of using AI to reach more people with fewer bottlenecks."
+      ]
+    },
+    {
+      "heading": "What it means, and what is still unclear",
+      "paragraphs": [
+        "For students and developers, the practical signal is that public-sector AI work in India is moving from policy documents to live demonstrations, and that a state is willing to put its own minister in front of the technology. For citizens, the promise is a faster, always-available channel to raise concerns. For officials in other states, it is a template worth studying and questioning.",
+        "Several things are not yet clear from the public reports. There is no published detail on how the avatar handles personal data, how it tells a genuine grievance from a casual question, or what happens when it is wrong. A conversational avatar speaking for a minister also raises questions about accountability: a digital twin can answer in the minister's voice, but it cannot be held to account the way a person can. Until the state publishes how the avatar works and how it will be governed, the launch is best read as an ambitious demonstration rather than a finished service."
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "q": "What is Telangana's AI minister?",
+      "a": "It is an AI avatar, or digital twin, of Telangana's IT and industries minister D Sridhar Babu. It was unveiled at GDG Hyderabad's DevFest 2026 and answered questions in English and Telugu. It is not a separate government post and holds no decision-making authority."
+    },
+    {
+      "q": "Will citizens be able to use the AI avatar?",
+      "a": "The state says the on-stage launch is phase one. In the next phase it plans to let citizens interact with the avatar, share feedback and raise grievances, according to IT adviser Sai Krishna. No date has been announced for that rollout."
+    },
+    {
+      "q": "Who built the AI avatar?",
+      "a": "It was developed on TensorGo's HumAIn platform under the guidance of Telangana IT adviser Sai Krishna, according to The Times of India and The New Indian Express."
+    }
+  ],
+  "image_prompt": "A photorealistic wide 16:9 editorial photo of a large tech conference stage in Hyderabad, a life-size digital avatar of an Indian male minister shown on a big screen while a diverse young audience of developers watches, candid documentary style, warm stage lighting, no text, no letters, no logos, no watermarks.",
+  "source_name": "The Times of India",
+  "source_link": "https://timesofindia.indiatimes.com/city/hyderabad/telangana-unveils-indias-first-ai-minister-at-hyderabad-devfest-2026/articleshow/135172155.cms",
+  "source_url": "https://timesofindia.indiatimes.com/city/hyderabad/telangana-unveils-indias-first-ai-minister-at-hyderabad-devfest-2026/articleshow/135172155.cms"
+}
