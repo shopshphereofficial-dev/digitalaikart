@@ -1,0 +1,80 @@
+{
+  "title": "IIM alumnus builds 5 open AI models in 13 days for under $200",
+  "slug": "iim-alumnus-5-open-ai-models-13-days",
+  "category": "AI India",
+  "description": "An IIM alumnus trained five small open AI models in 13 days for about $194, showing Indian students and builders that useful AI need not cost crores.",
+  "emoji": "🧠",
+  "keywords": [
+    "small AI models",
+    "Udgam Labs",
+    "open source AI India",
+    "AI training cost",
+    "Jitesh Prasad"
+  ],
+  "tags": [
+    "#AI",
+    "#IndiaAI",
+    "#OpenSource",
+    "#AIResearch"
+  ],
+  "tldr": [
+    "An Indian builder released five small open AI models in about a fortnight.",
+    "The main chat model was trained from scratch for $146, about $194 for the whole project.",
+    "A 29.5 MB speech model beat a much larger model on Hindi speech tests.",
+    "The results, code and failures were all published openly under Apache-2.0."
+  ],
+  "sections": [
+    {
+      "heading": "A one-man AI lab in India",
+      "paragraphs": [
+        "In October 2026, an Indian builder named Jitesh Prasad released five small artificial intelligence models in about a fortnight. The releases cover speech, reasoning, mathematics, images and conversation. Prasad studied physics at the University of North Bengal and later did an MBA at IIM Lucknow, and he works through a small outfit called Udgam Labs.",
+        "Along with the models, he published a benchmark that compares 27 small language models with fewer than 400 million parameters each. His own models are included in that comparison, and they do not always finish first. The write-ups also state plainly what did not work, which is unusual for AI releases, where companies usually highlight only the best numbers. One recent English model missed its stated performance target, and that result was published anyway, along with the training material, the evaluation and the limitations."
+      ]
+    },
+    {
+      "heading": "The chat model that cost under $200",
+      "paragraphs": [
+        "The best known release is Laghu, a 152-million-parameter English chat model. Laghu is Sanskrit for small or light. It was trained from scratch, which means it started from random numbers rather than being adjusted from someone else's finished model. The main training run took 13.2 hours on eight A100 graphics processors and cost 146 dollars. The whole project came to about 194 dollars. He kept the bill, wrote down every step of the recipe and rebuilt the data from openly licensed sources, so that anyone else can repeat the experiment rather than take his word for it.",
+        "The finished model is a single 163 megabyte file that can run inside a web browser, and it can read about 16,000 tokens of input at a time. It is released under the Apache-2.0 licence, with the weights, the training code, the data recipe and every evaluation result open to anyone. In his own tests, Laghu matched SmolLM2-135M-Instruct on chat quality and multi-turn conversation, and did better on school-level maths, but it trailed Falcon-H1-Tiny-90M-Instruct, which used roughly twelve times more computing power."
+      ]
+    },
+    {
+      "heading": "Speech in Hindi and Hinglish, and a small reasoning model",
+      "paragraphs": [
+        "Another release, Shruti, is a speech-to-text model that is only 29.5 megabytes in size. It was tested on Hindi, Hinglish and English speech. On the Hindi material used in the comparison it made fewer errors than Whisper large-v3, a far larger model, while on English the larger model stayed ahead. Prasad's own account does not hide that difference.",
+        "A third model, Gargi, has 384 million parameters and was trained on about 17 billion tokens of text. On several reasoning tests it came within two points of Qwen2.5-0.5B, a model trained on a vastly larger amount of text, but it fell well behind on general knowledge. That result was published too. Together, the releases argue for showing the whole picture rather than only the wins, and for treating a failed test as information rather than something to hide."
+      ]
+    },
+    {
+      "heading": "What it means for Indian students and small businesses",
+      "paragraphs": [
+        "The obvious takeaway is cost. Training a model from scratch has long been imagined as a job for well funded laboratories with thousands of chips and teams of engineers. These numbers suggest that a student or a small team, with a modest budget and a few rented graphics processors, can train a small model and publish it openly. Because the training used openly licensed data and an open codebase, the cost is mostly the price of rented computing, not expensive proprietary tools.",
+        "For small businesses, small models matter because they can run on a laptop or a local server instead of a paid cloud service. That can lower running costs and keep company data in house. The caveat is important though. A model this small knows very little, states wrong facts with confidence and should not be used for advice or decisions that matter. It is a research release, not a finished product."
+      ]
+    },
+    {
+      "heading": "The bigger picture for Indian AI",
+      "paragraphs": [
+        "India has been pushing to build its own AI capability while working within tight limits on computing power and capital. This story sits alongside government plans for sovereign AI infrastructure and new state-level AI policies, but it comes from the opposite direction. It is an individual making the case that the entry barrier is lower than it looks.",
+        "The benchmark of 27 small models under 400 million parameters may be the most useful part for Indian developers, because it offers a common yardstick for models that can run on ordinary hardware. The question Prasad is asking is simple. Does useful artificial intelligence always need enormous machines, enormous datasets and enormous budgets? The answer is not settled yet, but he has put the question in public view."
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "q": "Who built these small AI models and where?",
+      "a": "Jitesh Prasad, who studied physics at the University of North Bengal and later did an MBA at IIM Lucknow, built them at his small outfit Udgam Labs in India."
+    },
+    {
+      "q": "How much did it cost to train the Laghu chat model?",
+      "a": "The main training run cost 146 dollars and the whole project about 194 dollars, using eight A100 GPUs for 13.2 hours, according to Udgam Labs."
+    },
+    {
+      "q": "Can Indian small businesses use these models?",
+      "a": "Yes, they are open under Apache-2.0 and small enough to run locally, but they are research models that are often wrong on facts and should not be used for important decisions."
+    }
+  ],
+  "image_prompt": "A young man working alone late at night in a small home office, two computer monitors glowing with colourful charts, notebooks and a cup of tea on a wooden desk, warm desk lamp light, photorealistic, wide 16:9 landscape",
+  "source_name": "India Today",
+  "source_url": "https://www.indiatoday.in/education-today/news/story/small-ai-models-jitesh-prasad-udgam-labs-low-cost-open-results-3024600-2026-10-25"
+}
