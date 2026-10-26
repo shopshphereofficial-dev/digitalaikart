@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-25",
+ "updated": "2026-10-26",
  "note": "Single source of truth for ALL products on digitalkartai.shop. The blog agent MUST read this file at the start of every run and promote the best-matching product per post. The product agent MUST append new products here when publishing them. Never delete or modify existing entries.",
  "products": [
   {
@@ -5288,8 +5288,7 @@
     "legal notice",
     "India"
    ]
-  }
-,
+  },
   {
    "slug": "retirement-pension-playbook-2026-27",
    "name": "The Indian Retirement & Pension Playbook 2026-27 — Digital Edition",
@@ -5375,6 +5374,74 @@
     "government employee pension",
     "salaried employees",
     "India"
+   ]
+  },
+  {
+   "slug": "sheets-autopilot-india",
+   "name": "Sheets Autopilot — 12 Google Sheets Automations for Indian Small Businesses",
+   "tagline": "Twelve self-contained Google Apps Script automations that run inside your own Google account — escalating invoice reminders (−3, 0, +7, +15, +30 days), payment receipts with the amount written in Indian lakh/crore words, a lead follow-up sequence on day 3, 7 and 14, an 8am business digest, low-stock alerts at the reorder level, GST filing reminders with a checklist, deadline-to-calendar sync, weekly CSV backups to Drive, duplicate lead cleanup for Indian phone formats, client onboarding folders, monthly client reports and a daily WhatsApp nudge list with pre-typed wa.me links. Delivered as a ZIP with the 12 .gs files, a starter workbook with every column each script reads, an offline picker that copies the code, a setup guide with Google's real quotas and a troubleshooting table, a 30-check test suite and a single-user commercial licence. No subscription, no server, no API keys, nothing to renew. One-time ₹199.",
+   "price": "₹199",
+   "mrp": "₹999",
+   "url": "/products/sheets-autopilot-india/",
+   "also_available": [
+    "gst-invoice-generator-pro",
+    "freelancer-finance-os-india",
+    "freelancer-contract-proposal-kit"
+   ],
+   "topics": [
+    "google sheets automation",
+    "google apps script",
+    "apps script templates",
+    "google sheets templates india",
+    "sheets automation india",
+    "invoice reminder automation",
+    "payment reminder emails",
+    "automatic payment reminders",
+    "invoice follow up",
+    "payment receipt email",
+    "amount in words india",
+    "receipt generator",
+    "lead follow up automation",
+    "follow up email sequence",
+    "lead management spreadsheet",
+    "daily business digest",
+    "daily sales report email",
+    "business dashboard email",
+    "low stock alert",
+    "inventory alert spreadsheet",
+    "stock reorder level",
+    "gst reminder",
+    "gst filing checklist",
+    "gstr-1 reminder",
+    "gstr-3b reminder",
+    "gst due dates",
+    "composition dealer cmp-08",
+    "qrmp quarterly returns",
+    "google calendar sync",
+    "deadline tracker",
+    "project deadline reminders",
+    "google drive backup",
+    "csv backup spreadsheet",
+    "sheet backup automation",
+    "duplicate leads cleanup",
+    "deduplicate contacts",
+    "crm cleanup",
+    "client onboarding automation",
+    "client folder automation",
+    "welcome email automation",
+    "monthly client report",
+    "client reporting automation",
+    "freelancer reporting",
+    "whatsapp reminder",
+    "wa.me link generator",
+    "click to chat whatsapp",
+    "small business automation india",
+    "freelancer tools india",
+    "no code automation india",
+    "zapier alternative india",
+    "spreadsheet automation",
+    "business templates india",
+    "digitalkartai"
    ]
   }
  ]
