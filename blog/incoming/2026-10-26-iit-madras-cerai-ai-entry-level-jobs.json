@@ -1,0 +1,80 @@
+{
+  "title": "IIT Madras paper: AI won't take your job, but entry level is at risk",
+  "slug": "iit-madras-cerai-ai-entry-level-jobs-india",
+  "category": "AI Jobs",
+  "description": "A new IIT Madras CeRAI white paper says AI is reworking tasks rather than wiping out jobs, and warns entry-level roles in India carry the biggest risk.",
+  "emoji": "🧰",
+  "keywords": [
+    "IIT Madras CeRAI",
+    "AI jobs India",
+    "entry-level jobs AI",
+    "AI white paper",
+    "reskilling India"
+  ],
+  "tags": [
+    "#AIJobs",
+    "#IITMadras",
+    "#IndiaAI",
+    "#FutureOfWork"
+  ],
+  "tldr": [
+    "IIT Madras CeRAI has published a white paper titled How AI Is Reconfiguring Work in India.",
+    "It argues AI changes tasks inside jobs rather than removing whole occupations.",
+    "Entry-level roles are the most exposed because junior work is the training ground for senior work.",
+    "It recommends cheap narrow AI for MSMEs, India-specific labour research and clear reskilling paths."
+  ],
+  "sections": [
+    {
+      "heading": "What the paper says",
+      "paragraphs": [
+        "Researchers at the Centre for Responsible AI, or CeRAI, at IIT Madras have published a white paper titled How AI Is Reconfiguring Work in India. Its central claim is narrower, and more useful, than the usual headlines: artificial intelligence is not removing whole occupations in India. It is rearranging the tasks inside them.",
+        "The paper's argument is that most jobs are bundles of tasks and only some of those tasks can be handed to a machine. What actually changes depends on the task, the industry, the rules around it, and how much the AI costs to run. Professor Balaraman Ravindran, who heads CeRAI, framed the question the paper tries to answer simply: which tasks go, and why. That framing is what makes the paper useful to a reader trying to work out what happens to their own job, rather than to a whole industry in the abstract."
+      ]
+    },
+    {
+      "heading": "A task is not a job",
+      "paragraphs": [
+        "The paper separates the effects of AI into four levels, namely individual tasks, jobs, occupations and overall labour-market outcomes. The distinction matters because a system that can read a medical scan or answer a customer query does not make the entire profession disappear. It then identifies two broad patterns. In the first, AI handles most of the routine work and people mainly check its output or step in when something goes wrong. In the second, people keep the core work and AI simply makes them faster.",
+        "The first pattern is already visible in India's cost-sensitive service economy. Routine BPO calls, GST bookkeeping, invoice processing and quality checks on a factory line can be automated with fairly cheap, narrow systems that do not need the most advanced models. For a business running on thin margins, the gap between the cost of a person and the cost of software is what makes adoption commercially attractive."
+      ]
+    },
+    {
+      "heading": "The first rung of the ladder",
+      "paragraphs": [
+        "The paper's most uncomfortable finding concerns who is exposed. Entry-level workers are the most vulnerable, because junior roles are made up largely of repetitive tasks, and those same tasks are how people learn the job. A customer service executive no longer answers routine queries. A junior accountant spends less time punching in invoices. A young software engineer finds that AI can write much of the starter code that once taught them how a codebase fits together.",
+        "Senior people still hold architecture, complex debugging, litigation strategy and client advice. The gap is in between. If organisations automate the basic work through which juniors become seniors, they have to invent another way to build that judgement. The paper suggests junior roles could shift towards checking AI output, handling escalated cases and evaluating how well a system performs."
+      ]
+    },
+    {
+      "heading": "New work, but no automatic match",
+      "paragraphs": [
+        "AI is also creating roles the paper names explicitly: escalation specialists, AI trainers, conversation designers and robot operators. NITI Aayog has projected up to four million new AI-related jobs in five years, but the paper stresses that this depends on skilling being coordinated, and that nobody is yet tracking whether the workers who lose tasks are the ones who fill these new roles. A BPO executive whose routine calls are automated is not automatically a conversation designer, and the paper is clear that the bridge between the two has to be built deliberately.",
+        "The authors are also candid about the limits of their own work. Their examples are illustrative, much of the evidence comes from vendors and practitioners rather than independent studies, and India lacks rigorous research on which skills cluster together in real jobs. They describe their framework as a structured hypothesis rather than a settled finding, which matters for anyone tempted to read it as a forecast."
+      ]
+    },
+    {
+      "heading": "What it recommends",
+      "paragraphs": [
+        "The prescription has three parts. Encourage affordable, narrow AI for micro, small and medium enterprises rather than chasing frontier models. Fund labour-market research that is specific to India. And build worker-transition pathways and liability rules before adoption speeds up, with clarity on who pays for reskilling, how long it takes, and whether a worker can keep earning while they retrain. The paper also argues that India should not treat maximum automation as the goal in itself; the aim is to make sure the productivity gains do not cost an entire generation its first chance to learn a profession.",
+        "For students and early-career professionals, the practical reading is that the task you are hired for is less safe than the judgement you are building. For a small business, it means the case for automating a repetitive process is real, but so is the risk of thinning out the bench that produced your experienced staff. The paper's closing question is the one worth sitting with: if machines do the junior work, where will tomorrow's experienced professionals come from."
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "q": "Does the IIT Madras paper say AI will take jobs in India?",
+      "a": "No. It says AI is reconfiguring tasks inside jobs rather than removing whole occupations, though entry-level roles carry the most risk because they are built on repetitive work."
+    },
+    {
+      "q": "Which jobs does it flag as most exposed?",
+      "a": "Junior roles built on routine tasks, such as standard BPO calls, GST and invoice bookkeeping, factory quality checks and the starter-level coding that new engineers learn on."
+    },
+    {
+      "q": "What does it recommend for small businesses?",
+      "a": "Affordable, narrow AI tools aimed at specific repetitive tasks, along with funding for India-specific labour research and clear reskilling paths for affected workers."
+    }
+  ],
+  "image_prompt": "A young Indian customer support agent in a Bengaluru office wearing a headset, looking at her screen while a senior colleague stands beside her and explains something, warm late afternoon light through large windows, wide 16:9 landscape.",
+  "source_name": "The Indian Express",
+  "source_url": "https://indianexpress.com/article/education/artificial-intelligence-iit-madras-study-ai-impact-jobs-entry-level-careers-india-10936963/"
+}
