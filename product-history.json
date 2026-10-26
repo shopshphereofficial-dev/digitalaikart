@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-25",
+ "updated": "2026-10-26",
  "note": "Append-only log of products published to digitalkartai.shop. Newest last. Never delete or modify existing records.",
  "history": [
   {
@@ -413,6 +413,39 @@
     "No attribution required; commercial licence for unlimited personal and client projects",
     "Works fully offline in Chrome, Edge, Firefox and Safari; SVG opens in Figma, Sketch, Illustrator, Inkscape, Affinity Designer and Canva",
     "Delivered as one ZIP; no install, no sign-up, one-time purchase"
+   ]
+  },
+  {
+   "date": "2026-10-26",
+   "name": "Sheets Autopilot — 12 Google Sheets Automations for Indian Small Businesses",
+   "slug": "sheets-autopilot-india",
+   "category": "Automation Template Pack / Google Apps Script",
+   "type": "non-ebook",
+   "price": "₹199",
+   "mrp": "₹999",
+   "url": "https://digitalkartai.shop/products/sheets-autopilot-india/",
+   "download": "https://digitalkartai.shop/downloads/sheets-autopilot-india.zip",
+   "payment_link": "https://rzp.io/rzp/N8bcCDt",
+   "status": "published",
+   "features": [
+    "12 self-contained Google Apps Script automations (one file each, own CONFIG block)",
+    "01 Invoice reminders at −3, 0, +7, +15 and +30 days with per-stage state written back to the sheet",
+    "02 Payment receipts the moment a row is marked Paid, with amount in Indian lakh/crore words",
+    "03 Lead follow-up sequence: instant acknowledgement then day 3, 7 and 14, stopping on Won/Lost",
+    "04 8am HTML digest: overdue, due today, leads to chase, stock to reorder, deadlines in 7 days",
+    "05 Low-stock alerts at the reorder level with shortfall and restock value, once per item per day",
+    "06 GST filing reminders (monthly, QRMP and composition) with a seven-point checklist",
+    "07 Deadline → Google Calendar sync, idempotent via stored event IDs",
+    "08 Weekly CSV backup of every tab to Drive, last 8 folders kept",
+    "09 Duplicate lead cleanup that understands +91 / 0-prefixed Indian phone formats; deletes nothing",
+    "10 Client onboarding: Drive folder + filled template doc + welcome email + status flip",
+    "11 Monthly per-client report of invoiced / paid / pending totals and jobs completed",
+    "12 Daily WhatsApp nudge list of wa.me links with the message pre-typed (no Business API needed)",
+    "Starter workbook (xlsx) with the exact columns each script reads and labelled example rows",
+    "Offline script picker (HTML) with search, copy-to-clipboard and download per script",
+    "SETUP-GUIDE.html: ten-minute setup, per-automation reference, quotas, troubleshooting, limitations",
+    "30-check test suite (tests/run-tests.js) runnable with plain Node, no dependencies",
+    "Single-user commercial licence; no API keys, no server, no subscription"
    ]
   }
  ]
