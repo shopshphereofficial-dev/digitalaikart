@@ -1,0 +1,82 @@
+{
+  "date": "2026-10-27",
+  "title": "Sarvam to Build AI for the Army, Navy and Air Force Under HQ IDS",
+  "slug": "sarvam-hq-ids-tri-service-ai-mou",
+  "category": "AI India",
+  "description": "Sarvam has signed an MoU with HQ IDS to build AI for the Army, Navy and Air Force, with shared foundation models and human oversight on operations.",
+  "emoji": "🛡️",
+  "keywords": [
+    "Sarvam HQ IDS MoU",
+    "military AI India",
+    "Sarvam 105B",
+    "defence AI India",
+    "sovereign AI"
+  ],
+  "tags": [
+    "#AI",
+    "#AIIndia",
+    "#Defence",
+    "#Sarvam"
+  ],
+  "tldr": [
+    "Sarvam has signed an MoU with Headquarters Integrated Defence Staff covering AI projects across the Army, Navy and Air Force.",
+    "The three services will share the same foundation models, agentic infrastructure and geospatial systems, with human oversight retained on operational decisions.",
+    "The work sits inside Chanakya, Sarvam's firewalled defence division, and draws on models such as Sarvam 105B.",
+    "An MoU sets a framework, not a contract: no values, timelines or specific systems have been disclosed."
+  ],
+  "sections": [
+    {
+      "heading": "What was signed",
+      "paragraphs": [
+        "Sarvam has signed a Memorandum of Understanding with Headquarters Integrated Defence Staff, the arm of the Ministry of Defence that coordinates joint military planning, to set up an umbrella framework for artificial intelligence projects across the Indian Army, the Indian Navy and the Indian Air Force. The framework also covers the joint, tri-service and integrated organisations under HQ IDS. The company announced the agreement on Tuesday, 27 October 2026, and The Hindu BusinessLine, Business Standard and IANS all reported it the same morning.",
+        "Under the agreement, Sarvam will design, develop and deploy AI applications for the operational, training and decision-support needs of the three services, and provide follow-on technical support. Work spans several projects rather than a single product, with HQ IDS facilitating the engagement. Pratyush Kumar, co-founder of Sarvam, said the company exists to build AI in India, for India, and that the core of that mission is to put the country's own intelligence into the systems it depends on."
+      ]
+    },
+    {
+      "heading": "One stack shared by three services",
+      "paragraphs": [
+        "The detail that makes this more than a procurement note is the sharing. The three services and the joint organisations will get access to the same foundation models, the same agentic infrastructure, and the same geospatial and perception systems. Doctrine and lessons learned in one service's projects can then feed the next, instead of each wing building a separate stack that cannot talk to the others.",
+        "The stated focus areas are decision support, target acquisition, and data fusion across what the company calls the sensor-to-shooter loop, the chain that runs from a sensor detecting something to a weapon or unit responding. Sarvam says human oversight is retained on operational decisions, and that the aim is an AI layer built in India and deployed on sovereign infrastructure. Those two sentences are doing a lot of work, and they are the parts that will need independent scrutiny as projects move from framework to field."
+      ]
+    },
+    {
+      "heading": "Inside Chanakya, and the model behind it",
+      "paragraphs": [
+        "The work will be carried out by Chanakya, Sarvam's firewalled division focused on national security and defence. Chanakya will apply Sarvam's own stack, including foundation models such as Sarvam 105B. That model is a mixture-of-experts system with a 128,000-token context window, released as open weights under the Apache 2.0 licence, and trained from scratch on compute provided under the IndiaAI Mission with infrastructure from Yotta and technical support from Nvidia. Sarvam says it performs strongly across 22 Indian languages for its size.",
+        "There is an interesting tension in that combination. The weights of Sarvam 105B are public and anyone can download them, while the defence work is deliberately firewalled behind a separate division. Open weights are how the company built credibility as a sovereign model builder; a firewall is how it expects to be trusted with sensitive work. Both can be true at once, but the boundary between the public model and the defence deployment is exactly the part outsiders cannot see."
+      ]
+    },
+    {
+      "heading": "Why it matters beyond the armed forces",
+      "paragraphs": [
+        "For the defence establishment, the logic is self-reliance. IANS framed the MoU as a step in the government's push towards Atmanirbharta in defence, and noted that the same imperative now extends to artificial intelligence. Defence Minister Rajnath Singh has argued that critical military AI must be developed domestically, because foreign suppliers could withhold technology or leave India exposed to backdoors or kill switches, while adding that collaboration with trusted partners remains possible.",
+        "For Indian AI companies, the signal is about buyers. A tri-service framework gives an indigenous model builder a reference customer of a kind that is hard to find anywhere, and it follows the IndiaAI Mission's Rs 10,372-crore programme under which Sarvam's models were trained. If the framework produces reusable components, geospatial tooling and evaluation standards, the spillover into disaster response, logistics, border monitoring and public safety is plausible. If it produces only bespoke projects, the ecosystem learns much less."
+      ]
+    },
+    {
+      "heading": "The questions the announcement leaves open",
+      "paragraphs": [
+        "An MoU is a framework, not a contract for specific systems. Neither Sarvam nor HQ IDS has disclosed the value of the work, the number of projects, delivery timelines, or which platforms the applications will run on. There is no published detail on what data will train or fine-tune the defence models, how outputs will be validated, who signs off before a system is used in an operation, or how errors will be audited after the fact.",
+        "Those gaps matter more in defence than in most sectors, because the consequences of a wrong output are not a bad summary or a lost sale. The human-oversight commitment is the right starting point, but oversight is a design property, not a press line: it depends on how a system presents recommendations, how quickly a person can challenge them, and whether anyone is accountable when a recommendation is accepted and turns out to be wrong. For students and professionals watching India's AI push, the practical takeaway is narrower and more useful. Sovereign AI has moved from summit speeches to a defence customer, and the skills in demand will be the unglamorous ones, from data engineering and evaluation to deployment on constrained, secure infrastructure."
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "q": "What exactly has Sarvam agreed to do for the armed forces?",
+      "a": "Under the MoU with HQ IDS, Sarvam will design, develop and deploy AI applications for the operational, training and decision-support needs of the Army, Navy and Air Force, and provide follow-on technical support. It is an umbrella framework covering several projects, not a single contract."
+    },
+    {
+      "q": "Which AI model will the defence projects use?",
+      "a": "Sarvam says the work will run through Chanakya, its firewalled national security division, using its own stack including foundation models such as Sarvam 105B. That model is open-weight and was trained from scratch on IndiaAI Mission compute."
+    },
+    {
+      "q": "Will AI make targeting decisions on its own?",
+      "a": "Sarvam says human oversight is retained on operational decisions, and the stated focus is decision support and data fusion across the sensor-to-shooter loop. No autonomous decision-making authority has been announced, and no details of the oversight mechanism have been published."
+    }
+  ],
+  "image_prompt": "A natural, photorealistic wide photograph of a quiet, secure engineering room where two people in plain shirts study a large wall display of terrain maps and data charts, soft daylight from a side window, cables and a server rack softly out of focus in the foreground. Documentary style, realistic lighting, no text, no letters, no logos, no insignia, wide 16:9 landscape.",
+  "source_name": "The Hindu BusinessLine",
+  "source_link": "https://www.thehindubusinessline.com/news/sarvam-and-ministry-of-defence-sign-mou-for-ai-projects-across-the-indian-army-navy-and-air-force/article71629864.ece",
+  "source_url": "https://www.thehindubusinessline.com/news/sarvam-and-ministry-of-defence-sign-mou-for-ai-projects-across-the-indian-army-navy-and-air-force/article71629864.ece"
+}
