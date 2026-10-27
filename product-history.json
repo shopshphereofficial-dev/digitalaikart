@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-26",
+ "updated": "2026-10-27",
  "note": "Append-only log of products published to digitalkartai.shop. Newest last. Never delete or modify existing records.",
  "history": [
   {
@@ -446,6 +446,37 @@
     "SETUP-GUIDE.html: ten-minute setup, per-automation reference, quotas, troubleshooting, limitations",
     "30-check test suite (tests/run-tests.js) runnable with plain Node, no dependencies",
     "Single-user commercial licence; no API keys, no server, no subscription"
+   ]
+  },
+  {
+   "date": "2026-10-27",
+   "name": "Udhaar Khata — Offline Credit Ledger & Payment Reminder App for Indian Shops",
+   "slug": "udhaar-khata-india",
+   "category": "Business Software / Offline Credit Ledger Web App",
+   "type": "non-ebook",
+   "price": "₹199",
+   "mrp": "₹499",
+   "url": "https://digitalkartai.shop/products/udhaar-khata-india/",
+   "download": "https://digitalkartai.shop/downloads/udhaar-khata-india.zip",
+   "payment_link": "https://rzp.io/rzp/yHTutJ9d",
+   "status": "published",
+   "features": [
+    "Single self-contained index.html app — no install, no sign-up, no subscription, works offline",
+    "Customer records with phone, note, opening balance and opening date carried from a notebook",
+    "Four entry types: credit sale, payment received, adjustment (−) and adjustment (+), each with date, note and optional due date",
+    "Running balance per customer with credit / paid / balance columns, oldest entry first",
+    "FIFO ageing: payments clear the oldest dues first; unpaid money bucketed as not due, 1–15, 16–30, 31–60 and 60+ days",
+    "Dashboard: total outstanding, overdue amount, collections this month and customer count",
+    "Customer list with search, filters (All / Pending / Overdue / Settled / In advance) and status pills including 'Overdue 23d'",
+    "Reports: ageing bars across all customers, top ten dues, six months of credit versus collections",
+    "Printable A4 account statement per customer with closing balance and the amount in words (Indian lakh/crore)",
+    "One-click WhatsApp reminder with editable template using {customer} {business} {amount} {date} {upi} placeholders",
+    "Automatic 91 prefix for 10-digit Indian phone numbers; international numbers pass through",
+    "CSV exports: balances sheet with ageing columns, and full entries sheet for the accountant",
+    "JSON backup download and restore to move the khata between devices",
+    "Clear demo data (four clearly labelled example customers) with a one-click erase before real use",
+    "Twelve-part GUIDE.html manual, START-HERE.txt quick start and a seven-clause LICENSE.txt",
+    "Amounts in Indian digit grouping (₹12,34,567.00) with tabular figures and a responsive layout down to phone width"
    ]
   }
  ]
