@@ -541,6 +541,33 @@
         "Works in Excel 2016+, Microsoft 365, Google Sheets and LibreOffice Calc; no macros or add-ins",
         "Packaged as a ZIP with the two workbooks, manual, quick start, CSV and licence"
       ]
+    },
+    {
+      "date": "2026-10-28",
+      "name": "The AI Certification Reality Check 2026-27 — Which AI Certificates Are Actually Worth It",
+      "slug": "ai-certification-reality-check-2026-27",
+      "category": "Career & Certification Guide",
+      "type": "ebook",
+      "price": "₹149",
+      "mrp": "₹599",
+      "url": "https://digitalkartai.shop/products/ai-certification-reality-check-2026-27/",
+      "download": "https://digitalkartai.shop/downloads/ai-certification-reality-check-2026-27.pdf",
+      "payment_link": "https://rzp.io/rzp/uvCZSCeV",
+      "status": "published",
+      "features": [
+        "36-page PDF guide, 13 parts",
+        "8 paid AI credentials with fees verified against vendor pages on 28 October 2026",
+        "Published India prices used where they exist: AI-901 ₹3,691, AWS AI Practitioner ₹8,553",
+        "Six-year cost of ownership and per-year holding cost for every credential",
+        "Eight verdicts graded buy / buy if / skip / wait, plus a six-criteria scorecard",
+        "The 1,725-recruiter experiment and 2026 employer surveys, plus Naukri recruiter-search data",
+        "The ₹0 route: eight free options and exactly what each one gives you",
+        "The five traps, including retired exams such as AI-900 (retired 30 June 2026)",
+        "Three 30-day study plans: non-technical, fresher, working developer",
+        "Reimbursement email, CV lines, LinkedIn entry and the ninety-second interview answer",
+        "Eight practice questions with explanations",
+        "Exam-day checklist and the six-point re-verification routine"
+      ]
     }
   ]
 }
