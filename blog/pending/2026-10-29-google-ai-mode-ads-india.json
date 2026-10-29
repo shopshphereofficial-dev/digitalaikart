@@ -1,0 +1,81 @@
+{
+  "date": "2026-10-29",
+  "title": "Google Brings Ads to AI Mode in India: What It Means for You",
+  "slug": "google-ai-mode-ads-india",
+  "category": "AI Business",
+  "description": "Google is putting sponsored ads inside AI Mode in India, alongside nine other markets. Here is what changes for people searching and for Indian advertisers.",
+  "emoji": "🔍",
+  "keywords": [
+    "Google AI Mode ads India",
+    "AI Mode Sponsored",
+    "Alphabet Q3 2026",
+    "AI search advertising",
+    "Google Ads India"
+  ],
+  "tags": [
+    "#AI",
+    "#Google",
+    "#AIMode",
+    "#DigitalAdvertising"
+  ],
+  "tldr": [
+    "Google is scaling ads inside AI Mode in India and nine other markets, with every paid placement labelled Sponsored.",
+    "The company announced it on 28 October alongside Alphabet's September-quarter results, where Search revenue growth slowed to 12 percent.",
+    "Google's own business chief said AI Mode queries carry lower monetization, which is why the ad push is happening now.",
+    "For Indian advertisers, existing Search, Shopping and Performance Max campaigns are eligible by default, so it is worth checking budgets and reporting this week."
+  ],
+  "sections": [
+    {
+      "heading": "What Google announced",
+      "paragraphs": [
+        "Google is bringing ads into AI Mode, the conversational tab inside its search engine, in India and nine other markets. The company announced the expansion on 28 October 2026 in a post by Shashi Thakur, vice president and general manager of Google Search Ads and Ads on Google Experiences, and repeated it on the same day's quarterly earnings call. The other markets are Australia, Canada, Kenya, Malaysia, New Zealand, Nigeria, Pakistan, the Philippines and Singapore. Google says Brazil, Mexico and the United Kingdom are planned for the fourth quarter of 2026.",
+        "Sponsored placements will appear inside AI Mode's generated answers, clearly labelled Sponsored, and Google says it will keep testing formats. Ads first appeared in AI Mode in the United States in May 2025; this is the first time Google has taken that monetization outside the US. Alongside the international rollout, Google is launching multiturn ads in the US, which allow an ad to appear in response to a follow-up question mid-conversation rather than only at the start."
+      ]
+    },
+    {
+      "heading": "Why now: the numbers behind the push",
+      "paragraphs": [
+        "The timing is not a coincidence. Alphabet reported September-quarter revenue of $127.6 billion, up 25 percent year on year, and Google Cloud revenue more than doubled to $30.7 billion. But the advertising engine that funds all of it is slowing: Search and other advertising revenue rose 12 percent to $63.35 billion, down from 17 percent growth in the previous quarter and 19 percent in the first quarter of 2026. Total advertising revenue of $82.01 billion came in below analyst expectations, and Alphabet shares fell around 8 percent after the results, as TechCrunch reported.",
+        "Google's chief business officer Philipp Schindler gave a direct explanation on the call. Strong growth in AI Mode queries had an impact on Search growth, he said, because of the lower monetization Google is seeing in AI Mode. In plain terms, people asking longer questions inside an AI answer get fewer ads than people scrolling ten blue links, so the same query volume earns less. He named foreign exchange as the single largest driver of the deceleration, and said some Asia-Pacific retailers were affected by the European Union's removal of its de minimis exemption on low-cost imports."
+      ]
+    },
+    {
+      "heading": "What changes for people searching in India",
+      "paragraphs": [
+        "In practice, an Indian user asking AI Mode to compare two phones, plan a trip or price a home repair is now more likely to see a paid product list or sponsored recommendation woven into the answer. The label matters: Google says placements will be marked Sponsored, and users should treat that marker the way they treat an ad marker on a conventional results page. The difference is that inside a conversational answer a sponsored block can look like part of the reply, so reading the label carefully is the habit to build.",
+        "The scale of what Google is monetizing is worth understanding. Sundar Pichai said on the call that queries in AI Mode are on average three times longer than traditional searches, that one in five AI Mode searches globally uses voice, images or documents, and that Google has crossed 50 billion visual searches a month. He also said year-on-year query growth is the highest it has been in five years. Longer queries are commercially valuable because they carry more context about intent, which is what advertisers pay for."
+      ]
+    },
+    {
+      "heading": "What it means for Indian advertisers and small businesses",
+      "paragraphs": [
+        "This is the part most Indian businesses need to act on. Search Engine Journal reported that existing Search, Shopping and Performance Max campaigns are eligible for AI Mode by default and cannot be opted out of separately, which means spend can start flowing to these placements without a new campaign being created. Advertisers who set daily budgets months ago should check campaign settings and placement reporting in Google Ads this week rather than discovering the shift on a monthly invoice.",
+        "Google's argument for the format is that it performs. Schindler said click-through rates are already similar between sponsored and organic product list items within AI Mode, and that user research shows people find the ads relevant. He also said Gemini models helped advertisers generate more than 1.5 billion campaign assets in the quarter, up more than seven times year on year, and cited Telstra as an example where AI Max captured long-form and multilingual queries for a 52 percent increase in conversions and a 36 percent reduction in cost per order. Those are Google's figures from a single advertiser, so they are a reason to test, not to assume the same result."
+      ]
+    },
+    {
+      "heading": "The trust question, and what to watch",
+      "paragraphs": [
+        "The awkward part of this announcement is that it is a fix for a problem the product created. Google built AI Mode because people wanted answers instead of links, and answers are harder to advertise against than links. Expanding ads into ten more markets restores some of the revenue the shift gave away, but it also puts paid content inside the part of the product users trust most for a neutral answer. How clearly the Sponsored label survives different formats will decide whether the experience holds up.",
+        "For publishers and site owners in India, the direction of travel is the same one that has worried them all year: more of the user's attention and more ad inventory sits on Google's own surface, and the click to the source becomes optional. The things to watch are the first Indian performance reports on AI Mode placements, any change to how the Sponsored label is rendered, and whether Google publishes separate guidance for small businesses rather than leaving them inside default settings."
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "q": "Will I start seeing ads in Google's AI answers in India?",
+      "a": "Yes. Google is scaling ads in AI Mode in India and nine other markets, announced on 28 October 2026. The placements will be labelled Sponsored and appear inside the conversational answer, not only on the traditional results page."
+    },
+    {
+      "q": "Do Indian advertisers need to create a new campaign for AI Mode?",
+      "a": "According to Search Engine Journal, existing Search, Shopping and Performance Max campaigns are eligible by default and cannot be opted out of separately. Check your campaign settings, budgets and placement reports rather than assuming you are excluded."
+    },
+    {
+      "q": "Why is Google doing this now?",
+      "a": "Because AI Mode earns less per query. Search advertising growth slowed to 12 percent in the September quarter, and Google's chief business officer said the lower monetization of AI Mode queries affected results, so the company is adding paid placements to that surface."
+    }
+  ],
+  "image_prompt": "A natural, photorealistic wide photograph of a young Indian woman in a bright apartment sitting at a wooden table, holding a smartphone in both hands while reading a search answer, a cup of chai and a notebook beside her, warm late-morning light through a window, shallow depth of field. Candid documentary style, realistic, no text, no letters, no logos, no brand marks, wide 16:9 landscape.",
+  "source_name": "Google Ads & Commerce blog",
+  "source_link": "https://blog.google/products/ads-commerce/ads-in-ai-mode-global/"
+}
