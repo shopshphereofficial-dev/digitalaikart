@@ -1,0 +1,31 @@
+name: Publish The 2027 Appraisal Playbook PDF
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  upload-ebook:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Download ebook from release
+        run: |
+          mkdir -p downloads
+          gh release download appraisal-playbook-2027-india-v1 --repo shopshphereofficial-dev/digitalaikart --output "downloads/appraisal-playbook-2027-india.pdf"
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Commit ebook to repo
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add downloads/appraisal-playbook-2027-india.pdf
+          git commit -m "Add The 2027 Appraisal Playbook PDF to repo" || echo "No changes to commit"
+          git push
