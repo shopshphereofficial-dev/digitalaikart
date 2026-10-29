@@ -18,7 +18,7 @@ jobs:
       - name: Download ebook from release
         run: |
           mkdir -p downloads
-          gh release download appraisal-playbook-2027-india-v1 --repo shopshphereofficial-dev/digitalaikart --output "downloads/appraisal-playbook-2027-india.pdf"
+          gh release download appraisal-playbook-2027-india-v1 --repo shopshphereofficial-dev/digitalaikart --pattern "2027-appraisal-playbook.pdf" --output "downloads/appraisal-playbook-2027-india.pdf"
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
