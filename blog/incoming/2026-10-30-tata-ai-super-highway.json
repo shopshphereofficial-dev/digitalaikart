@@ -1,0 +1,80 @@
+{
+  "title": "Tata Communications to build 10,000 km AI super highway in India",
+  "slug": "tata-communications-ai-super-highway-india",
+  "category": "AI Hardware",
+  "description": "Tata Communications will spend up to $450 million on 10,000 km of AI-ready fibre across India. Here is what the network means for jobs and small businesses.",
+  "emoji": "📡",
+  "keywords": [
+    "Tata Communications",
+    "AI super highway",
+    "data centre connectivity",
+    "India AI infrastructure",
+    "fibre network"
+  ],
+  "tags": [
+    "#AIInfrastructure",
+    "#TataCommunications",
+    "#DataCentres",
+    "#IndiaAI"
+  ],
+  "tldr": [
+    "Tata Communications will invest close to $450 million, about Rs 4,350 crore, in a 10,000 km AI-ready fibre network.",
+    "Phase one links Mumbai, Pune, Hyderabad and Chennai, with later phases reaching Vizag, Bhubaneswar and GIFT City.",
+    "The build adds about 6 Pbps of capacity to an existing network already running at 70 to 80 per cent utilisation.",
+    "No customer contracts have been announced yet, and new capacity is due between FY2030 and FY2036."
+  ],
+  "sections": [
+    {
+      "heading": "What Tata Communications has announced",
+      "paragraphs": [
+        "On 26 October, Tata Communications said it will spend close to 450 million dollars, or roughly Rs 4,350 crore, to build what it calls an AI super highway: about 10,000 kilometres of new long-haul fibre across India, designed to carry data between data centres at high speed and low delay. The company said the network will be built in three phases over a three to five year horizon and funded from its own operating cash flows rather than fresh borrowing.",
+        "Tata Communications already runs one of the larger private cable networks in the world, with more than 500,000 km of subsea fibre and over 200,000 km of terrestrial fibre. The new build is meant to add about 6 petabits per second of capacity to its existing 1.25 Pbps, which is already running at 70 to 80 per cent utilisation, according to the company's filing with stock exchanges."
+      ]
+    },
+    {
+      "heading": "Why cables matter as much as chips",
+      "paragraphs": [
+        "Most conversation about AI in India is about GPUs, electricity and land. But the speed of an AI answer depends on the slowest link between the data centre holding the model and the person using it. Training runs, agentic workflows and real-time voice tools all push large volumes of data between facilities, and ordinary telecom networks were not built for that pattern. Tata's pitch is direct data-centre-to-data-centre links with custom service guarantees on latency, capacity and resilience.",
+        "Ganesh Lakshminarayanan, managing director and chief executive, said the data-centre-to-data-centre connectivity market in India could exceed 1 billion dollars over the medium term. Rupesh Chokshi, who leads network services, told Moneycontrol that the company is targeting a 30 to 40 per cent share of the work it can go after. The timing is tied to a wider build-out: India has drawn more than 300 billion dollars of data centre investment commitments in the past year, and operational capacity is expected to at least triple in the next three years, according to research published by Rhodium Group on 27 October."
+      ]
+    },
+    {
+      "heading": "The route: Mumbai to Chennai, then east and west",
+      "paragraphs": [
+        "The first phase connects the Mumbai-Pune-Hyderabad-Chennai corridor, joining major data centre clusters to undersea cable landing stations. The second phase widens coverage across Hyderabad, Visakhapatnam and Chennai. Later phases stretch east towards Bhubaneswar and west into Gujarat, including GIFT City and Jamnagar, so that data centre clusters sit closer to international cable landing points.",
+        "The company has said capacity will be added between FY2030 and FY2036, which tells you this is a long build and not a switch that flips next quarter. Visakhapatnam and Bhubaneswar matter because both are emerging data centre locations with lower land and power costs, while GIFT City matters because it hosts a growing cluster of financial firms that run latency-sensitive workloads."
+      ]
+    },
+    {
+      "heading": "What it means for students and young professionals",
+      "paragraphs": [
+        "Fibre networks are physical work. Someone has to survey the route, dig and lay duct, pull cable, splice strands, test links, and then operate and maintain the whole thing for years. Add the data centre technicians, network engineers and security staff needed at either end, and a build of this size creates a steady and less glamorous layer of AI employment outside the usual software jobs, much of it in Tier-2 and Tier-3 cities along the route. The company also says it will keep expanding its existing national long-distance and metro networks alongside the new build, so the older work does not disappear.",
+        "For students, the signal is that AI work in India is not only about training models. Optical networking, data centre operations, power and cooling management and network security are skills this build will need, and they are reachable through diploma, certification and apprenticeship routes rather than only through a computer science degree."
+      ]
+    },
+    {
+      "heading": "What it means for small businesses, and the caveats",
+      "paragraphs": [
+        "Faster, cheaper links between Indian data centres can pull down the cost of running AI tools here instead of abroad. A shopkeeper using an AI billing assistant, a clinic using speech-to-text in a regional language, or a small exporter running an agent to match invoices all depend on how quickly data reaches a server and comes back. Better domestic connectivity makes locally hosted AI services more viable than routing every request through Singapore or Virginia.",
+        "The caveats are real. Tata has not announced any customer contracts for the new network and says it is in advanced discussions with potential customers. The extra capacity lands from FY2030, and connectivity alone will not decide anything: compute, power, land and skilled people have to keep pace, or the fibre will sit underused. The practical takeaway is that India's AI build-out is moving from announcements about models to announcements about wires, and the second kind is what makes the first kind usable."
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "q": "How much is Tata Communications investing in the AI super highway?",
+      "a": "Close to 450 million dollars, or about Rs 4,350 crore in capital expenditure. The company says the build will run in three phases over three to five years and will be funded from its operating cash flows."
+    },
+    {
+      "q": "Which cities will the new fibre network connect?",
+      "a": "The first phase covers Mumbai, Pune, Hyderabad and Chennai. Later phases extend to Visakhapatnam and Bhubaneswar in the east, and to Gujarat nodes including GIFT City and Jamnagar in the west."
+    },
+    {
+      "q": "Will this make AI cheaper for small businesses in India?",
+      "a": "It could help over time, because faster links between Indian data centres lower the cost of hosting and using AI services here. But new capacity is due between FY2030 and FY2036, so the effect will not be immediate."
+    }
+  ],
+  "image_prompt": "Photorealistic wide 16:9 photo of an Indian field engineer in a safety helmet and reflective vest splicing a bundle of fibre-optic cables at an open roadside trench beside a highway at golden hour, cable spools and a utility van nearby, natural warm daylight, shallow depth of field, no text and no logos.",
+  "source_name": "The Hindu BusinessLine",
+  "source_url": "https://www.thehindubusinessline.com/info-tech/tata-comm-to-invest-450-million-in-high-speed-fibre-network-to-connect-ai-data-centres/article71626390.ece"
+}
