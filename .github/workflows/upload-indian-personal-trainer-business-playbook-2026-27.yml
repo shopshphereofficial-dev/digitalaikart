@@ -18,7 +18,7 @@ jobs:
       - name: Download ebook from release
         run: |
           mkdir -p downloads
-          gh release download indian-personal-trainer-business-playbook-2026-27-v1 --repo shopshphereofficial-dev/digitalaikart --output "downloads/indian-personal-trainer-business-playbook-2026-27.pdf"
+          gh release download indian-personal-trainer-business-playbook-2026-27-v1 --repo shopshphereofficial-dev/digitalaikart --pattern "indian-personal-trainer-business-playbook-2026-27.pdf" --output "downloads/indian-personal-trainer-business-playbook-2026-27.pdf"
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
