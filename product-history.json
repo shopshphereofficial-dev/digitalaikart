@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-29",
+ "updated": "2026-10-30",
  "note": "Append-only log of products published to digitalkartai.shop. Newest last. Never delete or modify existing records.",
  "history": [
   {
@@ -596,6 +596,34 @@
     "Nine hard cases with their own scripts, including returning from maternity leave and a PIP",
     "Eight copy-paste AI prompts with a redaction rule",
     "Every figure sourced and dated; Aon, Deloitte, EY, MoSPI, RBI and Income Tax Department, 29 October 2026"
+   ]
+  },
+  {
+   "date": "2026-10-30",
+   "name": "PaySlip Pro — Indian Payroll & Salary Slip System (Offline Web App)",
+   "slug": "payslip-pro-india",
+   "category": "Business Software / Offline Payroll & Salary Slip Web App",
+   "type": "webapp",
+   "price": "₹249",
+   "mrp": "₹599",
+   "url": "https://digitalkartai.shop/products/payslip-pro-india/",
+   "download": "https://digitalkartai.shop/downloads/payslip-pro-india.zip",
+   "payment_link": "https://rzp.io/rzp/NVtPpre",
+   "status": "published",
+   "features": [
+    "Single self-contained HTML file — no install, no sign-up, works offline",
+    "Employee master with monthly structure (Basic, HRA, Conveyance, Special, Other), PAN, UAN, ESI IP, bank and IFSC",
+    "Monthly pay run: paid days, loss-of-pay pro-rating, incentive, arrears, advance, TDS and other deductions",
+    "PF 12% with statutory wage ceiling cap (₹15,000 default, switchable) plus employer PF, EDLI 0.5% and PF admin 0.5%",
+    "ESI 0.75% employee / 3.25% employer within the ₹21,000 wage limit, rounded up to the rupee",
+    "Professional tax presets for 7 states (MH, KA, TS, AP, WB, GJ, MP), nil for Delhi, manual elsewhere",
+    "Per-employee per-month overrides for PF, ESI and professional tax",
+    "Printable A4 salary slip: business header, earnings vs deductions, net pay in figures and Indian words, employer contribution",
+    "Print all slips one per page; Save as PDF from the print dialog",
+    "Monthly salary register with totals, printable and exportable as CSV for Excel and Google Sheets",
+    "Dashboard: headcount, net payable, employer cost, statutory totals and headcount cost table",
+    "JSON backup and restore to move between devices; sample data with three example employees",
+    "Includes USER-GUIDE.html (12 sections), START-HERE.txt, sample-data.json and LICENSE.txt"
    ]
   }
  ]
