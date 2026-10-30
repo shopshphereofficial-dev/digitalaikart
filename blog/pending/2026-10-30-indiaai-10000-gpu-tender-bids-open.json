@@ -1,0 +1,76 @@
+{
+  "date": "2026-10-30",
+  "title": "India's 10,000-GPU AI Tender Opens Today, and Price Is the Point",
+  "slug": "indiaai-10000-gpu-tender-bids-open",
+  "category": "AI India",
+  "description": "C-DAC opens technical bids today for 10,000 AI compute units. Here is what the tender asks, who can bid, and why India is buying compute all over again.",
+  "emoji": "🖥",
+  "keywords": [
+    "IndiaAI Mission GPU tender",
+    "C-DAC 10000 GPU empanelment",
+    "AI compute India",
+    "GPU pricing India",
+    "MeitY IndiaAI"
+  ],
+  "tags": ["#AI", "#IndiaAI", "#GPUs", "#Compute"],
+  "tldr": [
+    "C-DAC opens technical bids at 4 pm IST today for empanelling providers of up to 10,000 AI compute units under the IndiaAI Mission.",
+    "Clusters can be 4,000, 1,000 or 512 units, each inside a single Indian data centre, for a five-year service period.",
+    "The bar is high: at least Rs 120 crore average annual turnover and a Tier-III data centre in India.",
+    "The tender is a re-buy, not a first buy: hardware maker Netweb says global per-hour GPU rates have risen, so older rates no longer buy capacity."
+  ],
+  "sections": [
+    {
+      "heading": "What opens today",
+      "paragraphs": [
+        "The Centre for Development of Advanced Computing (C-DAC) is scheduled to open technical proposals at 4 pm IST on 30 October 2026 for its tender to empanel providers of up to 10,000 AI compute units under the IndiaAI Mission, as Elets CIO reported. The Request for Empanelment, numbered C-DAC/GPU/01/2026, was published on 7 October and closed for submissions on the Central Public Procurement Portal at 3:30 pm on 29 October. It follows IT Minister Ashwini Vaishnaw's 11 October announcement that the government would add 10,000 more GPUs to the mission's shared pool.",
+        "This is stage one, and it is technical only. There are no price bids in this round, bidders need at least 60 marks out of 100 to be empanelled, and the bids must stay valid for 180 days. Commercial terms, cluster sizes and rates are settled in a later stage. In plain terms, today decides who is allowed to sell compute to the Indian state, not at what price."
+      ]
+    },
+    {
+      "heading": "What the tender actually buys",
+      "paragraphs": [
+        "C-DAC, which sits under the Ministry of Electronics and Information Technology and runs the compute pillar of the mission, wants end-to-end AI compute services for five years. An AI compute unit is defined broadly enough to cover GPUs, TPUs and other accelerators, with NVIDIA's H100 and H200 and their next-generation equivalents named as the class of hardware expected. Capacity is bought in clusters of 4,000, 1,000 or 512 units, and every cluster has to sit inside a single data centre in India. C-DAC has kept the option to scale past 10,000 units if demand justifies it.",
+        "The workloads listed are the familiar heavy ones: large-scale model training, fine-tuning, inference, high-performance computing and other generative AI work. The users are ministries, academia, research institutions, startups and industry. According to reports of the minister's announcement, 3,000 units are reserved for government and public-interest work, with 7,000 offered to companies."
+      ]
+    },
+    {
+      "heading": "Who can actually bid",
+      "paragraphs": [
+        "The eligibility rules narrow the field quickly. A bidder needs an average annual turnover of at least Rs 120 crore, a Tier-III data centre in India, and either 512 compute units already installed or a commitment to deploy that many in India within six months, backed by a bank guarantee. The document also carries a Make in India declaration and requires bidders to certify they are not from a country sharing a land border with India.",
+        "That combination points to a shortlist of data-centre operators and cloud service providers, not startups and not research labs. For an Indian founder reading this, the practical takeaway is that the government is not buying your cluster directly. It is empanelling the companies whose clusters you will rent from, which is why the useful question this week is which of those providers will pass the 60-mark technical bar."
+      ]
+    },
+    {
+      "heading": "Why India is buying compute again",
+      "paragraphs": [
+        "More than 38,000 GPUs have already been brought onto the IndiaAI compute platform through earlier rounds at subsidised rates, and startups and enterprises still report months-long waits for high-end capacity. So this is not a first purchase. The clearest explanation of why a fresh tender was needed came from hardware maker Netweb Technologies on its September-quarter earnings call, when managing director Sanjay Lodha told analysts that the GPUs offered under the earlier request were being used up, and that international per-hour GPU rates had gone up, leaving IndiaAI unable to buy capacity at the old rates. A new request, priced at the market, is the fix.",
+        "Lodha also clarified the plumbing, which is easy to misread in the headlines. C-DAC is running this request on behalf of IndiaAI rather than for itself, and the empanelled cloud providers will place orders with hardware vendors like Netweb as demand arrives. The 10,000 figure is a ceiling for the pool, not a single purchase order for boxes."
+      ]
+    },
+    {
+      "heading": "What to watch next",
+      "paragraphs": [
+        "Three things will decide whether this round does more than the last one. The first is price: the whole point of a re-tender is that capacity now costs more per hour, so the question is whether the mission's subsidy can absorb that without cutting the hours it can hand out. The second is whether the 7,000-for-companies share holds once bids are evaluated, or gets reallocated to public-sector demand. The third is speed, since the six-month deployment commitment is only as good as the bank guarantee behind it.",
+        "For builders, the near-term action is unglamorous but useful: check which providers get empanelled over the next few weeks, and price your training plans against current market rates rather than the subsidised rates quoted a year ago. The mission's compute is still the cheapest serious option in India, but it is being repriced in public, and that is the story today's bid opening tells."
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "q": "What is happening with the IndiaAI GPU tender on 30 October 2026?",
+      "a": "C-DAC is opening technical proposals at 4 pm IST for RFE No. C-DAC/GPU/01/2026, which seeks providers of up to 10,000 AI compute units for five years. No price bids are opened at this stage."
+    },
+    {
+      "q": "Can an Indian startup bid for this tender directly?",
+      "a": "In practice, no. Bidders need at least Rs 120 crore average annual turnover, a Tier-III data centre in India and 512 installed compute units or a six-month deployment commitment with a bank guarantee, which rules out most startups."
+    },
+    {
+      "q": "Why did the government issue a new GPU tender at all?",
+      "a": "Netweb Technologies told analysts that GPUs from the earlier request are being used up and that international per-hour GPU rates have risen, so IndiaAI cannot secure capacity at the old rates and needs a fresh request priced at market."
+    }
+  ],
+  "image_prompt": "A natural, photorealistic wide photograph inside a modern Indian data centre, a technician in a plain shirt walking down an aisle of black server racks with glowing indicator lights, cool blue-white overhead lighting, cables neatly bundled overhead, slight motion blur on the technician, documentary style, realistic, no text, no letters, no logos, wide 16:9 landscape.",
+  "source_name": "Elets CIO",
+  "source_link": "https://cio.eletsonline.com/artificial-intelligence/indiaai-mission-10000-gpu-tender-cdac-technical-bids-open-ai-compute/76530/"
+}
