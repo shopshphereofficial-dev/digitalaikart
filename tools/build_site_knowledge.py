@@ -177,6 +177,7 @@ def load_pages():
         ("/refund-policy.html", "refund-policy.html"),
         ("/terms.html", "terms.html"),
         ("/thank-you.html", "thank-you.html"),
+        ("/about.html", "about.html"),
         ("/sitemap.html", "sitemap.html"),
     ]
     out = []
