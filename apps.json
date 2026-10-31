@@ -1,31 +1,30 @@
 {
- "updated": "2026-10-14",
+ "updated": "2026-10-31",
  "note": "Only apps that are ready for release are listed here.",
  "apps": [
   {
    "slug": "neon-calculator",
    "name": "Neon Calculator",
-   "tagline": "A colourful, kid-friendly calculator with glowing neon buttons.",
+   "tagline": "A bright, colourful calculator with glowing neon buttons and big, easy-to-tap keys.",
    "category": "Tools",
    "price": "Free",
-   "description": "Neon Calculator is a bright, playful calculator built for kids and anyone who wants maths to feel fun. Every key glows in neon, the buttons are big and easy to hit, and the whole app works fully offline with no ads and no sign-up.\n\nIt is small, fast and free — the perfect first calculator on a child's phone or tablet.",
+   "description": "Neon Calculator is a bright, playful calculator with glowing neon keys, big buttons that are easy to hit, and a fast, lightweight interface that works fully offline.\n\nIt is free to download and supported by a small banner ad and an occasional full-screen ad. There is no sign-up, no account and no in-app purchase.",
    "features": [
     "Glowing neon button design",
-    "Big, kid-friendly keys",
+    "Big, easy-to-tap keys",
     "Works fully offline",
-    "No ads, no sign-up",
+    "No sign-up, no account",
     "Lightweight and fast"
    ],
    "tags": [
     "calculator",
-    "kids",
     "neon",
     "offline",
-    "ad-free",
     "maths",
+    "big buttons",
     "calculator app",
-    "kids calculator",
-    "offline calculator"
+    "offline calculator",
+    "free calculator"
    ],
    "platform": "Android",
    "icon": "/apps/icons/neon-calculator.svg",
@@ -48,20 +47,19 @@
    "faq": [
     [
      "Is Neon Calculator free?",
-     "Yes - Neon Calculator is completely free, with no ads and no sign-up."
+     "Yes - it is free to download and use. It is supported by a small banner ad and an occasional full-screen ad. There is no sign-up and no in-app purchase."
     ],
     [
      "Does it work offline?",
-     "Yes. Neon Calculator works fully offline, so it works without Wi-Fi or mobile data."
+     "Yes. The calculator itself works fully offline, so it works without Wi-Fi or mobile data. Ads need a connection to load, and the app keeps working without them."
     ],
     [
-     "Is it good for kids?",
-     "Yes. It has big, glowing keys that are easy for children to tap."
+     "Is it suitable for all ages?",
+     "Yes. It is a general-audience calculator with big, easy-to-tap keys. There is no sign-up, no chat and no user-generated content."
     ]
    ],
    "hashtags": [
     "calculator",
-    "kidsCalculator",
     "neon",
     "offlineApp",
     "freeApp",
@@ -77,7 +75,8 @@
    "package": "com.neon.calc",
    "updated": "10 October 2026",
    "apk": "https://github.com/shopshphereofficial-dev/neon-calculator/releases/latest/download/app.apk",
-   "permissions": "Internet and network state only. The app works fully offline.",
+   "permissions": "Internet and network state - used to load ads and check connectivity. The calculator itself works offline.",
+   "ads": "Google AdMob banner and interstitial ads",
    "privacy_url": "/app-privacy-policy.html",
    "deletion_url": "/account-deletion.html",
    "page": "/apps/neon-calculator/"
