@@ -1,0 +1,94 @@
+name: App logo (real icon + social card)
+
+# 1. Repairs the single mistyped base64 character in apps/icons/neon-calculator.svg
+#    and verifies the file against the expected checksum, so the real Neon
+#    Calculator logo is byte-for-byte what the app uses.
+# 2. Rebuilds the 1200x630 social/preview card at
+#    assets/apps/og/neon-calculator.png from that same logo.
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/app-logo.yml"
+      - "apps/icons/neon-calculator.svg"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: app-logo
+  cancel-in-progress: false
+
+jobs:
+  logo:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+
+      - name: Install Pillow
+        run: pip install --quiet pillow
+
+      - name: Repair icon, then build the social card
+        run: |
+          python3 - <<'PY'
+          import base64, hashlib, re, sys
+          from PIL import Image
+
+          ICON = "apps/icons/neon-calculator.svg"
+          OG = "assets/apps/og/neon-calculator.png"
+          EXPECTED = "99898ab135b95db658cd47d1386391d64e1a3e8676d4fe19a237ae380a94a0fb"
+
+          svg = open(ICON, encoding="utf-8").read()
+          fixed = svg.replace("AAmEf5ARUpADgr", "AAmEv5ARUpADgr")
+          if fixed != svg:
+              open(ICON, "w", encoding="utf-8").write(fixed)
+              print("icon repaired")
+
+          digest = hashlib.sha256(open(ICON, "rb").read()).hexdigest()
+          if digest != EXPECTED:
+              sys.exit("icon checksum mismatch: %s" % digest)
+          print("icon checksum ok")
+
+          m = re.search(r"base64,([A-Za-z0-9+/=]+)\"", open(ICON, encoding="utf-8").read())
+          if not m:
+              sys.exit("no embedded logo found")
+          open("/tmp/logo.png", "wb").write(base64.b64decode(m.group(1)))
+
+          logo = Image.open("/tmp/logo.png").convert("RGBA")
+          W, H = 1200, 630
+          bg = Image.new("RGB", (W, H), (9, 12, 18))
+          px = bg.load()
+          cx, cy = W // 2, H // 2
+          for y in range(0, H, 2):
+              for x in range(0, W, 2):
+                  d = ((x - cx) ** 2 / cx ** 2 + (y - cy) ** 2 / cy ** 2) ** 0.5
+                  v = int(16 + 18 * max(0.0, 1 - d))
+                  for dx in (0, 1):
+                      for dy in (0, 1):
+                          if x + dx < W and y + dy < H:
+                              px[x + dx, y + dy] = (v, v + 3, v + 8)
+          size = 420
+          lg = logo.resize((size, size), Image.LANCZOS)
+          bg.paste(lg, (cx - size // 2, cy - size // 2), lg)
+          bg.save(OG, optimize=True)
+          print("wrote", OG)
+          PY
+
+      - name: Commit if changed
+        run: |
+          if [ -z "$(git status --porcelain)" ]; then
+            echo "Nothing to change."
+            exit 0
+          fi
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "icons: real Neon Calculator logo + social card"
+          git pull --rebase origin "${GITHUB_REF_NAME}"
+          git push
