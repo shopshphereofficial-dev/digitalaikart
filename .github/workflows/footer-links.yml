@@ -1,0 +1,41 @@
+name: Footer links (Apps on every page)
+
+# Every footer should offer the same navigation, including the Apps section, so
+# any page leads to /apps/ and the legal pages. Safe to re-run — idempotent.
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "tools/footer_links.py"
+      - ".github/workflows/footer-links.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: footer-links
+  cancel-in-progress: false
+
+jobs:
+  apply:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Add missing footer links
+        run: python3 tools/footer_links.py .
+
+      - name: Commit if changed
+        run: |
+          if [ -z "$(git status --porcelain)" ]; then
+            echo "Nothing to change — footers already complete."
+            exit 0
+          fi
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "nav: add Apps link to every footer"
+          git pull --rebase origin "${GITHUB_REF_NAME}"
+          git push
