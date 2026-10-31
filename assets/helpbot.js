@@ -180,8 +180,14 @@
 
   function factsBlock() {
     var s = KB.site || {}, L = [];
+    if (s.entity) L.push('Brand & owner: ' + s.entity);
     if (s.what) L.push('About: ' + s.what);
-    if (s.contact) L.push('Contact: WhatsApp ' + s.contact.whatsapp + ', email ' + s.contact.email);
+    if (s.location) L.push('Location: ' + s.location);
+    if (s.hours) L.push('Support hours: ' + s.hours);
+    if (s.contact) {
+      var nums = [s.contact.whatsapp, s.contact.whatsapp_2].filter(Boolean).join(' and ');
+      L.push('Contact: WhatsApp ' + nums + ', email ' + s.contact.email + ' (always give both numbers)');
+    }
     if (s.how_to_buy) L.push('How to buy: ' + s.how_to_buy);
     if (s.how_to_download) L.push('Downloads: ' + s.how_to_download);
     if (s.refund) L.push('Refunds: ' + s.refund);
