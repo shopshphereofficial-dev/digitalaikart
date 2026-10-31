@@ -18,7 +18,7 @@ jobs:
       - name: Download ebook from release
         run: |
           mkdir -p downloads
-          gh release download ai-prompt-pack-indian-dietitians-2026-27-v1 --repo shopshphereofficial-dev/digitalaikart --output "downloads/ai-prompt-pack-indian-dietitians-2026-27.pdf"
+          gh release download ai-prompt-pack-indian-dietitians-2026-27-v1 --repo shopshphereofficial-dev/digitalaikart --output "downloads/ai-prompt-pack-indian-dietitians-2026-27.pdf" --clobber
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
