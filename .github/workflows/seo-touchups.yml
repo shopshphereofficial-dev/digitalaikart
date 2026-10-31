@@ -1,0 +1,43 @@
+name: SEO touch-ups
+
+# Real meta descriptions on the policy pages, over-long descriptions trimmed to
+# fit Google's snippet, content-visibility on listing cards, and a short-lived
+# token warning on the admin setup screen.
+# Safe to re-run — tools/seo_touchups.py is idempotent.
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "tools/seo_touchups.py"
+      - ".github/workflows/seo-touchups.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: seo-touchups
+  cancel-in-progress: false
+
+jobs:
+  apply:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Apply touch-ups
+        run: python3 tools/seo_touchups.py .
+
+      - name: Commit if changed
+        run: |
+          if [ -z "$(git status --porcelain)" ]; then
+            echo "Nothing to change."
+            exit 0
+          fi
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "seo: real policy descriptions, trimmed snippets, lighter listings"
+          git pull --rebase origin "${GITHUB_REF_NAME}"
+          git push
