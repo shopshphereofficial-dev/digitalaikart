@@ -1,0 +1,49 @@
+name: Image dimensions (Core Web Vitals)
+
+# Adds real width/height to every local image and lazy-loads everything below the
+# fold, so the blog and product listings stop shifting as covers load (CLS).
+# Safe to re-run — tools/img_dimensions.py is idempotent.
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "tools/img_dimensions.py"
+      - ".github/workflows/img-dimensions.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: img-dimensions
+  cancel-in-progress: false
+
+jobs:
+  apply:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+
+      - name: Install image tools
+        run: pip install --quiet pillow
+
+      - name: Add intrinsic image sizes
+        run: python3 tools/img_dimensions.py .
+
+      - name: Commit if changed
+        run: |
+          if [ -z "$(git status --porcelain)" ]; then
+            echo "Nothing to change."
+            exit 0
+          fi
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "perf: intrinsic image sizes and lazy loading"
+          git pull --rebase origin "${GITHUB_REF_NAME}"
+          git push
