@@ -202,76 +202,21 @@
     $('msgs').scrollTop = $('msgs').scrollHeight;
     return m;
   }
-  function linkify(m) { m.innerHTML = m.textContent.replace(/(https?:\/\/[^\s)]+)/g, '<a href="$1" target="_blank" rel="noopener">$1</a>'); }
-
-  /* ---------- send ---------- */
-  function send(text) {
-    text = (text || '').trim();
-    if (!text || busy) return;
-
-    var need = tierFor(chosen()).cost;
-    if (creditsLeft() < need) { showUpgrade('out'); return; }
-    if (!askedUpgrade) {
-      askedUpgrade = true;
-      localStorage.setItem('dskAI_upgrade_seen', '1');
-      showUpgrade('first');
+  function linkify(m) {
+    var raw = m.textContent, out = '', last = 0, x;
+    var re = /(https?:\/\/[^\s)<>"']+)/g;
+    function esc(s) {
+      return s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+              .replace(/"/g, '&quot;').replace(/'/g, '&#39;');
     }
-
-    busy = true;
-    addMsg('user', text);
-    $('ai-in').value = '';
-    var think = addMsg('ai', mode === 'image' ? 'Creating your image...' : 'Thinking...', 'thinking');
-
-    function finish(payload) {
-      think.remove();
-      if (payload.image) {
-        var wrap = document.createElement('div');
-        wrap.className = 'msg ai';
-        if (payload.reply) { var cap = document.createElement('div'); cap.textContent = payload.reply; wrap.appendChild(cap); }
-        var img = document.createElement('img');
-        img.src = 'data:image/jpeg;base64,' + payload.image;
-        img.alt = 'Image created with Astral AI';
-        img.style.cssText = 'max-width:100%;border-radius:12px;margin-top:.4rem;display:block';
-        wrap.appendChild(img);
-        $('msgs').appendChild(wrap);
-        $('msgs').scrollTop = $('msgs').scrollHeight;
-      } else {
-        linkify(addMsg('ai', payload.reply));
-      }
-      if (payload.conversation_id) convoId = payload.conversation_id;
-      if (D.profile && typeof payload.credits === 'number') D.profile.tokens = payload.credits;
-      else if (!D.profile) { guest.used++; localStorage.setItem('dskAI_used', guest.used); }
-      refreshPlanRow();
-      if (u) loadConvos();
-      busy = false;
-      if (creditsLeft() < tierFor(chosen()).cost) setTimeout(function () { showUpgrade('out'); }, 800);
+    while ((x = re.exec(raw))) {
+      out += esc(raw.slice(last, x.index));
+      var u = esc(x[1]);
+      out += '<a href="' + u + '" target="_blank" rel="noopener noreferrer">' + u + '</a>';
+      last = x.index + x[1].length;
     }
-
-    function fail(msg, code) {
-      think.remove();
-      addMsg('ai', msg);
-      busy = false;
-      if (code === 'not_enough_credits' || code === 'guest_limit') setTimeout(function () { showUpgrade('out'); }, 600);
-    }
-
-    var p = D.client ? D.client().auth.getSession() : Promise.resolve({ data: {} });
-    p.then(function (s) {
-      var token = s.data && s.data.session ? s.data.session.access_token : null;
-      var headers = { 'Content-Type': 'application/json' };
-      if (token) headers.Authorization = 'Bearer ' + token;
-      return fetch(FN, {
-        method: 'POST', headers: headers,
-        body: JSON.stringify({ kind: mode, tier: chosen(), prompt: text, conversation_id: convoId })
-      }).then(function (r) { return r.json(); });
-    }).then(function (b) {
-      if (b.reply || b.image) return finish(b);
-      if (b.error === 'not_enough_credits') return fail('You are out of credits for this month.', b.error);
-      if (b.error === 'guest_limit') return fail('You have used your free guest messages. Create an account to keep going.', b.error);
-      if (b.error === 'ai_not_configured') return fail('Astral is being set up right now — please try again shortly.', b.error);
-      fail('Sorry, something went wrong. Please try again.', b.error);
-    }).catch(function () {
-      fail('Network error — check your internet and try again.');
-    });
+    out += esc(raw.slice(last));
+    m.innerHTML = out;
   }
 
   /* ---------- settings ---------- */

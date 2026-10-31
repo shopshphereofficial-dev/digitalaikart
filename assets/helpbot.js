@@ -60,6 +60,12 @@
     + '.hb-in input:focus{border-color:#1d4ed8}'
     + '.hb-in button{background:linear-gradient(135deg,#1d4ed8,#1e40af);border:none;border-radius:9px;padding:0 .9rem;color:#ffffff;font-weight:800;cursor:pointer;font-size:.8rem;font-family:inherit}';
 
+  function esc(s) {
+    return String(s == null ? '' : s)
+      .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;').replace(/'/g, '&#39;');
+  }
+
   function el(t, c, txt) { var e = document.createElement(t); if (c) e.className = c; if (txt !== undefined) e.textContent = txt; return e; }
 
   function init() {
@@ -248,7 +254,7 @@
       a.href = l.url;
       if (l.url.indexOf('http') === 0) { a.target = '_blank'; a.rel = 'noopener'; }
       if (l.url.indexOf('/downloads/') === 0) a.setAttribute('download', '');
-      a.innerHTML = '<span>' + (l.label || labelFor(l.url)) + '</span>' + arrow();
+      a.innerHTML = '<span>' + esc(l.label || labelFor(l.url)) + '</span>' + arrow();
       box.appendChild(a);
     });
     m.appendChild(box);
