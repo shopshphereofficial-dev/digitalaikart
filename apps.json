@@ -1,591 +1,86 @@
 {
-  "updated": "2026-10-14",
-  "note": "Single source of truth for the Digitalaikart Apps store. tools/build_apps.py reads this file and generates /apps/index.html plus one page per app at /apps/<slug>/. Add an entry here (and drop the icon into /apps/icons) to publish an app.",
-  "apps": [
+ "updated": "2026-10-14",
+ "note": "Only apps that are ready for release are listed here.",
+ "apps": [
+  {
+   "slug": "neon-calculator",
+   "name": "Neon Calculator",
+   "tagline": "A colourful, kid-friendly calculator with glowing neon buttons.",
+   "category": "Tools",
+   "price": "Free",
+   "description": "Neon Calculator is a bright, playful calculator built for kids and anyone who wants maths to feel fun. Every key glows in neon, the buttons are big and easy to hit, and the whole app works fully offline with no ads and no sign-up.\n\nIt is small, fast and free — the perfect first calculator on a child's phone or tablet.",
+   "features": [
+    "Glowing neon button design",
+    "Big, kid-friendly keys",
+    "Works fully offline",
+    "No ads, no sign-up",
+    "Lightweight and fast"
+   ],
+   "tags": [
+    "calculator",
+    "kids",
+    "neon",
+    "offline",
+    "ad-free",
+    "maths",
+    "calculator app",
+    "kids calculator",
+    "offline calculator"
+   ],
+   "platform": "Android",
+   "icon": "/apps/icons/neon-calculator.svg",
+   "screenshots": [],
+   "video": "",
+   "downloads": [
     {
-      "slug": "neon-calculator",
-      "name": "Neon Calculator",
-      "tagline": "A colourful, kid-friendly calculator with glowing neon buttons.",
-      "category": "Tools",
-      "price": "Free",
-      "description": "Neon Calculator is a bright, playful calculator built for kids and anyone who wants maths to feel fun. Every key glows in neon, the buttons are big and easy to hit, and the whole app works fully offline with no ads and no sign-up.\n\nIt is small, fast and free — the perfect first calculator on a child's phone or tablet.",
-      "features": [
-        "Glowing neon button design",
-        "Big, kid-friendly keys",
-        "Works fully offline",
-        "No ads, no sign-up",
-        "Lightweight and fast"
-      ],
-      "tags": [
-        "calculator",
-        "kids",
-        "neon",
-        "offline",
-        "ad-free",
-        "maths",
-        "calculator app",
-        "kids calculator",
-        "offline calculator"
-      ],
-      "platform": "Android",
-      "icon": "/apps/icons/neon-calculator.svg",
-      "screenshots": [],
-      "video": "",
-      "downloads": [
-        {
-          "label": "Download APK",
-          "url": "https://github.com/shopshphereofficial-dev/neon-calculator/releases/latest/download/app.apk",
-          "style": "gold"
-        },
-        {
-          "label": "View on GitHub",
-          "url": "https://github.com/shopshphereofficial-dev/neon-calculator",
-          "style": "outline"
-        }
-      ],
-      "repo": "https://github.com/shopshphereofficial-dev/neon-calculator",
-      "featured": true,
-      "badge": "POPULAR",
-      "og": "/assets/apps/og/neon-calculator.png",
-      "faq": [
-        [
-          "Is Neon Calculator free?",
-          "Yes - Neon Calculator is completely free, with no ads and no sign-up."
-        ],
-        [
-          "Does it work offline?",
-          "Yes. Neon Calculator works fully offline, so it works without Wi-Fi or mobile data."
-        ],
-        [
-          "Is it good for kids?",
-          "Yes. It has big, glowing keys that are easy for children to tap."
-        ]
-      ],
-      "hashtags": [
-        "calculator",
-        "kidsCalculator",
-        "neon",
-        "offlineApp",
-        "freeApp",
-        "android",
-        "maths",
-        "calculatorApp",
-        "digitalkart"
-      ]
+     "label": "Download APK",
+     "url": "https://github.com/shopshphereofficial-dev/neon-calculator/releases/latest/download/app.apk"
     },
     {
-      "slug": "neon-piano",
-      "name": "Neon Piano + Calculator",
-      "tagline": "A neon piano and a calculator in one playful app.",
-      "category": "Music",
-      "price": "Free",
-      "description": "Neon Piano + Calculator puts a glowing neon piano and a full calculator in the same app. Tap the colourful keys to play, or switch to the calculator when you need to do some maths.\n\nIt is built to be fun and simple — great for kids, quick tunes, and everyday sums. Works offline, with no ads.",
-      "features": [
-        "Playable neon piano",
-        "Built-in calculator",
-        "Colourful glowing keys",
-        "Offline, no ads",
-        "Simple and kid-friendly"
-      ],
-      "tags": [
-        "piano",
-        "music",
-        "calculator",
-        "kids",
-        "neon",
-        "offline",
-        "piano app",
-        "learn piano",
-        "kids music",
-        "offline piano"
-      ],
-      "platform": "Android",
-      "icon": "/apps/icons/neon-piano.svg",
-      "screenshots": [],
-      "video": "",
-      "downloads": [
-        {
-          "label": "Download APK",
-          "url": "https://github.com/shopshphereofficial-dev/neon-piano-android/releases/latest/download/app.apk",
-          "style": "gold"
-        },
-        {
-          "label": "View on GitHub",
-          "url": "https://github.com/shopshphereofficial-dev/neon-piano-android",
-          "style": "outline"
-        }
-      ],
-      "repo": "https://github.com/shopshphereofficial-dev/neon-piano-android",
-      "featured": false,
-      "badge": "",
-      "og": "/assets/apps/og/neon-piano.png",
-      "faq": [
-        [
-          "Is Neon Piano + Calculator free?",
-          "Yes - it is free, ad-free and works offline."
-        ],
-        [
-          "Can I actually play tunes on it?",
-          "Yes. Tap the colourful neon keys to play, and switch to the calculator whenever you need it."
-        ],
-        [
-          "Does it need internet?",
-          "No. The app works completely offline."
-        ]
-      ],
-      "hashtags": [
-        "piano",
-        "neonPiano",
-        "musicApp",
-        "calculator",
-        "kids",
-        "offlineApp",
-        "freeApp",
-        "android",
-        "learnPiano",
-        "digitalkart"
-      ]
-    },
-    {
-      "slug": "car-simulator",
-      "name": "Car Simulator",
-      "tagline": "A top-down open-city car driving simulator for Android.",
-      "category": "Games",
-      "price": "Free",
-      "description": "Car Simulator is a smooth top-down driving game set in an open city. Cruise the streets, take corners, and enjoy simple, responsive driving built on a custom engine made for Android phones.\n\nIt runs offline, loads fast, and is light on storage — a quick driving fix without the ads or the wait.",
-      "features": [
-        "Open city map to drive around",
-        "Smooth top-down driving",
-        "Custom, lightweight game engine",
-        "Works offline",
-        "No ads"
-      ],
-      "tags": [
-        "game",
-        "car",
-        "driving",
-        "simulator",
-        "offline",
-        "arcade",
-        "car game",
-        "driving simulator",
-        "open world",
-        "offline game"
-      ],
-      "platform": "Android",
-      "icon": "/apps/icons/car-simulator.svg",
-      "screenshots": [],
-      "video": "",
-      "downloads": [
-        {
-          "label": "Download APK",
-          "url": "https://github.com/shopshphereofficial-dev/car-simulator-android/releases/latest/download/app.apk",
-          "style": "gold"
-        },
-        {
-          "label": "View on GitHub",
-          "url": "https://github.com/shopshphereofficial-dev/car-simulator-android",
-          "style": "outline"
-        }
-      ],
-      "repo": "https://github.com/shopshphereofficial-dev/car-simulator-android",
-      "featured": true,
-      "badge": "NEW",
-      "og": "/assets/apps/og/car-simulator.png",
-      "faq": [
-        [
-          "What kind of game is Car Simulator?",
-          "It is a top-down, open-city driving simulator built for Android phones."
-        ],
-        [
-          "Does it work offline?",
-          "Yes. Car Simulator runs offline and loads fast."
-        ],
-        [
-          "Is it free?",
-          "Yes - free, with no ads."
-        ]
-      ],
-      "hashtags": [
-        "carGame",
-        "drivingSimulator",
-        "openWorld",
-        "androidGame",
-        "offlineGame",
-        "freeGame",
-        "arcade",
-        "carSimulator",
-        "digitalkart"
-      ]
-    },
-    {
-      "slug": "grabit",
-      "name": "GrabIt",
-      "tagline": "An all-in-one media downloader, browser and phone cleaner.",
-      "category": "Tools",
-      "price": "Free",
-      "description": "GrabIt bundles three everyday tools into one clean app: a fast in-app browser, a media downloader, and a phone cleaner that frees up space. Browse, save what you need, and tidy your storage without hopping between apps.\n\nIt is designed to be simple and quick, with no clutter and no ads.",
-      "features": [
-        "Built-in fast browser",
-        "Media downloader",
-        "Phone cleaner / storage tidy-up",
-        "Clean, uncluttered design",
-        "No ads"
-      ],
-      "tags": [
-        "downloader",
-        "browser",
-        "cleaner",
-        "tools",
-        "media",
-        "utilities",
-        "snaptube",
-        "snaptube alternative",
-        "video downloader",
-        "youtube downloader",
-        "instagram downloader",
-        "reels downloader",
-        "whatsapp status saver",
-        "ad-free"
-      ],
-      "platform": "Android",
-      "icon": "/apps/icons/grabit.svg",
-      "screenshots": [],
-      "video": "",
-      "downloads": [
-        {
-          "label": "Download APK",
-          "url": "https://github.com/shopshphereofficial-dev/grabit/releases/latest/download/app.apk",
-          "style": "gold"
-        },
-        {
-          "label": "View on GitHub",
-          "url": "https://github.com/shopshphereofficial-dev/grabit",
-          "style": "outline"
-        }
-      ],
-      "repo": "https://github.com/shopshphereofficial-dev/grabit",
-      "featured": true,
-      "badge": "",
-      "og": "/assets/apps/og/grabit.png",
-      "faq": [
-        [
-          "Can I download videos with GrabIt?",
-          "Yes. GrabIt has an in-app browser and a media downloader - open a page and save the video, audio or image you want."
-        ],
-        [
-          "Is GrabIt a SnapTube alternative?",
-          "Yes. It is a free, ad-free alternative with a built-in browser, a media downloader and a phone cleaner."
-        ],
-        [
-          "Does it clean my phone?",
-          "Yes. GrabIt includes a storage cleaner that frees up space by clearing junk files."
-        ],
-        [
-          "Is GrabIt free?",
-          "Yes - completely free, with no ads."
-        ]
-      ],
-      "hashtags": [
-        "snaptube",
-        "snaptubeAlternative",
-        "videoDownloader",
-        "youtubeDownloader",
-        "instagramDownloader",
-        "reelsDownloader",
-        "whatsappStatusSaver",
-        "mediaDownloader",
-        "browser",
-        "adFree",
-        "android",
-        "digitalkart"
-      ]
-    },
-    {
-      "slug": "soulstream",
-      "name": "SoulStream",
-      "tagline": "A gamer-grade media downloader with a neon animated UI.",
-      "category": "Media",
-      "price": "Free",
-      "description": "SoulStream is a media downloader built with a bold, neon, gamer-style interface. It browses, downloads and plays back media with speed and flair, and it stays ad-free.\n\nFast downloads, an animated UI, and a built-in player — all in one app.",
-      "features": [
-        "Neon animated interface",
-        "Fast media downloads",
-        "Built-in browser and player",
-        "Ad-free",
-        "Made for power users"
-      ],
-      "tags": [
-        "media",
-        "downloader",
-        "neon",
-        "video",
-        "music",
-        "ad-free",
-        "snaptube alternative",
-        "video downloader",
-        "youtube downloader",
-        "instagram downloader",
-        "reels downloader",
-        "offline player"
-      ],
-      "platform": "Android",
-      "icon": "/apps/icons/soulstream.svg",
-      "screenshots": [],
-      "video": "",
-      "downloads": [
-        {
-          "label": "Download APK",
-          "url": "https://github.com/shopshphereofficial-dev/soulstream/releases/latest/download/app.apk",
-          "style": "gold"
-        },
-        {
-          "label": "View on GitHub",
-          "url": "https://github.com/shopshphereofficial-dev/soulstream",
-          "style": "outline"
-        }
-      ],
-      "repo": "https://github.com/shopshphereofficial-dev/soulstream",
-      "featured": false,
-      "badge": "",
-      "og": "/assets/apps/og/soulstream.png",
-      "faq": [
-        [
-          "Is SoulStream a SnapTube alternative?",
-          "Yes. SoulStream downloads video, audio and images from YouTube, Instagram, Facebook, TikTok and 1000+ other sites, without ads."
-        ],
-        [
-          "Can I play what I downloaded?",
-          "Yes. SoulStream has a built-in player for everything you save."
-        ],
-        [
-          "Is it free?",
-          "Yes - SoulStream is free and ad-free."
-        ]
-      ],
-      "hashtags": [
-        "snaptubeAlternative",
-        "videoDownloader",
-        "youtubeDownloader",
-        "instagramDownloader",
-        "reelsDownloader",
-        "offlinePlayer",
-        "mediaDownloader",
-        "adFree",
-        "android",
-        "digitalkart"
-      ]
-    },
-    {
-      "slug": "pulsechat",
-      "name": "PulseChat",
-      "tagline": "A simple chat app with unique usernames and friends.",
-      "category": "Social",
-      "price": "Free",
-      "description": "PulseChat is a lightweight chat app where you pick a unique username and add friends to talk with. Sign in with Google and start chatting in a clean, distraction-free interface.\n\nIt is built to be simple and friendly — no clutter, no noise.",
-      "features": [
-        "Google sign-in",
-        "Unique usernames",
-        "Add friends and chat",
-        "Clean, simple design",
-        "Lightweight"
-      ],
-      "tags": [
-        "chat",
-        "social",
-        "messaging",
-        "friends",
-        "android",
-        "chat app",
-        "google login"
-      ],
-      "platform": "Android",
-      "icon": "/apps/icons/pulsechat.svg",
-      "screenshots": [],
-      "video": "",
-      "downloads": [
-        {
-          "label": "Download APK",
-          "url": "https://github.com/shopshphereofficial-dev/pulsechat/releases/latest/download/app.apk",
-          "style": "gold"
-        },
-        {
-          "label": "View on GitHub",
-          "url": "https://github.com/shopshphereofficial-dev/pulsechat",
-          "style": "outline"
-        }
-      ],
-      "repo": "https://github.com/shopshphereofficial-dev/pulsechat",
-      "featured": false,
-      "badge": "",
-      "og": "/assets/apps/og/pulsechat.png",
-      "faq": [
-        [
-          "How do I sign in to PulseChat?",
-          "Sign in with your Google account, pick a unique username and start chatting."
-        ],
-        [
-          "Is PulseChat free?",
-          "Yes - PulseChat is free to use."
-        ],
-        [
-          "Can I add friends?",
-          "Yes. Add friends by username and chat with them in a clean, simple interface."
-        ]
-      ],
-      "hashtags": [
-        "chatApp",
-        "messaging",
-        "socialApp",
-        "friends",
-        "android",
-        "freeApp",
-        "googleLogin",
-        "digitalkart"
-      ]
-    },
-    {
-      "slug": "twinspace",
-      "name": "TwinSpace",
-      "tagline": "Run a second copy of any app in an isolated space.",
-      "category": "Utilities",
-      "price": "Free",
-      "description": "TwinSpace lets you run a second, separate copy of an app on the same phone — perfect for two accounts on one device. Each copy lives in its own isolated space, keeping your data apart.\n\nBuilt from scratch for privacy and simplicity.",
-      "features": [
-        "Clone an app into a second copy",
-        "Isolated space for each copy",
-        "Great for two accounts",
-        "Privacy-focused",
-        "Simple to set up"
-      ],
-      "tags": [
-        "cloner",
-        "dual-app",
-        "privacy",
-        "utilities",
-        "tools",
-        "android",
-        "app cloner",
-        "dual app",
-        "clone app",
-        "work profile"
-      ],
-      "platform": "Android",
-      "icon": "/apps/icons/twinspace.svg",
-      "screenshots": [],
-      "video": "",
-      "downloads": [
-        {
-          "label": "Download APK",
-          "url": "https://github.com/shopshphereofficial-dev/twinspace/releases/latest/download/app.apk",
-          "style": "gold"
-        },
-        {
-          "label": "View on GitHub",
-          "url": "https://github.com/shopshphereofficial-dev/twinspace",
-          "style": "outline"
-        }
-      ],
-      "repo": "https://github.com/shopshphereofficial-dev/twinspace",
-      "featured": false,
-      "badge": "",
-      "og": "/assets/apps/og/twinspace.png",
-      "faq": [
-        [
-          "What does TwinSpace do?",
-          "TwinSpace runs a second, separate copy of an app on the same phone - each copy in its own isolated space."
-        ],
-        [
-          "Can I use two accounts on one phone?",
-          "Yes. TwinSpace is perfect for running two accounts of the same app on one device."
-        ],
-        [
-          "Is it free?",
-          "Yes - TwinSpace is free."
-        ]
-      ],
-      "hashtags": [
-        "appCloner",
-        "dualApp",
-        "twoAccounts",
-        "cloneApp",
-        "privacy",
-        "android",
-        "utilities",
-        "freeApp",
-        "digitalkart"
-      ]
-    },
-    {
-      "slug": "voltaura",
-      "name": "VoltAura",
-      "tagline": "Premium charging animations and notification edge-glow.",
-      "category": "Personalisation",
-      "price": "Free",
-      "description": "VoltAura makes your phone feel premium with beautiful charging animations and a glowing edge effect when notifications arrive. It is light on battery and easy to set up.\n\nA simple way to make your Android look and feel more special.",
-      "features": [
-        "Premium charging animations",
-        "Edge-glow for notifications",
-        "Lightweight and battery-friendly",
-        "Easy setup",
-        "No ads"
-      ],
-      "tags": [
-        "charging",
-        "animation",
-        "personalisation",
-        "neon",
-        "android",
-        "charging animation",
-        "battery",
-        "edge glow",
-        "customisation"
-      ],
-      "platform": "Android",
-      "icon": "/apps/icons/voltaura.svg",
-      "screenshots": [],
-      "video": "",
-      "downloads": [
-        {
-          "label": "Download APK",
-          "url": "https://github.com/shopshphereofficial-dev/voltaura/releases/latest/download/app.apk",
-          "style": "gold"
-        },
-        {
-          "label": "View on GitHub",
-          "url": "https://github.com/shopshphereofficial-dev/voltaura",
-          "style": "outline"
-        }
-      ],
-      "repo": "",
-      "featured": false,
-      "badge": "",
-      "og": "/assets/apps/og/voltaura.png",
-      "faq": [
-        [
-          "What does VoltAura do?",
-          "VoltAura adds premium charging animations and a glowing edge effect when notifications arrive."
-        ],
-        [
-          "Will it drain my battery?",
-          "No. VoltAura is designed to be lightweight and battery-friendly."
-        ],
-        [
-          "Is it free?",
-          "Yes - VoltAura is free, with no ads."
-        ]
-      ],
-      "hashtags": [
-        "chargingAnimation",
-        "edgeGlow",
-        "batteryAnimation",
-        "customisation",
-        "personalisation",
-        "neon",
-        "android",
-        "freeApp",
-        "digitalkart"
-      ]
+     "label": "Source on GitHub",
+     "url": "https://github.com/shopshphereofficial-dev/neon-calculator"
     }
-  ]
+   ],
+   "repo": "https://github.com/shopshphereofficial-dev/neon-calculator",
+   "featured": true,
+   "badge": "POPULAR",
+   "og": "/assets/apps/og/neon-calculator.png",
+   "faq": [
+    [
+     "Is Neon Calculator free?",
+     "Yes - Neon Calculator is completely free, with no ads and no sign-up."
+    ],
+    [
+     "Does it work offline?",
+     "Yes. Neon Calculator works fully offline, so it works without Wi-Fi or mobile data."
+    ],
+    [
+     "Is it good for kids?",
+     "Yes. It has big, glowing keys that are easy for children to tap."
+    ]
+   ],
+   "hashtags": [
+    "calculator",
+    "kidsCalculator",
+    "neon",
+    "offlineApp",
+    "freeApp",
+    "android",
+    "maths",
+    "calculatorApp",
+    "digitalkart"
+   ],
+   "version": "1.3",
+   "version_code": 4,
+   "size": "7.2 MB",
+   "min_android": "Android 8.0 (API 26) or newer",
+   "package": "com.neon.calc",
+   "updated": "10 October 2026",
+   "apk": "https://github.com/shopshphereofficial-dev/neon-calculator/releases/latest/download/app.apk",
+   "permissions": "Internet and network state only. The app works fully offline.",
+   "privacy_url": "/app-privacy-policy.html",
+   "deletion_url": "/account-deletion.html",
+   "page": "/apps/neon-calculator/"
+  }
+ ]
 }
