@@ -1,0 +1,43 @@
+name: App pages (Play Store readiness)
+
+# Adds a "Permissions & data" section to every app page, names UTILITYNEST as the
+# publisher, and links the app privacy policy + data-deletion pages. Also adds
+# the two new pages to the help bot's knowledge list.
+# Safe to re-run — tools/app_playstore_pages.py is idempotent.
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "tools/app_playstore_pages.py"
+      - ".github/workflows/app-playstore-pages.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: app-playstore-pages
+  cancel-in-progress: false
+
+jobs:
+  apply:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Apply app page changes
+        run: python3 tools/app_playstore_pages.py .
+
+      - name: Commit if changed
+        run: |
+          if [ -z "$(git status --porcelain)" ]; then
+            echo "Nothing to change — app pages already up to date."
+            exit 0
+          fi
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "apps: list permissions, name UTILITYNEST as publisher, link app privacy + deletion pages"
+          git pull --rebase origin "${GITHUB_REF_NAME}"
+          git push
