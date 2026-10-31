@@ -178,6 +178,8 @@ def load_pages():
         ("/terms.html", "terms.html"),
         ("/thank-you.html", "thank-you.html"),
         ("/about.html", "about.html"),
+        ("/app-privacy-policy.html", "app-privacy-policy.html"),
+        ("/account-deletion.html", "account-deletion.html"),
         ("/sitemap.html", "sitemap.html"),
     ]
     out = []
