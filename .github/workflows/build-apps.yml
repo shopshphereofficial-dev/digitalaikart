@@ -4,7 +4,8 @@ name: Build apps store
 # an app (or its icon/screenshots) republishes the listing automatically. Also
 # renders a 1200x630 share/preview image per app from its logo, and then adds
 # the Play-review blocks (permissions, app details, policy links, UTILITYNEST
-# entity footer) that tools/build_apps.py deliberately leaves out.
+# entity footer) that tools/build_apps.py deliberately leaves out, plus an
+# accurate AdMob advertising disclosure.
 on:
   push:
     branches: [main]
@@ -13,6 +14,7 @@ on:
       - "tools/build_apps.py"
       - "tools/build_app_og.py"
       - "tools/app_page_extras.py"
+      - "tools/app_ads_disclosure.py"
       - "apps/icons/**"
       - "apps/shots/**"
       - ".github/workflows/build-apps.yml"
@@ -47,15 +49,18 @@ jobs:
       - name: Add permissions, app details and entity footer
         run: python3 tools/app_page_extras.py
 
+      - name: Disclose AdMob advertising accurately
+        run: python3 tools/app_ads_disclosure.py
+
       - name: Commit if changed
         run: |
-          if [ -z "$(git status --porcelain apps sitemap.xml assets/apps/og)" ]; then
+          if [ -z "$(git status --porcelain apps sitemap.xml assets/apps/og index.html app-privacy-policy.html)" ]; then
             echo "apps store already up to date."
             exit 0
           fi
           git config user.name  "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add apps sitemap.xml assets/apps/og
+          git add apps sitemap.xml assets/apps/og index.html app-privacy-policy.html
           git commit -m "chore: rebuild apps store"
           git pull --rebase origin "${GITHUB_REF_NAME}"
           git push
