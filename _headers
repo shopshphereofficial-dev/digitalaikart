@@ -1,0 +1,40 @@
+# Cache and security headers.
+# Read by Netlify and Cloudflare Pages. GitHub Pages ignores this file — it has
+# no custom-header support, so HTML there is cached by GitHub's own defaults
+# (a few minutes). If the site is served by Netlify or Cloudflare Pages, the
+# rules below apply and crawlers always get the current HTML.
+
+/*
+  X-Frame-Options: DENY
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: geolocation=(), microphone=(), camera=()
+  Strict-Transport-Security: max-age=31536000; includeSubDomains
+
+# HTML must always be revalidated so search and social crawlers see the latest
+# footer, policy pages and product copy immediately after a deploy.
+/*.html
+  Cache-Control: public, max-age=0, must-revalidate
+
+/
+  Cache-Control: public, max-age=0, must-revalidate
+
+# Fingerprinted/rarely changing static assets can be cached hard.
+/assets/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/apps/icons/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# Machine-readable files the bots and the help bot read.
+/site-knowledge.json
+  Cache-Control: public, max-age=300
+
+/sitemap.xml
+  Cache-Control: public, max-age=600
+
+/feed.xml
+  Cache-Control: public, max-age=600
+
+/robots.txt
+  Cache-Control: public, max-age=3600
