@@ -1,0 +1,43 @@
+name: Site hardening
+
+# Escapes model-supplied labels in the help bot, hardens the paid assistant's
+# linkify(), adds rel=noopener to every _blank link, adds a Referrer-Policy meta
+# tag to every page, and marks admin/ads/utility pages noindex.
+# Safe to re-run — tools/site_hardening.py is idempotent.
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "tools/site_hardening.py"
+      - ".github/workflows/site-hardening.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: site-hardening
+  cancel-in-progress: false
+
+jobs:
+  apply:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Apply hardening
+        run: python3 tools/site_hardening.py .
+
+      - name: Commit if changed
+        run: |
+          if [ -z "$(git status --porcelain)" ]; then
+            echo "Nothing to change."
+            exit 0
+          fi
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "security: escape model output, noopener, referrer policy, noindex admin"
+          git pull --rebase origin "${GITHUB_REF_NAME}"
+          git push
