@@ -2,7 +2,9 @@ name: Build apps store
 
 # Regenerates the /apps/ store pages from apps.json on every change, so adding
 # an app (or its icon/screenshots) republishes the listing automatically. Also
-# renders a 1200x630 share/preview image per app from its logo.
+# renders a 1200x630 share/preview image per app from its logo, and then adds
+# the Play-review blocks (permissions, app details, policy links, UTILITYNEST
+# entity footer) that tools/build_apps.py deliberately leaves out.
 on:
   push:
     branches: [main]
@@ -10,6 +12,7 @@ on:
       - "apps.json"
       - "tools/build_apps.py"
       - "tools/build_app_og.py"
+      - "tools/app_page_extras.py"
       - "apps/icons/**"
       - "apps/shots/**"
       - ".github/workflows/build-apps.yml"
@@ -40,6 +43,9 @@ jobs:
 
       - name: Generate per-app share images
         run: python3 tools/build_app_og.py
+
+      - name: Add permissions, app details and entity footer
+        run: python3 tools/app_page_extras.py
 
       - name: Commit if changed
         run: |
