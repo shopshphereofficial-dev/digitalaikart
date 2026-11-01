@@ -1,0 +1,82 @@
+{
+  "date": "2026-11-01",
+  "title": "BharatGen's Next Test: Getting India's Own AI Actually Used",
+  "slug": "bharatgen-sovereign-ai-real-world-use",
+  "category": "AI India",
+  "description": "BharatGen's Ganesh Ramakrishnan says India's AI push must move from building models to using them in governance, insurance, hospitals and schools.",
+  "emoji": "🇮🇳",
+  "keywords": [
+    "BharatGen sovereign AI",
+    "Param2 17B model",
+    "Indian language AI",
+    "IndiaAI Mission",
+    "voice AI government services"
+  ],
+  "tags": [
+    "#AI",
+    "#IndiaAI",
+    "#BharatGen",
+    "#IndianLanguages"
+  ],
+  "tldr": [
+    "At ET Vision Conclave 5.0 on 1 November, BharatGen's Ganesh Ramakrishnan said India's AI push has to move from building foundation models to getting them used.",
+    "His three stated problems with imported AI are representation, compliance and access, summed up as: global AI is built for a fraction of the world.",
+    "BharatGen's Param2 is a 17-billion-parameter mixture-of-experts model covering 22 Indian languages, with only 2.4 billion parameters active per token.",
+    "The gap worth watching is that BharatGen's own model card still calls the open release an early checkpoint that needs fine-tuning and safety work before production use."
+  ],
+  "sections": [
+    {
+      "heading": "What was actually said",
+      "paragraphs": [
+        "On 1 November, Ganesh Ramakrishnan, Institute Chair Professor in IIT Bombay's Department of Computer Science and Engineering and founding director of BharatGen, spoke at the ET Vision Conclave 5.0 on a topic that reads like a policy shift in one line: Sovereign AI for Viksit Bharat 2047, from foundational models to real-world AI for Bharat. His argument, as ETGovernment reported, is that India's AI ambitions will need more than access to foundation models built elsewhere. The country needs systems that understand its languages, work inside its regulatory frameworks and serve its citizens.",
+        "Ramakrishnan put the problem in a single sentence. Global AI is built for a fraction of the world, he said, and named three specific failures: representation, compliance and access. Representation means most systems are trained mainly for English and struggle with Indian languages, Indian documents and Indian cultural context. Compliance means that in governance, banking, financial services, insurance and healthcare, sensitive data has to stay inside controlled infrastructure. Access means that leaning on foreign providers leaves pricing, availability and terms of use in someone else's hands."
+      ]
+    },
+    {
+      "heading": "Why a model built from scratch is the base layer",
+      "paragraphs": [
+        "BharatGen is a government-funded initiative run by a consortium of nine institutions and anchored at IIT Bombay. Its Param series of language models is built for 22 Indian languages plus English, with reasoning, mathematics, coding and tool use. The distinction BharatGen draws is that Param is pretrained from scratch on Indian language data, rather than adding Indian languages to a foreign model through translation or light fine-tuning. Built from scratch for India, and already in production, is how Ramakrishnan described it.",
+        "The money behind it is public. A PIB release from February 2026 records 235 crore rupees of support from the Department of Science and Technology, and 1,058 crore rupees through the IndiaAI Mission. That mission was approved in March 2024 with an outlay of 10,371.92 crore rupees over five years, and a Lok Sabha reply in August 2026 records 20 indigenous foundation model proposals selected from 506 applications, with BharatGen's Param2-17B, Patram-7B and Shrutam 2 among the outputs the government lists as launched."
+      ]
+    },
+    {
+      "heading": "Voice, because India talks more than it types",
+      "paragraphs": [
+        "A large part of BharatGen's strategy is speech. Its Shrutam models handle speech-to-text in real time across Indian languages, including code-mixed speech where a sentence moves between two languages, and its Sooktam models do text-to-speech with cross-lingual voice generation and voice cloning. According to the PIB release, the models Prime Minister Narendra Modi launched in February 2026 included Shrutam in 12 Indian languages and Sooktam in 12 languages. Ramakrishnan's roadmap extends both to all 22 scheduled languages.",
+        "The reasoning is about who India's digital infrastructure currently leaves out. Most of it was built around screens and text, which assumes literacy and usually assumes English. For government services to genuinely reach citizens, voice cannot be an add-on, Ramakrishnan said. A citizen who can speak Marathi or Bhojpuri but cannot comfortably type it is not served by a portal that only accepts typed text. BharatGen also says its speech models are tuned for Indian accents, local names and scheme names, which is where systems trained mostly on American and British English tend to fail."
+      ]
+    },
+    {
+      "heading": "Where it is already being tried",
+      "paragraphs": [
+        "According to the presentation, Param2 is already powering MahaSamvaad, an initiative associated with the Maharashtra government, and InsureCopilot. The document side is handled by Patram, a vision-language model built for scanned and digital Indian paperwork: government orders, land records, insurance policies, bank statements, medical reports and court filings, including the hard parts such as mixed scripts, handwritten annotations and stamps.",
+        "The insurance numbers from the presentation are the most concrete claims in it. BharatGen says its underwriting assistant can cut case reviews from hours to under five minutes, with 70 per cent of cases fully automatable, and that a separate policy-explainer assistant answers questions in 22 languages over WhatsApp. It also lists a public-service access platform, clinical documentation for Amrita Hospitals, a learning platform with the Kotak Education Foundation and an assistant for IGNOU. On scale, the presentation claims more than 22 trillion training tokens including 10 trillion Indian-language tokens, over 30 research papers and 180,000-plus downloads across Hugging Face and AIKosh."
+      ]
+    },
+    {
+      "heading": "The part that needs saying out loud",
+      "paragraphs": [
+        "There is a real gap between the pitch and the artefact. BharatGen's own model card for the released Param2 weights calls it an early post-training checkpoint, a solid base for research and fine-tuning that needs further fine-tuning and safety alignment before it goes into production. The same card says quality varies from language to language depending on how much training data was available. That is not a contradiction of the presentation so much as a different definition of production: a model running inside a pilot deployment is not the same as a model a district office should rely on for a land record query in Santali.",
+        "So the useful things to watch over the next year are dull and measurable. Accuracy per language, not just coverage of 22 of them. Cost per query at government volume. Whether the promised hosted APIs arrive, so a small enterprise does not need its own GPUs. And whether departments actually buy, since a pilot that works in one state can still take months of procurement to spread. For Indian students and builders, the open weights are the practical opening: domain models such as Ayur Param for Ayurveda, Agri Param for agriculture and Legal Param for law already exist to fine-tune from. The question has moved on from whether India can train its own model to whether anyone will use it."
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "q": "What is BharatGen's Param2 model?",
+      "a": "A 17-billion-parameter mixture-of-experts language model that covers 22 Indian languages and English, with about 2.4 billion parameters active per token. It was pretrained from scratch and released as open weights on Hugging Face and AIKosh in February 2026."
+    },
+    {
+      "q": "Is India's sovereign AI already in real use?",
+      "a": "Partly. BharatGen says Param2 runs MahaSamvaad for the Maharashtra government and InsureCopilot, with pilots at Amrita Hospitals, IGNOU and with the Kotak Education Foundation. BharatGen's own model card still describes the open release as an early checkpoint needing fine-tuning before production."
+    },
+    {
+      "q": "Why does voice matter so much for Indian AI?",
+      "a": "Most Indian digital services assume a screen, text and often English. BharatGen's argument, made at the ET Vision Conclave on 1 November, is that voice interfaces are how services reach citizens who are more comfortable speaking an Indian language than typing it."
+    }
+  ],
+  "image_prompt": "A wide photorealistic documentary photo of a young Indian woman in a simple village service centre, speaking into a smartphone held close as she asks a question, warm late-morning light through a window, a clerk's desk with a thick land-record register softly blurred behind her, natural colours, real place, no text, no logos, 16:9 landscape.",
+  "source_name": "ETGovernment",
+  "source_link": "https://government.economictimes.indiatimes.com/news/technology/indias-sovereign-ai-push-moves-from-foundational-models-to-real-world-applications-for-bharat-ganesh-ramakrishnan/135418246",
+  "source_url": "https://government.economictimes.indiatimes.com/news/technology/indias-sovereign-ai-push-moves-from-foundational-models-to-real-world-applications-for-bharat-ganesh-ramakrishnan/135418246"
+}
