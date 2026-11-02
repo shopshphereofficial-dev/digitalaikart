@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-01",
+ "updated": "2026-11-02",
  "note": "Single source of truth for ALL products on digitalkartai.shop. The blog agent MUST read this file at the start of every run and promote the best-matching product per post. The product agent MUST append new products here when publishing them. Never delete or modify existing entries.",
  "products": [
   {
@@ -7163,6 +7163,69 @@
     "personal finance",
     "tax planning",
     "compliance"
+   ]
+  },
+  {
+   "slug": "rentproof-rent-receipt-hra-india",
+   "name": "RentProof — Rent Receipt & HRA Exemption Kit (Offline Web App)",
+   "tagline": "A working rent-receipt and HRA tool in a single HTML file. Enter the year, the rent, the city and the landlord once, and it prints twelve rent receipts — April to March, numbered consecutively, two to an A4 page — each with the landlord's PAN, the full property address, the period, the amount in figures and in words using Indian numbering, the payment mode and bank or UPI reference, the date of receipt, a signature block and a Re 1 revenue-stamp box only where cash rent exceeds Rs 5,000 a month. Change any month's amount for a mid-year hike, or set a month to zero for a month the flat was empty, and the annual total follows. Then the HRA exemption under Section 10(13A) as the least of three amounts — actual HRA received, rent paid less one-tenth of salary, and 50% or 40% of salary — with each limit shown, the deciding one marked and the taxable balance given. The 50% limit follows Rule 279 of the Income-tax Rules 2026 from tax year 2026-27, so it covers Mumbai, Kolkata, Delhi, Chennai, Hyderabad, Pune, Ahmedabad and Bengaluru, and falls back to the four old metros under Rule 2A for 2025-26 and earlier. Section 80GG is computed the same way for salaries with no HRA, with the Rs 60,000 cap and the ownership check. It also prints a rent summary sheet and an HRA working sheet, generates a landlord no-PAN declaration for the Rs 1,00,000 threshold, keeps a ten-item document checklist, and exports everything to one JSON file. No sign-up, no subscription, no internet needed, and your salary and the landlord's PAN never leave the browser. It is a calculator and a document generator: it does not file anything, does not verify that rent was paid, and is not tax advice.",
+   "price": "₹199",
+   "mrp": "₹699",
+   "url": "/products/rentproof-rent-receipt-hra-india/",
+   "also_available": [
+    "payslip-pro-india",
+    "income-tax-act-2025-playbook-2026-27",
+    "staffkit-hr-letters-india"
+   ],
+   "topics": [
+    "rent receipt",
+    "rent receipt generator",
+    "HRA",
+    "HRA exemption",
+    "house rent allowance",
+    "Section 10(13A)",
+    "Rule 279",
+    "Rule 2A",
+    "HRA calculator",
+    "HRA calculation",
+    "rent receipt for HRA",
+    "landlord PAN",
+    "landlord PAN required",
+    "rent above 1 lakh",
+    "Form 12BB",
+    "Form 124",
+    "Form 10BA",
+    "Section 80GG",
+    "80GG deduction",
+    "revenue stamp",
+    "rent agreement",
+    "rent paid proof",
+    "investment proof",
+    "tax saving",
+    "salary tax",
+    "old tax regime",
+    "metro city HRA",
+    "50% HRA",
+    "40% HRA",
+    "Bengaluru HRA",
+    "Hyderabad HRA",
+    "Pune HRA",
+    "Ahmedabad HRA",
+    "Mumbai HRA",
+    "Delhi HRA",
+    "Chennai HRA",
+    "Kolkata HRA",
+    "Gurugram HRA",
+    "Noida HRA",
+    "ITR HRA",
+    "income tax India",
+    "salaried employee",
+    "tenant",
+    "rented flat",
+    "printable receipt",
+    "offline tool",
+    "rent proof",
+    "India"
    ]
   }
  ]
