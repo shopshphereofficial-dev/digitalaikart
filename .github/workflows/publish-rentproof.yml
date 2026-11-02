@@ -1,0 +1,39 @@
+name: Publish RentProof catalogue entry
+
+# Appends the RentProof product to products.json and product-history.json, maps
+# its download in thank-you.html, adds the URL to sitemap.xml and the card to
+# products/index.html. Idempotent — safe to re-run.
+#
+# Run manually after the product page and ZIP are committed:
+#   gh workflow run publish-rentproof.yml
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: publish-rentproof
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Apply catalogue changes
+        run: python3 .github/scripts/publish_rentproof.py
+
+      - name: Commit and push
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add products.json product-history.json thank-you.html sitemap.xml products/index.html
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "chore(catalogue): publish RentProof — products.json, history, download map, sitemap, card"
+            git push
+          fi
