@@ -1,0 +1,47 @@
+name: Restore UTILITYNEST entity footer
+
+# One-off, idempotent maintenance job.
+#
+# Restores the parent-company footer on the blog posts that were published
+# without it (31 Oct - 2 Nov 2026), fixes the blog_agent.py template so new
+# posts keep it, adds parentOrganization to the Organization JSON-LD on
+# index.html and about.html, and removes the dead netlify.toml / _headers.
+#
+# Safe to run repeatedly: a second run reports "0 fixed" and commits nothing.
+# It does not touch page copy, titles, URLs or products.
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: entity-footer-fix
+  cancel-in-progress: false
+
+jobs:
+  fix:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+
+      - name: Apply the footer and schema fix
+        run: python3 tools/fix_entity_footer.py
+
+      - name: Commit if anything changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "nothing to change"
+          else
+            git commit -m "Restore UTILITYNEST entity footer on blog posts; add parentOrganization to schema"
+            git pull --rebase origin main
+            git push
+          fi
