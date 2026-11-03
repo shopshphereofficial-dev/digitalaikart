@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-02",
+ "updated": "2026-11-03",
  "note": "Append-only log of products published to digitalkartai.shop. Newest last. Never delete or modify existing records.",
  "history": [
   {
@@ -801,6 +801,39 @@
     "Pack: RentProof.html, 11-section USER-GUIDE.html, START-HERE.txt, sample-data.json and a 12-clause LICENSE.txt",
     "133 automated checks passed before publication: 78 on the calculation core (amount in words, city percentages, the three HRA limits, 80GG, receipt generation, PAN validation) and 55 on the interface in a DOM",
     "Razorpay payment link wired to the thank-you page download for this slug"
+   ]
+  },
+  {
+   "date": "2026-11-03",
+   "name": "CashFlow Compass — 13-Week Cash Flow Forecast & Runway Planner",
+   "slug": "cashflow-compass-13-week-india",
+   "category": "Spreadsheet System / Cash Flow, Runway & Scenario Planning",
+   "type": "non-ebook",
+   "price": "₹249",
+   "mrp": "₹799",
+   "url": "https://digitalkartai.shop/products/cashflow-compass-13-week-india/",
+   "download": "https://digitalkartai.shop/downloads/cashflow-compass-13-week-india.zip",
+   "payment_link": "https://rzp.io/rzp/EKwNCkv9",
+   "status": "published",
+   "features": [
+    "Macro-free Excel workbook (.xlsx) that also opens in Google Sheets",
+    "Thirteen weekly columns with real Monday-Sunday dates",
+    "Up to 6 revenue lines, each with its own growth, collection lag and bad-debt %",
+    "Up to 12 cost lines, each with its own growth, payment lag, fixed/variable and input-GST flag",
+    "Six one-off slots (capex, refunds, advances) placed by week number",
+    "GST output minus input credit, paid after the user's filing lag",
+    "Opening cash, closing cash, buffer line, OD/CC headroom and weekly status",
+    "Conditional formatting: amber below buffer, red in negative, green clear",
+    "Dashboard signal line in plain English naming the week and the rupee gap",
+    "Twelve dashboard metrics including lowest close, week of lowest, extra cash needed",
+    "Five health checks including a formula-error counter and fixed/variable split",
+    "Two charts: closing cash vs buffer, and money in vs money out",
+    "Three full scenario engines (Base, Slow, Stress) with multipliers and extra lags",
+    "Actual vs forecast tab with variance and forecast-accuracy score",
+    "Blank template plus a fully worked example workbook",
+    "Ten-minute quick start, full manual with formula explanations, eight-clause licence",
+    "A4 print setup with fit-to-width for lender or board packs",
+    "No macros, no password protection, no sign-up, works offline"
    ]
   }
  ]
