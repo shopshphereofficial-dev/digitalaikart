@@ -1,0 +1,75 @@
+{
+  "title": "Telangana to Train 1 Lakh Students in AI and Cloud for Free With AWS",
+  "slug": "telangana-1-lakh-students-free-ai-cloud-training",
+  "category": "AI Jobs",
+  "description": "Telangana and AWS will give one lakh students free AI and cloud training across 643 colleges, with 900-plus courses, certification vouchers and job fairs.",
+  "emoji": "🎓",
+  "keywords": [
+    "Telangana AI training",
+    "AWS Skill Builder",
+    "free cloud courses",
+    "TASK Telangana",
+    "AI skilling India"
+  ],
+  "tags": ["#TelanganaAI", "#AWS", "#FreeAITraining", "#AIJobs"],
+  "tldr": [
+    "Telangana and AWS signed an agreement on 2 November 2026 to train one lakh students in AI and cloud computing.",
+    "Students from 643 TASK-affiliated colleges get one year of free access to more than 900 courses on AWS Skill Builder.",
+    "Arts and commerce students get dedicated learning tracks, not just engineering and science students.",
+    "TASK will hold job fairs for students who finish the programme, and train college faculty too."
+  ],
+  "sections": [
+    {
+      "heading": "What was signed, and by whom",
+      "paragraphs": [
+        "On Monday, 2 November 2026, the Telangana Academy for Skill and Knowledge, known as TASK, signed an agreement with Amazon Web Services at the state Secretariat in Hyderabad. The deal sets up what the state calls the Telangana AI and Cloud Skilling Initiative, and its stated aim is to train one lakh students across the state in artificial intelligence and cloud computing.",
+        "IT and Industries Minister D. Sridhar Babu announced the programme after the signing. He said students from 643 TASK-affiliated colleges would receive industry-oriented training in AI, cloud computing, data engineering, machine learning and generative AI. TASK CEO Nitin Reddy and AWS India and South Asia President Sandeep Dutta were among those present, along with senior officials from the state's IT department and higher education council. The structure of the deal matters as much as the announcement. TASK is a state-level skilling body that already works through a network of affiliated colleges, so the programme plugs into classrooms that exist rather than asking students to travel to a new campus. AWS brings the course material and the platform. Neither partner is starting from zero, which is usually what separates a training scheme that reaches a lakh of students from one that stays on paper."
+      ]
+    },
+    {
+      "heading": "What students actually get",
+      "paragraphs": [
+        "The most concrete part of the deal is course access. Every enrolled student gets one year of free access to more than 900 digital courses through AWS Skill Builder, Amazon's own learning platform for cloud skills. Students also get access to the AWS Cloud Console for hands-on practice, which matters because cloud and AI skills are hard to learn from videos alone.",
+        "Beyond courses, the programme promises discounted vouchers for global certification examinations. Those certifications carry weight with recruiters because they are tested, not just attended. There will also be industry-connect sessions with technology experts and hackathons, so students get exposure to working professionals and practice building something under time pressure. For a student who has only studied theory, that combination is the useful part. Cloud platforms are learned by doing: spinning up a small service, watching it fail, fixing permissions, checking the bill. A course that gives real console access and a mentor to ask is very different from a playlist of recorded lectures."
+      ]
+    },
+    {
+      "heading": "Arts and commerce students are included",
+      "paragraphs": [
+        "One detail stands out. The programme is not limited to engineering and science students. Students from non-STEM backgrounds, including arts and commerce, will get specialised learning tracks of their own.",
+        "That choice reflects how AI work is actually changing. Plenty of jobs that use AI tools are not coding jobs. They sit in operations, marketing, finance, HR and analytics, where the ability to work with data and AI assistants matters more than writing software. For a BA or BCom student in a Tier 2 or Tier 3 town, a free, structured route into those skills is a real opening that rarely comes along."
+      ]
+    },
+    {
+      "heading": "Where the jobs part comes in",
+      "paragraphs": [
+        "The Minister said TASK will organise special job fairs for students who complete the training programme. Faculty members at participating colleges will also be trained in AI and cloud technologies, which is the part that decides whether a programme survives after the launch event. A trained teacher inside the college keeps the momentum going between batches.",
+        "According to The New Indian Express, the programme is designed to run without any financial burden on the state government, the institutions or the students. That matters for colleges that cannot afford lab equipment or licences, and it removes the fee barrier that stops many students from signing up for certification courses priced in dollars. The faculty training angle is worth watching for another reason. When teachers are trained alongside students, the college can run its own batches in later years without waiting for the next agreement. That is the difference between a one-time push and a change in what a college actually teaches."
+      ]
+    },
+    {
+      "heading": "What to check before you enrol",
+      "paragraphs": [
+        "The announcement does not yet spell out how a student applies, when batches begin, or how the one lakh seats are divided between colleges and districts. Those details will decide whether this reaches students in smaller towns or stays concentrated in Hyderabad. Students should ask their college placement or TASK coordinator for the enrolment process rather than waiting for a public link.",
+        "The other thing worth doing is treating the free access as a deadline, not a gift. A year of course access passes quickly. Picking one track, finishing the certification exam while the voucher is valid, and building one small project on the cloud console will count for more in an interview than a long list of half-watched courses. Free training opens the door, but the certificate and the project are what a recruiter actually sees."
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "q": "Who can join the Telangana AI and Cloud Skilling Initiative?",
+      "a": "Students of the 643 colleges affiliated to TASK in Telangana are covered, including those in arts and commerce streams, not only engineering and science students."
+    },
+    {
+      "q": "Is the AWS training really free for students?",
+      "a": "Yes. Students get one year of free access to more than 900 courses on AWS Skill Builder, and the state says the programme puts no financial burden on students, colleges or the government."
+    },
+    {
+      "q": "Will the programme help with jobs?",
+      "a": "TASK plans job fairs for students who complete the training, and the course work includes industry sessions, hackathons and discounted vouchers for global certification exams."
+    }
+  ],
+  "image_prompt": "Photorealistic wide landscape photo of Indian college students in a bright computer lab, working on laptops at long desks, a young woman explaining something on a screen to two classmates, afternoon light through windows, natural candid scene, no text, no logos.",
+  "source_name": "The New Indian Express",
+  "source_url": "https://www.newindianexpress.com/states/telangana/2026/Nov/03/1-lakh-telangana-students-to-get-free-training-in-ai-cloud-computing"
+}
