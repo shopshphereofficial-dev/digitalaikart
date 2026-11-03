@@ -1,8 +1,8 @@
 {
- "updated": "2026-11-02",
+ "updated": "2026-11-03",
  "note": "Single source of truth for ALL products on digitalkartai.shop. The blog agent MUST read this file at the start of every run and promote the best-matching product per post. The product agent MUST append new products here when publishing them. Never delete or modify existing entries.",
  "products": [
-{
+  {
    "slug": "indian-diabetes-prediabetes-playbook-2026-27",
    "name": "The Indian Diabetes & Prediabetes Playbook 2026-27 — Digital Edition",
    "tagline": "The complete 37-page playbook for type 2 diabetes and prediabetes in India — reading your own reports, the RSSDI and ICMR disagreement over a fasting sugar of 104, the HbA1c trap in anaemic patients, the 7.7% who meet all three ABC targets, and the three-year prediabetes window the Indian Diabetes Prevention Programme measured at a 28.5% risk reduction. The Indian thali rebuilt: the ICMR-NIN 45/15 rule, portions without a weighing scale, the carbohydrate ladder, protein as the missing quarter, six breakfasts fixed, ten lunches and dinners, a seven-day menu, a kitchen reset, and why the 2025 Nature Medicine analysis of 18,090 Indians found that swapping refined cereal for millet flour at the same total carbohydrate did not lower diabetes risk while substituting protein did. Then the fifteen-minute post-meal walk and its evidence, monitoring that tells you something, the 2026 semaglutide price change after the March patent expiry and the generic launches at Rs 750-4,200 a month, insulin, hypoglycaemia and the 15-15 rule, sick days and night shifts, the annual complications screening calendar, the two-minute foot check, the IRDAI rules on pre-existing disease and portability, the free screening and medicines at 1.87 lakh Ayushman Arogya Mandirs, a monthly cost planner, and eight printable worksheets. Every figure verified from ICMR-INDIAB, ICMR-NIN, RSSDI, the ICMR Standard Treatment Workflow, IRDAI and MoHFW, November 2026.",
@@ -7395,6 +7395,62 @@
     "freelancer to company",
     "small business India",
     "India"
+   ]
+  },
+  {
+   "slug": "cashflow-compass-13-week-india",
+   "name": "CashFlow Compass — 13-Week Cash Flow Forecast & Runway Planner (Excel + Google Sheets)",
+   "tagline": "A thirteen-week cash flow forecast for Indian small businesses, built as a macro-free Excel workbook that also opens in Google Sheets. You enter up to six revenue lines and twelve cost lines, each with its own monthly amount, annual growth and lag in weeks, and the engine shifts every line into the week the money actually moves: a three-week collection lag means week 4 collects what week 1 invoiced, less your bad-debt percentage, and costs work the same way with their payment lag. GST is modelled as output tax on invoiced sales minus input credit on the cost lines you mark claimable, paid after your filing lag. Six one-off slots take capex, refunds and advances by week. Thirteen week columns then print opening cash, closing cash, your buffer, OD headroom and a per-week status of OK, BELOW BUFFER or NEGATIVE, colour-coded amber and red. The dashboard turns it into one plain-English signal line that names the week and the rupee gap, twelve metrics including the lowest closing balance and extra cash needed, five health checks including a formula-error counter, and two charts — closing cash against your buffer, and money in versus money out. A scenarios tab runs Base, Slow and Stress as three complete thirteen-week engines driven by sales and cost multipliers and extra collection and payment delays, so a bad quarter can be priced before it is lived. An actual-vs-forecast tab records what really hit the bank each Monday and scores forecast accuracy. Ships as two workbooks — a blank template and a fully worked example — with a ten-minute quick start, a full manual explaining every calculation, and a licence. No macros, no password protection, no sign-up, A4 print setup for a lender.",
+   "price": "₹249",
+   "mrp": "₹799",
+   "url": "/products/cashflow-compass-13-week-india/",
+   "also_available": [
+    "stocksense-inventory-system-india",
+    "gst-invoice-generator-pro",
+    "udhaar-khata-india",
+    "freelancer-finance-os-india"
+   ],
+   "topics": [
+    "cash flow",
+    "cash flow forecast",
+    "13 week cash flow",
+    "weekly cash flow",
+    "cash flow statement",
+    "cash flow projection",
+    "runway calculator",
+    "cash runway",
+    "working capital",
+    "cash shortfall",
+    "cash crunch",
+    "small business finance",
+    "MSME finance",
+    "cash flow template",
+    "excel cash flow template",
+    "google sheets cash flow",
+    "financial model",
+    "business forecast",
+    "cash flow planning",
+    "collection lag",
+    "debtor days",
+    "payment terms",
+    "bad debt",
+    "GST cash flow",
+    "GST timing",
+    "input tax credit",
+    "OD limit",
+    "cash credit limit",
+    "headroom",
+    "scenario planning",
+    "what if analysis",
+    "budget vs actual",
+    "forecast accuracy",
+    "small business excel template",
+    "india business template",
+    "traders cash flow",
+    "agency cash flow",
+    "contractor cash flow",
+    "cash flow for startups",
+    "burn rate"
    ]
   }
  ]
