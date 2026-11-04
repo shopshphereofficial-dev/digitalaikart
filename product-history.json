@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-03",
+ "updated": "2026-11-04",
  "note": "Append-only log of products published to digitalkartai.shop. Newest last. Never delete or modify existing records.",
  "history": [
   {
@@ -834,6 +834,41 @@
     "Ten-minute quick start, full manual with formula explanations, eight-clause licence",
     "A4 print setup with fit-to-width for lender or board packs",
     "No macros, no password protection, no sign-up, works offline"
+   ]
+  },
+  {
+   "date": "2026-11-04",
+   "name": "InboxKit India — 12 Responsive Email Templates for Indian Small Businesses (HTML Pack)",
+   "slug": "inboxkit-email-templates-india",
+   "category": "Email Template Pack / Responsive HTML Emails for Indian Small Businesses",
+   "type": "template-pack",
+   "price": "₹249",
+   "mrp": "₹999",
+   "url": "https://digitalkartai.shop/products/inboxkit-email-templates-india/",
+   "download": "https://digitalkartai.shop/downloads/inboxkit-email-templates-india.zip",
+   "payment_link": "https://rzp.io/rzp/AqNaeH0Q",
+   "status": "published",
+   "features": [
+    "Twelve complete, self-contained HTML email templates, one file each",
+    "Table-based layout with inline CSS at 600px, one 600px breakpoint for phones",
+    "Bulletproof buttons built from a table cell with a padded anchor, not a CSS-only button",
+    "No images, no web fonts, no JavaScript and no tracking pixels — renders with images blocked",
+    "Dark-mode rules and a color-scheme meta tag in every file",
+    "01 Welcome, 02 Order confirmation, 03 B2B payment reminder, 04 GST tax invoice",
+    "05 Quotation follow-up, 06 Abandoned cart, 07 Dispatch and tracking, 08 Festive sale",
+    "09 New product launch, 10 Feedback request, 11 Appointment reminder, 12 Win-back",
+    "Payment reminder carries UPI ID, account name, account number, IFSC, days past due and a 'already paid? send the UTR' line",
+    "GST invoice shows place of supply, reverse charge, HSN, taxable value, CGST and SGST rows, total and amount in words, with a commented-out IGST row for inter-state supply",
+    "Rupee amounts use the HTML entity so older Outlook builds do not mangle the symbol, and follow Indian digit grouping",
+    "Every example value from the fictional demo business is highlighted in pale yellow for find-and-replace",
+    "69 documented merge fields with a merge-fields.csv mapping sheet (field, meaning, example value, templates used)",
+    "Live gallery (preview.html) renders all twelve templates in the browser, with subject line and preheader for each",
+    "Nine-section guide: editing rules, which platform for which template, upload steps for six platforms, pre-send check, deliverability, India notes, troubleshooting",
+    "Deliverability section states plainly that inbox placement needs SPF, DKIM, DMARC, a warmed domain and an opted-in list",
+    "Marketing versus transactional split so an invoice reminder never stops because someone unsubscribed from offers",
+    "Troubleshooting table for six real failures: Outlook gaps, flat buttons, broken mobile layout, literal merge fields, dark mode, Gmail clipping",
+    "Eight-clause licence: your business plus one client, unlimited emails and edits, no resale or redistribution",
+    "One ZIP, 19 files, about 54 KB; largest template about 13 KB, well under Gmail's clipping point"
    ]
   }
  ]
