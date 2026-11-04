@@ -18,7 +18,7 @@ jobs:
       - name: Download ebook from release
         run: |
           mkdir -p downloads
-          gh release download aadhaar-pan-fix-playbook-v1 --repo shopshphereofficial-dev/digitalaikart --output "downloads/aadhaar-pan-fix-playbook.pdf"
+          gh release download aadhaar-pan-fix-playbook-v1 --repo shopshphereofficial-dev/digitalaikart --pattern "aadhaar-pan-fix-playbook.pdf" --output "downloads/aadhaar-pan-fix-playbook.pdf"
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
