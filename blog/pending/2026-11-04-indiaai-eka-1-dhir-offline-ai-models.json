@@ -1,0 +1,85 @@
+{
+  "date": "2026-11-04",
+  "title": "India's New AI Models Run Fully Offline, Even on a 6 GB Phone",
+  "slug": "indiaai-eka-1-dhir-offline-ai-models",
+  "category": "AI India",
+  "description": "IndiaAI Mission released EKA-1, Dhir 2B and Dhir 5B - Indian-language models built to run offline, on-premise and inside air-gapped networks, even on a phone.",
+  "emoji": "🇮🇳",
+  "keywords": [
+    "IndiaAI Mission models",
+    "EKA-1 Soket",
+    "Dhir 2B ZenteiQ",
+    "offline AI India",
+    "air-gapped AI"
+  ],
+  "tags": [
+    "#AI",
+    "#IndiaAI",
+    "#SovereignAI",
+    "#IndianLanguages"
+  ],
+  "tldr": [
+    "The IndiaAI Mission released three indigenous foundation models on 3 November: Soket's EKA-1 (26.3 billion parameters) and ZenteiQ's Dhir 2B and Dhir 5B.",
+    "All three are built to run offline, on-premise or inside air-gapped networks, with Dhir able to work on a smartphone with 6 GB of RAM.",
+    "ZenteiQ trained on TPUs because GPUs were scarce, saying waiting for GPUs would have cost another three to four months.",
+    "The models were built with subsidised national AI compute and will be reachable through AIKosh, but no independent benchmark results have been published yet."
+  ],
+  "sections": [
+    {
+      "heading": "What was actually released",
+      "paragraphs": [
+        "The IndiaAI Mission, under the Ministry of Electronics and IT, released three indigenous foundation models at an event in New Delhi on Tuesday evening. Two companies are behind them. Soket Labs Technology and Research launched EKA-1, a 26.3 billion parameter model trained on about 7.5 trillion tokens covering all 22 scheduled Indian languages along with English. ZenteiQ AiTech Innovations launched two smaller open-source models, Dhir 2B and Dhir 5B, which support English and 10 Indian languages.",
+        "The event was attended by IT Secretary S Krishnan and IndiaAI Mission chief operating officer Sudeep Shrivastava. Both firms were selected under the IndiaAI Innovation Centre pillar of the mission, the arm that funds work on indigenous foundation models. The government said access to subsidised national AI compute, plus support for ancillary research expenses, is what made the builds possible.",
+        "The two releases are aimed at different jobs. Soket describes EKA-1 as an open, sparse hybrid language model built for maths, code, reasoning and agentic use, tuned for India's banking, financial services and cybersecurity landscape. ZenteiQ's Dhir models are positioned as multilingual assistants for document-grounded automation and knowledge retrieval, in defence, government, industrial and education settings."
+      ]
+    },
+    {
+      "heading": "The word that matters here is air-gapped",
+      "paragraphs": [
+        "With a service like ChatGPT, the step where the model produces an answer happens on a server somewhere else. ZenteiQ chief executive Sashikumar Ganesan explained at the briefing that in an air-gapped setup, that inference happens locally instead, on a machine cut off from the internet and outside networks. His summary was blunt: no data goes outside, and the model needs no network connection. The Dhir models will run on GPUs and TPUs, and on any smartphone with at least 6 GB of RAM.",
+        "That is a different product from a chatbot, and the timing is not accidental. On 15 October, CERT-In issued an advisory saying AI agents being tested online had reached the live systems of Indian organisations and read business records, including personal data and confidential material, as ThePrint reported. For a defence unit, a hospital or a bank that cannot legally let data leave its own building, a model that never needs a network is the only kind that clears the first meeting.",
+        "EKA-1 takes a slightly different route. The Hindu reports it can handle certain inference on a local device such as a smartphone, so parts of it work without mobile data or Wi-Fi. Soket founder Abhishek Upperwal also said safeguards are in place, including protections against content on suicide and self-harm."
+      ]
+    },
+    {
+      "heading": "Trained on TPUs, because GPUs were not available",
+      "paragraphs": [
+        "The most honest detail in the launch came from ZenteiQ. Ganesan said the company trained on Tensor Processing Units because GPUs were scarce, that TPUs are not inferior to GPUs, and that waiting for GPUs would have meant another three to four months. Anyone who has tried to buy accelerator capacity in India will recognise that arithmetic.",
+        "The government's own answer to the shortage is still in progress. In an interview with ETGovernment published on 4 November, Krishnan said that under India Semiconductor Mission 2.0 the ministry is targeting an indigenous GPU chip in roughly 24 months, and that the mission has already supported more than 20 indigenous models, with the hope that at least two reach frontier level."
+      ]
+    },
+    {
+      "heading": "Where these sit in the IndiaAI stack",
+      "paragraphs": [
+        "These are not the first models out of the mission. The Hindu BusinessLine notes earlier releases from Sarvam AI, BharatGen and Gnani AI, so EKA-1 and the Dhir pair add to a list rather than starting one. Krishnan framed it in terms of autonomy: indigenous models strengthen India's technological and strategic autonomy in AI and open up productivity gains across government, industry, research and education.",
+        "Distribution is the part to watch. Krishnan said platforms such as AIKosh can make the models accessible to researchers, students, innovators and the wider public, which is the difference between a press release and something a college lab in Warangal can actually download and run. Whether the weights land there quickly, and under what licence terms, is a fair test of how serious the open-access talk is.",
+        "Keep this separate from the policy news of the same week. MeitY is drafting a consultation paper on AI governance, and officials have said sectoral regulators such as RBI and SEBI should carry some of the load because risks differ by sector, as the Hindustan Times reported. A model that runs inside your own walls and a law governing how you use it are two different pieces of the same puzzle."
+      ]
+    },
+    {
+      "heading": "What to do with this, without the hype",
+      "paragraphs": [
+        "For students and researchers, watch AIKosh rather than the headlines. A 2B or 5B parameter model that runs on a phone with 6 GB of RAM is small enough to fine-tune on a single rented GPU and to demo in a classroom with no internet. That is a realistic project, and a better use of a semester than another wrapper around a foreign API.",
+        "For businesses, the useful question is which of your workflows cannot leave the building. Customer support routing, document extraction, internal search over contracts, first-pass screening of security alerts: these are the places where an on-premise multilingual model changes the cost of a compliance conversation. Ask for the licence, the hardware floor and an evaluation on your own data.",
+        "One caveat worth stating plainly. The launch did not publish independent benchmark results, and neither company's performance claims have been verified outside its own testing. Parameter counts, token counts and language coverage are factual and reported, but quality is not yet established. Treat these as promising infrastructure, not as proof that India has caught up."
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "q": "Which models did the IndiaAI Mission release in November 2026?",
+      "a": "Three: EKA-1 from Soket Labs Technology and Research, a 26.3 billion parameter model trained on about 7.5 trillion tokens across all 22 scheduled Indian languages and English, plus Dhir 2B and Dhir 5B from ZenteiQ AiTech Innovations, which are open-source multilingual models supporting English and 10 Indian languages."
+    },
+    {
+      "q": "What does air-gapped actually mean for these models?",
+      "a": "It means the model runs on hardware cut off from the internet and outside networks, so the inference that produces an answer happens locally instead of on a remote server. ZenteiQ says the Dhir models need no network connection and can run on a smartphone with at least 6 GB of RAM, which suits defence, government and other sensitive deployments."
+    },
+    {
+      "q": "Can I download and use them?",
+      "a": "The Dhir models are described as open-source and deployable on-premise, and EKA-1 is described as an open model. IT Secretary S Krishnan said platforms such as AIKosh can make mission-built models available to researchers, students and innovators, but the release did not specify download links or licence terms for each model."
+    }
+  ],
+  "image_prompt": "A photorealistic photo of a young Indian engineer in a plain office holding a mid-range Android phone, screen glowing softly on her face, a closed server rack and neatly coiled cables behind her, warm late-afternoon light through a window, natural colours, shallow depth of field, candid and calm, no text, no logos, 16:9 landscape.",
+  "source_name": "The Hindu",
+  "source_link": "https://www.thehindu.com/sci-tech/technology/indiaai-mission-releases-indigenous-foundation-models-eka-1-dhir-2b-and-dhir-5b/article71663984.ece"
+}
