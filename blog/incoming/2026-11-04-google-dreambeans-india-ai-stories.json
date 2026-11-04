@@ -1,0 +1,75 @@
+{
+  "title": "Dreambeans Comes to India: Google's AI App Reads Your Gmail",
+  "slug": "google-dreambeans-india-ai-stories",
+  "category": "AI Products",
+  "description": "Google launched Dreambeans in India, its first market outside the US. The app builds daily illustrated stories from Gmail, Photos and YouTube in 14 languages.",
+  "emoji": "✨",
+  "keywords": [
+    "Google Dreambeans",
+    "Dreambeans India",
+    "AI app India",
+    "personalised AI stories",
+    "Google Labs"
+  ],
+  "tags": ["#GoogleDreambeans", "#AIInIndia", "#AIApps", "#DigitalIndia"],
+  "tldr": [
+    "Google has brought its Dreambeans app to India, the first country outside the US to get it.",
+    "The app writes daily illustrated stories from Google services you connect, with no prompt needed.",
+    "It supports 14 languages but only one at a time, so mixed Hinglish stories are not possible yet.",
+    "You can disconnect any service and delete your Dreambeans data from inside the app."
+  ],
+  "sections": [
+    {
+      "heading": "Google brings Dreambeans to India",
+      "paragraphs": [
+        "On 3 November, Google expanded Dreambeans, an experimental app from Google Labs, to India. It is the first country outside the United States to get the app, which was introduced in June and opened to all eligible adults in the US in September. In India it is available on Android and iOS to anyone aged 18 and above.",
+        "Dreambeans does not work like a chatbot. You do not type a question. Instead, the app puts together a set of illustrated stories each day based on what it finds in the Google services you allow it to connect, such as Gmail, Calendar, Photos, Search and YouTube. The stories can cover places to visit, crafts to try, local events or reminders. You can open a story to read more, bookmark it for later, or share it with others."
+      ]
+    },
+    {
+      "heading": "How the app builds your stories",
+      "paragraphs": [
+        "Google says the app uses its Personal Intelligence technology to read across the connected accounts and work out what might interest you. Some stories now carry moving illustrations generated with Google's Veo video model instead of still pictures. The company is also exploring ways to make the stories more actionable, so that a suggestion can be acted on rather than only read.",
+        "The trade-off is data. To assemble a daily set of stories about your life, the app needs access to mail, photos and calendar entries, which often hold very personal information. Google says users choose which services to connect and can disconnect any of them at any time. Dreambeans works only with personal Gmail accounts, not office or enterprise accounts, and the stories are visible only to the person signed in. Google also says that information deleted from a connected service is removed from the app's personalisation system as well."
+      ]
+    },
+    {
+      "heading": "Why India was picked first",
+      "paragraphs": [
+        "Google product manager Gozde Oznur said at a press briefing that India was chosen because of strong interest from Indian users and the wide use of Google's services in the country, with a high overlap of people using its mail, photos and AI assistant. For a company trying to reach the world's second-largest internet market, that overlap makes India the cheapest possible place to test a product like this.",
+        "The early US numbers suggest why a bigger market matters. Sensor Tower estimates shared with TechCrunch put US downloads at nearly 55,000 since June, with about 63 per cent of them arriving in September when the app opened to all adults. Downloads then fell 84 per cent month on month to roughly 5,500 in October. In the first 30 days after the wider opening, Dreambeans drew about 29,000 downloads, against 7.4 million for Meta's Muse, 2.8 million for ChatGPT, 362,000 for Grok Bot and 155,000 for Claude. Dreambeans is a much narrower product than those apps, but the gap is still large."
+      ]
+    },
+    {
+      "heading": "The language gap",
+      "paragraphs": [
+        "The India release supports 14 languages: English, Hindi, Bengali, Telugu, Marathi, Tamil, Urdu, Gujarati, Kannada, Malayalam, Odia, Punjabi, Assamese and Nepali. That is a wide list for a first version, and it puts the app in front of users who rarely see a new AI product in their own language on day one.",
+        "But users can pick only one language for the stories they receive. The app can read information across services in several languages, yet it cannot write a story that mixes them, Oznur said. In a country where many people move between Hindi, English and a third language inside a single conversation, that is a real limitation, and the sort of thing that usually gets fixed only after enough Indian users ask for it."
+      ]
+    },
+    {
+      "heading": "What this means for Indian readers",
+      "paragraphs": [
+        "For students and young professionals, Dreambeans is a free, low-effort way to see what a proactive AI assistant feels like, with no prompts and no paid plan. For small business owners, it is more a signal than a tool: Google is testing how far people will let an AI app read their personal data in exchange for convenience, and the answer will shape what business-facing AI products look like a year or two from now.",
+        "The practical approach is to connect one service at a time and watch what appears. Google says users can delete their Dreambeans data from inside the app, and can ask it to avoid certain subjects, including work-related information. The company also accepts that the app may surface memories people would rather not see, such as stories about someone who has died, and offers controls to limit that. Those controls are worth finding before the app starts guessing, and they take less time to set up than reviewing each story the app produces."
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "q": "Is Google Dreambeans free in India?",
+      "a": "Yes. It is a free Google Labs experiment available on Android and iOS in India for users aged 18 and above. No subscription is needed."
+    },
+    {
+      "q": "Which Google services does Dreambeans use?",
+      "a": "Only the ones you choose to connect, such as Gmail, Calendar, Photos, Search and YouTube. You can disconnect any of them at any time."
+    },
+    {
+      "q": "Can Dreambeans write stories in Hinglish?",
+      "a": "Not yet. You select one language at a time, so each story comes in a single language, though the app can read information in several languages."
+    }
+  ],
+  "image_prompt": "A young Indian woman in her twenties sitting on a sunlit balcony with a smartphone, smiling softly at the screen, a steel cup of chai on the parapet beside her, plants in the background, warm morning light, shallow depth of field, natural photorealistic photo, wide 16:9 landscape",
+  "source_name": "TechCrunch",
+  "source_url": "https://techcrunch.com/2026/11/02/google-takes-dreambeans-to-india-in-bid-to-bring-ai-generated-personal-stories-to-the-masses/"
+}
