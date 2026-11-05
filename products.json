@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-04",
+ "updated": "2026-11-05",
  "note": "Single source of truth for ALL products on digitalkartai.shop. The blog agent MUST read this file at the start of every run and promote the best-matching product per post. The product agent MUST append new products here when publishing them. Never delete or modify existing entries.",
  "products": [
   {
@@ -7818,6 +7818,47 @@
     "Rashtriya Vayoshri Yojana",
     "sibling care agreement",
     "caregiver burnout"
+   ]
+  },
+  {
+   "slug": "excelpower-formula-flashcards",
+   "name": "ExcelPower — 150 Excel Formula Flashcards + Offline Drill App",
+   "tagline": "150 Excel formula flashcards with an offline spaced-repetition drill app, a printable A4 card deck and a practice workbook — lookup, text cleaning, dates, GST and EMI arithmetic, multi-condition analysis and Excel 365 dynamic arrays, each card carrying the exact formula and the one trap it hides.",
+   "price": "₹199",
+   "mrp": "₹599",
+   "url": "https://digitalkartai.shop/products/excelpower-formula-flashcards/",
+   "also_available": false,
+   "topics": [
+    "excel formulas",
+    "excel flashcards",
+    "learn excel",
+    "excel formula list",
+    "VLOOKUP",
+    "INDEX MATCH",
+    "XLOOKUP",
+    "SUMIFS",
+    "COUNTIFS",
+    "FILTER function",
+    "dynamic arrays",
+    "TEXTJOIN",
+    "EOMONTH",
+    "NETWORKDAYS",
+    "financial year formula",
+    "GST formula excel",
+    "EMI formula excel",
+    "PMT",
+    "margin vs markup",
+    "ageing buckets",
+    "spaced repetition",
+    "flashcards",
+    "anki deck",
+    "excel practice workbook",
+    "excel for accountants",
+    "MIS executive",
+    "excel interview questions",
+    "excel skills India",
+    "offline study app",
+    "printable flashcards"
    ]
   }
  ]
