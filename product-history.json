@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-04",
+ "updated": "2026-11-05",
  "note": "Append-only log of products published to digitalkartai.shop. Newest last. Never delete or modify existing records.",
  "history": [
   {
@@ -869,6 +869,34 @@
     "Troubleshooting table for six real failures: Outlook gaps, flat buttons, broken mobile layout, literal merge fields, dark mode, Gmail clipping",
     "Eight-clause licence: your business plus one client, unlimited emails and edits, no resale or redistribution",
     "One ZIP, 19 files, about 54 KB; largest template about 13 KB, well under Gmail's clipping point"
+   ]
+  },
+  {
+   "date": "2026-11-05",
+   "name": "ExcelPower — 150 Excel Formula Flashcards + Offline Drill App",
+   "slug": "excelpower-formula-flashcards",
+   "category": "Learning & Reference / Excel Formula Flashcard Pack + Offline Drill App",
+   "type": "non-ebook",
+   "price": "₹199",
+   "mrp": "₹599",
+   "url": "https://digitalkartai.shop/products/excelpower-formula-flashcards/",
+   "download": "https://digitalkartai.shop/downloads/excelpower-formula-flashcards.zip",
+   "payment_link": "https://rzp.io/rzp/VRDrCOIA",
+   "status": "published",
+   "features": [
+    "150 Excel formula flashcards in 8 categories, each with a real task, the exact formula and a one-line note on the trap or version limit",
+    "72 Core, 61 Intermediate and 17 Advanced cards; 24 Lookup, 24 Text, 18 Date, 22 Maths, 18 Logic, 16 Money, 14 Data Analysis, 14 Dynamic Arrays",
+    "Offline drill app (single self-contained HTML file) with five-box spaced repetition: 10 min, 1 day, 3 days, 7 days, 14 days",
+    "Ten-question multiple-choice quiz, reshuffled every attempt, scoring against the task each formula solves",
+    "Progress screen: mastery by category, box distribution, day streak and answer accuracy, saved in browser localStorage",
+    "Keyboard shortcuts: space to reveal, 1/2/3 to grade, S to skip; progress export to JSON and a full reset",
+    "Printable A4 card deck: 150 cards, ten per sheet, 15 sheets, framed to cut, category + level + card number on every card",
+    "Four-page A4 quick reference listing all 150 formulas grouped by category",
+    "Practice workbook (xlsx, macro-free): 40 labelled example rows, 24 tasks with gold answer cells, answer key with exact formula and reason, formula index",
+    "Anki / Quizlet import file (tab separated) and the full deck as JSON",
+    "START-HERE.html guide: three-minute start, five-box schedule, printing at 100% scale, Anki import, compatibility, licence",
+    "India-specific cards: GST inclusive arithmetic, EMI and interest split, FY 2026-27 label, ageing buckets, lakh and crore",
+    "Works with no internet connection, no account and no subscription; single-user commercial licence"
    ]
   }
  ]
