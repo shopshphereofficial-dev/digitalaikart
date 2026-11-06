@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-05",
+ "updated": "2026-11-06",
  "note": "Append-only log of products published to digitalkartai.shop. Newest last. Never delete or modify existing records.",
  "history": [
   {
@@ -897,6 +897,35 @@
     "START-HERE.html guide: three-minute start, five-box schedule, printing at 100% scale, Anki import, compatibility, licence",
     "India-specific cards: GST inclusive arithmetic, EMI and interest split, FY 2026-27 label, ageing buckets, lakh and crore",
     "Works with no internet connection, no account and no subscription; single-user commercial licence"
+   ]
+  },
+  {
+   "date": "2026-11-06",
+   "name": "SocialKit India — 48 Ready-to-Post Social Graphics + Offline Post Maker",
+   "slug": "socialkit-india-post-maker",
+   "category": "Design Template Pack / Offline Social Post Maker",
+   "type": "non-ebook",
+   "price": "₹249",
+   "mrp": "₹1,499",
+   "url": "https://digitalkartai.shop/products/socialkit-india-post-maker/",
+   "download": "https://digitalkartai.shop/downloads/socialkit-india-post-maker.zip",
+   "payment_link": "https://rzp.io/rzp/HAnzYJ6",
+   "status": "published",
+   "features": [
+    "12 social layouts: offer burst, rate card, festival greeting, new arrival, menu card, story flash sale, contact card, quote card, combo deal, opening hours, notice board, hiring",
+    "4 colour themes each — 48 designs in total",
+    "Sizes: 1080x1080 square, 1080x1350 portrait, 1080x1920 story",
+    "Offline post maker in plain HTML + JavaScript (no install, no account, no CDN)",
+    "Edit business details once — all 48 templates update live",
+    "PNG export at exact template size (verified 1080 px output)",
+    "Editable SVG export for Inkscape / Illustrator / Figma",
+    "All 48 designs also pre-exported as SVG files in samples/",
+    "India-first copy: rupee prices, WhatsApp ordering lines, local hours, coupon codes",
+    "Regional-language text supported (Devanagari, Tamil, Bengali, Telugu, Kannada, Malayalam, Gujarati, Punjabi, Urdu)",
+    "Colours editable in one THEMES block at the top of app.js",
+    "Full README.html instructions: size guide, layout-to-platform map, colour editing, print sizes, troubleshooting",
+    "Plain-English licence: unlimited posts, unlimited businesses you own or manage; no reselling the files",
+    "No watermark, no subscription, no per-post limit, works offline"
    ]
   }
  ]
