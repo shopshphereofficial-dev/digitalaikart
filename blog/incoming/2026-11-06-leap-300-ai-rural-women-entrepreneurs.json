@@ -1,0 +1,80 @@
+{
+  "title": "AI advisor helps 5 lakh rural women run small businesses",
+  "slug": "leap-300-ai-rural-women-entrepreneurs",
+  "category": "AI India",
+  "description": "Government livelihood programmes in Bihar, Punjab, UP and Haryana are using an AI business advisor to help over five lakh rural women plan and run businesses.",
+  "emoji": "👩‍💼",
+  "keywords": [
+    "rural women entrepreneurs",
+    "AI business advisor",
+    "Vyapar Mitra",
+    "Leap 300",
+    "livelihood mission"
+  ],
+  "tags": [
+    "#AIIndia",
+    "#RuralEntrepreneurs",
+    "#MSME",
+    "#WomenInBusiness"
+  ],
+  "tldr": [
+    "Four state livelihood programmes are working with Leap 300 to reach over five lakh rural women entrepreneurs.",
+    "Its Vyapar Mitra AI advisor gives business advice in local languages through a phone app.",
+    "Punjab's credit-linked pilot cut business launch time from about three months to 12 days.",
+    "Uttar Pradesh aims to cover one lakh households over three years under its Zero Poverty Programme."
+  ],
+  "sections": [
+    {
+      "heading": "A new AI advisor for rural women",
+      "paragraphs": [
+        "Government-run livelihood programmes in Bihar, Punjab, Uttar Pradesh and Haryana are now working with a company called Leap 300 to bring an AI business advisor to more than five lakh women entrepreneurs. The partnerships, announced on 4 November, ride on networks the states already have, so the technology reaches women through field workers and self-help groups rather than through app stores alone.",
+        "The idea is to give a first-time entrepreneur the kind of advice that used to be available only to someone with an accountant or a business consultant on call. India has already built one of the world's largest networks for reaching rural women, and the next step is to make personalised business expertise available to every woman through that network, said Vinod Raghuwanshi, co-founder of Leap 300. The company says the four partnerships together cover more than five lakh women, with room to reach many more through the same government machinery."
+      ]
+    },
+    {
+      "heading": "How the app works",
+      "paragraphs": [
+        "Women are onboarded on the Leap 300 beneficiary app. There they prepare and submit a business plan with AI help, learn business basics through a voice-based learning system, and keep daily accounts using simple digital bookkeeping tools. The AI advisor, called Vyapar Mitra, suggests what to sell, when to restock and how to price, in local languages, both on its own and when the woman asks a question.",
+        "The programme runs as a structured 300-day journey from choosing a business to steady income. Leap 300 also trains government field workers, who otherwise support hundreds of households each, so that the quality of advice stays the same as the programme grows."
+      ]
+    },
+    {
+      "heading": "What the Bihar and Punjab pilots show",
+      "paragraphs": [
+        "In Bihar, under JEEViKA's Satat Jeevikoparjan Yojana, about 60 percent of businesses in the wider programme in the same blocks were livestock-based, compared with less than one percent in the Leap 300 pilot. Women chose retail, food and skilled services instead. As of September 2026, 87 percent of the relevant trained participants had used the AI advisor and 95 percent were recording their accounts digitally. A separate JEEViKA collaboration has a roadmap covering three lakh households.",
+        "In Punjab, under the credit-linked PEHEL programme, monthly loan throughput rose from four to 25 per block, a 6.25 times increase, and the time taken to launch a business fell from about three months to 12 days. First-time entrepreneurs rose from 15 percent to 45 percent of participants, who together ran 51 kinds of business. Women with at least three months of business history reported about 1.5 times their earlier income, and the programme reported full loan repayment so far."
+      ]
+    },
+    {
+      "heading": "Why this matters beyond the four states",
+      "paragraphs": [
+        "For small businesses, the interesting part is not the chatbot. It is that AI is being used on two old problems at once: advice that does not scale, and credit that lenders hesitate to give without a business plan. A plan a loan officer can read, backed by digital accounts that show real cash flow, changes how a bank sees a first-time borrower. There is a lesson here for any small shop or service business too. The tools that worked in these pilots are unglamorous: a voice-based course, a bookkeeping app, a plan written in a language the owner actually speaks. None of it needs a large budget, and most of it runs on the smartphone a family already owns.",
+        "For students and young professionals, this is a working example of AI work that is not coding work. A programme of this size needs field trainers, translators, local-language content reviewers and managers who can read data coming in from thousands of very small businesses."
+      ]
+    },
+    {
+      "heading": "The hard part is still ahead",
+      "paragraphs": [
+        "Scale is the real test. Uttar Pradesh's Zero Poverty Programme, run with the state planning department, targets one lakh households over three years, including 50,000 in the first year, against about 12.36 lakh households identified as zero-poverty households in the state. Haryana's rural livelihoods mission plans to cover 1,200 women entrepreneurs over three years. Numbers of that size depend on field staff more than on model quality, and on whether the app keeps working in places where the network is patchy and the phone is shared.",
+        "Two questions will decide whether the model travels. First, whether the advice holds up when a woman asks about a market the system has never seen. Second, whether the time saved and the easier credit turn into income that lasts after the 300 days end. Leap 300 says its wider programme has a 90 percent graduation rate, and independent checks of that number would say more than any pilot figure."
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "q": "What is Vyapar Mitra?",
+      "a": "It is the AI business advisor inside the Leap 300 app. It answers questions and suggests products, pricing and restocking in local Indian languages."
+    },
+    {
+      "q": "Can women outside these four states use it?",
+      "a": "At present the programme runs through government livelihood schemes in Bihar, Punjab, Uttar Pradesh and Haryana. Leap 300 says the same model can be extended to other states through similar partnerships."
+    },
+    {
+      "q": "Does the app give loans?",
+      "a": "No. It helps a woman prepare a business plan and keep digital accounts, which can support a loan application. In Punjab the credit itself comes through the government's PEHEL programme."
+    }
+  ],
+  "image_prompt": "A woman in her thirties in a village courtyard checking a smartphone while standing beside stacked sacks of grain and a small grocery counter, late afternoon light, documentary style, shallow depth of field, wide 16:9 landscape",
+  "source_name": "Business Standard",
+  "source_url": "https://www.business-standard.com/content/press-releases-ani/leap-300-collaborates-with-state-governments-to-help-over-5-lakh-rural-women-entrepreneurs-through-ai-led-entrepreneurship-model-126110500031_1.html"
+}
