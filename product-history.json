@@ -957,5 +957,27 @@
         "Includes README.html instructions, labelled sample CSV and save file, and a plain-English licence"
       ]
     }
+,
+    {
+      "date": "2026-11-07",
+      "name": "The EPF Claim Playbook 2026-27",
+      "slug": "epf-claim-playbook-2026-27",
+      "category": "Playbook / Provident Fund, Pension & Insurance Claims",
+      "type": "ebook",
+      "price": "₹199",
+      "mrp": "₹999",
+      "url": "https://digitalkartai.shop/products/epf-claim-playbook-2026-27/",
+      "download": "https://digitalkartai.shop/downloads/epf-claim-playbook-2026-27.pdf",
+      "payment_link": "https://rzp.io/rzp/nqIkZna4",
+      "status": "published",
+      "features": [
+        "41 pages, 13 chapters, 5 appendices",
+        "Verified against EPF, EPS and EDLI Schemes 2026 (G.S.R. 525(E), 526(E), 527(E))",
+        "Wage ceiling change of 17 September 2026 covered",
+        "The 12-minute account audit and the 9 rejection fixes",
+        "EPS pension maths, EDLI cover and tax on early withdrawal",
+        "Printable checklist, document matrix and 3 letter templates"
+      ]
+    }
   ]
 }
