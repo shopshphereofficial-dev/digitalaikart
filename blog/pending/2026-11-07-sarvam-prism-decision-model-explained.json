@@ -1,0 +1,82 @@
+{
+  "date": "2026-11-07",
+  "title": "Sarvam Prism: A 44-Millisecond Model That Just Picks an Option",
+  "slug": "sarvam-prism-decision-model-explained",
+  "category": "AI Products",
+  "description": "Sarvam's Prism returns a probability for each option instead of writing a paragraph. Here is what a decision model does and where Indian teams would use one.",
+  "emoji": "🎯",
+  "keywords": [
+    "Sarvam Prism",
+    "decision models India",
+    "Sarvam 105B",
+    "AI ticket routing",
+    "open-weight decision model"
+  ],
+  "tags": [
+    "#AIProducts",
+    "#Sarvam",
+    "#IndiaAI",
+    "#EnterpriseAI"
+  ],
+  "tldr": [
+    "Sarvam AI released Prism on November 3, 2026, a decision model built on its Sarvam 105B foundation model that returns a probability for each option you give it.",
+    "Sarvam reports an average score of 71.8 across three indices with a median response time of 44 milliseconds on an Nvidia B200 GPU, the best average among the 25 decision models it tested under 100 milliseconds.",
+    "The weights are on Hugging Face under Apache 2.0 and need one FP8-capable GPU with about 120 GB of memory, while the hosted Decisions API is priced at 4 rupees per million input tokens and nothing for output.",
+    "All benchmark numbers are company-reported; the real test is how well the model is calibrated on your own past cases."
+  ],
+  "sections": [
+    {
+      "heading": "A model that answers with a number, not a paragraph",
+      "paragraphs": [
+        "On November 3, 2026, Bengaluru-based Sarvam AI released Sarvam Prism, a model that does not write prose. It takes three inputs, the state of a system, a question, and a list of possible options, and returns a probability for each option. There is no token-by-token generation and no explanation to parse afterwards. Sarvam calls Prism a System One decision model built on its Sarvam 105B foundation model, and frames it around the kind of repetitive judgement an enterprise makes thousands of times a day.",
+        "The mechanics are unusual. Each question becomes one sequence holding the state, the instructions and every option, followed by an answer marker. Options cannot see each other, and a small decision head reads the hidden state at the end of each option and turns it into one probability per option. Sarvam trained the model on its 105B-10B mixture-of-experts base, arguing that this class of model improves with scale while keeping inference cheap."
+      ]
+    },
+    {
+      "heading": "The 44-millisecond claim, and how to read it",
+      "paragraphs": [
+        "Sarvam reports an average score of 71.8 across three evaluation indices, with a median response time of 44 milliseconds on an Nvidia B200 GPU. The company ran Prism and 24 other decision models through the same three indices on the same hardware, and says Prism had the highest average score of any model it tested that responded in under 100 milliseconds. Faster models in its table, such as OneJev-9B at 10 milliseconds, scored lower. Higher-scoring models such as mammoth-1 at 75.2 took 284 milliseconds. The median is worth pairing with the tail: Sarvam's model card puts the 95th percentile at 420 milliseconds, measured on 1,000 random requests sent one at a time.",
+        "Two claims matter more to a buyer than the headline score. The first is calibration. On answers given with at least 90 per cent confidence, Sarvam says Prism expects 3.3 per cent to be wrong and gets 2.2 per cent wrong across 37 public benchmarks, and expects 5.4 per cent and gets 4.4 per cent in Indian languages, where it scored 82.5 on that index. The second is order invariance. If a model's answer changes when you shuffle the options, routing logic built on it is unreliable, so Prism sorts options into a fixed order before scoring and returns probabilities under your own option names. Inc42 notes that all of this is company-reported, and that independent testing on comparable workloads will decide how it holds up in production."
+      ]
+    },
+    {
+      "heading": "Where an Indian team would actually use it",
+      "paragraphs": [
+        "The obvious fit is anything that is a sort by probability rather than a conversation. Sarvam lists routing, triage, moderation, judging whether an AI agent finished a task correctly, security checks such as prompt-injection detection, and scoring. A general-purpose model can do each of those jobs, but it does them by generating text that another system has to read, which adds latency and cost and gives a different answer shape every time. Sarvam's own documentation reports 78.5 per cent accuracy on judging recorded agent runs and 89.0 per cent on a security benchmark that includes prompt-injection and jailbreak checks.",
+        "The commercial details are unusually simple. Through Sarvam's Decisions API, Prism is priced at 4 rupees per million input tokens and nothing for output, because it produces no output tokens. Alternatively the weights are on Hugging Face under the Apache 2.0 licence, at roughly 106 GB, and run in FP8 on one GPU with about 120 GB of memory, such as a B200 or H200. That is server-class hardware rather than a laptop, so most teams will start on the API and only move to self-hosting when the data cannot leave their own machines."
+      ]
+    },
+    {
+      "heading": "India's decision-model race is already crowded",
+      "paragraphs": [
+        "Sarvam did not invent the category. TypeSafe created it and named its first model Jev after Kahneman's System One thinking, and Microsoft and Perplexity now ship decision models of their own. What is new is how many Indian teams are in it. Kerala-based ConvAI Innovations built Laya, an open-weight decision model meant to run locally on laptops and phones, and Hyderabad's Sthanika AI, part of PurpleTalk's research lab, builds the Sieve family of open-weight models for intent detection and AI-agent tool selection.",
+        "The pattern is telling. Instead of competing with frontier labs on general-purpose chat, Indian teams are picking narrow, measurable tasks where being small, fast and runnable inside the country counts for something. Prism takes that bet up a level by starting from a 105B base and treating Indian-language performance as a selling point rather than an afterthought."
+      ]
+    },
+    {
+      "heading": "What to test before you wire it in",
+      "paragraphs": [
+        "A decision model is only as good as its calibration on your data, and calibration does not transfer automatically from a public benchmark. Before putting Prism behind a workflow, run a few thousand of your own past cases through it, check how often the top option was right, and check whether the probability it gave matched the error rate it actually produced. A model that says 90 per cent and is right 70 per cent of the time is worse than useless for automation, because it hides its own mistakes.",
+        "Then decide what happens when confidence is low. The practical pattern is three-way: act automatically on high confidence, queue for human review in the middle, and reject below a floor. Test on the languages and spellings your customers actually use as well. Prism's documented coverage is English, ten Indian languages and Hinglish, which is more than most models offer, but the language mix in your own tickets is the only test that settles whether it handles yours."
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "q": "What is a decision model?",
+      "a": "A decision model is trained to pick between options rather than to generate text. You give it the current state, a question and a fixed set of possible answers, and it returns a probability for each one. That makes it cheap and fast to wire into software that needs a sort, such as routing a support ticket to the right team."
+    },
+    {
+      "q": "Can I run Sarvam Prism on my own servers?",
+      "a": "Yes. Sarvam released the weights on Hugging Face under the Apache 2.0 licence, about 106 GB of files. The catch is hardware: the model needs one FP8-capable GPU with roughly 120 GB of memory, such as a B200 or H200. Teams without one can use the hosted Decisions API instead, at 4 rupees per million input tokens."
+    },
+    {
+      "q": "Does Prism replace a general-purpose model like GPT or Gemini?",
+      "a": "No. It only returns probabilities for options you supply, so it cannot write an email or answer an open question. Sarvam positions it as one component in a stack, used alongside a generative model for tasks like routing, document triage, prompt-injection detection and checking whether an AI agent finished its work."
+    }
+  ],
+  "image_prompt": "Photorealistic wide 16:9 editorial photo of a young Indian operations manager at a large support centre in Bengaluru, looking at a wall of monitors showing simple bar charts and percentage dials, colleagues in the background at their desks, warm evening light through tall windows, shallow depth of field, natural colours, no text, no logos",
+  "source_name": "Sarvam AI",
+  "source_link": "https://www.sarvam.ai/blogs/sarvam-prism",
+  "source_url": "https://www.sarvam.ai/blogs/sarvam-prism"
+}
