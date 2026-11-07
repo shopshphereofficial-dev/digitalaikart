@@ -1,0 +1,80 @@
+{
+  "title": "India Wants to Be AI Application Capital, Opens Semicon 2.0 Portal",
+  "slug": "india-ai-application-capital-gpu-roadmap",
+  "category": "AI Policy",
+  "description": "India opened Semicon 2.0 applications for chip, machine and packaging units on 6 November, and set an AI application capital goal plus a GPU roadmap.",
+  "emoji": "🖥️",
+  "keywords": [
+    "Semicon 2.0",
+    "AI application capital",
+    "GPU chip India",
+    "semiconductor policy",
+    "MSME electronics"
+  ],
+  "tags": [
+    "#Semicon2",
+    "#AIInIndia",
+    "#SemiconductorMission",
+    "#MSME"
+  ],
+  "tldr": [
+    "India opened Semicon 2.0 applications for chip design support, machines and materials, and packaging units on 6 November.",
+    "IT minister Ashwini Vaishnaw said India wants to become the world's AI application capital, not just a model builder.",
+    "A homegrown GPU chip roadmap is being finalised, though no launch date has been given.",
+    "Twelve new electronics component projects were approved, with 7,127 direct jobs expected."
+  ],
+  "sections": [
+    {
+      "heading": "What happened on 6 November",
+      "paragraphs": [
+        "Union IT minister Ashwini Vaishnaw launched the Semicon 2.0 web application portal in New Delhi on 6 November, and applications are now open under three of the programme's six pillars. These cover machines and materials, setting up more fabs, and strengthening assembly, testing, marking and packaging units. The government said the portal has been built to accept only complete applications, so that what Vaishnaw called frivolous applicants stay out and only serious players take part.",
+        "Speaking at the same event, Vaishnaw said India is focused on becoming the application capital of the world, rather than only building models. He pointed to the use of AI inside enterprises and in sectors such as agriculture, healthcare and education as the area where Indian industry is putting its effort. He also said the global AI industry is going through significant turbulence and rapid change, and that more shifts are expected as the technology develops."
+      ]
+    },
+    {
+      "heading": "The GPU chip plan and what it changes",
+      "paragraphs": [
+        "The minister said the roadmap for an indigenous graphics processing unit chip is getting finalised. GPUs are the hardware that trains and runs large AI models, and almost all of it is imported today. A domestic GPU programme would not replace imports quickly, and no timeline or funding figure for it was announced, but it signals that the government now sees AI computing hardware as a strategic gap and not only a purchase decision.",
+        "Semicon 2.0 itself was approved by the Union Cabinet with a fiscal outlay of 1,27,500 crore rupees under the India Semiconductor Mission. It works through six pillars: chip design, machines and materials, more fabs, packaging, research and development, and talent development. The government has set a target of attracting at least three major equipment manufacturers and five chemicals and gases companies to India, which is where the country currently depends most heavily on imports."
+      ]
+    },
+    {
+      "heading": "What small firms actually get",
+      "paragraphs": [
+        "Along with the portal, MeitY approved 12 more applicants under the Electronics Components Manufacturing Scheme, with a projected investment of 7,503 crore rupees. These projects are expected to produce goods worth 39,045 crore rupees and create 7,127 direct jobs. They cover ten products, including multi-layer printed circuit boards, relays, heat sinks, specialty ceramics, copper foil and cathode active material, and are spread across Gujarat, Karnataka, Madhya Pradesh, Maharashtra, Punjab, Tamil Nadu and Uttar Pradesh.",
+        "With this round, 118 applications covering 34 products across 16 states have been approved under the scheme, with expected investment of 77,051 crore rupees and projected direct employment of 81,755 people. The government said nearly 50 per cent of the units approved so far are small and medium enterprises. For a small manufacturer in electronics, components, chemicals or testing, that matters more than the headline AI slogan, because the scheme is where the actual contracts, capital support and supply chain orders sit."
+      ]
+    },
+    {
+      "heading": "What it means for students and professionals",
+      "paragraphs": [
+        "The first phase of the semiconductor programme has already approved 12 projects across six states with cumulative investment of over 1.64 lakh crore rupees, and five of them have started commercial production as of October 2026. That pipeline is where entry-level process, testing, equipment maintenance and design jobs come from, and it is growing slowly but steadily.",
+        "On the skills side, 105 startups have been given access to electronic design automation tools, 24 are supported through funding, and 332 institutions have received these tools under the Chips to Startup programme, with about 70,000 students trained so far. Talent development is a separate pillar in Semicon 2.0. For a student choosing a specialisation or a working professional weighing a switch, the practical signal is that demand is shifting toward hardware-adjacent skills such as verification, packaging, yield analysis and equipment engineering, not only model building."
+      ]
+    },
+    {
+      "heading": "The careful reading",
+      "paragraphs": [
+        "Three caveats are worth keeping in mind. The GPU roadmap has been described as getting finalised, which means no approved plan, budget or date exists in public yet. Semicon 1.0 also shows how long this takes: of 12 approved projects, five are in commercial production after several years. And the minister's own comment about turbulence in the global AI industry is a reminder that chip and AI spending worldwide is being re-rated right now.",
+        "So the accurate summary is this: India has opened a funding window and set a direction, not delivered a finished chip industry. Applications under the three pillars are live, which means companies can act now. Students and workers should treat the announcement as a map of where government money is heading over the next few years, and watch the approvals that follow rather than the speeches."
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "q": "What is Semicon 2.0?",
+      "a": "It is the second phase of the India Semiconductor Mission, approved with an outlay of 1,27,500 crore rupees. It covers chip design, machines and materials, more fabs, packaging, research and talent."
+    },
+    {
+      "q": "Can a small business apply under Semicon 2.0?",
+      "a": "Yes. Applications are live for the machines and materials, fab and packaging pillars. The government says nearly half of the units approved under its electronics component scheme are MSMEs."
+    },
+    {
+      "q": "Will India make its own AI chips soon?",
+      "a": "Not soon. The minister said the indigenous GPU chip roadmap is being finalised, with no approved budget or timeline announced, so any made-in-India AI chip is years away."
+    }
+  ],
+  "image_prompt": "A young Indian engineer in a white cleanroom suit holding a silicon wafer with gloved hands inside a brightly lit semiconductor fabrication lab, colleagues working at machines in the soft background, wide 16:9 landscape, natural photorealistic light",
+  "source_name": "Press Information Bureau",
+  "source_url": "https://www.pib.gov.in/PressReleseDetailm.aspx?PRID=2333716&lang=2&reg=48"
+}
