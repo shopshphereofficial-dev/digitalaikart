@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<title>Sarvam Prism: A 44-Millisecond Model That Just Picks an Option — Digitalaikart</title>
+<meta name="description" content="Sarvam&#x27;s Prism returns a probability for each option instead of writing a paragraph. Here is what a decision model does and where Indian teams would use one.">
+<meta name="news_keywords" content="Sarvam Prism, decision models India, Sarvam 105B, AI ticket routing, open-weight decision model">
+<link rel="alternate" type="application/rss+xml" title="Digitalaikart Blog — AI News RSS Feed" href="https://digitalkartai.shop/feed.xml">
+<link rel="canonical" href="https://digitalkartai.shop/blog/2026-11-07-sarvam-prism-decision-model-explained.html">
+<meta property="og:title" content="Sarvam Prism: A 44-Millisecond Model That Just Picks an Option">
+<meta property="og:description" content="Sarvam&#x27;s Prism returns a probability for each option instead of writing a paragraph. Here is what a decision model does and where Indian teams would use one.">
+<meta property="og:type" content="article">
+<meta property="article:section" content="AI Products">
+<meta property="article:published_time" content="2026-11-07">
+<meta property="og:url" content="https://digitalkartai.shop/blog/2026-11-07-sarvam-prism-decision-model-explained.html">
+<meta property="og:site_name" content="Digitalaikart">
+<meta property="og:locale" content="en_IN">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Sarvam Prism: A 44-Millisecond Model That Just Picks an Option">
+<meta name="twitter:description" content="Sarvam&#x27;s Prism returns a probability for each option instead of writing a paragraph. Here is what a decision model does and where Indian teams would use one.">
+<meta property="og:image" content="https://digitalkartai.shop/assets/og/">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Sarvam Prism: A 44-Millisecond Model That Just Picks an Option — Digitalaikart blog cover">
+<meta name="twitter:image" content="https://digitalkartai.shop/assets/og/">
+<meta property="article:tag" content="Sarvam Prism"><meta property="article:tag" content="decision models India"><meta property="article:tag" content="Sarvam 105B"><meta property="article:tag" content="AI ticket routing"><meta property="article:tag" content="open-weight decision model">
+<link rel="stylesheet" href="/assets/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "NewsArticle",
+  "articleSection": "AI Products",
+  "headline": "Sarvam Prism: A 44-Millisecond Model That Just Picks an Option",
+  "description": "Sarvam's Prism returns a probability for each option instead of writing a paragraph. Here is what a decision model does and where Indian teams would use one.",
+  "image": ["https://digitalkartai.shop/assets/og/"],
+  "datePublished": "2026-11-07",
+  "publisher": {"@type": "Organization", "name": "Digitalaikart", "url": "https://digitalkartai.shop", "logo": {"@type": "ImageObject", "url": "https://digitalkartai.shop/assets/og-default.png", "width": 1200, "height": 630}},
+  "author": {"@type": "Organization", "name": "Digitalaikart"},
+  "mainEntityOfPage": "https://digitalkartai.shop/blog/2026-11-07-sarvam-prism-decision-model-explained.html",
+  "keywords": "Sarvam Prism, decision models India, Sarvam 105B, AI ticket routing, open-weight decision model"
+}
+</script>
+<style>
+.post-wrap{max-width:800px;margin:0 auto;padding:7rem 1.5rem 3rem}
+.post-svg{width:100%;height:auto;border-radius:14px;border:1px solid var(--border);display:block}
+.post-meta{display:flex;gap:0.8rem;flex-wrap:wrap;align-items:center;margin:1.2rem 0 0.3rem;font-size:0.75rem;color:var(--text-muted)}
+.post-meta .cat{background:rgba(245,197,66,0.12);border:1px solid rgba(245,197,66,0.3);color:var(--gold);padding:0.15rem 0.7rem;border-radius:999px;font-weight:700;font-size:0.68rem;letter-spacing:0.5px;text-transform:uppercase}
+.post-title{font-size:1.7rem;color:#0f172a;font-weight:800;line-height:1.25;margin-bottom:0.6rem}
+.tldr{background:var(--navy-card);border-left:3px solid var(--gold);border-radius:0 12px 12px 0;padding:1.2rem 1.4rem;margin:1.8rem 0}
+.tldr h4{color:var(--gold);font-size:0.8rem;letter-spacing:1px;text-transform:uppercase;margin-bottom:0.5rem}
+.tldr ul{list-style:none}
+.tldr li{font-size:0.85rem;color:#334155;padding:0.2rem 0 0.2rem 1.2rem;position:relative}
+.tldr li::before{content:'→';position:absolute;left:0;color:var(--gold)}
+.post-body h2{font-size:1.15rem;color:#0f172a;margin:2rem 0 0.6rem;padding-bottom:0.3rem;border-bottom:1px solid var(--border)}
+.post-body h2 .num{color:var(--gold);margin-right:0.5rem}
+.post-body p{font-size:0.88rem;color:var(--text-secondary);margin:0.7rem 0}
+.post-body strong{color:#0f172a}
+.post-body ul{margin:0.6rem 0 0.6rem 1.4rem}
+.post-body li{font-size:0.85rem;color:var(--text-secondary);margin-bottom:0.35rem}
+.post-body .faq h3{font-size:0.98rem;color:#0f172a;margin:1.5rem 0 0.3rem}
+.post-body .faq p{font-size:0.85rem;color:var(--text-secondary);margin:0.4rem 0 0.9rem}
+.product-box{background:var(--navy-card);border:1px solid rgba(245,197,66,0.35);border-radius:14px;padding:1.5rem;margin:2.5rem 0;position:relative;overflow:hidden}
+.product-box::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:var(--gold-gradient)}
+.product-box h4{color:var(--gold);font-size:0.72rem;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:0.5rem}
+.product-box h3{color:#0f172a;font-size:1.05rem;margin-bottom:0.4rem}
+.product-box p{font-size:0.82rem;color:var(--text-secondary);margin-bottom:1rem}
+.product-box a{display:inline-block;background:var(--gold-gradient);color:var(--navy);padding:0.6rem 1.4rem;border-radius:10px;font-weight:700;font-size:0.82rem}
+.engage{margin:2.5rem 0;padding:1.4rem;background:var(--navy-card);border:1px solid var(--border);border-radius:14px;text-align:center}
+.engage h4{font-size:0.95rem;color:#0f172a;margin-bottom:0.8rem}
+.engage-row{display:flex;gap:0.6rem;justify-content:center;flex-wrap:wrap}
+.engage-btn{display:inline-flex;align-items:center;gap:0.4rem;padding:0.45rem 1rem;border-radius:999px;border:1px solid var(--border);background:#ffffff;color:var(--text-secondary);font-size:0.75rem;font-weight:600;cursor:pointer;transition:border-color 0.2s,color 0.2s;text-decoration:none}
+.engage-btn:hover{border-color:var(--gold);color:var(--gold)}
+.like-btn.liked{border-color:var(--gold);color:var(--gold)}
+.comment-note{font-size:0.72rem;color:var(--text-muted);margin-top:0.9rem}
+.related{margin:2.5rem 0;padding:1.3rem 1.5rem;background:var(--navy-card);border:1px solid var(--border);border-radius:14px}
+.related h4{font-size:0.8rem;color:var(--gold);letter-spacing:1px;text-transform:uppercase;margin-bottom:0.6rem}
+.related ul{list-style:none}
+.related li{font-size:0.85rem;color:var(--text-secondary);padding:0.35rem 0}
+.related li a{color:var(--gold)}
+.comment-note a{color:var(--whatsapp)}
+.sources{margin:2.5rem 0;padding:1.3rem 1.5rem;background:var(--navy-card);border:1px solid var(--border);border-radius:14px}
+.sources h4{font-size:0.8rem;color:var(--gold);letter-spacing:1px;text-transform:uppercase;margin-bottom:0.6rem}
+.sources ul{list-style:none}
+.sources li{font-size:0.75rem;color:var(--text-secondary);padding:0.25rem 0}
+.sources a{color:var(--gold);word-break:break-all}
+.summary-box{background:rgba(245,197,66,0.06);border:1px dashed rgba(245,197,66,0.35);border-radius:12px;padding:1.2rem 1.4rem;margin:2rem 0}
+.summary-box h4{color:var(--gold);font-size:0.75rem;letter-spacing:1px;text-transform:uppercase;margin-bottom:0.4rem}
+.summary-box p{font-size:0.85rem;color:#334155}
+.tag-pills{display:flex;flex-wrap:wrap;gap:0.5rem;margin:0.3rem 0 1.2rem}
+.tag-pills span{font-size:0.68rem;font-weight:600;color:#475569;background:rgba(148,163,184,0.08);border:1px solid rgba(148,163,184,0.25);padding:0.18rem 0.7rem;border-radius:999px;letter-spacing:0.3px}
+.post-cover{width:100%;height:auto;border-radius:14px;border:1px solid var(--border);display:block;aspect-ratio:16/9;object-fit:cover}</style>
+</head>
+<body>
+<nav class="nav"><div class="nav-inner"><a href="/" class="nav-logo">Digitalaikart</a><div class="nav-links"><a href="/">Home</a><a href="/products/">Products</a><a href="/apps/">Apps</a><a href="/ai/">AI Assistant</a><a href="/blog/" class="active">Blog</a></div></div></nav>
+
+<div class="post-wrap">
+  <img class="post-cover" src="/assets/og/" alt="Sarvam Prism: A 44-Millisecond Model That Just Picks an Option" width="1200" height="630">
+
+  <div class="post-meta"><span class="cat">AI Products</span><span>November 07, 2026</span><span>4 min read</span><span>By Digitalaikart Editorial</span></div>
+  <h1 class="post-title">Sarvam Prism: A 44-Millisecond Model That Just Picks an Option</h1>
+  <div class="tag-pills" aria-label="Topics"><span>#AIProducts</span><span>#Sarvam</span><span>#IndiaAI</span><span>#EnterpriseAI</span></div>
+
+  <div class="tldr">
+    <h4>TL;DR</h4>
+    <ul><li>Sarvam AI released Prism on November 3, 2026, a decision model built on its Sarvam 105B foundation model that returns a probability for each option you give it.</li><li>Sarvam reports an average score of 71.8 across three indices with a median response time of 44 milliseconds on an Nvidia B200 GPU, the best average among the 25 decision models it tested under 100 milliseconds.</li><li>The weights are on Hugging Face under Apache 2.0 and need one FP8-capable GPU with about 120 GB of memory, while the hosted Decisions API is priced at 4 rupees per million input tokens and nothing for output.</li><li>All benchmark numbers are company-reported; the real test is how well the model is calibrated on your own past cases.</li></ul>
+  </div>
+
+  <div class="post-body">
+<h2><span class="num">01.</span>A model that answers with a number, not a paragraph</h2><p>On November 3, 2026, Bengaluru-based Sarvam AI released Sarvam Prism, a model that does not write prose. It takes three inputs, the state of a system, a question, and a list of possible options, and returns a probability for each option. There is no token-by-token generation and no explanation to parse afterwards. Sarvam calls Prism a System One decision model built on its Sarvam 105B foundation model, and frames it around the kind of repetitive judgement an enterprise makes thousands of times a day.</p><p>The mechanics are unusual. Each question becomes one sequence holding the state, the instructions and every option, followed by an answer marker. Options cannot see each other, and a small decision head reads the hidden state at the end of each option and turns it into one probability per option. Sarvam trained the model on its 105B-10B mixture-of-experts base, arguing that this class of model improves with scale while keeping inference cheap.</p>
+<h2><span class="num">02.</span>The 44-millisecond claim, and how to read it</h2><p>Sarvam reports an average score of 71.8 across three evaluation indices, with a median response time of 44 milliseconds on an Nvidia B200 GPU. The company ran Prism and 24 other decision models through the same three indices on the same hardware, and says Prism had the highest average score of any model it tested that responded in under 100 milliseconds. Faster models in its table, such as OneJev-9B at 10 milliseconds, scored lower. Higher-scoring models such as mammoth-1 at 75.2 took 284 milliseconds. The median is worth pairing with the tail: Sarvam&#x27;s model card puts the 95th percentile at 420 milliseconds, measured on 1,000 random requests sent one at a time.</p><p>Two claims matter more to a buyer than the headline score. The first is calibration. On answers given with at least 90 per cent confidence, Sarvam says Prism expects 3.3 per cent to be wrong and gets 2.2 per cent wrong across 37 public benchmarks, and expects 5.4 per cent and gets 4.4 per cent in Indian languages, where it scored 82.5 on that index. The second is order invariance. If a model&#x27;s answer changes when you shuffle the options, routing logic built on it is unreliable, so Prism sorts options into a fixed order before scoring and returns probabilities under your own option names. Inc42 notes that all of this is company-reported, and that independent testing on comparable workloads will decide how it holds up in production.</p>
+<h2><span class="num">03.</span>Where an Indian team would actually use it</h2><p>The obvious fit is anything that is a sort by probability rather than a conversation. Sarvam lists routing, triage, moderation, judging whether an AI agent finished a task correctly, security checks such as prompt-injection detection, and scoring. A general-purpose model can do each of those jobs, but it does them by generating text that another system has to read, which adds latency and cost and gives a different answer shape every time. Sarvam&#x27;s own documentation reports 78.5 per cent accuracy on judging recorded agent runs and 89.0 per cent on a security benchmark that includes prompt-injection and jailbreak checks.</p><p>The commercial details are unusually simple. Through Sarvam&#x27;s Decisions API, Prism is priced at 4 rupees per million input tokens and nothing for output, because it produces no output tokens. Alternatively the weights are on Hugging Face under the Apache 2.0 licence, at roughly 106 GB, and run in FP8 on one GPU with about 120 GB of memory, such as a B200 or H200. That is server-class hardware rather than a laptop, so most teams will start on the API and only move to self-hosting when the data cannot leave their own machines.</p>
+<h2><span class="num">04.</span>India&#x27;s decision-model race is already crowded</h2><p>Sarvam did not invent the category. TypeSafe created it and named its first model Jev after Kahneman&#x27;s System One thinking, and Microsoft and Perplexity now ship decision models of their own. What is new is how many Indian teams are in it. Kerala-based ConvAI Innovations built Laya, an open-weight decision model meant to run locally on laptops and phones, and Hyderabad&#x27;s Sthanika AI, part of PurpleTalk&#x27;s research lab, builds the Sieve family of open-weight models for intent detection and AI-agent tool selection.</p><p>The pattern is telling. Instead of competing with frontier labs on general-purpose chat, Indian teams are picking narrow, measurable tasks where being small, fast and runnable inside the country counts for something. Prism takes that bet up a level by starting from a 105B base and treating Indian-language performance as a selling point rather than an afterthought.</p>
+<h2><span class="num">05.</span>What to test before you wire it in</h2><p>A decision model is only as good as its calibration on your data, and calibration does not transfer automatically from a public benchmark. Before putting Prism behind a workflow, run a few thousand of your own past cases through it, check how often the top option was right, and check whether the probability it gave matched the error rate it actually produced. A model that says 90 per cent and is right 70 per cent of the time is worse than useless for automation, because it hides its own mistakes.</p><p>Then decide what happens when confidence is low. The practical pattern is three-way: act automatically on high confidence, queue for human review in the middle, and reject below a floor. Test on the languages and spellings your customers actually use as well. Prism&#x27;s documented coverage is English, ten Indian languages and Hinglish, which is more than most models offer, but the language mix in your own tickets is the only test that settles whether it handles yours.</p>
+    <div class="faq">
+      <h2>Frequently asked questions</h2>
+<p><strong>What is a decision model?</strong><br>A decision model is trained to pick between options rather than to generate text. You give it the current state, a question and a fixed set of possible answers, and it returns a probability for each one. That makes it cheap and fast to wire into software that needs a sort, such as routing a support ticket to the right team.</p><p><strong>Can I run Sarvam Prism on my own servers?</strong><br>Yes. Sarvam released the weights on Hugging Face under the Apache 2.0 licence, about 106 GB of files. The catch is hardware: the model needs one FP8-capable GPU with roughly 120 GB of memory, such as a B200 or H200. Teams without one can use the hosted Decisions API instead, at 4 rupees per million input tokens.</p><p><strong>Does Prism replace a general-purpose model like GPT or Gemini?</strong><br>No. It only returns probabilities for options you supply, so it cannot write an email or answer an open question. Sarvam positions it as one component in a stack, used alongside a generative model for tasks like routing, document triage, prompt-injection detection and checking whether an AI agent finished its work.</p>
+    </div>
+  </div>
+
+  <div class="engage">
+    <h4>Found this useful? Share it</h4>
+    <div class="engage-row">
+      <a class="engage-btn" href="https://wa.me/?text=Sarvam%20Prism%3A%20A%2044-Millisecond%20Model%20That%20Just%20Picks%20an%20Option%20https%3A//digitalkartai.shop/blog/2026-11-07-sarvam-prism-decision-model-explained.html" target="_blank" rel="noopener">WhatsApp</a>
+      <a class="engage-btn" href="https://twitter.com/intent/tweet?text=Sarvam%20Prism%3A%20A%2044-Millisecond%20Model%20That%20Just%20Picks%20an%20Option&url=https%3A//digitalkartai.shop/blog/2026-11-07-sarvam-prism-decision-model-explained.html" target="_blank" rel="noopener">X / Twitter</a>
+      <a class="engage-btn" href="/products/">Explore AI guides</a>
+    </div>
+  </div>
+
+  <div class="sources">
+    <h4>Source</h4>
+    <ul>
+      <li><strong>Sarvam AI</strong> — <a href="https://www.sarvam.ai/blogs/sarvam-prism" target="_blank" rel="noopener nofollow">original report</a></li>
+      <li>Published: November 07, 2026 · Compiled by Digitalaikart</li>
+    </ul>
+  </div>
+
+  <div class="related">
+    <h4>More AI news</h4>
+    <ul>
+      <li><a href="/blog/gpt-6-astra-what-you-need-to-know.html">GPT-6 Astra Explained: 10 Things AI Beginners Should Know</a></li>
+      <li><a href="/blog/2026-11-06-leap-300-ai-rural-women-entrepreneurs.html">AI advisor helps 5 lakh rural women run small businesses</a></li>
+      <li><a href="/blog/2026-11-06-india-stocks-ai-hedge-global-markets.html">India Emerges as a Potential AI Hedge for Global Investors</a></li>
+      <li><a href="/blog/2026-11-06-ai-in-your-pocket-everyday-life-india.html">AI in Your Pocket: Changing Everyday Life in India</a></li>
+    </ul>
+  </div>
+</div>
+
+<footer><div class="footer-links"><a href="/">Home</a><a href="/products/">Products</a><a href="/blog/">Blog</a><a href="/privacy-policy.html">Privacy Policy</a><a href="/refund-policy.html">Refund Policy</a><a href="/terms.html">Terms &amp; Conditions</a></div><p><strong>Digitalaikart</strong> — Premium AI Digital Products</p><p style="margin-top:0.5rem;color:#334155">&copy; 2026 Digitalaikart. All rights reserved.</p></footer>
+<script src="/assets/effects.js"></script>
+</body>
+</html>
