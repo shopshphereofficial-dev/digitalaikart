@@ -1006,6 +1006,40 @@
         "Runs offline from a folder of plain HTML, CSS and JavaScript — no account, no server, no analytics, nothing uploaded",
         "Includes README.html instructions, START-HERE.txt quick start and a plain-English licence"
       ]
+    },
+    {
+      "date": "2026-11-08",
+      "name": "The Indian Blood Pressure Playbook 2026-27",
+      "slug": "blood-pressure-playbook-india-2026-27",
+      "category": "Health Playbook / Chronic Condition Self-Management",
+      "type": "ebook",
+      "price": "₹199",
+      "mrp": "₹999",
+      "url": "https://digitalkartai.shop/products/blood-pressure-playbook-india-2026-27/",
+      "download": "https://digitalkartai.shop/downloads/blood-pressure-playbook-india-2026-27.pdf",
+      "payment_link": "https://rzp.io/rzp/WJDZw4Z",
+      "status": "published",
+      "features": [
+        "42-page premium PDF, 18 chapters, 9 printable worksheets",
+        "The seven-day home BP audit: validated upper-arm device, cuff-size table, 2-3 readings a minute apart, day one discarded",
+        "Home threshold 135/85 against the clinic 140/90, with white-coat and masked patterns in a table",
+        "India's numbers: 35.5% prevalence (ICMR-INDIAB), 15-17.5% control rate, 42.4 crore screened under NP-NCD",
+        "The Indian hidden-salt table: pickle, papad, namkeen, bread, sauces, instant noodles, restaurant gravy",
+        "Sodium-to-salt arithmetic (mg x 2.5) and the four-week salt taper",
+        "Potassium and DASH-style plate changes with the kidney-disease warning",
+        "Walking prescription, four-week build-up and the isometric handgrip protocol",
+        "Weight and South Asian cut-offs: BMI 23/25, waist 90 cm men and 80 cm women",
+        "STOP-BANG sleep-apnoea screen, alcohol, tobacco and the painkillers that raise BP",
+        "Five drug families, side effects with fixes, single-pill combinations, adherence",
+        "Jan Aushadhi prices against branded strips, worked as monthly cost",
+        "Eight clinic tests with Indian costs and eight questions to ask",
+        "Red flags, hypertensive urgency vs emergency, F.A.S.T. stroke test, wallet card",
+        "Pregnancy, older adults, diabetes, chronic kidney disease, young-onset hypertension",
+        "NP-NCD screening, PM-JAY scope, eSanjeevani, ABHA, insurance disclosure",
+        "Eight-week plan with realistic combined 10-15 mmHg",
+        "Nine worksheets: 7-day log, 30-day trend, salt audit, swap card, medicine card, doctor summary, wallet card, family risk sheet, tracker",
+        "Source and verification log dated November 2026"
+      ]
     }
   ]
 }
