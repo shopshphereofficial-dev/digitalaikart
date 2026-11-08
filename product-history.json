@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-07",
+  "updated": "2026-11-08",
   "note": "Append-only log of products published to digitalkartai.shop. Newest last. Never delete or modify existing records.",
   "history": [
     {
@@ -956,8 +956,7 @@
         "Runs offline from a folder: no account, no server, no analytics, no external fonts or images",
         "Includes README.html instructions, labelled sample CSV and save file, and a plain-English licence"
       ]
-    }
-,
+    },
     {
       "date": "2026-11-07",
       "name": "The EPF Claim Playbook 2026-27",
@@ -977,6 +976,35 @@
         "The 12-minute account audit and the 9 rejection fixes",
         "EPS pension maths, EDLI cover and tax on early withdrawal",
         "Printable checklist, document matrix and 3 letter templates"
+      ]
+    },
+    {
+      "date": "2026-11-08",
+      "name": "IDFrame — Passport & Visa Photo Sheet Maker",
+      "slug": "idframe-passport-visa-photo-maker",
+      "category": "Offline Web App / Passport, Visa & ID Photo Sheet Printing",
+      "type": "non-ebook",
+      "price": "₹199",
+      "mrp": "₹999",
+      "url": "https://digitalkartai.shop/products/idframe-passport-visa-photo-maker/",
+      "download": "https://digitalkartai.shop/downloads/idframe-passport-visa-photo-maker.zip",
+      "payment_link": "https://rzp.io/rzp/8urx1mwN",
+      "status": "published",
+      "features": [
+        "Eight size presets in exact millimetres: Indian passport 51 × 51 mm, PAN/Aadhaar/exam forms 35 × 45 mm, stamp size 20 × 25 mm, US visa 51 × 51 mm, Schengen, UK and Canada 35 × 45 mm, plus a custom size",
+        "Head-height band, chin line, eye line and 1.5 mm keep-clear edge drawn over the photo as crop guides — on screen only, never in the export",
+        "300 DPI rendering throughout; every export and every printed sheet is generated at the pixel size that matches the millimetres",
+        "Print page generated at the exact paper size with zero margins, so the printer cannot silently rescale the photos",
+        "Five papers: A4, A5, 4 × 6 inch, 5 × 7 inch and US Letter, with adjustable margin and gap",
+        "Sheet maths done for you — maximum fit, centred grid, or a fixed number of copies for one application",
+        "0.15 mm cut lines around each photo, switchable off for a clean sheet",
+        "Single-photo JPG export at the exact pixel size with a quality slider and a live file-size read-out, plus a lossless PNG option",
+        "Background check that samples the left and right edges at head height and reports whether the background looks bright and even",
+        "Resolution check that compares the pixels the crop uses with the pixels the print needs, and warns before a soft print",
+        "Drag, scroll-zoom and slider nudges for cropping, with offsets clamped so the frame is always fully covered",
+        "A drawn example portrait so the guides can be tried without a photograph; it is labelled as an example and never used in a real export",
+        "Runs offline from a folder of plain HTML, CSS and JavaScript — no account, no server, no analytics, nothing uploaded",
+        "Includes README.html instructions, START-HERE.txt quick start and a plain-English licence"
       ]
     }
   ]
