@@ -1,0 +1,69 @@
+{
+  "title": "IndiaAI Fellowship Closes 30 November: Up to Rs 2 Lakh for Students",
+  "slug": "indiaai-fellowship-2026-27-deadline-30-november",
+  "category": "AI India",
+  "description": "The IndiaAI Fellowship 2026-27 closes on 30 November. UG students get up to Rs 1 lakh, PG up to Rs 2 lakh and PhD scholars up to Rs 80,000 a month.",
+  "emoji": "🎓",
+  "keywords": ["IndiaAI Fellowship", "AI research funding", "MeitY IndiaAI Mission", "student fellowship India", "AI skilling"],
+  "tags": ["#IndiaAI", "#AIFellowship", "#AIResearch", "#StudentOpportunity"],
+  "tldr": [
+    "Applications for the IndiaAI Fellowship 2026-27 close on 30 November 2026.",
+    "Undergraduate students can get up to Rs 1 lakh and postgraduate students up to Rs 2 lakh for AI projects.",
+    "PhD scholars get a monthly stipend of Rs 70,000 to Rs 80,000 plus a yearly project grant of Rs 2 lakh.",
+    "Students from any discipline can apply, as long as the project is about artificial intelligence."
+  ],
+  "sections": [
+    {
+      "heading": "A national fellowship for AI projects",
+      "paragraphs": [
+        "The IndiaAI Fellowship, run under the IndiaAI Mission of the Ministry of Electronics and Information Technology, is taking applications for the 2026-27 academic year. The window opened on 16 October 2026 and closes on 30 November 2026. Applications are accepted only through the official portal at fellowship.indiaai.gov.in, and there is no offline route.",
+        "The fellowship sits under the IndiaAI FutureSkills programme, which is the government's effort to build a research pipeline inside Indian campuses rather than only buying AI talent from outside. The idea is simple: if a student already has a workable idea for an AI or machine learning project, the government will pay for the compute, data, travel and other costs that usually kill such projects before they start."
+      ]
+    },
+    {
+      "heading": "How much money is on the table",
+      "paragraphs": [
+        "Undergraduate and integrated dual degree students can receive up to Rs 1 lakh for their project. Postgraduate students can receive up to Rs 2 lakh, paid in semester-wise instalments. For PhD scholars, the support is larger: a monthly stipend of Rs 70,000 in the first two years, Rs 75,000 in the third year and Rs 80,000 in the fourth and fifth years, along with an annual project grant of Rs 2 lakh.",
+        "There is a separate benefit for students who get published. Fellowship holders can claim up to Rs 1 lakh in one-time financial support to present an accepted research paper at a reputed international AI conference. For a student who has been self-funding conference travel, or skipping it altogether, that clause matters as much as the main grant."
+      ]
+    },
+    {
+      "heading": "Who can actually apply",
+      "paragraphs": [
+        "The fellowship is open to Indian nationals studying full time. Part-time students are not eligible. Any academic discipline qualifies, including engineering, science, medicine, law, commerce, business and the liberal arts, provided the proposed project is centred on artificial intelligence or machine learning.",
+        "The stage rules are specific. Undergraduate students must be in their final year, meaning the fifth semester of a three-year course, the seventh semester of a four-year course or the ninth semester of a five-year integrated dual degree. Postgraduate students can apply in their first three semesters. The PhD track is for first-year full-time scholars at institutions recognised on the IndiaAI portal. UG and PG applicants also need at least 70 percent marks or a 7.0 CGPA, and must have completed at least three full-time AI-related courses."
+      ]
+    },
+    {
+      "heading": "The application has its own rules",
+      "paragraphs": [
+        "Everything runs through the portal, and the portal logs you in through DigiLocker, from which it reads your APAAR ID. A student without an APAAR ID needs to sort that out with the college office first. After that, the form asks for branch, programme, roll number, CGPA, the three AI courses, bank details with a passbook page or cancelled cheque, and a project description of up to 500 words covering the objective, method and expected impact, plus a domain such as agriculture or cybersecurity.",
+        "The endorsement letter is where many applications get stuck. It has to be signed and stamped by the project guide, head of department or head of institution, and every detail in it, from the CGPA to the project title to the guide's name, must match the online form. The guide's contact has to be an official college email address, not a personal Gmail or Yahoo account. Documents must be uploaded on the portal, not emailed. Once submitted, an application cannot be edited by the student, and a send-back does not extend the deadline. Applications are also reviewed as they arrive, so an early submission is safer than one sent on 30 November."
+      ]
+    },
+    {
+      "heading": "What this means for Indian students",
+      "paragraphs": [
+        "For most Indian students, the barrier to serious AI work is not talent or ideas. It is access to GPUs, clean datasets, paid cloud credits and the money to attend a conference. A department lab often runs on a shared machine and a small grant that has already been spent. A fellowship that pays for the project itself changes what a final-year student or a first-year PhD scholar can attempt, and it does so without the student first needing a venture capital pitch or a corporate sponsor.",
+        "It also fits a wider pattern in Indian AI policy right now. The IndiaAI Mission has released homegrown models, states are running their own skilling programmes, and the central government keeps talking about building applications rather than only consuming them. A fellowship is the bottom of that pipeline, and the number of funded students in the next two years will show whether the pipeline is real. Students who want in have until 30 November 2026 to apply, and the work starts with a guide, an APAAR ID and a project idea that fits a real problem."
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "q": "What is the last date for the IndiaAI Fellowship 2026-27?",
+      "a": "30 November 2026. Applications are accepted only on fellowship.indiaai.gov.in, and they are reviewed as they come in, so submitting early is safer than waiting for the final week."
+    },
+    {
+      "q": "Can students from non-technical streams apply?",
+      "a": "Yes. Any discipline is allowed, including law, commerce and the arts, as long as the project is about artificial intelligence. UG and PG applicants still need 70 percent or a 7.0 CGPA and three full-time AI courses."
+    },
+    {
+      "q": "How much funding does the fellowship give?",
+      "a": "Up to Rs 1 lakh for undergraduate and integrated dual degree projects, up to Rs 2 lakh for postgraduate projects, and for PhD scholars Rs 70,000 to Rs 80,000 per month plus a Rs 2 lakh annual project grant."
+    }
+  ],
+  "image_prompt": "A photorealistic wide 16:9 photo of an Indian university student in a plain kurta sitting at a shared desk in a modest campus lab, laptop open with code on screen, a notebook with a hand-drawn project diagram beside it, a faculty guide standing nearby and pointing at the screen, warm afternoon light through an open window, other students working in the blurred background.",
+  "source_name": "The Week",
+  "source_url": "https://www.theweek.in/news/education/2026/11/06/indiaai-fellowship-are-you-eligible-ug-pg-phd-students-can-apply-before-nov-30.html"
+}
