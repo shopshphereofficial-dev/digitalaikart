@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-08",
+  "updated": "2026-11-09",
   "note": "Append-only log of products published to digitalkartai.shop. Newest last. Never delete or modify existing records.",
   "history": [
     {
@@ -1039,6 +1039,35 @@
         "Eight-week plan with realistic combined 10-15 mmHg",
         "Nine worksheets: 7-day log, 30-day trend, salt audit, swap card, medicine card, doctor summary, wallet card, family risk sheet, tracker",
         "Source and verification log dated November 2026"
+      ]
+    },
+    {
+      "date": "2026-11-09",
+      "name": "DutyRota — Staff Shift & Leave Roster Planner (Offline Web App)",
+      "slug": "dutyrota-shift-roster-planner",
+      "category": "Software Tool / Offline Web App (roster planner)",
+      "type": "non-ebook",
+      "price": "₹199",
+      "mrp": "₹1,299",
+      "url": "https://digitalkartai.shop/products/dutyrota-shift-roster-planner/",
+      "download": "https://digitalkartai.shop/downloads/dutyrota-shift-roster-planner.zip",
+      "payment_link": "https://rzp.io/rzp/Ol7aQJTD",
+      "status": "published",
+      "features": [
+        "Offline single-file HTML/JS roster planner (no install, no sign-up)",
+        "Staff master: name, role, weekly-off weekday, weekly shift cap, preferred shift",
+        "Shift master: code, start/end (overnight supported), break minutes, weekday and weekend headcount",
+        "One-click month generation applying pinned cells, leave, holidays, weekly offs, consecutive-day limit and weekly cap in a fixed order",
+        "Fair shift rotation by how often each person has already had each shift type",
+        "Coverage line under every day (filled/required per shift) plus per-shift month totals",
+        "Checks panel: uncovered shifts, duplicate names, invalid times, limit breaches, unassigned days",
+        "Click to cycle a cell through shift / Off / Leave / Holiday / blank; right-click to step back; edits pinned",
+        "Leave ranges per person and business holidays, with a closed-holiday switch",
+        "A4 landscape printout with business name, legend, grid, coverage line and sign-off blocks",
+        "WhatsApp text export, one line per day, one press to copy",
+        "CSV export (one row per person per day) and hours/off/leave totals per person",
+        "JSON backup and restore; data stored in the browser only, nothing uploaded",
+        "Worked example month, full manual, quick start, sample printout and licence in the ZIP"
       ]
     }
   ]
