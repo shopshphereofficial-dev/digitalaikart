@@ -1069,6 +1069,33 @@
         "JSON backup and restore; data stored in the browser only, nothing uploaded",
         "Worked example month, full manual, quick start, sample printout and licence in the ZIP"
       ]
+    },
+    {
+      "date": "2026-11-09",
+      "name": "The Indian Property Title Check Playbook 2026-27",
+      "slug": "property-title-check-playbook-2026-27",
+      "category": "Playbook / Property Title Verification, Land Records & RERA",
+      "type": "ebook",
+      "price": "₹199",
+      "mrp": "₹999",
+      "url": "https://digitalkartai.shop/products/property-title-check-playbook-2026-27/",
+      "download": "https://digitalkartai.shop/downloads/property-title-check-playbook-2026-27.pdf",
+      "payment_link": "https://rzp.io/rzp/V0OQGRDc",
+      "status": "published",
+      "features": [
+        "59-page premium PDF playbook, 36 chapters across eight parts",
+        "The twelve documents that decide a title, and the one question each answers",
+        "30-minute online verification run across registration, RERA, revenue, e-Courts, CERSAI and IBBI",
+        "State portal table: Karnataka Kaveri 2.0 from 1 April 2004 with Form 15/16/17, Telangana from 1 January 1983, Maharashtra free Index-II from 1985, plus AP, TN, Kerala, UP, Odisha, Bihar, Haryana, Punjab, West Bengal, Gujarat, Rajasthan, MP",
+        "Every encumbrance certificate entry decoded, and the nil-EC trap explained",
+        "RERA Sections 3, 4, 9, 11, 12, 13, 14, 18, 19 and 31 explained in plain English",
+        "Supreme Court doctrine from Suraj Lamp 2012 through the 2025 and 2026 restatements, including Parsvnath on occupancy certificates",
+        "Nine agreement clauses, milestone payment structure and a 5-10 per cent retention until mutation",
+        "Twenty-four red flags and seven forgeries with the check that catches each",
+        "Registration day checklist, mutation, RERA remedies and the e-Jagriti consumer route with fee slabs",
+        "Eight printable worksheets, from the twelve-document checklist to the red-flag score sheet",
+        "Full source appendix with dates, every fact checked November 2026"
+      ]
     }
   ]
 }
