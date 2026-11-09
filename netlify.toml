@@ -1,6 +1,13 @@
 [build]
   publish = "."
 
+# IDFrame was renamed to MilliPhoto before launch. Preserve any old links.
+[[redirects]]
+  from = "/products/idframe-passport-visa-photo-maker/"
+  to = "/products/milliphoto-passport-visa-photo-sheet-maker/"
+  status = 301
+  force = true
+
 # HTML is always revalidated so crawlers and visitors get the current page
 # straight after a deploy, never a stale cached copy.
 [[headers]]
