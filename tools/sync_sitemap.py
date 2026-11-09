@@ -17,10 +17,10 @@ SKIP_FILES = ('/404.html', '/thank-you.html')
 
 def has_noindex(html):
     """Recognise robots meta tags regardless of attribute order."""
-    for tag in re.findall(r'<meta\\b[^>]*>', html, flags=re.I | re.S):
-        name = re.search(r'\\bname\\s*=\\s*["\\\']robots["\\\']', tag, flags=re.I)
-        content = re.search(r'\\bcontent\\s*=\\s*["\\\']([^"\\\']*)["\\\']', tag, flags=re.I)
-        if name and content and re.search(r'\\bnoindex\\b', content.group(1), flags=re.I):
+    for tag in re.findall(r'<meta\b[^>]*>', html, flags=re.I | re.S):
+        name = re.search(r'\bname\s*=\s*["\']robots["\']', tag, flags=re.I)
+        content = re.search(r'\bcontent\s*=\s*["\']([^"\']*)["\']', tag, flags=re.I)
+        if name and content and re.search(r'\bnoindex\b', content.group(1), flags=re.I):
             return True
     return False
 
@@ -61,14 +61,14 @@ def main():
 
     def keep_indexable_url(match):
         block = match.group(0)
-        loc = re.search(r'<loc>\\s*' + re.escape(BASE) + r'([^<]*)</loc>', block)
+        loc = re.search(r'<loc>\s*' + re.escape(BASE) + r'([^<]*)</loc>', block)
         if loc and loc.group(1) not in allowed:
             removed.append(loc.group(1))
             return ''
         return block
 
-    # Remove stale thank-you/noindex URLs before adding the current page set.
-    xml = re.sub(r'<url\\b[^>]*>.*?</url>', keep_indexable_url, xml, flags=re.S)
+    # Remove stale, missing and noindex URLs before adding the current page set.
+    xml = re.sub(r'<url\b[^>]*>.*?</url>', keep_indexable_url, xml, flags=re.S)
     existing = set(re.findall(r'<loc>' + re.escape(BASE) + r'([^<]*)</loc>', xml))
     missing = [path for path in sorted(allowed) if path not in existing]
 
@@ -88,7 +88,7 @@ def main():
         )
 
     if add:
-        xml = xml.replace('</urlset>', '\\n'.join(add) + '\\n</urlset>')
+        xml = xml.replace('</urlset>', '\n'.join(add) + '\n</urlset>')
 
     with open(SITEMAP, 'w', encoding='utf-8') as handle:
         handle.write(xml)
