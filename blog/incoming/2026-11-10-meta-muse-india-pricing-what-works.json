@@ -1,0 +1,83 @@
+{
+  "date": "2026-11-10",
+  "title": "Meta's Muse AI Agent Has India Prices: Rs 1,799 and Rs 8,999",
+  "slug": "meta-muse-india-pricing-what-works",
+  "category": "AI Products",
+  "description": "Meta has put rupee prices on its Muse AI agent before an India launch. What the two plans cost, what works here today, and what still does not.",
+  "emoji": "💬",
+  "keywords": [
+    "Meta Muse India price",
+    "Muse AI agent subscription",
+    "Meta Muse Power plan",
+    "AI agents India 2026",
+    "Muse WhatsApp assistant"
+  ],
+  "tags": [
+    "#AIProducts",
+    "#Meta",
+    "#AIAgents",
+    "#IndiaAI"
+  ],
+  "tldr": [
+    "The Hindu found Meta listing Muse at Rs 1,799 for the Power tier and Rs 8,999 for the Maximum tier in India, with slightly higher charges through Google Play and Apple billing.",
+    "Muse is not launched in India yet; Indian users are on a waitlist, and the report does not say whether the prices are monthly or annual, or whether they are final.",
+    "Parts of Muse already reach India through the web and WhatsApp, but it cannot make card payments on a user's behalf because the payment integrations it needs do not operate in India.",
+    "The practical advice for now is to join the waitlist rather than buy through a VPN, and to treat both prices as a signal of where AI agent subscriptions are landing in rupees."
+  ],
+  "sections": [
+    {
+      "heading": "Rupee prices, before the product arrives",
+      "paragraphs": [
+        "Meta has set rupee-denominated subscription prices for Muse, its personal AI agent, even though the service has not launched in India. The Hindu reported on 9 November 2026 that Muse is listed at Rs 1,799 for its Power tier and Rs 8,999 for its Maximum tier, with marginally higher charges for subscriptions bought through Google Play or Apple's billing systems. The report said the pricing, which is broadly in line with US rates, had not been reported before.",
+        "Two things are still open. It is unclear whether these prices are final or could change when Muse launches in India, and Meta did not respond to The Hindu's queries. Gadgets360, summarising the same report, noted that it does not specify whether the figures are monthly or yearly. A Rs 1,799 monthly bill and a Rs 1,799 annual bill are different products for an Indian household. In the US, Meta sells both tiers on monthly terms only, at 20 dollars and 100 dollars."
+      ]
+    },
+    {
+      "heading": "What you are actually paying for",
+      "paragraphs": [
+        "Muse is not a chatbot in a browser tab. Meta introduced it at Meta Connect 2026 and launched it in September, and it lives inside Meta's own products, WhatsApp included, where it can draft and send emails, book travel and restaurant reservations, fill out forms online, and work through multi-step tasks in the background, according to Gadgets360. It is currently available in the US on iOS, Android and the web.",
+        "The two tiers differ mainly in how much work they allow. Meta's own documentation, cited by Gadgets360, says the Power tier includes 500 million Muse tokens a week and the Maximum plan 3 billion tokens a week. Muse competes with OpenAI's Dots, Anthropic's Claude Duet, xAI's Grok Bot and Instinct. Separately, India Today reported on 10 November that Muse now also runs on smartwatches, on the Apple Watch and on Wear OS devices, with the iPhone app needing iOS 18.0 or later and the Apple Watch companion needing watchOS 9.0 or later. That rollout is limited to the US, Canada, Singapore and Japan for now."
+      ]
+    },
+    {
+      "heading": "The India gap: a waitlist, a VPN and one thing that breaks",
+      "paragraphs": [
+        "Muse currently puts Indian users on a waitlist. The Hindu found that people can register through a VPN connected to a supported market, and that the accounts keep working in India after the VPN is switched off. Muse's web and WhatsApp interfaces are reachable from India, and Indian-issued cards can be used to pay if the card's billing territory is set to a supported market.",
+        "The limitation is more interesting than the workaround. Muse will not accept a user's authorisation to make card payments on their behalf, because that capability depends on integrations with payment processors that do not operate in India, The Hindu reported. An executive at a large Indian payment gateway, which has worked on agentic payments, denied last month that the company was working with Muse's developers to integrate it. So the most useful part of a personal agent, paying for the booking it just found, is precisely the part that does not work here yet. An agent that can plan a trip but cannot pay for it is a planner, not an agent."
+      ]
+    },
+    {
+      "heading": "Is it worth the money for an Indian user?",
+      "paragraphs": [
+        "For most people, not yet, for a simple reason: there is nothing to buy. Meta has not opened Muse in India, and the free tier with generous usage limits that The Hindu describes exists in the US, Canada, Japan and Singapore. Paying through a VPN to use a service that cannot complete payments on your behalf, on pricing that may be revised at launch, buys you a demo rather than a tool.",
+        "The prices are still worth noting as a market signal. At Rs 1,799 a month, Muse would sit in the same bracket as the paid tiers of the big global assistants; at Rs 8,999 a month, the Maximum plan would cost more than four times as much. Indian buyers have shown they will pay for tools that save real time, but the value case for an agent rests on it finishing tasks end to end, including the payment step that is missing.",
+        "There is a second, quieter signal in the same week. Meta also released Muse Ember on 10 November, a smaller model it says is built for token-heavy agent work such as routing, extraction and long document parsing, priced at 0.10 dollars per million input tokens and 0.50 dollars per million output tokens, as reported by India Today. Cheaper models for the repetitive steps are what make a token-heavy subscription like Muse's Maximum tier possible."
+      ]
+    },
+    {
+      "heading": "What to watch before you spend",
+      "paragraphs": [
+        "Three things will decide whether these prices mean anything. The first is an official India launch date, and whether Meta keeps the rupee pricing or revises it. The second is the billing period: a monthly Rs 1,799 is a considered purchase for a professional, an annual Rs 1,799 is an impulse buy, and the difference changes who the product is for.",
+        "The third is agentic payments. India's payment stack is unusually well suited to it, with UPI, mandates and a large base of small merchants, but an agent needs a partner willing to carry the liability for a transaction it initiates. Until a processor signs on, an Indian Muse user will be doing the last step by hand. Join the waitlist, keep the free tier in mind, and read the launch terms rather than the leaked ones. The rupee price is real; the rupee product is not here yet."
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "q": "How much will Meta Muse cost in India?",
+      "a": "The Hindu reported on 9 November 2026 that Meta has listed Muse at Rs 1,799 for the Power tier and Rs 8,999 for the Maximum tier in India, with slightly higher charges if you subscribe through Google Play or Apple's billing. It is not yet clear whether those prices are monthly or annual, or whether they are final, because Meta has not launched Muse in India."
+    },
+    {
+      "q": "Can I use Muse in India right now?",
+      "a": "Not officially. Indian users are placed on a waitlist. The Hindu found that people can register through a VPN set to a supported market and keep using the account in India afterwards, and that the web and WhatsApp interfaces are reachable here. But Muse cannot make card payments on your behalf in India, because the payment processor integrations it relies on do not operate in the country."
+    },
+    {
+      "q": "What do the Power and Maximum plans include?",
+      "a": "According to Meta's documentation cited by Gadgets360, the Power tier includes 500 million Muse tokens a week and the Maximum plan 3 billion tokens a week, with extra tokens available for purchase. In the US both are sold on monthly terms at 20 dollars and 100 dollars respectively, and Muse is available there on iOS, Android and the web."
+    }
+  ],
+  "image_prompt": "Photorealistic wide 16:9 editorial photo of a young Indian professional at a small cafe table in Mumbai, holding a smartphone showing a chat assistant interface with soft blue-green bubbles, a notebook and a cup of chai beside her, late morning light, blurred street and auto-rickshaw outside the window, natural colours, shallow depth of field, no text, no logos",
+  "source_name": "The Hindu",
+  "source_link": "https://www.thehindu.com/business/Industry/meta-sets-india-pricing-for-muse-ai-agent-ahead-of-launch/article71682680.ece",
+  "source_url": "https://www.thehindu.com/business/Industry/meta-sets-india-pricing-for-muse-ai-agent-ahead-of-launch/article71682680.ece"
+}
