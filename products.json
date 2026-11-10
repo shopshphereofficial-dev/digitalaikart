@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-09",
+  "updated": "2026-11-10",
   "note": "Single source of truth for ALL products on digitalkartai.shop. The blog agent MUST read this file at the start of every run and promote the best-matching product per post. The product agent MUST append new products here when publishing them. Never delete or modify existing entries.",
   "products": [
     {
@@ -8879,6 +8879,60 @@
         "hair loss scam India",
         "ASCI hair claims",
         "hair loss guide PDF"
+      ]
+    },
+    {
+      "slug": "shaadibudget-pro-india",
+      "name": "ShaadiBudget Pro — Indian Wedding Budget, Vendor & Payment Tracker (Excel + Google Sheets)",
+      "tagline": "A formula-driven wedding budget system for Indian weddings, in one Excel workbook that also runs in Google Sheets. Nine linked sheets and one dashboard. You plan by function (up to 10, roka to reception) and by 15 categories; log every vendor with their quote, GST percentage and other charges so two quotations become comparable numbers; record every advance and instalment against its due date and mark it Paid when the money leaves, which is what drives paid-so-far, balance-due and the overdue list — unpaid rows past their date turn red, rows due within fourteen days turn amber. Planned, committed and paid are kept apart on purpose, so an on-budget wedding that is short of cash this month is visible before it happens. The guest sheet holds one row per family with veg, Jain and non-veg headcounts and the RSVP; the Dashboard takes the smaller of the function's expected guests and the confirmed people, splits it in your confirmed guest mix and prices it at that function's plate rates. A shagun register totals what came in by bride side and groom side and flags thank-yous still pending. The checklist's 40 tasks carry a 'months before' figure, so every do-by date is calculated backwards from the wedding date and anything late is flagged. Six health checks name what is missing — no budget, a vendor booked in a category with no plan, a function with guests but no plate rate — instead of quietly showing zero. No macros, no add-ins, no password: plain SUMIFS, COUNTIFS, SUMPRODUCT and EDATE, so it opens in Excel 2016+, Microsoft 365, Google Sheets and LibreOffice Calc. Ships with a blank template, a fully filled fictional example (Jaipur, ₹45 lakh, 18 vendors, 30 payments), a five-page guide, a quick start and the licence. It plans and records; it does not pay anyone, calculate GST liability or TDS, or know real market prices.",
+      "price": 249,
+      "mrp": 999,
+      "url": "/products/shaadibudget-pro-india/",
+      "also_available": [
+        "cashflow-compass-13-week-india",
+        "bizcalc-pro-india",
+        "socialkit-india-post-maker"
+      ],
+      "topics": [
+        "wedding budget planner",
+        "indian wedding budget",
+        "shaadi budget",
+        "wedding budget spreadsheet",
+        "wedding budget excel",
+        "wedding planner google sheets",
+        "wedding expense tracker",
+        "wedding vendor tracker",
+        "vendor quote comparison",
+        "wedding payment schedule",
+        "wedding advance tracker",
+        "wedding balance due",
+        "guest list rsvp",
+        "plate count calculator",
+        "catering plate estimate",
+        "veg jain nonveg count",
+        "shagun register",
+        "shagun tracker",
+        "wedding checklist",
+        "wedding timeline checklist",
+        "wedding functions budget",
+        "roka mehendi sangeet budget",
+        "reception budget",
+        "wedding cost sheet india",
+        "shaadi kharcha",
+        "wedding budget in lakh",
+        "excel template india",
+        "google sheets template india",
+        "no macros spreadsheet",
+        "budget vs actual",
+        "overdue payment tracker",
+        "gst on vendor quote",
+        "tds 194c wedding",
+        "cash limit 269st",
+        "marriage registration checklist",
+        "couple budget planner",
+        "family contribution split",
+        "wedding planner tool india",
+        "digitalkartai"
       ]
     }
   ]

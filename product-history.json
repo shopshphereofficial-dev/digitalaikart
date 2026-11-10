@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-09",
+  "updated": "2026-11-10",
   "note": "Append-only log of products published to digitalkartai.shop. Newest last. Never delete or modify existing records.",
   "history": [
     {
@@ -1095,6 +1095,35 @@
         "Registration day checklist, mutation, RERA remedies and the e-Jagriti consumer route with fee slabs",
         "Eight printable worksheets, from the twelve-document checklist to the red-flag score sheet",
         "Full source appendix with dates, every fact checked November 2026"
+      ]
+    },
+    {
+      "date": "2026-11-10",
+      "name": "ShaadiBudget Pro — Indian Wedding Budget, Vendor & Payment Tracker",
+      "slug": "shaadibudget-pro-india",
+      "category": "Wedding Planning / Personal Finance Spreadsheet System",
+      "type": "spreadsheet system (xlsx + google sheets)",
+      "price": "₹249",
+      "mrp": "₹999",
+      "url": "https://digitalkartai.shop/products/shaadibudget-pro-india/",
+      "download": "https://digitalkartai.shop/downloads/shaadibudget-pro-india.zip",
+      "payment_link": "https://rzp.io/rzp/3iH6l5BP",
+      "status": "published",
+      "features": [
+        "Nine linked sheets: Start Here, Dashboard, Setup, Budget Plan, Vendors, Payments, Guests, Shagun, Checklist (plus a hidden Lists sheet feeding the dropdowns)",
+        "Planned, committed and paid kept apart; still-to-pay and committed-vs-budget calculated, not typed",
+        "Budget by function (up to 10, roka to reception) and by 15 expense categories with a suggested split",
+        "Vendor quotes with GST % and other charges combined into a comparable total cost, plus booked amount, paid so far and balance due",
+        "Payments sheet with due dates, mode and reference; overdue rows red, due-within-14-days amber, days-overdue column",
+        "Guest list by family with veg / Jain / non-veg headcounts, RSVP, stay and rooms; plate estimate per function from the smaller of expected and confirmed",
+        "Shagun register with bride-side / groom-side totals and a thank-you-pending count",
+        "40-task checklist whose do-by dates are calculated backwards from the wedding date, with LATE flags",
+        "Six dashboard health checks that name missing budget, unplanned spend, booked vendors with no payment and functions with no plate rate",
+        "One-page A4 dashboard with a planned-vs-committed bar chart and full print setup on every sheet",
+        "Capacity: 160 budget lines, 70 vendors, 160 payments, 220 guest families, 120 shagun entries, 80 checklist rows",
+        "No macros, no add-ins, no password; SUMIFS / COUNTIFS / SUMPRODUCT / EDATE only, so Excel 2016+, Microsoft 365, Google Sheets and LibreOffice Calc all work",
+        "Blank template + fully filled fictional worked example (Jaipur, ₹45 lakh, 18 vendors, 30 payments, 22 families)",
+        "Five-page GUIDE.pdf, one-page START-HERE.txt and a plain-English LICENSE.txt in the same ZIP"
       ]
     }
   ]
