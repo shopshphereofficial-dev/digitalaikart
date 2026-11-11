@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-10",
+  "updated": "2026-11-11",
   "note": "Append-only log of products published to digitalkartai.shop. Newest last. Never delete or modify existing records.",
   "history": [
     {
@@ -1125,6 +1125,35 @@
         "Blank template + fully filled fictional worked example (Jaipur, ₹45 lakh, 18 vendors, 30 payments, 22 families)",
         "Five-page GUIDE.pdf, one-page START-HERE.txt and a plain-English LICENSE.txt in the same ZIP"
       ]
-    }
+    },
+    {
+    "date": "2026-11-11",
+    "name": "Kirayanama — Rent Agreement, Leave & Licence, PG and Handover Kit (India)",
+    "slug": "kirayanama-rent-agreement-kit-india",
+    "category": "Legal Document Kit / Rent Agreement, Leave & Licence, Lease, PG and Handover Pack",
+    "type": "document template pack (docx + pdf)",
+    "price": "₹299",
+    "mrp": "₹1,499",
+    "url": "https://digitalkartai.shop/products/kirayanama-rent-agreement-kit-india/",
+    "download": "https://digitalkartai.shop/downloads/kirayanama-rent-agreement-kit-india.zip",
+    "payment_link": "https://rzp.io/rzp/dsUVvGLe",
+    "status": "published",
+    "features": [
+      "Seven documents, each supplied twice: an unlocked .docx and a print-ready .pdf — 14 files plus a 7-page guide, START-HERE.txt and LICENSE.txt",
+      "01 Residential leave & licence, 11 months: 18 numbered clauses over 8 pages, with Annexure A (premises, parties, payment details, meter readings) and Annexure B (inventory and condition)",
+      "02 Commercial leave & licence, 11 months: permitted business, tenant licences, signage, electrical load, staff and insurance, GST clause for a registered landlord, TDS clause for a deducting tenant, six-month deposit ceiling",
+      "03 Residential lease, 12 months, registrable: demise, rent, deposit, two-way lock-in with agreed damages, repair split, termination after lock-in, registration and Rent Authority steps",
+      "04 Paying-guest / hostel licence: single occupancy, shared facilities, what the fee includes, per-unit electricity above the included units, eight house rules, 15-day notice",
+      "05 Renewal and extension addendum: extended term, revised rent, deposit treatment, every other term carried forward",
+      "06 Notice letters: tenant's notice, landlord's notice, and a proof-of-service sheet recording mode, date, postal receipt and acknowledgement card",
+      "07 Handover, inventory and deposit settlement: keys issued and returned, meter readings at both ends, 20-row room-by-room condition table with deduction column, settlement statement from deposit held to net refund",
+      "Deposit ceilings follow the Model Tenancy Act, 2021 — two months' rent residential, six months non-residential — with refund on handover and itemised deductions only",
+      "Entry and inspection clause follows the 24-hour written notice rule; society NOC, shifting formalities and non-occupancy charges covered",
+      "Guide covers stamp duty, notary versus registration, the one-year registration rule under the Registration Act 1908, Rent Authority intimation, GST on residential and commercial rent, and TDS on rent",
+      "No macros, no password, no protected sections — edit any clause; opens in Word, Google Sheets-compatible Google Docs, WPS Office and LibreOffice",
+      "A4 layout with numbered clauses, page numbers in the footer and repeating table headers across page breaks",
+      "Templates, not legal advice — stated in the documents, the guide, the licence and the product page"
+    ]
+  }
   ]
 }
