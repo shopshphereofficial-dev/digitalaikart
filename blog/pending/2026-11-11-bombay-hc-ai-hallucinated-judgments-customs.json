@@ -1,0 +1,83 @@
+{
+  "date": "2026-11-11",
+  "title": "Bombay High Court Quashes Customs Order Over AI-Made Judgments",
+  "slug": "bombay-hc-ai-hallucinated-judgments-customs",
+  "category": "AI Policy",
+  "description": "The Bombay High Court quashed a customs order that cited two Supreme Court judgments nobody can trace. What the ruling means for Indian legal and tax work.",
+  "emoji": "⚖️",
+  "keywords": [
+    "Bombay High Court AI judgments",
+    "AI hallucinated case law India",
+    "Quanta Logistics customs order",
+    "Supreme Court zero tolerance AI",
+    "AI in Indian courts 2026"
+  ],
+  "tags": [
+    "#AIPolicy",
+    "#Judiciary",
+    "#AIHallucinations",
+    "#IndiaAI"
+  ],
+  "tldr": [
+    "The Bombay High Court quashed a customs order that relied on two Supreme Court judgments that could not be found in any law report or database.",
+    "The order was set aside by consent after the Customs department chose not to defend it; the case now goes back for a fresh hearing.",
+    "The Supreme Court has already declared a zero-tolerance rule: a decision built even partly on fake AI-generated precedent is no decision in the eyes of the law.",
+    "For lawyers, chartered accountants and tax officers, the practical rule is simple: the person who signs the order owns the citation, not the chatbot."
+  ],
+  "sections": [
+    {
+      "heading": "What the Bombay High Court actually did",
+      "paragraphs": [
+        "On 30 October 2026, a Division Bench of the Bombay High Court set aside an order of the Commissioner of Customs (Import-I), Mumbai, after the company it penalised pointed out that the order relied on two Supreme Court judgments untraceable in any law report or legal database. Justices M.S. Karnik and Sandesh D. Patil quashed the Order-in-Original dated 11 August 2026 in Quanta Logistics Pvt. Ltd. v. Commissioner of Customs (Import-I), Writ Petition No. 5093 of 2026. Bar and Bench reported it on 7 November; MediaNama followed on 11 November.",
+        "Quanta's counsel, Senior Advocate Venkatesh Dhond, argued that the order had been passed \"by taking recourse to Artificial Intelligence (AI) without independent application of mind\", citing the two judgments as an example and saying they appeared \"to be a hallucination of AI\". The company had asked the Commissioner on 1 September 2026 for copies of both. They were never provided. Counsel for the Customs department fairly submitted that the order could be quashed and the matter remitted, and it was set aside by consent. The Commissioner must now hear the case afresh and conclude within eight weeks of 5 November 2026."
+      ]
+    },
+    {
+      "heading": "The rule the Supreme Court has already laid down",
+      "paragraphs": [
+        "The High Court did not have to invent a standard. Quanta relied on the Supreme Court's 2026 judgment in Vijay Ghanshyam Gadiya v. Union of India (2026 INSC 947), which set aside a Rs 425 crore customs penalty because the adjudicating officer had relied on fabricated citations. Gadiya quoted the court's 2 July 2026 ruling in Pooja Ramesh Singh v. Jammu & Kashmir Bank Ltd., which set out the zero-tolerance rule.",
+        "The court said it was \"necessary for courts to adopt a zero-tolerance mode for producing, citing or using artificial intelligence-generated precedents without verification\", that citing such material unverified is misconduct for an advocate, and that reliance on it is an equally serious lapse for a judge. Such a decision \"is no decision in the eyes of the law\" and must be set aside \"even if an iota of fake or hallucinated material enters the decision-making process\". The line that sums up the debate: \"AI may well serve as training wheels, but entrusting it with the pilot's seat would be both imprudent and dangerous.\" The court added that this says nothing against rightful use of AI, only against fake material presented as precedent."
+      ]
+    },
+    {
+      "heading": "This is a pattern, not a one-off",
+      "paragraphs": [
+        "Quanta is the latest in a series. In October 2025 the Bombay High Court quashed an income-tax assessment in KMG Wires Pvt Ltd v. National Faceless Assessment Centre, where the officer had relied on three non-existent decisions for a Rs 22.66 crore addition, noting that \"when one is exercising quasi-judicial functions, such results are not to be blindly relied upon\". The Delhi High Court set aside a similar tax order in July 2026. On 20 August 2026 the Gujarat High Court quashed a GST registration cancellation in Faiz Enterprise v. State of Gujarat after the State Tax Officer admitted using AI to draft the order, which relied \"exclusively on the AI-generated case laws\".",
+        "The Income Tax Appellate Tribunal in Bengaluru recalled an order in Buckeye Trust v. PCIT within a week in December 2024 after finding four non-existent judgments in it; the Karnataka High Court ordered an inquiry against a trial judge whose order rested on two non-existent Supreme Court decisions. What has changed is not that errors happen but that they are cheap and fluent: a fabricated citation arrives with a plausible paragraph number and confident prose, so it slips past a busy reader."
+      ]
+    },
+    {
+      "heading": "What it means if you use AI in legal or tax work",
+      "paragraphs": [
+        "The liability sits with the person who signs, not with the tool. For an advocate drafting a reply, a chartered accountant answering a show-cause notice, or a consultant writing a client memo, verification is no longer a final read-through; it is the work. Every authority should be traced to a database or the court's own record before it goes into a document; neutral citations make that easier, since 2026 INSC 947 can be checked against the Supreme Court's own listing.",
+        "Quanta also offers the cheapest test for anyone served an order: ask for copies of the judgments cited. If an authority cannot produce a judgment it relied on, that silence is the argument.",
+        "None of this is an argument against using AI. The Supreme Court said as much, and has released draft Regulations for Use of AI in Courts, 2026, for comment, while asking the Bar Council of India to frame disciplinary norms for lawyers who cite unverified material. The line being drawn is between assistance and substitution: summarising a long file is fair use; producing the authority that decides the case is not."
+      ]
+    },
+    {
+      "heading": "The part that is still unresolved",
+      "paragraphs": [
+        "Because the quashing was by consent, the High Court recorded no finding of its own on how the order was drafted, and the customs dispute remains open for fresh adjudication. That makes Quanta a signal rather than a precedent on AI use. What the final AI regulations permit, what the Bar Council's norms look like, and whether the disciplinary action the Supreme Court suggested in Gadiya is pursued, are all still open.",
+        "The safest reading of the year's cases is the simplest. An order or opinion is only as good as the authorities under it, and every authority is now one click from verification. A tool that writes quickly has not made the checking optional; it has made it the difference between a decision that stands and one that is set aside."
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "q": "What did the Bombay High Court order in the Quanta Logistics case?",
+      "a": "On 30 October 2026, a Division Bench of Justices M.S. Karnik and Sandesh D. Patil quashed, by consent of both parties, an Order-in-Original dated 11 August 2026 passed by the Commissioner of Customs (Import-I), Mumbai. The petitioner, Quanta Logistics, had argued that the order relied on two Supreme Court judgments that do not exist in any law report or database. The Commissioner must now hear the matter afresh and finish within eight weeks of 5 November 2026."
+    },
+    {
+      "q": "Did the High Court find that AI was used to draft the order?",
+      "a": "No. The order was quashed by consent after counsel for the Customs department submitted that it could be set aside and the matter remanded, so the High Court did not record its own finding on how the order was drafted. The allegation that the order was passed using AI without independent application of mind was the petitioner's case, and the merits of the underlying customs dispute remain open."
+    },
+    {
+      "q": "Can Indian lawyers and tax professionals still use AI tools?",
+      "a": "Yes. The Supreme Court has expressly said its zero-tolerance rule has no bearing on the rightful use of AI, only on presenting or relying on fake material as if it were a precedent. In practice that means using AI for drafting, summarising and research, while verifying every citation against a legal database or the court's own record before it is filed or relied on. The court has also released draft Regulations for Use of AI in Courts, 2026, for public comment."
+    }
+  ],
+  "image_prompt": "Photorealistic wide 16:9 editorial photograph of a lawyer's desk in a Mumbai chamber in the late afternoon: a stack of case files and bound law reports, an open laptop showing a plain white document, reading glasses, a pen and a cup of chai, warm lamp light against a soft window glow, shallow depth of field, natural colours, no text, no logos, no faces",
+  "source_name": "MediaNama",
+  "source_link": "https://www.medianama.com/2026/11/223-tax-order-ai-hallucinated-case-law/",
+  "source_url": "https://www.medianama.com/2026/11/223-tax-order-ai-hallucinated-case-law/"
+}
