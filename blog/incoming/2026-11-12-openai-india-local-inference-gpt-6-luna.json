@@ -1,0 +1,80 @@
+{
+  "title": "OpenAI Now Processes Its AI Inside India for Indian Businesses",
+  "slug": "openai-india-local-inference-gpt-6-luna",
+  "category": "AI Business",
+  "description": "OpenAI now runs GPT-6 Luna API requests and the processing behind them inside India, not just storage. Here is what it means for Indian firms and developers.",
+  "emoji": "🗄️",
+  "keywords": [
+    "OpenAI India",
+    "local inference",
+    "data residency",
+    "GPT-6 Luna",
+    "AI enterprise"
+  ],
+  "tags": [
+    "#OpenAI",
+    "#IndiaAI",
+    "#DataResidency",
+    "#EnterpriseAI"
+  ],
+  "tldr": [
+    "OpenAI has started processing API requests inside India, not only storing data there.",
+    "The option works only with the GPT-6 Luna model at launch.",
+    "Eligible customers must create a new API project and use the India endpoint.",
+    "The move targets banks, hospitals and firms that need data processed in-country."
+  ],
+  "sections": [
+    {
+      "heading": "What OpenAI Announced",
+      "paragraphs": [
+        "On Thursday, OpenAI began offering local processing for its API in India. Until now, Indian customers could have their data stored inside the country. From this week, the company says it will also process API requests and run the model computation that produces the answers within India, for customers who opt in. The offering starts with a single model, GPT-6 Luna, and covers text input and output.",
+        "The company framed the change as a way to clear a practical barrier to enterprise adoption rather than as a new model launch. The capability is available through the Responses API and the Chat Completions API for direct API usage. OpenAI said this kind of inference residency is available in other regions too, with India, Australia and Japan among the most recent markets to receive it."
+      ]
+    },
+    {
+      "heading": "Why Processing Location Matters",
+      "paragraphs": [
+        "Data residency and data processing are often used as if they mean the same thing, but they do not. Residency is about where information sits when it is stored. Processing is about where the machine that reads that information and generates a reply actually runs. A company can keep its files in an Indian data centre and still send every single query abroad for computation, where a model running on foreign servers reads the prompt and writes the reply.",
+        "For banks, insurers, hospitals and government-linked projects, that difference often decides whether a workload can use a foreign AI model at all. Nitin Bawankule, who heads the enterprise business for OpenAI in India, said some Indian businesses had not fully deployed AI for important work because they needed the information involved to be processed within the country. He added that local inference gives them more control over where supported workloads run."
+      ]
+    },
+    {
+      "heading": "How A Business Actually Gets It",
+      "paragraphs": [
+        "Access is not automatic, and it is not a switch that flips for every existing customer. According to OpenAI, eligible customers need to create a new API project, select India for both data storage and processing, and use the India regional endpoint. Only GPT-6 Luna is supported at launch, so teams running other models on the platform will either wait for wider support or keep those workloads on their current settings.",
+        "For developers, that makes the change a configuration choice rather than a rewrite. The same API calls work, pointed at a different project and endpoint. Small teams weighing the option should first confirm whether the model and features they depend on are covered, and check with their legal and compliance colleagues that the new setting matches the data they actually handle in production."
+      ]
+    },
+    {
+      "heading": "The Wider India Push",
+      "paragraphs": [
+        "The launch sits inside a broader expansion. Earlier this year OpenAI announced an India initiative covering AI infrastructure, enterprise adoption, skills development and local partnerships, including a partnership with the Tata Group to develop domestic data centre capacity. Local processing gives that kind of infrastructure something concrete to run.",
+        "It also lands in a crowded week for Indian AI policy. The Union government has been signalling that critical sectors such as defence and aerospace should lean on indigenously built models, and three homegrown foundation models were released this month under the IndiaAI Mission. Foreign firms now have a reason to show that Indian data can stay in India, while Indian model builders have a fresh reason to argue that locally built systems are the safer default for sensitive work. Buyers, in turn, get to compare the two on a clearer footing."
+      ]
+    },
+    {
+      "heading": "What It Means For Students And Small Firms",
+      "paragraphs": [
+        "For students and job seekers, the practical signal is that data location is turning into a job skill. Teams that can explain residency, processing, regional endpoints and audit trails will be the ones trusted with regulated work. These words now appear in ordinary enterprise AI deals, not only in legal paperwork, and being able to discuss them confidently is an advantage in interviews.",
+        "For small businesses and startups, the immediate benefit is narrower than the headlines suggest. A local endpoint removes one objection when selling an AI product to a cautious client, but it does not change what the model can do or what it costs. The real test will be whether more Indian firms move sensitive work onto AI now that the processing question finally has an answer, and whether that shows up in ordinary workflows such as claims processing, invoice matching and customer support rather than in pilot projects."
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "q": "What exactly has OpenAI started doing in India?",
+      "a": "It now processes API requests and runs the model computation inside India for customers who opt in, starting with the GPT-6 Luna model. Previously, only storage of customer content was local."
+    },
+    {
+      "q": "Does every OpenAI customer in India get this automatically?",
+      "a": "No. Eligible customers must create a new API project, select India for both storage and processing, and use the India regional endpoint. Only GPT-6 Luna is supported at launch."
+    },
+    {
+      "q": "Is this the same as keeping data in India?",
+      "a": "Not the same. Storing data locally and processing it locally are separate steps. This move adds in-country processing, which matters for regulated industries that cannot send queries abroad."
+    }
+  ],
+  "image_prompt": "Wide photorealistic photo of a small Indian software office at dusk, two developers reviewing code on laptops at a shared wooden desk, a server rack visible through a glass partition behind them, warm indoor lighting, natural candid scene, no text and no logos, 16:9 landscape.",
+  "source_name": "The Economic Times",
+  "source_url": "https://economictimes.indiatimes.com/ai/ai-insights/openai-brings-local-inference-to-india-starting-with-gpt-6-luna/articleshow/135760461.cms"
+}
