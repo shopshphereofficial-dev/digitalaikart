@@ -18,7 +18,7 @@ jobs:
       - name: Download ebook from release
         run: |
           mkdir -p downloads
-          gh release download ai-reply-desk-support-prompts-2026-27-v1 --repo shopshphereofficial-dev/digitalaikart --output "downloads/ai-reply-desk-support-prompts-2026-27.pdf"
+          gh release download ai-reply-desk-support-prompts-2026-27-v1 --repo shopshphereofficial-dev/digitalaikart --pattern "ai-reply-desk-support-prompts-2026-27.pdf" --dir downloads
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
