@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-11",
+  "updated": "2026-11-12",
   "note": "Append-only log of products published to digitalkartai.shop. Newest last. Never delete or modify existing records.",
   "history": [
     {
@@ -1127,33 +1127,58 @@
       ]
     },
     {
-    "date": "2026-11-11",
-    "name": "Kirayanama — Rent Agreement, Leave & Licence, PG and Handover Kit (India)",
-    "slug": "kirayanama-rent-agreement-kit-india",
-    "category": "Legal Document Kit / Rent Agreement, Leave & Licence, Lease, PG and Handover Pack",
-    "type": "document template pack (docx + pdf)",
-    "price": "₹299",
-    "mrp": "₹1,499",
-    "url": "https://digitalkartai.shop/products/kirayanama-rent-agreement-kit-india/",
-    "download": "https://digitalkartai.shop/downloads/kirayanama-rent-agreement-kit-india.zip",
-    "payment_link": "https://rzp.io/rzp/dsUVvGLe",
-    "status": "published",
-    "features": [
-      "Seven documents, each supplied twice: an unlocked .docx and a print-ready .pdf — 14 files plus a 7-page guide, START-HERE.txt and LICENSE.txt",
-      "01 Residential leave & licence, 11 months: 18 numbered clauses over 8 pages, with Annexure A (premises, parties, payment details, meter readings) and Annexure B (inventory and condition)",
-      "02 Commercial leave & licence, 11 months: permitted business, tenant licences, signage, electrical load, staff and insurance, GST clause for a registered landlord, TDS clause for a deducting tenant, six-month deposit ceiling",
-      "03 Residential lease, 12 months, registrable: demise, rent, deposit, two-way lock-in with agreed damages, repair split, termination after lock-in, registration and Rent Authority steps",
-      "04 Paying-guest / hostel licence: single occupancy, shared facilities, what the fee includes, per-unit electricity above the included units, eight house rules, 15-day notice",
-      "05 Renewal and extension addendum: extended term, revised rent, deposit treatment, every other term carried forward",
-      "06 Notice letters: tenant's notice, landlord's notice, and a proof-of-service sheet recording mode, date, postal receipt and acknowledgement card",
-      "07 Handover, inventory and deposit settlement: keys issued and returned, meter readings at both ends, 20-row room-by-room condition table with deduction column, settlement statement from deposit held to net refund",
-      "Deposit ceilings follow the Model Tenancy Act, 2021 — two months' rent residential, six months non-residential — with refund on handover and itemised deductions only",
-      "Entry and inspection clause follows the 24-hour written notice rule; society NOC, shifting formalities and non-occupancy charges covered",
-      "Guide covers stamp duty, notary versus registration, the one-year registration rule under the Registration Act 1908, Rent Authority intimation, GST on residential and commercial rent, and TDS on rent",
-      "No macros, no password, no protected sections — edit any clause; opens in Word, Google Sheets-compatible Google Docs, WPS Office and LibreOffice",
-      "A4 layout with numbered clauses, page numbers in the footer and repeating table headers across page breaks",
-      "Templates, not legal advice — stated in the documents, the guide, the licence and the product page"
-    ]
-  }
+      "date": "2026-11-11",
+      "name": "Kirayanama — Rent Agreement, Leave & Licence, PG and Handover Kit (India)",
+      "slug": "kirayanama-rent-agreement-kit-india",
+      "category": "Legal Document Kit / Rent Agreement, Leave & Licence, Lease, PG and Handover Pack",
+      "type": "document template pack (docx + pdf)",
+      "price": "₹299",
+      "mrp": "₹1,499",
+      "url": "https://digitalkartai.shop/products/kirayanama-rent-agreement-kit-india/",
+      "download": "https://digitalkartai.shop/downloads/kirayanama-rent-agreement-kit-india.zip",
+      "payment_link": "https://rzp.io/rzp/dsUVvGLe",
+      "status": "published",
+      "features": [
+        "Seven documents, each supplied twice: an unlocked .docx and a print-ready .pdf — 14 files plus a 7-page guide, START-HERE.txt and LICENSE.txt",
+        "01 Residential leave & licence, 11 months: 18 numbered clauses over 8 pages, with Annexure A (premises, parties, payment details, meter readings) and Annexure B (inventory and condition)",
+        "02 Commercial leave & licence, 11 months: permitted business, tenant licences, signage, electrical load, staff and insurance, GST clause for a registered landlord, TDS clause for a deducting tenant, six-month deposit ceiling",
+        "03 Residential lease, 12 months, registrable: demise, rent, deposit, two-way lock-in with agreed damages, repair split, termination after lock-in, registration and Rent Authority steps",
+        "04 Paying-guest / hostel licence: single occupancy, shared facilities, what the fee includes, per-unit electricity above the included units, eight house rules, 15-day notice",
+        "05 Renewal and extension addendum: extended term, revised rent, deposit treatment, every other term carried forward",
+        "06 Notice letters: tenant's notice, landlord's notice, and a proof-of-service sheet recording mode, date, postal receipt and acknowledgement card",
+        "07 Handover, inventory and deposit settlement: keys issued and returned, meter readings at both ends, 20-row room-by-room condition table with deduction column, settlement statement from deposit held to net refund",
+        "Deposit ceilings follow the Model Tenancy Act, 2021 — two months' rent residential, six months non-residential — with refund on handover and itemised deductions only",
+        "Entry and inspection clause follows the 24-hour written notice rule; society NOC, shifting formalities and non-occupancy charges covered",
+        "Guide covers stamp duty, notary versus registration, the one-year registration rule under the Registration Act 1908, Rent Authority intimation, GST on residential and commercial rent, and TDS on rent",
+        "No macros, no password, no protected sections — edit any clause; opens in Word, Google Sheets-compatible Google Docs, WPS Office and LibreOffice",
+        "A4 layout with numbered clauses, page numbers in the footer and repeating table headers across page breaks",
+        "Templates, not legal advice — stated in the documents, the guide, the licence and the product page"
+      ]
+    },
+    {
+      "date": "2026-11-12",
+      "name": "PromptDesk India — 120 Business AI Prompts + Offline Prompt Library",
+      "slug": "promptdesk-india-ai-prompt-system",
+      "category": "AI Prompt System / Prompt Pack + Offline Web App",
+      "type": "prompt system (html app + csv + json)",
+      "price": "₹249",
+      "mrp": "₹999",
+      "url": "https://digitalkartai.shop/products/promptdesk-india-ai-prompt-system/",
+      "download": "https://digitalkartai.shop/downloads/promptdesk-india-ai-prompt-system.zip",
+      "payment_link": "https://rzp.io/rzp/4DLsGmns",
+      "status": "published",
+      "features": [
+        "120 prompts in 10 categories of 12: sales, marketing, content, WhatsApp & support, e-commerce, money & pricing, team & hiring, operations, freelance & clients, learning & planning",
+        "Single-file offline HTML library (104 KB): live search, category chips, fill-in [bracket] inputs that rebuild the prompt as you type, one-tap copy with a clipboard fallback, print view",
+        "Builder tab: six fields (role, task, context, format, rules, language) assemble a structured prompt with an anti-fabrication line; saved to a local stack",
+        "My stack saves prompts in browser local storage, exports as .txt, never uploaded",
+        "Hindi and Hinglish reply options appended per prompt without touching the original text",
+        "Every prompt carries a use case and a model tip on how to get more from the second pass",
+        "India-specific content: rupee pricing arithmetic, GST invoice layout, UPI and payment reminders, WhatsApp Business quick replies, Meesho/Flipkart/Amazon listings, festival campaigns, dealer margins, Hinglish rewrites",
+        "prompts.csv (120 rows, 6 columns) for Excel and Google Sheets, and prompts.json for loading into your own tools",
+        "README.md manual, QUICK-START.txt one-pager, three fully worked examples, and LICENSE.txt (one business, no resale)",
+        "No account, no analytics, no external requests; works with the internet switched off"
+      ]
+    }
   ]
 }
