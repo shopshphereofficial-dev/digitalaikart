@@ -8,6 +8,14 @@
     <lastBuildDate>Mon, 28 Sep 2026 15:46:00 +0530</lastBuildDate>
     <atom:link href="https://digitalkartai.shop/feed.xml" rel="self" type="application/rss+xml"/>
         <item>
+      <title>OpenAI now processes AI requests inside India</title>
+      <link>https://digitalkartai.shop/blog/2026-11-13-openai-india-local-ai-processing.html</link>
+      <guid isPermaLink="true">https://digitalkartai.shop/blog/2026-11-13-openai-india-local-ai-processing.html</guid>
+      <description>OpenAI has started running GPT-6 Luna API requests and model inference on servers inside India, aimed at banks and firms bound by data localisation rules.</description>
+      <pubDate>Fri, 13 Nov 2026 09:00:00 +0530</pubDate>
+      <category>AI India</category>
+    </item>
+    <item>
       <title>Gemini 4 Hydrogen Is Fast and Cheap to Run, Not Cheap to Use</title>
       <link>https://digitalkartai.shop/blog/2026-11-13-gemini-4-hydrogen-india-pricing-what-it-means.html</link>
       <guid isPermaLink="true">https://digitalkartai.shop/blog/2026-11-13-gemini-4-hydrogen-india-pricing-what-it-means.html</guid>
