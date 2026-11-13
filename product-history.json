@@ -1209,6 +1209,36 @@
         "Packaged ZIP with README, labelled example resume (imports to a 93 score), 120-action-verb checklist and single-user licence",
         "Razorpay payment link wired to the store thank-you page and the correct ZIP download"
       ]
+    },
+    {
+      "date": "2026-11-13",
+      "name": "GSTR-9 Filing Kit FY 2025-26 — The Annual Return Working Kit",
+      "slug": "gstr9-filing-kit-fy-2025-26",
+      "category": "Tax / GST Compliance Working Kit",
+      "type": "ebook",
+      "price": "₹149",
+      "mrp": "₹599",
+      "url": "https://digitalkartai.shop/products/gstr9-filing-kit-fy-2025-26/",
+      "download": "https://digitalkartai.shop/downloads/gstr9-filing-kit-fy-2025-26.pdf",
+      "payment_link": "https://rzp.io/rzp/AMDRrvM",
+      "status": "published",
+      "features": [
+        "37-page premium PDF, 16 parts, every GSTR-9 table from 4 to 19",
+        "The 30 November 2026 window: section 16(4), 34(2), 37(3), 39(9) and Rule 37A",
+        "The early-filing trap: filing GSTR-9 closes the credit window on the filing date",
+        "Rs 2 crore exemption tested on PAN-level aggregate turnover (Notification 15/2025)",
+        "Rs 5 crore GSTR-9C threshold, self-certification and the Circular 246/03/2025 late fee rule",
+        "Four-column master working paper and eight reconciliations",
+        "Table-by-table walkthrough with the FY 2025-26 relaxations and withdrawals",
+        "IMS mechanics: accept, reject, pending, deemed acceptance, locking, IMS-driven Table 8A",
+        "GST 2.0 split year: 22 September 2025 rate change across Tables 4, 5, 10, 11 and 17",
+        "Rule 37A reversal, Rule 37 180-day rule, interest at 18% and 24%, DRC-03 route",
+        "DRC-01B and DRC-01C: seven-day Part B reply and the Rule 59(6) block",
+        "GSTR-9C Parts I to V with the five differences that explain most reconciliations",
+        "Late fee slabs and caps worked through four examples",
+        "Section 74A notice window to 30 June 2030 and the section 125 general penalty",
+        "Filing-day runbook, fifteen mistakes with fixes, 48-day plan and a 23-point checklist"
+      ]
     }
   ]
 }
