@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-12",
+  "updated": "2026-11-13",
   "note": "Append-only log of products published to digitalkartai.shop. Newest last. Never delete or modify existing records.",
   "history": [
     {
@@ -1178,6 +1178,36 @@
         "prompts.csv (120 rows, 6 columns) for Excel and Google Sheets, and prompts.json for loading into your own tools",
         "README.md manual, QUICK-START.txt one-pager, three fully worked examples, and LICENSE.txt (one business, no resale)",
         "No account, no analytics, no external requests; works with the internet switched off"
+      ]
+    },
+    {
+      "date": "2026-11-13",
+      "name": "ResumeCraft India — Offline ATS Resume & Cover Letter Builder",
+      "slug": "resumecraft-india-ats-builder",
+      "category": "Software Tool / Offline Web App",
+      "type": "non-ebook",
+      "price": "₹199",
+      "mrp": "₹999",
+      "url": "https://digitalkartai.shop/products/resumecraft-india-ats-builder/",
+      "download": "https://digitalkartai.shop/downloads/resumecraft-india-ats-builder.zip",
+      "payment_link": "https://rzp.io/rzp/ro0qlAOs",
+      "status": "published",
+      "features": [
+        "Single-file offline resume builder (index.html, 68 KB) — no install, no sign-up, no network calls",
+        "Live A4 preview (210 mm) updates as you type; the print layout prints only the resume",
+        "0-100 ATS score across 10 weighted checks, each showing points earned and a specific fix",
+        "Job-description keyword match: top terms from the pasted post split into found and missing",
+        "Three print-ready single-column templates: Classic ATS, Modern accent header, Compact",
+        "Two font families and five accent colours; no new dependencies",
+        "Repeaters for work experience, education, projects and certifications; one bullet per line",
+        "Fresher mode weights projects instead of work experience",
+        "Cover-letter generator in standard, fresher and career-switch tones, built from the resume's own quantified bullets",
+        "Copy letter, or print it to A4 PDF",
+        "Multiple resumes saved in browser local storage with autosave; new and delete",
+        "Export JSON backup, import it on another machine; export plain .txt for job portals",
+        "Built-in guide tab: ATS rules, print settings (A4, margins None), privacy and troubleshooting",
+        "Packaged ZIP with README, labelled example resume (imports to a 93 score), 120-action-verb checklist and single-user licence",
+        "Razorpay payment link wired to the store thank-you page and the correct ZIP download"
       ]
     }
   ]

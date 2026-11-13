@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-12",
+  "updated": "2026-11-13",
   "note": "Single source of truth for ALL products on digitalkartai.shop. The blog agent MUST read this file at the start of every run and promote the best-matching product per post. The product agent MUST append new products here when publishing them. Never delete or modify existing entries.",
   "products": [
     {
@@ -9381,6 +9381,36 @@
             "homestay room standards",
             "homestay photography phone"
         ]
+    },
+    {
+      "slug": "resumecraft-india-ats-builder",
+      "name": "ResumeCraft India — Offline ATS Resume & Cover Letter Builder",
+      "tagline": "An offline, single-file resume builder for Indian job seekers: fill a form on the left, watch an A4 page build on the right, and get a 0-100 ATS readiness score that names the fix. Ten weighted checks cover contact details, a target-role line, summary length, experience or projects, education, a 6+ item skills block, action-verb bullets, numbers in bullets and overall length; paste a job description and a tenth check shows which of its key terms are missing. Three single-column print-ready templates (Classic ATS, Modern, Compact), two fonts, five accents, fresher mode that scores projects instead of jobs, a cover-letter generator in standard, fresher and career-switch tones, JSON backup and plain-text export. One HTML file with no server, no analytics and no network calls - data stays in the browser on your own device. Includes README, a labelled example resume, a 120-action-verb checklist and a single-user licence.",
+      "price": "₹199",
+      "mrp": "₹999",
+      "url": "/products/resumecraft-india-ats-builder/",
+      "topics": [
+        "ATS resume builder India",
+        "offline resume builder",
+        "resume maker without subscription",
+        "fresher resume format India 2026",
+        "ATS friendly resume template",
+        "resume builder one time payment",
+        "cover letter generator India",
+        "resume keyword match job description",
+        "ATS score checker",
+        "resume builder for freshers",
+        "single column resume template",
+        "resume PDF A4 India",
+        "resume builder no sign up",
+        "job application resume India",
+        "campus placement resume",
+        "resume for career change India",
+        "resume summary examples India",
+        "action verbs for resume",
+        "resume builder HTML offline",
+        "resume builder no watermark"
+      ]
     }
   ]
 }
