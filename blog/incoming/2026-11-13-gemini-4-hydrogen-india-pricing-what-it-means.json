@@ -1,0 +1,83 @@
+{
+ "date": "2026-11-13",
+ "title": "Gemini 4 Hydrogen Is Fast and Cheap to Run, Not Cheap to Use",
+ "slug": "gemini-4-hydrogen-india-pricing-what-it-means",
+ "category": "AI Products",
+ "description": "Google's Gemini 4 Hydrogen is faster and smarter than the Flash model it replaces, but it costs more per token. What it means for Indian developers.",
+ "emoji": "⚡",
+ "keywords": [
+  "Gemini 4 Hydrogen price",
+  "Gemini API pricing India",
+  "Gemini 4 Hydrogen vs Argon",
+  "AI coding model cost 2026",
+  "Google AI Studio free tier"
+ ],
+ "tags": [
+  "#AIProducts",
+  "#Google",
+  "#Gemini",
+  "#IndiaAI"
+ ],
+ "tldr": [
+  "Google released Gemini 4 Hydrogen on 12 November 2026, a fast model for everyday coding and agent work that sits below the frontier Gemini 4 Carbon and Argon models.",
+  "It is priced flat across a one million token context at 1.50 dollars per million input tokens and 7.50 dollars per million output tokens, roughly Rs 141 and Rs 707 at about 94 rupees to the dollar.",
+  "Google says it finishes tasks 2.5 times faster than Gemini 3.8 Flash and more than triples its Terminal-Bench 4.1 score, but VentureBeat called it a pricier successor and there is no introductory discount.",
+  "The free tier in Google AI Studio and the Gemini API is the practical entry point for Indian students and small teams, with Batch pricing at half rate for bulk jobs."
+ ],
+ "sections": [
+  {
+   "heading": "What Google shipped, and who can use it",
+   "paragraphs": [
+    "Google released Gemini 4 Hydrogen on 12 November 2026, a model it says is built for speed in everyday coding and agent work rather than for the hardest reasoning problems. In the announcement, Koray Kavukcuoglu, senior vice president at Google DeepMind and the company's chief AI architect, described Hydrogen as a way of bringing Gemini 4 to everyone, with the larger frontier models Gemini 4 Carbon and Gemini 4 Argon kept for deep, long-horizon reasoning. Google calls Hydrogen the high-efficiency engine teams pair with those bigger models when they need code written, tests run and changes verified.",
+    "Availability is unusually wide for a launch day. According to Google, Hydrogen is in Google AI Studio and the Gemini API on both the free and paid tiers, in Gemini for business, in the Gemini app, in Google Search, and in Google Antigravity for paid Google AI Pro and Ultra subscribers. Free users of the Gemini app reach it through automatic model selection, so most people in India will meet Hydrogen without ever choosing it from a menu."
+   ]
+  },
+  {
+   "heading": "The price sheet, in dollars and in rupees",
+   "paragraphs": [
+    "Hydrogen is priced flat across its entire one million token context window: 1.50 dollars per million input tokens and 7.50 dollars per million output tokens, including the thinking tokens the model spends before it answers, according to Google's Gemini API documentation. Cached input costs 0.075 dollars per million tokens, a 95 per cent discount, but only through implicit caching, because explicit caching is not supported. Batch and Flex pricing halves both rates, and the free tier on the Gemini API and AI Studio costs nothing but is rate-limited.",
+    "At about 94 rupees to the dollar on 13 November, that works out to roughly Rs 141 for a million input tokens and Rs 707 for a million output tokens, with cached input near Rs 7. The output rate is the number that matters for an Indian team, because it covers the model's reasoning as well as its answer. A support bot writing 500-word replies all day is billed on output, not on the prompt.",
+    "The context window is a selling point too. Input, thinking and output tokens share one window of 1,048,576 tokens, and responses can run past 64,000 tokens up to a million. Hydrogen also adds a fourth thinking level, xhigh, alongside low, medium and the default high, so a developer can trade latency and token spend against reasoning depth."
+   ]
+  },
+  {
+   "heading": "Faster than the model it replaces, and dearer than it",
+   "paragraphs": [
+    "Google's own comparison is against Gemini 3.8 Flash, the model most teams on the cheaper tier are migrating from. At its default high thinking setting, Hydrogen finishes tasks 2.5 times faster, more than triples its Terminal-Bench 4.1 score from 18.2 per cent to 57 per cent, and cuts fabricated claims by more than five times by flagging missing context instead of guessing, according to the announcement. It also adapts when a tool call fails or a search returns nothing, and batches read and search tool calls in parallel. On the Artificial Analysis Intelligence Index it scores 51 at the default setting against 50 for the larger Gemini 4 Argon.",
+    "The catch is price. VentureBeat described Hydrogen as a faster, smarter and pricier Flash successor and noted that Google lists no introductory promotion for the standard tier. That is a shift worth noticing: the fast model in the Gemini line is no longer the cheap model, it is the mid-priced one. Since thinking tokens bill at the output rate, a hard prompt on xhigh can cost several times a simple one on medium. The published benchmarks are also Google's own figures, and independent testing of Hydrogen has not yet been reported."
+   ]
+  },
+  {
+   "heading": "What it changes for Indian developers, students and small teams",
+   "paragraphs": [
+    "The free tier is the most useful part of this launch in India. Hydrogen is available at no charge in Google AI Studio and on the free Gemini API tier, rate limits aside, which means a student or a bootcamp batch can put a current model behind a project without a card. The 1M context window matters for the work Indian teams actually do, such as reading long contracts, tender documents and scanned forms, and Google says Hydrogen reads tables, charts, dense PDFs, images, audio and video with higher accuracy.",
+    "The cost discipline is new, though. Four thinking levels mean deciding, per request, how much reasoning to buy, and the default is not the cheapest. Three habits follow. Send overnight or bulk jobs through the Batch tier at half price. Keep prompts stable and prefix-heavy so implicit caching does the discounting. And keep hard architectural work on Carbon or Argon, with Hydrogen doing the writing, testing and verification, the multi-model pattern Google documents for worker and verifier agents."
+   ]
+  },
+  {
+   "heading": "What to check before you move a workload",
+   "paragraphs": [
+    "The first thing to check is whether the price rise is worth the speed. A high-volume classification or extraction pipeline, where answers are short, will feel the output rate more than a coding assistant running a few hundred tasks a day. Compare your current bill against the same token volume at 7.50 dollars per million output tokens before switching, and remember that a cheaper model for the easy majority of traffic usually saves more than a discount on the rest.",
+    "The second is to wait for independent benchmarks, because Google's Terminal-Bench and Intelligence Index figures are self-reported, and the honest test is your own repository, documents and languages. The third is rate limits on the free tier, which decide whether a free prototype survives a demo day. Hydrogen is a good model at a fair price; it is not a price cut, and budgeting as if it were is the mistake to avoid this week."
+   ]
+  }
+ ],
+ "faq": [
+  {
+   "q": "How much does Gemini 4 Hydrogen cost per million tokens?",
+   "a": "On the paid Gemini API tier it is 1.50 dollars per million input tokens and 7.50 dollars per million output tokens, flat across the full one million token context window, with thinking tokens billed as output. Cached input is 0.075 dollars per million through implicit caching only, Batch and Flex tiers are half price, and the free tier in Google AI Studio and the Gemini API is free but rate-limited. At about 94 rupees to the dollar that is roughly Rs 141 and Rs 707."
+  },
+  {
+   "q": "Is Gemini 4 Hydrogen better than Gemini 4 Argon?",
+   "a": "Not across the board. Google says Hydrogen scores 51 on the Artificial Analysis Intelligence Index at its default high thinking setting against 50 for Argon, and 54 at the new xhigh level, while being built for speed rather than long-horizon reasoning. Argon and Carbon remain the frontier models for hard architectural and multi-step problems, and Google positions Hydrogen as a fast execution model to use alone or alongside them."
+  },
+  {
+   "q": "Can I use Gemini 4 Hydrogen in India for free?",
+   "a": "Yes. Google says Hydrogen is available on the free tiers of Google AI Studio and the Gemini API, and in the Gemini app through automatic model selection for free users, plus in Google Search for all users. The free tier is rate-limited, so heavy or production use needs the paid tier. Paid Google AI Pro and Ultra subscribers also get it in Google Antigravity."
+  }
+ ],
+ "image_prompt": "Photorealistic wide 16:9 editorial photo of a young Indian software developer at a shared desk in a Bengaluru coworking space, laptop open showing a code editor with test results, a second monitor with charts, a steel tumbler of filter coffee, warm afternoon light through large windows, plants and whiteboard in soft background blur, natural colours, shallow depth of field, no text, no logos",
+ "source_name": "Google Blog",
+ "source_link": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-hydrogen/",
+ "source_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-hydrogen/"
+}
