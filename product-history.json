@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-13",
+  "updated": "2026-11-14",
   "note": "Append-only log of products published to digitalkartai.shop. Newest last. Never delete or modify existing records.",
   "history": [
     {
@@ -1238,6 +1238,33 @@
         "Late fee slabs and caps worked through four examples",
         "Section 74A notice window to 30 June 2030 and the section 125 general penalty",
         "Filing-day runbook, fifteen mistakes with fixes, 48-day plan and a 23-point checklist"
+      ]
+    },
+    {
+      "date": "2026-11-14",
+      "name": "ShaadiCard Studio — Digital Wedding Invitation Maker (No Code, Offline)",
+      "slug": "shaadicard-studio-digital-invitations",
+      "category": "Software Tool / Digital Invitation Studio (offline HTML app)",
+      "type": "webapp",
+      "price": "₹349",
+      "mrp": "₹1,299",
+      "url": "https://digitalkartai.shop/products/shaadicard-studio-digital-invitations/",
+      "download": "https://digitalkartai.shop/downloads/shaadicard-studio-digital-invitations.zip",
+      "payment_link": "https://rzp.io/rzp/Q6mS5hxx",
+      "status": "published",
+      "features": [
+        "No-code form editor with a live preview of the actual exported file",
+        "Three complete designs: Classic Gold, Midnight Bloom, Marigold",
+        "Live countdown (days/hours/minutes/seconds) with a graceful past-date state",
+        "Repeatable function list — mehndi, haldi, sangeet, wedding, reception — each with a Google Maps link",
+        "WhatsApp RSVP button with a pre-written message to the number you choose",
+        "Add to calendar: .ics with one VEVENT per function, RFC 5545 line folding",
+        "Optional photo gallery with automatic broken-image fallback",
+        "Print stylesheet producing a single A5 card (countdown, buttons and gallery stripped)",
+        "Hindi invitation line toggle (आप सादर आमंत्रित हैं)",
+        "Autosave in browser storage, project JSON save/open, Start blank and Load example",
+        "Escaped output — names and story text are HTML-escaped, no injection",
+        "Packaged with START-HERE guide, printing and sharing checklist, example invitation, design preview PNG and licence"
       ]
     }
   ]

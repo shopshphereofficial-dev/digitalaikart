@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-13",
+  "updated": "2026-11-14",
   "note": "Single source of truth for ALL products on digitalkartai.shop. The blog agent MUST read this file at the start of every run and promote the best-matching product per post. The product agent MUST append new products here when publishing them. Never delete or modify existing entries.",
   "products": [
     {
@@ -9538,6 +9538,50 @@
         "pointsman",
         "assistant loco shed",
         "RRB Group D playbook"
+      ]
+    },
+    {
+      "slug": "shaadicard-studio-digital-invitations",
+      "name": "ShaadiCard Studio — Digital Wedding Invitation Maker (No Code, Offline)",
+      "tagline": "A no-code invitation studio for Indian weddings and family functions: fill a form with the couple's names, the main date, the venue and each function, pick one of three designs, and download a single self-contained invitation page. It carries a live countdown to the main day, a function schedule where every venue opens in Google Maps, a WhatsApp RSVP button that writes the message for the guest, a calendar file with one entry per function for Google Calendar, Apple Calendar and Outlook, an optional photo gallery that hides broken images, and a print stylesheet that turns the same file into one clean A5 card. Two guides (start-here and a printing and sharing checklist), a finished example invitation, a PNG preview of the three designs and a plain English licence are in the ZIP. Runs offline in the browser with no account, no Canva plan, no subscription and no network calls.",
+      "price": "₹349",
+      "mrp": "₹1,299",
+      "url": "/products/shaadicard-studio-digital-invitations/",
+      "topics": [
+        "digital wedding invitation",
+        "wedding invitation card online",
+        "digital invite India",
+        "shaadi invitation card",
+        "save the date digital",
+        "wedding invitation maker",
+        "no code invitation",
+        "invitation without Canva",
+        "wedding website India",
+        "RSVP WhatsApp invitation",
+        "wedding countdown page",
+        "mehndi invitation",
+        "sangeet invitation",
+        "haldi invitation",
+        "reception invitation",
+        "engagement invitation",
+        "anniversary invitation",
+        "griha pravesh invitation",
+        "printable A5 invitation",
+        "wedding card printing",
+        "invitation with Google Maps",
+        "add to calendar wedding",
+        "wedding hashtag page",
+        "Indian wedding tools",
+        "digital invitation template",
+        "wedding invite design",
+        "shaadi card design",
+        "invitation html template",
+        "offline invitation maker",
+        "wedding planner tools India",
+        "event invitation page",
+        "family function invitation",
+        "wedding invitation price",
+        "invitation under 500"
       ]
     }
   ]
