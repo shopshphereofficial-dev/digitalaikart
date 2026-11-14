@@ -1,0 +1,80 @@
+{
+  "title": "Bihar clears Rs 190 crore AI mission to train 7,000 students",
+  "slug": "bihar-ai-mission-190-crore-7000-students",
+  "category": "AI India",
+  "description": "Bihar has approved Rs 190.32 crore for an AI mission with Singapore's GFTN, including a five-month certification for 7,000 students and a startup sandbox.",
+  "emoji": "🎓",
+  "keywords": [
+    "Bihar AI Mission",
+    "Aryabhata Drishti",
+    "AI certification Bihar",
+    "GFTN Bihar",
+    "AI skilling India"
+  ],
+  "tags": [
+    "#BiharAI",
+    "#AISkilling",
+    "#IndiaAI",
+    "#AIStartups"
+  ],
+  "tldr": [
+    "The Bihar cabinet approved Rs 190.32 crore for the Bihar AI Mission on 10 November 2026.",
+    "7,000 undergraduate and postgraduate students will get a five-month AI certification over five years.",
+    "A digital sandbox called the Aryabhata Technology Observatory is meant to support more than 100 startups.",
+    "No application dates, eligibility cut-offs or fees have been announced yet."
+  ],
+  "sections": [
+    {
+      "heading": "What the cabinet cleared",
+      "paragraphs": [
+        "The Bihar cabinet, chaired by Chief Minister Samrat Choudhary, approved on 10 November 2026 a plan to set up the Bihar Artificial Intelligence Mission, run as the Aryabhata Drishti project, with a proposed spend of Rs 190.32 crore. The money is meant to do three things at once: run a certification programme for college students, build a testing platform for startups, and present the state's technology ecosystem to global investors. It is the largest spending commitment the state has made on artificial intelligence so far.",
+        "The implementing partner is Singapore-based Global Finance and Technology Network, or GFTN. It was selected through nomination under the Bihar Finance (Amendment) Rules, 2024, rather than through an open tender, according to the state's press note on the decision. GFTN will work with the National University of Singapore's Asian Institute of Digital Finance and the Lynx Foundation."
+      ]
+    },
+    {
+      "heading": "Seven thousand students over five years",
+      "paragraphs": [
+        "The headline number is 7,000. That is how many undergraduate and postgraduate students the state plans to put through a five-month advanced AI certification over five years, which works out to roughly 1,400 learners a year. Students from science and non-science streams are both eligible, which sets this apart from most campus AI programmes in India that are written for engineering students alone.",
+        "The details that students actually need, such as who can apply, what the cut-offs are and when applications open, have not been announced. Reports suggest GFTN will first set up a centre in Bihar and that training could begin around March 2027, but the state has not published a formal date. Until the selection rules are out, treat any registration link circulating on WhatsApp as unverified."
+      ]
+    },
+    {
+      "heading": "A sandbox for more than 100 startups",
+      "paragraphs": [
+        "The second piece is the Aryabhata Technology Observatory, described in official statements as an AI and quantum-enabled digital sandbox. Startups, entrepreneurs, students, researchers and government officials are to get access to AI and machine learning interfaces, data pipelines, a gateway to large language models and a cloud-based development environment.",
+        "For a founder working out of Patna or Muzaffarpur, this is the part that matters most. Building an AI product usually means paying for model access, data storage and servers in dollars before earning a rupee. A shared, state-backed sandbox lowers that entry cost and lets teams test ideas on problems specific to Bihar, such as agriculture, migration, flood response and small retail, instead of importing a product designed for another market. A sandbox, in this context, is a controlled testing environment rather than a finished service. That distinction matters: the announcement describes access to tools and infrastructure, not a promise of funding. Startups will still have to build, test and find customers themselves, but the state is offering to take away the first bill that usually stops a small team."
+      ]
+    },
+    {
+      "heading": "Why it matters outside Bihar",
+      "paragraphs": [
+        "Bihar is not the first state to move. Karnataka launched an AI-powered skills and jobs portal on 4 November, and several states are competing for the same pool of young people with AI skills. What is different here is the combination of a skilling programme and startup infrastructure in one package, plus a deliberate plan to take local companies to 12 global forums that GFTN runs, including the Singapore FinTech Festival, the Point Zero Forum in Zurich and the Bangkok Digital Finance Forum.",
+        "The pattern echoes what is happening at the centre, where the IndiaAI Mission is funding home-built models and shared computing. States are now adding their own layers on top. For students and job seekers, the practical signal is that government-funded AI credentials are becoming a normal part of the education map rather than a metro-only privilege."
+      ]
+    },
+    {
+      "heading": "What to watch",
+      "paragraphs": [
+        "Three things will decide whether the mission delivers. First, speed of execution: Rs 190.32 crore is modest by AI standards and the certification runs for only five months, so the first batch matters. Second, transparency about a partner chosen by nomination, since the state has not explained why it skipped an open tender and public money invites that question. Third, outcomes: a certificate is worth what it leads to, and the announcement mentions no internships, hiring partners or interviews.",
+        "For now the safe reading is this. Bihar has put real money behind AI skills and startup tooling, and students in the state have a new option on the horizon. But nothing is open for applications yet, and no fee structure has been published. Watch official state government announcements and do not pay any private agency that claims it can enrol you in advance."
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "q": "Can students from any stream apply for the Bihar AI certification?",
+      "a": "Yes, the approved plan is open to undergraduate and postgraduate students from science as well as non-science streams. The state has not yet announced eligibility cut-offs or application dates."
+    },
+    {
+      "q": "Is the Bihar AI training free for students?",
+      "a": "The state has not published fee details. The mission is government-funded, but no official statement yet says whether students pay anything, so wait for the formal notification before paying anyone."
+    },
+    {
+      "q": "What is the Aryabhata Technology Observatory?",
+      "a": "It is an AI and quantum-enabled digital sandbox planned through GFTN. It is meant to give more than 100 startups, along with students and researchers, access to AI tools, data pipelines, language model gateways and cloud development environments."
+    }
+  ],
+  "image_prompt": "A bright classroom in a small Indian town where young men and women in everyday clothes sit at shared desktop computers while a trainer points at a screen showing simple charts, afternoon sunlight through open windows, wide 16:9 landscape.",
+  "source_name": "India Today",
+  "source_url": "https://www.indiatoday.in/india/story/bihar-da-hike-cabinet-ai-mission-women-student-schemes-ptag-3036326-2026-11-10"
+}
