@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-14",
+  "updated": "2026-11-15",
   "note": "Append-only log of products published to digitalkartai.shop. Newest last. Never delete or modify existing records.",
   "history": [
     {
@@ -1265,6 +1265,35 @@
         "Autosave in browser storage, project JSON save/open, Start blank and Load example",
         "Escaped output — names and story text are HTML-escaped, no injection",
         "Packaged with START-HERE guide, printing and sharing checklist, example invitation, design preview PNG and licence"
+      ]
+    },
+    {
+      "date": "2026-11-15",
+      "name": "JobCard India — 8 Service Business Forms (Word + PDF)",
+      "slug": "jobcard-india-service-forms-kit",
+      "category": "Document Template Pack / Service Business Forms (job card, estimate, challan, AMC, warranty, receipt)",
+      "type": "document template pack (docx + pdf)",
+      "price": "₹249",
+      "mrp": "₹1,199",
+      "url": "https://digitalkartai.shop/products/jobcard-india-service-forms-kit/",
+      "download": "https://digitalkartai.shop/downloads/jobcard-india-service-forms-kit.zip",
+      "payment_link": "https://rzp.io/rzp/kox5szvO",
+      "status": "published",
+      "features": [
+        "Eight A4 forms, each supplied twice: unlocked .docx and print-ready .pdf (16 files)",
+        "01 Job Card / Service Request with accessory checklist and condition-at-intake",
+        "02 Service Estimate / Quotation with HSN-SAC, CGST/SGST rows, validity and 10% variation cap",
+        "03 Work Order / Job Assignment with parts issued and pre-work safety checklist",
+        "04 Delivery Challan with HSN, serials, reason for movement and e-way bill field",
+        "05 Annual Maintenance Contract with exclusions, response time, escalation and termination",
+        "06 Warranty Certificate separating workmanship from manufacturer part warranty",
+        "07 Work Completion & Handover Note with test checklist and balance payment",
+        "08 Payment Receipt with amount in words, UPI/UTR, balance due and next instalment",
+        "Every form fits one A4 page at 100% scale, so duplicate pads give office + customer copies",
+        "Built from tables, not text boxes — the layout holds when the buyer edits it",
+        "Ten-section guide: which form when, numbering scheme, intake habit, clause rationale, GST and e-way bill notes, printing and tablet fill, troubleshooting",
+        "Opens in Word 2016+, Microsoft 365, LibreOffice, Google Docs, WPS Office and Pages",
+        "Unlimited printing in the buyer's own business under the included licence"
       ]
     }
   ]
