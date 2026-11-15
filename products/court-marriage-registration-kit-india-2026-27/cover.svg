@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-label="Court Marriage and Marriage Registration Kit India 2026-27 — Digitalaikart">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0a1628"/>
+      <stop offset="60%" stop-color="#102038"/>
+      <stop offset="100%" stop-color="#0a1628"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect x="0" y="0" width="1200" height="6" fill="#f5c542"/>
+  <rect x="0" y="624" width="1200" height="6" fill="#f5c542"/>
+  <rect x="70" y="64" width="4" height="96" fill="#f5c542"/>
+
+  <text x="96" y="86" font-family="Helvetica, Arial, sans-serif" font-size="17" font-weight="bold" letter-spacing="3" fill="#f5c542">DIGITALAIKART ORIGINAL</text>
+  <text x="1130" y="86" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="17" letter-spacing="2" fill="#93a1b4">2026-27 EDITION</text>
+  <line x1="70" y1="112" x2="1130" y2="112" stroke="#2c3d57" stroke-width="1.4"/>
+
+  <text x="70" y="196" font-family="Georgia, 'Times New Roman', serif" font-size="58" font-weight="bold" fill="#ffffff">Court Marriage &amp;</text>
+  <text x="70" y="262" font-family="Georgia, 'Times New Roman', serif" font-size="58" font-weight="bold" fill="#ffffff">Marriage Registration</text>
+  <text x="70" y="328" font-family="Georgia, 'Times New Roman', serif" font-size="58" font-weight="bold" fill="#f5c542">Kit India</text>
+
+  <rect x="70" y="356" width="120" height="5" fill="#f5c542"/>
+
+  <text x="70" y="404" font-family="Helvetica, Arial, sans-serif" font-size="23" fill="#dbe3ee">Which law registers your marriage. The documents each state asks for.</text>
+  <text x="70" y="440" font-family="Helvetica, Arial, sans-serif" font-size="23" fill="#dbe3ee">The 30-day court marriage calendar. Verified 2026 fees.</text>
+
+  <rect x="70" y="482" width="1060" height="1.2" fill="#2c3d57"/>
+
+  <text x="70" y="528" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="bold" letter-spacing="2" fill="#f5c542">40 PAGES  ·  10 FILL-IN TEMPLATES  ·  6 STATE CHECKLISTS</text>
+  <text x="70" y="566" font-family="Helvetica, Arial, sans-serif" font-size="18" fill="#93a1b4">General information, not legal advice  ·  digitalkartai.shop</text>
+
+  <text x="1130" y="528" text-anchor="end" font-family="Georgia, 'Times New Roman', serif" font-size="24" font-weight="bold" fill="#ffffff">Digitalaikart</text>
+  <text x="1130" y="566" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="16" letter-spacing="1" fill="#93a1b4">DIGITAL EDITION</text>
+</svg>
