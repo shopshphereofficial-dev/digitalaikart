@@ -1,0 +1,71 @@
+{
+  "date": "2026-11-16",
+  "title": "India's universities are short of GPUs, and they are learning to share",
+  "slug": "india-universities-gpu-crunch-shared-compute",
+  "category": "AI India",
+  "description": "Indian universities cannot buy or rent enough GPU capacity for AI research. Bengaluru, Kanpur and Kochi are now pooling machines, and students stand to gain.",
+  "emoji": "🖥️",
+  "keywords": ["GPU crunch India", "university AI research", "IndiaAI Mission compute", "Nvidia H100 price India", "shared HPC facility"],
+  "tags": ["#AI", "#India", "#HigherEducation", "#Compute"],
+  "tldr": [
+    "Indian universities say affordable GPU capacity, not talent, is now the main limit on AI research.",
+    "RV University is exploring shared compute with S-VYASA and RV College of Engineering; CUSAT has opened its 24-GPU TEJASWI facility to outside researchers.",
+    "IIT Kanpur is planning a Rs 200-crore high-performance computing facility with advanced GPUs.",
+    "One Nvidia H100 80GB card costs Rs 25.5 lakh to Rs 50 lakh in India, which is why pooling and subsidies matter."
+  ],
+  "sections": [
+    {
+      "heading": "The bottleneck has moved to the chip",
+      "paragraphs": [
+        "For years the hard part of doing AI research in India was finding people and clean data. Reporting in Mint on 16 November 2026 suggests the binding constraint is now far more mundane: the machines. Universities say they cannot secure affordable, reliable GPU capacity quickly enough to keep pace with research into large language models and agentic AI, and several are starting to pool whatever hardware they have.",
+        "GPUs are the chips that perform the parallel arithmetic behind model training and inference, which is why every serious AI lab measures itself in cards rather than chairs. As research groups move from fine-tuning small models to building multi-step agents, the compute each project needs has grown faster than most campus budgets. Institutions are responding in three ways at once, according to Mint: sharing infrastructure, building dedicated facilities, and partnering with technology companies."
+      ]
+    },
+    {
+      "heading": "Sharing the lab after hours",
+      "paragraphs": [
+        "RV University in Bengaluru is exploring shared computing with neighbours S-VYASA University and R.V. College of Engineering. Its vice-chancellor, Prof. Ram Kumar Kakani, described the logic plainly to Mint: the campus cluster is a shared resource once the buildings close. \"During the late hours, when our campus is closed, it is a shared resource,\" he said, adding that with three or four universities in the neighbourhood, sharing is the sensible route.",
+        "In Kochi, Cochin University of Science and Technology has gone further and opened its TEJASWI high-performance computing facility to researchers from other academic institutions on a chargeable basis. The facility is equipped with 24 Nvidia A100 GPUs and two petabytes of storage, a configuration that a single department could rarely justify buying for itself."
+      ]
+    },
+    {
+      "heading": "Building, and renting from partners",
+      "paragraphs": [
+        "Sharing idle hours only goes so far. IIT Kanpur is planning a Rs 200-crore high-performance computing facility equipped with advanced GPUs to support AI research and scientific simulations, and is also talking to global suppliers about strengthening its compute. Buying at this scale is a capital project, not a departmental purchase.",
+        "Other institutions are choosing to rent capability instead. Manipal Institute of Technology Bengaluru has partnerships with technology companies that provide academic licences and access to AI models and computing infrastructure, either free of cost or at subsidised rates, Mint reported. For a college that cannot fund a data centre, a subsidised allocation and a supported model stack is often the difference between teaching AI and doing AI."
+      ]
+    },
+    {
+      "heading": "Why the IndiaAI Mission is not the whole answer",
+      "paragraphs": [
+        "The government has not ignored the problem. Under the IndiaAI Mission, a common compute facility lets researchers, academic institutions, students and startups access GPUs at subsidised rates. Universities told Mint that this helps, but that they need more predictable access, especially for projects that run for months rather than days.",
+        "Kakani's suggestion is to attach compute to research money rather than treat it as a separate queue: every project sanctioned by the Anusandhan National Research Foundation could come with a specified allocation of GPU hours. Omprakash Subbarao, chief executive of the Foundation for Science, Innovation and Development at IISc, argued for a wider framework that reaches beyond IISc and the IITs to colleges in tier-II and tier-III cities. \"It will increase entrepreneurship,\" he told Mint."
+      ]
+    },
+    {
+      "heading": "What this means for a student in India",
+      "paragraphs": [
+        "The price list explains the scramble. An Nvidia H100 80GB GPU, the card used for demanding workloads such as training large language models, costs between Rs 25.5 lakh and Rs 50 lakh per unit in India. An A100 80GB, the workhorse for model training and scientific computing, costs between Rs 20 lakh and Rs 29.6 lakh depending on configuration and seller. A rack of eight is a building, not a budget line.",
+        "The practical consequence, experts warned Mint, is that thin compute constrains the scope and quality of research, and can push groups to scale back work on fine-tuning smaller models and on applications for Indian languages, agriculture and healthcare, exactly the areas where local research matters most.",
+        "For students, the useful takeaway is to stop treating a GPU as something you personally own. Subsidised hours through the IndiaAI Mission compute facility, chargeable access to facilities such as CUSAT's TEJASWI, and academic partnerships at institutes like MIT Bengaluru are the realistic routes to running a real experiment. If you are writing a research proposal, budget the GPU hours in it, and ask your institution whether an ANRF-linked allocation can cover them."
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "q": "Why are Indian universities short of GPUs?",
+      "a": "Demand from large language model and agentic AI research has grown faster than campus budgets, and a single high-end Nvidia card costs tens of lakhs of rupees, so institutions cannot buy or rent capacity quickly enough."
+    },
+    {
+      "q": "Can students outside a top institute get access to AI compute?",
+      "a": "Yes. The IndiaAI Mission runs a common compute facility with subsidised GPUs for students and researchers, and some universities, such as CUSAT with its TEJASWI facility, rent capacity to outside academic institutions."
+    },
+    {
+      "q": "How much does an AI training GPU cost in India?",
+      "a": "An Nvidia H100 80GB is priced between Rs 25.5 lakh and Rs 50 lakh per unit, while an A100 80GB ranges from Rs 20 lakh to Rs 29.6 lakh, depending on configuration and seller, according to Mint."
+    }
+  ],
+  "image_prompt": "A university computer lab in India late at night, rows of desktop workstations with glowing screens showing charts, a young researcher in a light shirt reviewing results, warm ceiling lights and a dark window behind, natural photorealistic editorial photo, wide 16:9 landscape, no text, no logos",
+  "source_name": "Mint (Livemint)",
+  "source_url": "https://www.livemint.com/education/gpu-crunch-chip-shortage-indian-universities-ai-11794551082581.html"
+}
