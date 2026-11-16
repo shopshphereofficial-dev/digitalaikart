@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-15",
+  "updated": "2026-11-16",
   "note": "Append-only log of products published to digitalkartai.shop. Newest last. Never delete or modify existing records.",
   "history": [
     {
@@ -1327,6 +1327,37 @@
         "Printable 30-day action plan and tracker",
         "Free legal aid routes including NALSA helpline 15100",
         "Sources and verification log with dates"
+      ]
+    },
+    {
+      "date": "2026-11-16",
+      "name": "MenuMargin OS — India Edition 2026: Recipe Costing & Menu Pricing System",
+      "slug": "menumargin-os-india-2026",
+      "category": "Spreadsheet System / Recipe Costing & Menu Pricing (Excel + Google Sheets)",
+      "type": "non-ebook",
+      "price": "₹249",
+      "mrp": "₹1,499",
+      "url": "https://digitalkartai.shop/products/menumargin-os-india-2026/",
+      "download": "https://digitalkartai.shop/downloads/menumargin-os-india-2026.zip",
+      "payment_link": "https://rzp.io/rzp/6aA9k4Hc",
+      "status": "published",
+      "features": [
+        "Single macro-free .xlsx workbook, seven sheets: Start Here, Settings, Ingredients, Recipe Lines, Dishes, Menu Engineering, Break-Even",
+        "Ingredient costing from pack price to cost per usable gram/ml/piece, with wastage and trim (200 rows)",
+        "Recipe Lines with automatic ingredient lookup and line cost (400 rows)",
+        "Batch cost, cost per portion and packaging per portion for 50 dishes",
+        "Full margin stack per dish: GST, gross order value, commission on gross, 18% GST on commission, gateway fee, net realisation",
+        "Contribution in rupees and percent per dish, plus food cost percent",
+        "Price needed to hit the target food cost, calculated per dish",
+        "Healthy / Watch / Rework verdict with conditional colour",
+        "Menu Engineering: 70% popularity rule, Star / Plowhorse / Puzzle / Dog, with action line per class",
+        "Monthly revenue, food cost, packaging and commission roll-up with blended food cost and contribution percent",
+        "Break-even orders per month and per day, operating profit, margin of safety",
+        "Settings drive every sheet: GST, commission, GST on commission, gateway, packaging, target food cost, default wastage",
+        "Four example dishes and 23 example ingredients tagged EXAMPLE, safe to delete",
+        "Printable START-HERE.html guide with the margin stack worked line by line and sourced tax/commission defaults",
+        "README.txt and LICENSE.txt included; A4 landscape fit-to-width print setup on every sheet",
+        "Verified: zero formula errors on example data and on a blank template"
       ]
     }
   ]
