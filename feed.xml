@@ -8,6 +8,14 @@
     <lastBuildDate>Mon, 28 Sep 2026 15:46:00 +0530</lastBuildDate>
     <atom:link href="https://digitalkartai.shop/feed.xml" rel="self" type="application/rss+xml"/>
         <item>
+      <title>Sarvam Token Factory: one API, rupee pricing, Indian GPUs</title>
+      <link>https://digitalkartai.shop/blog/2026-11-17-sarvam-token-factory-india-api-rupee-pricing.html</link>
+      <guid isPermaLink="true">https://digitalkartai.shop/blog/2026-11-17-sarvam-token-factory-india-api-rupee-pricing.html</guid>
+      <description>Sarvam AI has opened Token Factory, a single OpenAI-compatible API that runs its own models and DeepSeek, Kimi and Gemma on GPUs in India, billed in rupees.</description>
+      <pubDate>Tue, 17 Nov 2026 09:00:00 +0530</pubDate>
+      <category>AI Products</category>
+    </item>
+    <item>
       <title>OpenAI Now Processes Indian Business Data Inside India</title>
       <link>https://digitalkartai.shop/blog/2026-11-16-openai-local-inference-india-gpt-6-luna.html</link>
       <guid isPermaLink="true">https://digitalkartai.shop/blog/2026-11-16-openai-local-inference-india-gpt-6-luna.html</guid>
