@@ -1388,6 +1388,43 @@
         "README.txt, LICENSE.txt (single business, unlimited prints) and example-profile.json included",
         "Verified: JS syntax checked, all six templates and three sizes rendered, and print-to-PDF page sizes measured (A4 card sheet, 210x297 letterhead, 148x210 rate card)"
       ]
+    },
+    {
+      "date": "2026-11-17",
+      "name": "The Indian Cancer Treatment Cost Playbook 2026-27 — Digital Edition",
+      "slug": "indian-cancer-treatment-cost-playbook-2026-27",
+      "category": "Playbook / Health-cost navigation guide",
+      "type": "ebook",
+      "price": "₹199",
+      "mrp": "₹999",
+      "url": "https://digitalkartai.shop/products/indian-cancer-treatment-cost-playbook-2026-27/",
+      "download": "https://digitalkartai.shop/downloads/indian-cancer-treatment-cost-playbook-2026-27.pdf",
+      "payment_link": "https://rzp.io/rzp/LCDyzxN",
+      "status": "published",
+      "features": [
+        "32-page premium PDF, 24 chapters in six parts, plus a seven-day start plan",
+        "The 9 November 2026 NPPA order S.O. 5690(E) explained: 30% trade-margin cap on 137 non-scheduled anti-cancer drugs, PTS/PTD basis from March 2026, GST on top",
+        "Outcome figures as reported: 85 companies and 121 drugs by 9 November, 650+ formulations over a 50% cut, highest 96.45%, ₹3,541 crore annual savings",
+        "What the order does not cover: drugs outside the list, GST, hospital charges, PAP free supplies",
+        "Six named drugs decoded: Pembrolizumab, Durvalumab, Osimertinib, Denosumab, Pegfilgrastim, Bevacizumab",
+        "Six-minute price check using Pharma Sahi Daam, the NPPA revised list and the hospital pharmacy display",
+        "Overcharge evidence packet and five complaint routes: app, 1800-111-255, monitoring-nppa@gov.in, State Drug Controller, CPGRAMS",
+        "Jan Aushadhi chapter: 20,149 kendras on 30 June 2026, 2,110 medicines and 315 devices, 50-80% cheaper, state-wise counts, Sugam app, 1800-180-8080",
+        "AMRIT counters, National Free Drugs Initiative and anti-cancer drugs on the district hospital essential list",
+        "Generic vs brand vs biosimilar, including the fact that the NMC 2023 generic-prescription regulations were held in abeyance",
+        "Nine questions that change the bill, plus an illustrative bill worked line by line",
+        "PM-JAY chapter: ₹5 lakh family floater, 1,961 packages across 27 specialties, 12 crore families, 37 lakh ASHA/Anganwadi families, 6 crore senior citizens 70+",
+        "Seven-step PM-JAY sequence with the Ayushman Mitra desk, pre-authorisation order and the written gap list",
+        "Inside-package vs outside-package table, including the immunotherapy drug gap",
+        "State schemes: Telangana Rajiv Aarogyasri ₹10 lakh, Tamil Nadu CMCHIS ₹5 lakh, Maharashtra MJPJAY ₹1.5 lakh, Odisha GJAY ₹5 lakh plus ₹5 lakh for women, Andhra Dr YSR Aarogyasri",
+        "PMNRF and CMRF document sets and the rule that relief funds do not stack with insurance",
+        "Seven insurance clauses, cashless pre-authorisation walkthrough, four failure reasons, rejection escalation ladder",
+        "Patient assistance programmes, crowdfunding fee maths on ₹10 lakh across Ketto, ImpactGuru and Milaap",
+        "30-day money triage worksheet, second opinion and clinical trial questions",
+        "18-line bill audit worksheet, cycle log, 12-question hospital one-pager and five desk scripts",
+        "Scam table and a verified directory of every official number and portal",
+        "Sources chapter with re-verification routes for every figure"
+      ]
     }
   ]
 }
