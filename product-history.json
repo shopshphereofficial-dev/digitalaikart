@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-16",
+  "updated": "2026-11-17",
   "note": "Append-only log of products published to digitalkartai.shop. Newest last. Never delete or modify existing records.",
   "history": [
     {
@@ -1358,6 +1358,35 @@
         "Printable START-HERE.html guide with the margin stack worked line by line and sourced tax/commission defaults",
         "README.txt and LICENSE.txt included; A4 landscape fit-to-width print setup on every sheet",
         "Verified: zero formula errors on example data and on a blank template"
+      ]
+    },
+    {
+      "date": "2026-11-17",
+      "name": "BrandCard Studio — Visiting Cards, Letterhead & Service Card Kit (India Edition)",
+      "slug": "brandcard-studio-visiting-card-letterhead-kit",
+      "category": "Print-ready stationery / Design template pack + offline browser studio",
+      "type": "non-ebook",
+      "price": "₹249",
+      "mrp": "₹1,299",
+      "url": "https://digitalkartai.shop/products/brandcard-studio-visiting-card-letterhead-kit/",
+      "download": "https://digitalkartai.shop/downloads/brandcard-studio-visiting-card-letterhead-kit.zip",
+      "payment_link": "https://rzp.io/rzp/13B8Sqgh",
+      "status": "published",
+      "features": [
+        "Single self-contained index.html studio, opens offline in Chrome, Edge, Firefox and Safari, no install, no account, no CDN",
+        "Six visiting card templates (Classic Rule, Gold Band, Vertical Split, Monogram, Service List, Minimal Grid), each with a designed back",
+        "Three card sizes: 90 x 54 mm standard India, 85 x 50 mm compact, 54 x 90 mm vertical",
+        "Eight accent colour presets that carry band, rules and monogram",
+        "A4 print sheet: 10 cards at 90x54 (2 x 5), 5 mm margins, 3 mm gaps, light cut guides, 9 cards at 54x90 vertical",
+        "Back sheet mirrored automatically for duplex printing (flip on long edge)",
+        "A4 letterhead with accent header band, contact strip, watermark monogram and footer with GSTIN",
+        "A5 rate card with up to 8 services and prices, footer contact block and 18 mm UPI QR",
+        "UPI payment QR from any app loaded as PNG/JPG, printed at 16 mm on card backs, stored only in the browser",
+        "Save/load profile as JSON plus localStorage session restore, so reprints need no retyping",
+        "Automatic name fitting so long business names shrink instead of overflowing the card",
+        "Printable START-HERE.html guide: setup, print-dialog settings, paper and GSM, duplex alignment, bleed and trim, troubleshooting",
+        "README.txt, LICENSE.txt (single business, unlimited prints) and example-profile.json included",
+        "Verified: JS syntax checked, all six templates and three sizes rendered, and print-to-PDF page sizes measured (A4 card sheet, 210x297 letterhead, 148x210 rate card)"
       ]
     }
   ]

@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-16",
+  "updated": "2026-11-17",
   "note": "Single source of truth for ALL products on digitalkartai.shop. The blog agent MUST read this file at the start of every run and promote the best-matching product per post. The product agent MUST append new products here when publishing them. Never delete or modify existing entries.",
   "products": [
     {
@@ -10027,6 +10027,29 @@
         "cybersecurity resume fresher",
         "cybersecurity interview questions India",
         "cybersecurity career roadmap PDF"
+      ]
+    },
+    {
+      "slug": "brandcard-studio-visiting-card-letterhead-kit",
+      "name": "BrandCard Studio — Visiting Cards, Letterhead & Service Card Kit (India Edition)",
+      "tagline": "Six print-ready card templates, an A4 letterhead and an A5 rate card, printed at exact 90 × 54 mm from one offline browser studio",
+      "price": "₹249",
+      "mrp": "₹1,299",
+      "url": "https://digitalkartai.shop/products/brandcard-studio-visiting-card-letterhead-kit/",
+      "also_available": null,
+      "topics": [
+        "visiting card design",
+        "visiting card template india",
+        "print ready stationery",
+        "letterhead template",
+        "rate card design",
+        "small business branding",
+        "offline design tool",
+        "90x54mm card",
+        "upi qr card",
+        "local print shop",
+        "shop stationery kit",
+        "duplex print sheet"
       ]
     }
   ]
