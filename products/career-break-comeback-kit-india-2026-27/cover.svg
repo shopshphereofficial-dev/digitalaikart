@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-label="The Comeback Kit — Career Break to Job Offer, India Edition 2026-27">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0a1628"/>
+      <stop offset="1" stop-color="#16273f"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect x="0" y="0" width="1200" height="8" fill="#f5c542"/>
+  <rect x="72" y="96" width="64" height="4" fill="#f5c542"/>
+  <text x="72" y="88" font-family="DejaVu Sans, Arial, sans-serif" font-size="22" font-weight="bold" fill="#f5c542" letter-spacing="6">DIGITALAIKART</text>
+  <text x="72" y="212" font-family="Georgia, DejaVu Serif, serif" font-size="82" font-weight="bold" fill="#ffffff">The Comeback Kit</text>
+  <text x="72" y="278" font-family="DejaVu Sans, Arial, sans-serif" font-size="34" font-weight="bold" fill="#f5c542">CAREER BREAK  →  JOB OFFER</text>
+  <text x="72" y="330" font-family="DejaVu Sans, Arial, sans-serif" font-size="24" fill="#c8d2e2">India Edition · November 2026</text>
+  <text x="72" y="404" font-family="DejaVu Sans, Arial, sans-serif" font-size="24" fill="#ffffff">5 verified returnship programmes · 24 AI prompts</text>
+  <text x="72" y="442" font-family="DejaVu Sans, Arial, sans-serif" font-size="24" fill="#ffffff">12 printable worksheets · 42 pages</text>
+  <rect x="72" y="500" width="1056" height="1.5" fill="#3a4a63"/>
+  <text x="72" y="552" font-family="DejaVu Sans, Arial, sans-serif" font-size="21" fill="#8f9bb0">Amazon rekindle · Myntra Phoenix · TCS Rebegin · Salesforce Return to Work · Goldman Sachs Returnship</text>
+  <text x="72" y="592" font-family="DejaVu Sans, Arial, sans-serif" font-size="20" font-weight="bold" fill="#f5c542">digitalkartai.shop</text>
+</svg>
