@@ -18,7 +18,7 @@ jobs:
       - name: Download ebook from release
         run: |
           mkdir -p downloads
-          gh release download career-break-comeback-kit-india-2026-27-v1 --repo shopshphereofficial-dev/digitalaikart --output "downloads/career-break-comeback-kit-india-2026-27.pdf"
+          gh release download career-break-comeback-kit-india-2026-27-v1 --repo shopshphereofficial-dev/digitalaikart --clobber --output "downloads/career-break-comeback-kit-india-2026-27.pdf"
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
