@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-17",
+ "updated": "2026-11-18",
  "note": "Single source of truth for ALL products on digitalkartai.shop. The blog agent MUST read this file at the start of every run and promote the best-matching product per post. The product agent MUST append new products here when publishing them. Never delete or modify existing entries.",
  "products": [
   {
@@ -10202,6 +10202,56 @@
     "visa refusal PIC 4020",
     "education agent commission australia",
     "indian students australia"
+   ]
+  },
+  {
+   "slug": "khata-ledger-pro",
+   "name": "KhataLedger Pro — Udhaar Khata, Ageing & Reminder Studio (Offline, India Edition 2026)",
+   "tagline": "An offline udhaar khata for Indian shops that answers the one question a paper book cannot: how old is each rupee. A single HTML app opens in the browser with a customer book (name, WhatsApp number, area, credit limit, note), opening balances carried over from the paper khata with the date they are from, and two kinds of entry — you gave (goods or cash on credit) and you got (payment by cash, UPI, bank, cheque, card or credit note) — each with date, mode, optional due date and a note. Payments are settled against the oldest unpaid amount first, FIFO, the way a shopkeeper does it in his head, so the ageing is honest: five buckets of not due, 1-30, 31-60, 61-90 and 90+ days, per customer and for the whole shop. The dashboard shows total receivable, the overdue-31-plus figure with its 90-plus part called out, collections this month and credit given this month, then the six largest balances with their oldest pending age. Every customer gets a printable A4 statement with a running balance, the closing figure in figures and in Indian words (lakh and crore style) and signature lines, saved as PDF from the same dialog. Three printable documents in all: statement, one-page ageing report and a reminder call-list with tick boxes. Reminders are written for you — balance, days pending, your UPI ID and a upi://pay link for the exact amount — and open in WhatsApp for you to send from your own number; nothing is sent automatically and there is no bulk messaging or Business API. Customers CSV with all five ageing columns and an entries CSV for Excel, plus a one-click JSON backup and restore, because the book lives in your browser's local storage and nowhere else. Unlimited customers and entries, no account, no login, no subscription, no internet connection needed after the download, and no data leaving the shop. Seven files in the ZIP: the app, its JavaScript and stylesheet, a printable Start Here guide, a readme, a licence and a sample book of six invented customers marked EXAMPLE. Not a GST billing tool — no tax invoices, no GSTR reports, no e-way bills. Tested before release with 54 calculation tests and 51 browser tests, all passing, and checked at 1440 px and 420 px wide. Runs in Chrome, Edge, Firefox and Safari on Windows, macOS, Linux and Android Chrome.",
+   "price": "₹299",
+   "mrp": "₹1,499",
+   "url": "/products/khata-ledger-pro/",
+   "also_available": [
+    "gst-invoice-generator-pro",
+    "tagcraft-barcode-upi-label-studio",
+    "brandcard-studio-visiting-card-letterhead-kit"
+   ],
+   "topics": [
+    "udhaar khata app",
+    "digital khata",
+    "khata book",
+    "khata ledger software",
+    "shop credit ledger",
+    "customer udhaar tracker",
+    "receivables ageing report",
+    "ageing analysis 30 60 90",
+    "FIFO ageing ledger",
+    "outstanding balance tracker",
+    "who owes me money app",
+    "payment reminder for shopkeepers",
+    "whatsapp payment reminder india",
+    "udhaar reminder message",
+    "upi payment link reminder",
+    "kirana shop accounting",
+    "small shop ledger excel alternative",
+    "offline khata software",
+    "khata app without subscription",
+    "one time purchase khata app",
+    "khata book for medical store",
+    "hardware shop credit ledger",
+    "wholesaler credit limit tracker",
+    "party ledger statement format",
+    "printable khata statement",
+    "customer statement of account india",
+    "amount in words indian format",
+    "credit limit per customer",
+    "daily credit sales register",
+    "shop udhaar bahi khata",
+    "small business receivables management india",
+    "dues recovery for small shops",
+    "khata app for laptop",
+    "khata html app offline",
+    "khata ledger csv export"
    ]
   }
  ]
